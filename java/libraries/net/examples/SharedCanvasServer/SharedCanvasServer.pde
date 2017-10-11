@@ -28,7 +28,7 @@ void setup()
   s = new Server(this, 12345); // Start a simple server on a port
 }
 
-void draw() 
+void roboLoop() 
 {
   if (mousePressed == true) {
     // Draw our line

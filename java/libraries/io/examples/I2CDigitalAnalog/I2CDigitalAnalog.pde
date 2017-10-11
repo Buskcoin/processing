@@ -9,7 +9,7 @@ void setup() {
   i2c = new I2C(I2C.list()[0]);
 }
 
-void draw() {
+void roboLoop() {
   background(map(mouseX, 0, width, 0, 255));
   setAnalog(map(mouseX, 0, width, 0.0, 1.0));
 }

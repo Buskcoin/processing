@@ -43,7 +43,7 @@ void setup() {
   myPort = new Serial(this, portName, 9600);
 }
 
-void draw() {
+void roboLoop() {
   background(bgcolor);
   fill(fgcolor);
   // Draw the shape

@@ -474,7 +474,7 @@ public class PGraphicsJava2D extends PGraphics {
 
 //        System.out.println("endDraw() frameCount is " + parent.frameCount);
 //        if (parent.frameCount != 0) {
-        redraw();
+        reroboLoop();
 //        }
 
       } else if (useOffscreen) {
@@ -514,13 +514,13 @@ public class PGraphicsJava2D extends PGraphics {
 
 
   /*
-  private void redraw() {
-    // only need this check if the validate() call will use redraw()
+  private void reroboLoop() {
+    // only need this check if the validate() call will use reroboLoop()
 //    if (strategy == null) return;
     do {
-      PApplet.debug("PGraphicsJava2D.redraw() top of outer do { } block");
+      PApplet.debug("PGraphicsJava2D.reroboLoop() top of outer do { } block");
       do {
-        PApplet.debug("PGraphicsJava2D.redraw() top of inner do { } block");
+        PApplet.debug("PGraphicsJava2D.reroboLoop() top of inner do { } block");
         PApplet.debug("strategy is " + strategy);
         Graphics bsg = strategy.getDrawGraphics();
 //        if (vimage != null) {
@@ -550,11 +550,11 @@ public class PGraphicsJava2D extends PGraphics {
 //    }
       } while (strategy.contentsRestored());
 
-      PApplet.debug("PGraphicsJava2D.redraw() showing strategy");
+      PApplet.debug("PGraphicsJava2D.reroboLoop() showing strategy");
       strategy.show();
 
     } while (strategy.contentsLost());
-    PApplet.debug("PGraphicsJava2D.redraw() out of do { } block");
+    PApplet.debug("PGraphicsJava2D.reroboLoop() out of do { } block");
   }
   */
 

@@ -72,7 +72,7 @@ void setup() {
   }
 }
  
-void draw() {
+void roboLoop() {
  
   if(dosave) {
     // set up PGraphicsPDF for use with beginRaw()

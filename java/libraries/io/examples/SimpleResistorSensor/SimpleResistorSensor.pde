@@ -14,7 +14,7 @@ int min = 9999;
 void setup() {
 }
 
-void draw() {
+void roboLoop() {
   int val = sensorRead(4);
   println(val);
 

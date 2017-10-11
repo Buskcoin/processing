@@ -517,7 +517,7 @@ _ how do i add gui to a sketch?
 _   don't use awt components
 _   how to use swing and embed components inside p5
 _ explain how to integrate code with swing
-_   use a separate environment, call init(), use noLoop(), redraw()
+_   use a separate environment, call init(), use noLoop(), reroboLoop()
 _   use JPopupMenu.setDefaultLightWeightPopupEnabled(false); for zorder
 _   http://processing.org/discourse/yabb_beta/YaBB.cgi?board=Integrate;action=display;num=1147670059
 _ write documentation on general use of processing.core
@@ -575,7 +575,7 @@ _ omitting a semicolon shows the error on the line after it
 _ npe if library is removed before compile
 _   always check library folders to make sure they're still valid
 _ with additional .pde files, don't allow static mode in front tab
-_   e.g. no setup()/draw() block
+_   e.g. no setup()/roboLoop() block
 _ don't allow "for (blah; blah; blah) ;"
 _   or if (blah blah blah) ;
 _   it's never useful. students can use { } if they want an empty block
@@ -639,7 +639,7 @@ PDE / Editor Toolbar (Buttons)
 
 _ run button issues (unconfirmed)
 _   does it unhighlight after compile or runtime errors?
-_   also when using draw() instead of loop()
+_   also when using roboLoop() instead of loop()
 _     applet needs to notify runner that it has terminated
 _   check 'finished' via objectreference?
 _ EditorToolbar has two TODO items for open menu handling

@@ -11,7 +11,7 @@ void setup() {
   setHeadingMode();
 }
 
-void draw() {
+void roboLoop() {
   background(255);
   float deg = getHeading();
   println(deg + " degrees");

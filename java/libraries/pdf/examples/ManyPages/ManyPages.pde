@@ -1,7 +1,7 @@
 /**
  * Many Pages. 
  * 
- * Saves a new page into a PDF file each loop through draw().
+ * Saves a new page into a PDF file each loop through roboLoop().
  * Pressing the mouse finishes writing the file and exits the program.
  */
 
@@ -16,7 +16,7 @@ void setup() {
   pdf = (PGraphicsPDF)beginRecord(PDF, "Lines.pdf");
 }
 
-void draw() {
+void roboLoop() {
   background(255); 
   stroke(0, 20);
   strokeWeight(20.0);

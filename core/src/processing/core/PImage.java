@@ -2561,7 +2561,7 @@ public class PImage implements PConstants, Cloneable {
    *
    * void setup() { }
    *
-   * void draw() { noStroke(); colorMode(RGB, colorCount-1); int alpha = (mouseX
+   * void roboLoop() { noStroke(); colorMode(RGB, colorCount-1); int alpha = (mouseX
    * / blockSize) << 24; int r, g, b, r2, g2, b2 = 0; for (int x = 0; x <= 0xFF;
    * x++) { for (int y = 0; y <= 0xFF; y++) { int dst = (x << 16) | (x << 8) |
    * x; int src = (y << 16) | (y << 8) | y | alpha; int result =

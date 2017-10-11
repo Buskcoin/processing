@@ -15,7 +15,7 @@ void setup() {
   beginRecord(pdf);
 }
 
-void draw() {  
+void roboLoop() {  
   background(255);
   
   for (int i=0; i<100; i++) {

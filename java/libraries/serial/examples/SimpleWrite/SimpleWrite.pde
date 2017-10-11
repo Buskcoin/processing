@@ -22,7 +22,7 @@ void setup()
   myPort = new Serial(this, portName, 9600);
 }
 
-void draw() {
+void roboLoop() {
   background(255);
   if (mouseOverRect() == true) {  // If mouse is over square,
     fill(204);                    // change color and

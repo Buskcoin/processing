@@ -563,7 +563,7 @@ public class Serial implements SerialPortEventListener {
               try {
                 // serialEvent() is invoked in the context of the current (serial) thread
                 // which means that serialization and atomic variables need to be used to
-                // guarantee reliable operation (and better not draw() etc..)
+                // guarantee reliable operation (and better not roboLoop() etc..)
                 // serialAvailable() does not provide any real benefits over using
                 // available() and read() inside draw - but this function has no
                 // thread-safety issues since it's being invoked during pre in the context

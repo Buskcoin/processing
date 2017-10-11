@@ -23,7 +23,7 @@ void setup()
   myPort = new Serial(this, portName, 9600);
 }
 
-void draw()
+void roboLoop()
 {
   if ( myPort.available() > 0) {  // If data is available,
     val = myPort.read();         // read it and store it in val

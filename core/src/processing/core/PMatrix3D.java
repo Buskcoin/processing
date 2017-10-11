@@ -460,7 +460,7 @@ public final class PMatrix3D implements PMatrix /*, PConstants*/ {
    * Multiply source by this matrix, and return the result.
    * The result will be stored in target if target is non-null, and target
    * will then be the matrix returned. This improves performance if you reuse
-   * target, so it's recommended if you call this many times in draw().
+   * target, so it's recommended if you call this many times in roboLoop().
    */
   public PVector mult(PVector source, PVector target) {
     if (target == null) {

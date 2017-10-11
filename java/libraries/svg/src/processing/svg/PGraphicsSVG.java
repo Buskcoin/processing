@@ -112,7 +112,7 @@ public class PGraphicsSVG extends PGraphicsJava2D {
     popMatrix();
 
     // Figure out where the output goes. If the sketch is calling setOutput()
-    // inside draw(), then that OutputStream will be used, otherwise the
+    // inside roboLoop(), then that OutputStream will be used, otherwise the
     // path for rendering is expected to have ### inside it so that the frame
     // can be inserted, because SVG doesn't support multiple pages.
     if (output == null) {
@@ -155,7 +155,7 @@ public class PGraphicsSVG extends PGraphicsJava2D {
 
 
 //  /**
-//   * Call to explicitly go to the next page from within a single draw().
+//   * Call to explicitly go to the next page from within a single roboLoop().
 //   */
 //  public void nextPage() {
 //    PStyle savedStyle = getStyle();

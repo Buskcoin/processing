@@ -236,7 +236,7 @@ X PShapes do not show up in PDF with P2D renderer
 X   https://github.com/processing/processing/issues/4647
 X Some semi-transparent edges of sphere() meshes rendered in higher density
 X   https://github.com/processing/processing/issues/4720
-X P2D and P3D not stopping with empty draw() blocks
+X P2D and P3D not stopping with empty roboLoop() blocks
 X   https://github.com/processing/processing/issues/4722
 
 
@@ -752,7 +752,7 @@ X   https://github.com/processing/processing/pull/3553
 X   https://github.com/processing/processing/issues/3550
 
 andres/jakub
-X toggling between noLights and PointLight in draw() behaving strangely
+X toggling between noLights and PointLight in roboLoop() behaving strangely
 X   https://github.com/processing/processing/issues/3546
 X NPE in Planets demo
 X   https://github.com/processing/processing/issues/3551
@@ -821,7 +821,7 @@ X   https://github.com/processing/processing/issues/115
 X lousy graphics cards cause background to flicker if background() not used
 X   http://code.google.com/p/processing/issues/detail?id=146
 X   https://github.com/processing/processing/issues/185
-X   OPENGL sketches flicker w/ Vista when background() not used inside draw()
+X   OPENGL sketches flicker w/ Vista when background() not used inside roboLoop()
 X   Disabling Aero scheme sometimes prevents the problem
 X   Updating graphics drivers may prevent the problem 
 X ellipse scaling method isn't great
@@ -865,7 +865,7 @@ X radius for rect not working on PShape
 X   https://github.com/processing/processing/issues/2646
 X bug in arc with createShape 
 X   https://github.com/processing/processing/issues/3018
-X OpenGL sketch flickers when draw() is missing or empty
+X OpenGL sketch flickers when roboLoop() is missing or empty
 X   https://github.com/processing/processing/issues/3473
 X   https://github.com/processing/processing/pull/3521
 X size() errors
@@ -951,7 +951,7 @@ X sketches with new fullScreen() method should grab focus by default
 X   https://github.com/processing/processing/issues/3380
 X sketches not getting focus with Java2D
 X   https://github.com/processing/processing/issues/3389
-X draw() executes twice when noLoop() called in setup()
+X roboLoop() executes twice when noLoop() called in setup()
 X   https://github.com/processing/processing/issues/3310
 X   broken since 3.0a7, but not in 3.0a5
 o pixelDensity(BEST)? (messes with pixels, but for most sketches, helpful)
@@ -978,7 +978,7 @@ X add support for more Image types (BGR) with PImage(java.awt.Image) constructor
 X move Java2D and JavaFX classes to their own packages
 
 threading headaches
-X sketch not always showing with empty draw()
+X sketch not always showing with empty roboLoop()
 X   https://github.com/processing/processing/issues/3363
 X static mode broken with Java2D on Windows and Linux
 X   https://github.com/processing/processing/issues/3315
@@ -1050,8 +1050,8 @@ cleaning
 o keep Danger2D? 
 o   can't do version that draws to BufferStrategy directly
 o   pixel operations (get/set/loadPixels/saveFrame) might be fixable
-o   but can't re-run draw() to re-blit the screen
-o     because we don't split calc() and draw()
+o   but can't re-run roboLoop() to re-blit the screen
+o     because we don't split calc() and roboLoop()
 o   even with the split, handleDraw() might need to live in PSurface
 o   add calc() option? this could ease transition
 X   decided to put efforts into JavaFX
@@ -1289,7 +1289,7 @@ X     in the end, not worth adding fromXxxx() syntax for single use
 opengl
 X OpenGL sketches work only after running a sketch with default renderer
 X   https://github.com/processing/processing/issues/3218
-X static mode - no setup() / draw() - broken in OpenGL
+X static mode - no setup() / roboLoop() - broken in OpenGL
 X   https://github.com/processing/processing/issues/3163
 X deal with some performance issues
 X   https://github.com/processing/processing/issues/3210
@@ -1297,7 +1297,7 @@ X Can't run sketches with offscreen PGraphics
 X   https://github.com/processing/processing/issues/3259
 o Merge glw code into the OpenGL library
 o   https://github.com/processing/processing/issues/3284
-X "Buffers have not been created" error for sketches w/o draw()
+X "Buffers have not been created" error for sketches w/o roboLoop()
 X   https://github.com/processing/processing/issues/2469
 o get code into makeGraphics() to handle bad path settings for LWJGL
 o   right now it has a bunch of JOGL-specific code
@@ -1341,7 +1341,7 @@ o   really nice for auto-complete
 o   prevents hundreds of entries from coming up w/ auto-complete
 o   downside: breaks compatibility big time
 X   would have to use ALIGN_CENTER eta al, so no
-X noSmooth() not sticking, has to be called again inside draw()
+X noSmooth() not sticking, has to be called again inside roboLoop()
 X   https://github.com/processing/processing/issues/3113
 X performance issues on OS X (might be threading due to Applet)
 X   https://github.com/processing/processing/issues/2423
@@ -1380,7 +1380,7 @@ X   https://github.com/processing/processing/pull/3053
 X   https://github.com/processing/processing/issues/3052
 
 akarshit
-X lerpColor() outside of setup()/draw() kills sketch
+X lerpColor() outside of setup()/roboLoop() kills sketch
 X   https://github.com/processing/processing/issues/3145
 X use default colorMode() with lerpColor() outside setup()
 X   https://github.com/processing/processing/pull/3146
@@ -1419,7 +1419,7 @@ X   seems fixed due to the rewrite
 X remove set/get/removeCache() methods from PApplet (add //ignore line)
 X flicker on startup
 X   https://github.com/processing/processing/issues/3134
-X static mode - no setup() / draw() - broken in Java2D
+X static mode - no setup() / roboLoop() - broken in Java2D
 X   https://github.com/processing/processing/issues/3130
 X are we running on the EDT or not?
 X   switched to using the EDT, but no EDT for blit() b/c it flickers
@@ -1705,7 +1705,7 @@ X simple NPE issue that needs workaround
 X   https://github.com/processing/processing/issues/2354
 
 fixed in 2.1
-X draw() called again before finishing on OS X (retina issue)
+X roboLoop() called again before finishing on OS X (retina issue)
 X   https://github.com/processing/processing/issues/1709
 X get() not always setting alpha channel when used with point()
 X   https://github.com/processing/processing/issues/1756
@@ -2456,7 +2456,7 @@ o key/mouse events have concurrency problems with noLoop()
 X   http://code.google.com/p/processing/issues/detail?id=187
 o   need to say "no drawing inside mouse/key events w/ noLoop"
 X   changed to reference issue
-X redraw() doesn't work from within draw()
+X reroboLoop() doesn't work from within roboLoop()
 X   http://code.google.com/p/processing/issues/detail?id=195
 X   make note for Casey to include this in the reference
 X Potential race condition when resizing sketches
@@ -2975,7 +2975,7 @@ X   decide on naming for the next release
 
 
 0204 core (2.0a5)
-X Abnormal high Java CPU usage at empty sketch with draw() 
+X Abnormal high Java CPU usage at empty sketch with roboLoop() 
 X   http://code.google.com/p/processing/issues/detail?id=729
 X   https://forum.processing.org/topic/absurd-java-cpu-usage-at-empty-sketch-with-draw
 X "Framingham" example has BufferOverflowException
@@ -3032,7 +3032,7 @@ A video problem with P3D
 0201 core (2.0a2)
 o moviemaker built into core to write uncompressed frames? or PNG?
 X   doing this via a tool instead
-X on resize, call redraw() when noLoop() is used
+X on resize, call reroboLoop() when noLoop() is used
 o   need to add this to the docs
 X   was already in the documentation..
 o add inputPath()
@@ -3698,7 +3698,7 @@ X   can't get this to crash anymore
 o   http://dev.processing.org/bugs/show_bug.cgi?id=1252
 
 earlier
-X if no draw() method, and renderer is not displayable, then exit
+X if no roboLoop() method, and renderer is not displayable, then exit
 X   static mode PDFs shouldn't just hang
 
 
@@ -3767,7 +3767,7 @@ X fix get() when used with save() in OpenGL mode
 X immediately update projection with OpenGL 
 X   in the past, projection updates required a new frame
 X   also prevents camera/project from being reset with setSize() (regression?)
-X     which was a problem anyway because it made GL calls outside draw()
+X     which was a problem anyway because it made GL calls outside roboLoop()
 X partial fix for texture edge problems with opengl
 o   http://dev.processing.org/bugs/show_bug.cgi?id=602
 X some camera problems may be coming from "cameraNear = -8" line
@@ -4298,9 +4298,9 @@ X   move away from using method like display
 X   look into opengl stuff for dealing with this
 X move addListeners() calls back out of PGraphics
 X resize window will nuke font setting
-X textFont() used in setup() is null once draw() arrives
+X textFont() used in setup() is null once roboLoop() arrives
 X   http://dev.processing.org/bugs/show_bug.cgi?id=726
-X colorMode() set inside setup() sometimes not set once draw() arrives
+X colorMode() set inside setup() sometimes not set once roboLoop() arrives
 X   http://dev.processing.org/bugs/show_bug.cgi?id=767
 X applet sizing issues with external vm
 X   could this possibly be related to the linux bug?
@@ -4320,7 +4320,7 @@ o   http://processing.org/discourse/yabb_beta/YaBB.cgi?board=Suggestions;action=
 X   hopefully this is cleaned up by removing some of the synchronization
 X sketches lock up when system time is changed
 X   http://dev.processing.org/bugs/show_bug.cgi?id=639
-X can draw() not be run on awt event thread?
+X can roboLoop() not be run on awt event thread?
 X   look into opengl stuff for dealing with this
 o "is there a better way to do this" thread in lists folder
 X framerate that's reported is out of joint with actual
@@ -4510,7 +4510,7 @@ X fix background() with P3D and beginRaw()
 X endRaw() has a problem with hint(ENABLE_DEPTH_SORT)
 X   because the triangles won't be rendered by the time endRaw() is called
 X   force depth sorted triangles to flush
-X is mousePressed broken with noLoop() or redraw()?
+X is mousePressed broken with noLoop() or reroboLoop()?
 X   sort of but not really, add notes to reference about it
 
 cleaning
@@ -4570,7 +4570,7 @@ o break apart functions into local (placement) and override (blitting)
 o   just have a "thin_flat_line" option in opengl code
 o is quad strip broken or not behaving as expected?
 X   may be correct, it worked for nik
-X inside draw() mode, delay() does nothing
+X inside roboLoop() mode, delay() does nothing
 X   delay might be a good way to signal drawing to the screen/updating
 X set(x, y, image) x, y not setting with processing
 
@@ -4716,7 +4716,7 @@ X   100x100 issues are exhibited on bh140c PCs, test and fix!
 X   100,200 and 128,200
 o AIOOBE on PLine 757.. halts renderer
 o fix erik's problems with export (also in bugs db)
-X draw() called twice in vista with java 1.6
+X roboLoop() called twice in vista with java 1.6
 X   http://dev.processing.org/bugs/show_bug.cgi?id=587
 
 cleanup from previous releases
@@ -4934,7 +4934,7 @@ X   signs point to Runner or PApplet changes between 98 and 99
 X   commenting out applet.setupFrameResizeListener() 
 X     in line 307 from Runner.java solved the problem
 X   http://dev.processing.org/bugs/show_bug.cgi?id=282
-X size of sketch different in setup() and draw() on linux
+X size of sketch different in setup() and roboLoop() on linux
 X   make sure that the sketch isn't being sized based on bad insets
 X   problem with resizing the component when the frame wasn't resizable
 X   http://dev.processing.org/bugs/show_bug.cgi?id=341
@@ -5359,7 +5359,7 @@ sound has been removed
 o duration as an internal param, not a function
 o When a sound is finished playing, 
 o   it should return to 0 so it can play again
-o Putting sound.loop() in draw() seemed to spawn multiple sounds threads?
+o Putting sound.loop() in roboLoop() seemed to spawn multiple sounds threads?
 o After a sound is paused, it will only play from where it was paused
 o   to its end and will not loop again
 o The ref in PSound2 says volume accepts vals from 0...1
@@ -5554,7 +5554,7 @@ X   when run internally (no code folder or .java files) will just wait
 X shouldn't quit draw mode apps immediately
 X   otherwise something gets drawn then the applet exits
 X   should instead use exit() when they need to exit
-X NullPointerException when no draw()
+X NullPointerException when no roboLoop()
 X   http://dev.processing.org/bugs/show_bug.cgi?id=210
 X window closing immediately with library imports
 X   http://dev.processing.org/bugs/show_bug.cgi?id=204
@@ -5757,14 +5757,14 @@ X static applets need to be able to resize themselves on 'play'
 X figure out what to do with static apps exported as application
 X   needs to just hang there
 o scripts (w/ no graphics) will need to call exit() explicitly
-o   actually.. just override the default draw() to say exit()
+o   actually.. just override the default roboLoop() to say exit()
 X may need a fileOutput() and fileInput() function
 X   to take care of exception handling
 o or maybe scripts are just handled with a different method? (yech)
 o   or maybe setup() can actually throw and Exception?
 o   but that's inserted by the parser, and hidden from the user?
 o implement size(0, 0) -> just doesn't bother doing a frame.show();
-o   too abstract, just have draw() call exit by default
+o   too abstract, just have roboLoop() call exit by default
 o   so if nothing inside draw, just quits
 o   make properly exit after things are finished
 o still some weirdness with thread flickering on the mac
@@ -6011,7 +6011,7 @@ X   size(30000, 20000, ILLUSTRATOR)
 X make Graphics2 et al load dynamically using reflection
 X   can this be done with g2 and if exception just falls back to g1?
 X   this way people can remove g1 by hand
-o size() that changes renderer will throw nasty exception in draw()
+o size() that changes renderer will throw nasty exception in roboLoop()
 X   or maybe that's ok? document that no changing renderers?
 X take a look to see what needs to happen to get PAppletGL merged in
 X   i.e. can i just extend GLCanvas?
@@ -6102,7 +6102,7 @@ X what to do about backwards images
 X imageMode() wasn't being set properly
 X fix noLoop() not properly running
 X   If noLoop() is called in setup(), nothing is drawn to the screen.
-X also fix redraw() to include interrupt() again
+X also fix reroboLoop() to include interrupt() again
 X loadPixels throwing NPEs
 X fixes to SCREEN_SPACE text not being sized properly
 X loadPixels()/updatePixels() on screen space text (ouch)
@@ -6168,7 +6168,7 @@ o   or maybe get rid of stroke(0)? hrm
 
 0077 core
 X bring back pmouseX/Y using a tricky method of storing separate
-X   values for inside draw() versus inside the event handler versions
+X   values for inside roboLoop() versus inside the event handler versions
 X   debug handling, and make firstMouse public
 X explicitly state depth()/nodepth()
 X   don't allocate zbuffer & stencil until depth() is called
@@ -6375,7 +6375,7 @@ X make sure background() gets called at least once with opengl
 X   otherwise screen never actually updates
 X beginFrame() around setup()
 X   draw mode stuff happens inside setup.. 
-o   or maybe need to get better at size() inside of draw() ? 
+o   or maybe need to get better at size() inside of roboLoop() ? 
 X   make this consistent with the regular PApplet
 X     otherwise things are going to be weird/difficult for debugging
 
@@ -6410,7 +6410,7 @@ X   probably not using java charwidth for the char's width
 X   probably wasn't using textFont() properly
 X now that it's actually a key, should it be a char? (what's keyChar?)
 X   that way println(c) would work a little better..
-X libraryCalls() not properly working for pre, post, or draw()
+X libraryCalls() not properly working for pre, post, or roboLoop()
 o image(myg, x, y) doesn't work but image(myg, x, y, w, h) does
 o   (image kind prolly not set right and so image() gets pissy)
 o   http://processing.org/discourse/yabb/YaBB.cgi?board=Proce55ing_software_bugs;action=display;num=1091798655
@@ -6604,8 +6604,8 @@ X     http://processing.org/discourse/yabb/YaBB.cgi?board=Syntax;action=display;
 X   key codes not properly coming through for UP/DOWN/etc
 X     had to bring back keyCode
 X     http://processing.org/discourse/yabb/YaBB.cgi?board=Proce55ing_software_bugs;action=display;num=1075138932;start=0
-X add redraw() function
-X   call redraw() on the first time through (to force initial draw)
+X add reroboLoop() function
+X   call reroboLoop() on the first time through (to force initial draw)
 X   otherwise noLoop() in setup means no drawing happens at all
 
 040920 evening

@@ -145,7 +145,7 @@ public interface PSurface {
   /**
    * On the next trip through the animation thread, things should go sleepy-bye.
    * Does not pause the thread immediately because that needs to happen on the
-   * animation thread itself, so fires on the next trip through draw().
+   * animation thread itself, so fires on the next trip through roboLoop().
    */
   public void pauseThread();
 

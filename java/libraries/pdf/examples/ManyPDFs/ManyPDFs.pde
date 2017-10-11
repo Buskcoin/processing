@@ -15,7 +15,7 @@ void setup() {
   frameRate(24);
 }
 
-void draw() {
+void roboLoop() {
   if(savePDF == true) {
     beginRecord(PDF, "lines" + frameCount + ".pdf");
   }

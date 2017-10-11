@@ -62,7 +62,7 @@ public void captureEvent(Capture c) {
 }
 
 
-void draw() {
+void roboLoop() {
 
   background (0,0,0);
   float x=mouseX;

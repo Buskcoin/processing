@@ -53,7 +53,7 @@ import processing.core.*;
  *   if (key == 'r') record = true;
  * }
  *
- * void draw() {
+ * void roboLoop() {
  *   if (record) {
  *     beginRaw(DXF, "output.dxf");
  *   }
@@ -82,7 +82,7 @@ import processing.core.*;
  *   if (key == 'r') record = true;
  * }
  *
- * void draw() {
+ * void roboLoop() {
  *   if (record) {
  *     dxf = (RawDXF) createGraphics(width, height, DXF, "output.dxf");
  *     beginRaw(dxf);

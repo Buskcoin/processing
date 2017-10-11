@@ -13,7 +13,7 @@ void setup() {
   oled = new SSD1306("i2c-1", 0x3c);
 }
 
-void draw() {
+void roboLoop() {
   background(0);
   stroke(255);
   line(0, 0, 127, 63);

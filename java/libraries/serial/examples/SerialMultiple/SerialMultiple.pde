@@ -28,7 +28,7 @@ void setup()  {
 }
 
 
-void draw() {
+void roboLoop() {
   // clear the screen:
   background(0);
   // use the latest byte from port 0 for the first circle

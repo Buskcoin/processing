@@ -245,7 +245,7 @@ class FontTexture implements PConstants {
     return outdated;
   }
 
-//  public void draw() {
+//  public void roboLoop() {
 //    Texture tex = textures[lastTex];
 //    pgl.drawTexture(tex.glTarget, tex.glName,
 //                    tex.glWidth, tex.glHeight,
