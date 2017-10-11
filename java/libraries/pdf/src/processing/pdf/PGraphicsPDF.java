@@ -315,7 +315,7 @@ public class PGraphicsPDF extends PGraphicsJava2D {
 
 
   /**
-   * Call to explicitly go to the next page from within a single draw().
+   * Call to explicitly go to the next page from within a single roboLoop().
    */
   public void nextPage() {
     PStyle savedStyle = getStyle();

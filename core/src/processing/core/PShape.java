@@ -267,7 +267,7 @@ public class PShape implements PConstants {
 
   // fill and stroke functions will need a pointer to the parent
   // PGraphics object.. may need some kind of createShape() fxn
-  // or maybe the values are stored until draw() is called?
+  // or maybe the values are stored until roboLoop() is called?
 
   // attaching images is very tricky.. it's a different type of data
 
@@ -2931,7 +2931,7 @@ public class PShape implements PConstants {
    * the effect. For example, calling <b>translate(50, 0)</b> and then
    * <b>translate(20, 0)</b> is the same as <b>translate(70, 0)</b>. This
    * transformation is applied directly to the shape, it's not refreshed each
-   * time <b>draw()</b> is run.
+   * time <b>roboLoop()</b> is run.
    * <br /><br />
    * Using this method with the <b>z</b> parameter requires using the P3D
    * parameter in combination with size.
@@ -2971,7 +2971,7 @@ public class PShape implements PConstants {
    * Subsequent calls to the method accumulates the effect. For example,
    * calling <b>rotateX(HALF_PI)</b> and then <b>rotateX(HALF_PI)</b> is the
    * same as <b>rotateX(PI)</b>. This transformation is applied directly to
-   * the shape, it's not refreshed each time <b>draw()</b> is run.
+   * the shape, it's not refreshed each time <b>roboLoop()</b> is run.
    * <br /><br />
    * This method requires a 3D renderer. You need to use P3D as a third
    * parameter for the <b>size()</b> function as shown in the example above.
@@ -3004,7 +3004,7 @@ public class PShape implements PConstants {
    * Subsequent calls to the method accumulates the effect. For example,
    * calling <b>rotateY(HALF_PI)</b> and then <b>rotateY(HALF_PI)</b> is the
    * same as <b>rotateY(PI)</b>. This transformation is applied directly to
-   * the shape, it's not refreshed each time <b>draw()</b> is run.
+   * the shape, it's not refreshed each time <b>roboLoop()</b> is run.
    * <br /><br />
    * This method requires a 3D renderer. You need to use P3D as a third
    * parameter for the <b>size()</b> function as shown in the example above.
@@ -3039,7 +3039,7 @@ public class PShape implements PConstants {
    * Subsequent calls to the method accumulates the effect. For example,
    * calling <b>rotateZ(HALF_PI)</b> and then <b>rotateZ(HALF_PI)</b> is the
    * same as <b>rotateZ(PI)</b>. This transformation is applied directly to
-   * the shape, it's not refreshed each time <b>draw()</b> is run.
+   * the shape, it's not refreshed each time <b>roboLoop()</b> is run.
    * <br /><br />
    * This method requires a 3D renderer. You need to use P3D as a third
    * parameter for the <b>size()</b> function as shown in the example above.
@@ -3073,7 +3073,7 @@ public class PShape implements PConstants {
    * calls to the method accumulates the effect. For example, calling
    * <b>rotate(HALF_PI)</b> and then <b>rotate(HALF_PI)</b> is the same as
    * <b>rotate(PI)</b>. This transformation is applied directly to the shape,
-   * it's not refreshed each time <b>draw()</b> is run.
+   * it's not refreshed each time <b>roboLoop()</b> is run.
    *
    * ( end auto-generated )
    * @webref pshape:method
@@ -3121,7 +3121,7 @@ public class PShape implements PConstants {
    * 200%. Subsequent calls to the method multiply the effect. For example,
    * calling <b>scale(2.0)</b> and then <b>scale(1.5)</b> is the same as
    * <b>scale(3.0)</b>. This transformation is applied directly to the shape,
-   * it's not refreshed each time <b>draw()</b> is run.
+   * it's not refreshed each time <b>roboLoop()</b> is run.
    * <br /><br />
    * Using this method with the <b>z</b> parameter requires using the P3D
    * parameter in combination with size.

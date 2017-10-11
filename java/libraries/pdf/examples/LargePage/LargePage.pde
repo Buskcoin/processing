@@ -16,7 +16,7 @@ void setup()
   size(2000, 2000, PDF, "Line.pdf");
 }
 
-void draw() 
+void roboLoop() 
 {
   background(255);
   stroke(0, 20);

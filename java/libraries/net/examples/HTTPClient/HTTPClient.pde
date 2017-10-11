@@ -26,7 +26,7 @@ void setup() {
   c.write("\r\n");
 }
 
-void draw() {
+void roboLoop() {
   if (c.available() > 0) { // If there's incoming data from the client...
     data = c.readString(); // ...then grab it and print it
     println(data);

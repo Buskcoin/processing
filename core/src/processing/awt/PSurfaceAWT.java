@@ -136,7 +136,7 @@ public class PSurfaceAWT extends PSurfaceNone {
           Dimension canvasSize = canvas.getSize();
           if (canvasSize.width != sketch.sketchWidth() ||
               canvasSize.height != sketch.sketchHeight()) {
-            sketch.redraw();
+            sketch.reroboLoop();
           }
         }
       }

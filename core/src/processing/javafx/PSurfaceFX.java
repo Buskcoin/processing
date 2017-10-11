@@ -137,7 +137,7 @@ public class PSurfaceFX implements PSurface {
                             Number oldWidth, Number newWidth) {
 //          sketch.width = newWidth.intValue();
           sketch.setSize(newWidth.intValue(), sketch.height);
-//          draw();
+//          roboLoop();
           fx.setSize(sketch.width, sketch.height);
         }
       });
@@ -147,7 +147,7 @@ public class PSurfaceFX implements PSurface {
                             Number oldHeight, Number newHeight) {
 //          sketch.height = newHeight.intValue();
           sketch.setSize(sketch.width, newHeight.intValue());
-//          draw();
+//          roboLoop();
           fx.setSize(sketch.width, sketch.height);
         }
       });

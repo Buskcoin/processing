@@ -20,7 +20,7 @@ public class WriteSVG extends PApplet {
 //    frameRate(1);
   }
 
-  public void draw() {
+  public void roboLoop() {
     background(random(255));
     stroke(random(255));
     strokeWeight(20);

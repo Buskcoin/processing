@@ -79,7 +79,7 @@ import java.util.HashMap;
  *   size(400, 400);
  *   moo = loadShape("moo.svg");
  * }
- * void draw() {
+ * void roboLoop() {
  *   background(255);
  *   shape(moo, mouseX, mouseY);
  * }

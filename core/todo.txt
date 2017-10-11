@@ -351,7 +351,7 @@ _   noticed that dispose() is getting called. stop() isn't.
 _   http://java.sun.com/docs/books/tutorial/deployment/applet/lifeCycle.html
 _ static mode sketches seem to break ESC... noLoop() problem?
 _   need to find another way to get ESC on static mode
-_   b/c static mode sketches *do* finish because they have no draw()
+_   b/c static mode sketches *do* finish because they have no roboLoop()
 _ sort out destroy(), stop(), pause() et al
 _   ColorSelector should stop/pause when not visible
 _     right now it's doing a low-level looping

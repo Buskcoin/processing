@@ -2,7 +2,7 @@ void setup()
 {
 }
 
-void draw()
+void roboLoop()
 {
 	println("i am a bug...);
 } 

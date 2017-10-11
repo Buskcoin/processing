@@ -24,7 +24,7 @@ size(400, 200);
 alist.add("hello");
 }
 
-public void draw() {
+public void roboLoop() {
 rect(width/4, height/4, width/2, height/2);
 synchronized(alist) {
 alist.get(0);

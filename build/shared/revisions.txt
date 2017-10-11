@@ -703,7 +703,7 @@ Lots of bug fixes.
 + Some semi-transparent edges of sphere() meshes rendered in higher density
   https://github.com/processing/processing/issues/4720
   
-+ P2D and P3D not stopping with empty draw() blocks
++ P2D and P3D not stopping with empty roboLoop() blocks
   https://github.com/processing/processing/issues/4722
 
 
@@ -2530,7 +2530,7 @@ beta release. Please keep the reports & code coming and help us get to 3.0.
   https://github.com/processing/processing/pull/3553
   https://github.com/processing/processing/issues/3550
 
-+ Toggling between noLights and PointLight in draw() behaving strangely
++ Toggling between noLights and PointLight in roboLoop() behaving strangely
   https://github.com/processing/processing/issues/3546
   
 + NullPointerException in Planets demo
@@ -2711,7 +2711,7 @@ technical details, the detailed changes since 3.0 alpha 11 are below.
 + Bug in arc with createShape()
   https://github.com/processing/processing/issues/3018
 
-+ OpenGL sketch flickers when draw() is missing or empty
++ OpenGL sketch flickers when roboLoop() is missing or empty
   https://github.com/processing/processing/issues/3473
   https://github.com/processing/processing/pull/3521
 
@@ -2815,7 +2815,7 @@ Hopefully the last release before we go to beta.
 + Sketches not getting focus with Java2D
   https://github.com/processing/processing/issues/3389
   
-+ draw() executes twice when noLoop() called in setup()
++ roboLoop() executes twice when noLoop() called in setup()
   https://github.com/processing/processing/issues/3310
 
 + displayDensity() not functioning properly
@@ -2845,7 +2845,7 @@ Hopefully the last release before we go to beta.
 
 [ multithreading is hard ] 
 
-+ Sketch not always showing with empty draw()
++ Sketch not always showing with empty roboLoop()
   https://github.com/processing/processing/issues/3363
   
 + Static mode broken with Java2D on Windows and Linux
@@ -3278,7 +3278,7 @@ section below, for a change in how the size() command works.
 + Single Frame (no screen display) PDF broken
   https://github.com/processing/processing/issues/3280
 
-+ "Buffers have not been created" error for sketches w/o draw()
++ "Buffers have not been created" error for sketches w/o roboLoop()
   https://github.com/processing/processing/issues/2469
 
 
@@ -3398,7 +3398,7 @@ section below, for a change in how the size() command works.
 + OpenGL sketches work only after running a sketch with default renderer
   https://github.com/processing/processing/issues/3218
   
-+ static mode - no setup() / draw() - broken in OpenGL
++ static mode - no setup() / roboLoop() - broken in OpenGL
   https://github.com/processing/processing/issues/3163
   
 + Deal with some performance issues
@@ -3493,7 +3493,7 @@ but a few that you might be likely to run across:
 + install/remove buttons not working in the managers
   https://github.com/processing/processing/issues/3172
 
-+ static mode - no setup() / draw() - broken in OpenGL
++ static mode - no setup() / roboLoop() - broken in OpenGL
   https://github.com/processing/processing/issues/3163
 
 + sketch window is not placed at correct location when running a second time
@@ -3729,7 +3729,7 @@ but a few that you might be likely to run across:
   https://github.com/processing/processing/issues/3148
   https://github.com/processing/processing/pull/3196
 
-+ lerpColor() outside of setup()/draw() kills sketch
++ lerpColor() outside of setup()/roboLoop() kills sketch
   https://github.com/processing/processing/issues/3145
 
 + Use default colorMode() with lerpColor() outside setup()
@@ -3761,7 +3761,7 @@ but a few that you might be likely to run across:
 + loadXxxx() methods will truly follow redirects (including http -> https)
   https://github.com/processing/processing-docs/issues/218
 
-+ noSmooth() not sticking, has to be called again inside draw()
++ noSmooth() not sticking, has to be called again inside roboLoop()
   https://github.com/processing/processing/issues/3113
 
 + Sketch window dimensions off in Java2D
@@ -3848,7 +3848,7 @@ but a few that you might be likely to run across:
 + Fix/prevent flicker on startup
   https://github.com/processing/processing/issues/3134
 
-+ static mode - no setup() / draw() - broken in Java2D
++ static mode - no setup() / roboLoop() - broken in Java2D
   https://github.com/processing/processing/issues/3130
 
 + Switch to using the EDT for launching sketch and talking to the OS
@@ -4798,7 +4798,7 @@ the new Python Mode, coming soon: https://github.com/jdf/processing.py
 
 [ fixed in earlier releases ] 
 
-+ draw() called again before finishing on OS X (retina issue)
++ roboLoop() called again before finishing on OS X (retina issue)
   https://github.com/processing/processing/issues/1709
 
 + get() not always setting alpha channel when used with point()
@@ -7107,7 +7107,7 @@ earlier releases.
 + OpenGL applets are working again.
   http://code.google.com/p/processing/issues/detail?id=845
 
-+ Abnormal high Java CPU usage at empty sketch with draw() 
++ Abnormal high Java CPU usage at empty sketch with roboLoop() 
   http://code.google.com/p/processing/issues/detail?id=729
 
 + "Framingham" example has BufferOverflowException
@@ -7350,7 +7350,7 @@ are exported, and a number of other bug fixes and tweaks.
   This helps prevent the unsightly mess of DLLs that were crowding the
   root folder of exported applications on Windows and Linux.
 
-+ If noLoop() has been called but a sketch is resized, redraw() will be 
++ If noLoop() has been called but a sketch is resized, reroboLoop() will be 
   called to update the screen.
 
 
@@ -7543,7 +7543,7 @@ features may be broken. See statement directly above.
 + excessive rotation of application causes memory to run out
   http://code.google.com/p/processing/issues/detail?id=235
 
-+ mirroring in A3D when background() not called within draw()
++ mirroring in A3D when background() not called within roboLoop()
   http://code.google.com/p/processing/issues/detail?id=624
 
 + removed A2D and A3D constants

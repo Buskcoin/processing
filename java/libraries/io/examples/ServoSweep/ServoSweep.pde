@@ -15,7 +15,7 @@ void setup() {
   servo2.attach(4);
 }
 
-void draw() {
+void roboLoop() {
   background(0);
   stroke(255);
   strokeWeight(3);

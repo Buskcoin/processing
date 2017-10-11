@@ -3630,7 +3630,7 @@ X   opted not to a long while ago
 o process still visible in Sysinternals Process Explorer after quit
 X   http://code.google.com/p/processing/issues/detail?id=259
 X   closed after no follow-up
-o setup() and draw() are not bold on osx (10.4)
+o setup() and roboLoop() are not bold on osx (10.4)
 o   likely osx refuses to do monaco bold
 X   http://dev.processing.org/bugs/show_bug.cgi?id=1047
 X   closed a long while ago
@@ -3949,7 +3949,7 @@ o reading movie is really really slow (2-3 fps)
 o   possible improvement from qtjava list added
 X   http://dev.processing.org/bugs/show_bug.cgi?id=40
 o tearing and incomplete updates on capture?
-o   putting read() inside draw() seems to eliminate this?
+o   putting read() inside roboLoop() seems to eliminate this?
 o   http://dev.processing.org/bugs/show_bug.cgi?id=114
 o   when drawing large video, the two triangles for the rect are out of sync
 o     only shows up in P3D
@@ -5597,7 +5597,7 @@ o   acts just like find/replace.. go through and do by hand
 o   3 column input file
 o   regexp to find, to replace, human readable description
 o   (void\s+)loop(\s+{) -> $1draw$2 (maintain all whitespace stuff)
-o   "The loop() method is now called draw() as of beta"
+o   "The loop() method is now called roboLoop() as of beta"
 o   "angleMode no longer exists, use radians() around your angles" 
 o   (comment out the line)
 X   this would only fix the minor stuff, not the important stuff
@@ -5659,7 +5659,7 @@ X   maybe the renderer exception is something different? newrendex?
 X   http://dev.processing.org/bugs/show_bug.cgi?id=78
 o weird exception in the run button watcher
 X   http://processing.org/bugs/show_bug.cgi?id=42
-X exceptions in draw() apps aren't caught
+X exceptions in roboLoop() apps aren't caught
 X   the program resize(200, 200); just does nothing (doesn't complain)
 X   http://dev.processing.org/bugs/show_bug.cgi?id=81
 X exception in setup() on external app doesn't kill run button 
@@ -6378,7 +6378,7 @@ X   add accessor to get items from the table
 X   see if items can be named in illusfarter using the svg palette
 X compound shapes (fonts) won't wind properly, so fill will be messed up
 X   added hack to allow for broken shapes
-X rename draw() and its buddy
+X rename roboLoop() and its buddy
 X a moveto *inside* a shape will be treated as a lineto
 X   had to fix this
 X implement polyline
@@ -6449,7 +6449,7 @@ X add PGraphicsOpenGL change to revisions.txt and the changes faq
 
 0116 pde
 o including function outlines in the code? 
-o   i.e. make setup() and draw() for people? seems silly.. not much to do
+o   i.e. make setup() and roboLoop() for people? seems silly.. not much to do
 o when importing a library, insert 'captureEvent'?
 o   again, seems to fraught with potential problems
 o saveFrame() directly to quicktime via port of DbnRecorder
@@ -6545,7 +6545,7 @@ X   noted in savePath and common issues
 X how do i move the mouse cursor? (or does this go in hacks?)
 X   http://java.sun.com/j2se/1.4.2/docs/api/java/awt/Robot.html
 X   requires a signed applet or local application
-X pmouseX and pmouseY have different values in mouse methods vs. draw()
+X pmouseX and pmouseY have different values in mouse methods vs. roboLoop()
 X advanced reference contains more info about how things work
 X move 'how do i create large images' here
 X createGraphics with PDF, using dispose() to clear the thing
@@ -7046,8 +7046,8 @@ o if NullPointerEx on a line that includes a "pixels["
 o   give an error message saying "you may need to call loadPixels"
 
 discuss with casey
-X redraw() should be listed under "related" for loop and noLoop
-X redraw() can't be called inside draw(), but loop/noLoop can
+X reroboLoop() should be listed under "related" for loop and noLoop
+X reroboLoop() can't be called inside roboLoop(), but loop/noLoop can
 X   not as weird as it sounds, but the redraw flag is gonna get cleared
 X documentation on tabs: .java files, inner classes, etc
 X   additional tabs are added to the main code
@@ -7061,7 +7061,7 @@ X   most things have other ways of making things much faster
 X   we've attempted for less confusion over speed in some cases
 X   get(), set() and red() et al are one such example
 X web colors with alpha: 0xffcc0080 or unhex("ffcc0080")
-`X the draw() method must exist, otherwise the sketch won't run
+`X the roboLoop() method must exist, otherwise the sketch won't run
 X   i.e. can't just have mousePressed() 
 o make a sketch that shows loading from the web
 o make another sketch that shows loading from a file
@@ -7433,7 +7433,7 @@ o particles lib requires depth() (but shouldn't)
 o   fix for 78 since not sure when simon's new version is happening
 X   requires because uses 3D.. oh well
 o "draw" is not highlighted as a keyword.. other keywords?
-o   draw(), PGraphics(), NO_DEPTH_TEST, PMovie(), PMovie.repeat()
+o   roboLoop(), PGraphics(), NO_DEPTH_TEST, PMovie(), PMovie.repeat()
 o   PClient(), PClient.available(), PClient.read(), 
 o   PServer(), PServer.dispose(), PServer.write(), attach(), length
 o   round() is not colored
@@ -7606,7 +7606,7 @@ X "use external editor" is broken
 X   throws exception on load()
 X make preproc only build once (across osx, windows, linux)
 X preproc: making all functions public that have no specifier
-X   this will make draw() etc all much easier
+X   this will make roboLoop() etc all much easier
 X   as well as the library events
 X   focusGained/focusLost was added.. 
 o if a data file is in the sketch (not data) folder export breaks
@@ -8125,7 +8125,7 @@ shape class Something {
     // so that this can use "implements ShapeInterface"
   }
 
-  void draw() {  // uses internal g. that's been set by parent
+  void roboLoop() {  // uses internal g. that's been set by parent
   }
 }
 
@@ -8139,7 +8139,7 @@ where the shape() method in BApplet looks like:
 
 shape(ShapeInterface o) {
   o.graphics(this.g);  // has to be a method, since intf
-  o.draw();
+  o.roboLoop();
 }
 
 X run java mode when large 'data' folder is in use
@@ -10046,7 +10046,7 @@ endShape();
 X fill(#ffcc00) wasn't working for rect, calci not being set
 X   also affected background and stroke
 X export was failing if no data dir
-X move background() out of draw() for draw mode apps
+X move background() out of roboLoop() for draw mode apps
 X click on project name to quickly go to rename mode
 X cursor goes away during edits (java bug, fix with hack)
 X handling of key/mouse events smoothed out
@@ -10198,7 +10198,7 @@ X save window position (only during session) of sketch run window
 X shouldn't substitute f's for: "Univers76.vlw.gz";
 X   need lots of testing--this changes lots of things
 X fixed commentsCodec which was mangling things
-o present mode doesn't work for draw()
+o present mode doesn't work for roboLoop()
 X   tested, seems to be fine?
 X console - convert tabs to spaces
 o   line wrapping (but save info for resize? noo..)
@@ -10418,7 +10418,7 @@ X write class loader or figure out how to change classpath
 X   might be able to load classes using forInstance on each file
 X   using byte array version of constructor
 X you should be able to create methods in drawing mode
-X   this shouldn't work, make void draw() {} to allow
+X   this shouldn't work, make void roboLoop() {} to allow
 
 
 0030
@@ -10456,14 +10456,14 @@ X   remove class 'PdeEditorOutput' and 'PdeEditorLabel'(?)
 X   added editor.console.lines to pde.properties
 X int() and float() now work for casting
 X draw mode needs to be better for workshops
-X   make size() work for draw() mode
+X   make size() work for roboLoop() mode
 X     inside Engine, reach in and grab calls to 'size'
 X     if call is not using a constant number, then punt
 X   when exporting, needs to grab this size parameter as well
 o related classes
 X   resolved, just use inner classes for everything
 o   better way to do parent and g.rect stuff in related classes
-o     implement g. passed into any function called draw()
+o     implement g. passed into any function called roboLoop()
 o     also important for things like cos, sin, max etc
 o     but maybe once you're doing more advanced code, that stuff's ok
 o       or using inner classes is better b/c class stuff works

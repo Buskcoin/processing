@@ -8,6 +8,6 @@ void setup() {
   adc = new MCP3001(SPI.list()[0]);
 }
 
-void draw() {
+void roboLoop() {
   background(adc.getAnalog() * 255);
 }

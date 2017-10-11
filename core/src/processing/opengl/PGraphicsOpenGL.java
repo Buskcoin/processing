@@ -555,8 +555,8 @@ public class PGraphicsOpenGL extends PGraphics {
     "Tessellation Error: %1$s";
   static final String GL_THREAD_NOT_CURRENT =
     "You are trying to draw outside OpenGL's animation thread.\n" +
-    "Place all drawing commands in the draw() function, or inside\n" +
-    "your own functions as long as they are called from draw(),\n" +
+    "Place all drawing commands in the roboLoop() function, or inside\n" +
+    "your own functions as long as they are called from roboLoop(),\n" +
     "but not in event handling functions such as keyPressed()\n" +
     "or mousePressed().";
 
@@ -4198,8 +4198,8 @@ public class PGraphicsOpenGL extends PGraphics {
    * <P>
    * begin/endCamera clauses do not automatically reset the camera transform
    * matrix. That's because we set up a nice default camera transform in
-   * setup(), and we expect it to hold through draw(). So we don't reset the
-   * camera transform matrix at the top of draw(). That means that an
+   * setup(), and we expect it to hold through roboLoop(). So we don't reset the
+   * camera transform matrix at the top of roboLoop(). That means that an
    * innocuous-looking clause like
    *
    * <PRE>
@@ -4208,7 +4208,7 @@ public class PGraphicsOpenGL extends PGraphics {
    * endCamera();
    * </PRE>
    *
-   * at the top of draw(), will result in a runaway camera that shoots
+   * at the top of roboLoop(), will result in a runaway camera that shoots
    * infinitely out of the screen over time. In order to prevent this, it is
    * necessary to call some function that does a hard reset of the camera
    * transform matrix inside of begin/endCamera. Two options are
@@ -4316,16 +4316,16 @@ public class PGraphicsOpenGL extends PGraphics {
    * do not need to be called from with beginCamera();/endCamera(); That's
    * because they always apply to the camera transformation, and they always
    * totally replace it. That means that any coordinate transforms done before
-   * camera(); in draw() will be wiped out. It also means that camera() always
+   * camera(); in roboLoop() will be wiped out. It also means that camera() always
    * operates in untransformed world coordinates. Therefore it is always
    * redundant to call resetMatrix(); before camera(); This isn't technically
    * true of gluLookat, but it's pretty much how it's used.
    * <P>
    * Now, beginCamera(); and endCamera(); are useful if you want to move the
    * camera around using transforms like translate(), etc. They will wipe out
-   * any coordinate system transforms that occur before them in draw(), but they
+   * any coordinate system transforms that occur before them in roboLoop(), but they
    * will not automatically wipe out the camera transform. This means that they
-   * should be at the top of draw(). It also means that the following:
+   * should be at the top of roboLoop(). It also means that the following:
    *
    * <PRE>
    * beginCamera();
@@ -4512,7 +4512,7 @@ public class PGraphicsOpenGL extends PGraphics {
    * </UL>
    * Each of these three functions completely replaces the projection matrix
    * with a new one. They can be called inside setup(), and their effects will
-   * be felt inside draw(). At the top of draw(), the projection matrix is not
+   * be felt inside roboLoop(). At the top of roboLoop(), the projection matrix is not
    * reset. Therefore the last projection function to be called always
    * dominates. On resize, the default projection is always established, which
    * has perspective.
@@ -6789,7 +6789,7 @@ public class PGraphicsOpenGL extends PGraphics {
 //      reapplySettings();
 
       // To avoid having garbage in the screen after a resize,
-      // in the case background is not called in draw().
+      // in the case background is not called in roboLoop().
       if (primaryGraphics) {
         background(backgroundColor);
       } else {

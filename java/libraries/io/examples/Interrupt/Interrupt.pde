@@ -10,7 +10,7 @@ void setup() {
   GPIO.attachInterrupt(4, this, "pinEvent", GPIO.RISING);
 }
 
-void draw() {
+void roboLoop() {
   background(bgcolor);
 }
 

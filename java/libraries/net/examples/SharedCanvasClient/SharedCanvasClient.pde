@@ -25,7 +25,7 @@ void setup()
   c = new Client(this, "127.0.0.1", 12345); // Replace with your server's IP and port
 }
 
-void draw() 
+void roboLoop() 
 {
   if (mousePressed == true) {
     // Draw our line

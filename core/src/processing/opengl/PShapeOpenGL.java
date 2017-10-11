@@ -3549,7 +3549,7 @@ public class PShapeOpenGL extends PShape {
   // Basically, the algorithm traverses all the shapes in the hierarchy and
   // updates the index cache for each child shape holding geometry (those being
   // the leaf nodes in the hierarchy tree), and creates index caches for the
-  // group shapes so that the draw() method can be called from any shape in the
+  // group shapes so that the roboLoop() method can be called from any shape in the
   // hierarchy and the correct piece of geometry will be rendered.
   //
   // For example, in the following hierarchy:
@@ -3565,9 +3565,9 @@ public class PShapeOpenGL extends PShape {
   //   GEO SHAPE 0         GEO SHAPE 0     GEO SHAPE 1       GEO SHAPE 2
   //   4 vertices          5 vertices      6 vertices        3 vertices
   //
-  // calling draw() from the root group should result in all the
+  // calling roboLoop() from the root group should result in all the
   // vertices (4 + 5 + 6 + 3 = 18) being rendered, while calling
-  // draw() from either child groups 0 or 1 should result in the first
+  // roboLoop() from either child groups 0 or 1 should result in the first
   // 4 vertices or the last 14 vertices being rendered, respectively.
   protected void aggregateImpl() {
     if (family == GROUP) {
@@ -4646,7 +4646,7 @@ public class PShapeOpenGL extends PShape {
 
 
   /*
-  public void draw() {
+  public void roboLoop() {
     draw(pg);
   }
   */

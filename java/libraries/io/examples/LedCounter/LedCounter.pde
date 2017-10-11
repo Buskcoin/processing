@@ -18,7 +18,7 @@ void setup() {
   frameRate(1);
 }
 
-void draw() {
+void roboLoop() {
   // make the LEDs count in binary
   for (int i=0; i < leds.length; i++) {
     if ((frameCount & (1 << i)) != 0) {

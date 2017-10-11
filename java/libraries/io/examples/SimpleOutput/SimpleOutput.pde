@@ -10,7 +10,7 @@ void setup() {
   frameRate(0.5);
 }
 
-void draw() {
+void roboLoop() {
   // make the LED blink
   ledOn = !ledOn;
   if (ledOn) {

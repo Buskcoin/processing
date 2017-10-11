@@ -32,7 +32,7 @@ void setup() {
   myPort = new Serial(this, portName, 9600);
 }
 
-void draw() {
+void roboLoop() {
   background(0);
   text("Last Received: " + inByte, 10, 130);
   text("Last Sent: " + whichKey, 10, 100);

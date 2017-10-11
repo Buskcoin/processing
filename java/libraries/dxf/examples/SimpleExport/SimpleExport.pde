@@ -15,7 +15,7 @@ void setup() {
   sphereDetail(12);
 }
 
-void draw() {
+void roboLoop() {
   if (record == true) {
     beginRaw(DXF, "output.dxf"); // Start recording to the file
   }

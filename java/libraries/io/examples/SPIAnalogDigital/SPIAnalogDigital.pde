@@ -11,7 +11,7 @@ void setup() {
   spi.settings(500000, SPI.MSBFIRST, SPI.MODE0);
 }
 
-void draw() {
+void roboLoop() {
   // dummy write, actual values don't matter
   byte[] out = { 0, 0 };
   byte[] in = spi.transfer(out);

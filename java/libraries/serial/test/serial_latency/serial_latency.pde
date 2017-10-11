@@ -20,7 +20,7 @@ void setup() {
   start = millis();
 }
 
-void draw() {
+void roboLoop() {
   background(255);
   if (0 < serial.available()) {
     int recv = serial.readBytes(in);

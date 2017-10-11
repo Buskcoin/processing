@@ -8,7 +8,7 @@ void setup() {
   GPIO.pinMode(4, GPIO.INPUT);
 }
 
-void draw() {
+void roboLoop() {
   // sense the input pin
   if (GPIO.digitalRead(4) == GPIO.HIGH) {
     fill(255);

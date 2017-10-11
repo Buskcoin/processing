@@ -942,7 +942,7 @@ public class PGraphics extends PImage implements PConstants {
 
   /**
    * Set engine's default values. This has to be called by PApplet,
-   * somewhere inside setup() or draw() because it talks to the
+   * somewhere inside setup() or roboLoop() because it talks to the
    * graphics buffer, meaning that for subclasses like OpenGL, there
    * needs to be a valid graphics context to mess with otherwise
    * you'll get some good crashing action.
@@ -1115,7 +1115,7 @@ public class PGraphics extends PImage implements PConstants {
    * draw GUI controls in 2D on top of a 3D interface). Starting in release
    * 0149, this will also clear the depth buffer. Restore the default with
    * hint(ENABLE_DEPTH_TEST), but note that with the depth buffer cleared,
-   * any 3D drawing that happens later in draw() will ignore existing shapes
+   * any 3D drawing that happens later in roboLoop() will ignore existing shapes
    * on the screen.
    * <br/> <br/>
    * hint(ENABLE_DEPTH_SORT) - Enable primitive z-sorting of triangles and
@@ -5204,7 +5204,7 @@ public class PGraphics extends PImage implements PConstants {
    * apply to everything that happens after and subsequent calls to the
    * function accumulates the effect. For example, calling <b>translate(50,
    * 0)</b> and then <b>translate(20, 0)</b> is the same as <b>translate(70,
-   * 0)</b>. If <b>translate()</b> is called within <b>draw()</b>, the
+   * 0)</b>. If <b>translate()</b> is called within <b>roboLoop()</b>, the
    * transformation is reset when the loop begins again. This function can be
    * further controlled by the <b>pushMatrix()</b> and <b>popMatrix()</b>.
    *
@@ -5246,7 +5246,7 @@ public class PGraphics extends PImage implements PConstants {
    * Transformations apply to everything that happens after and subsequent
    * calls to the function accumulates the effect. For example, calling
    * <b>rotate(HALF_PI)</b> and then <b>rotate(HALF_PI)</b> is the same as
-   * <b>rotate(PI)</b>. All tranformations are reset when <b>draw()</b>
+   * <b>rotate(PI)</b>. All tranformations are reset when <b>roboLoop()</b>
    * begins again.
    * <br/> <br/>
    * Technically, <b>rotate()</b> multiplies the current transformation
@@ -5282,7 +5282,7 @@ public class PGraphics extends PImage implements PConstants {
    * subsequent calls to the function accumulates the effect. For example,
    * calling <b>rotateX(PI/2)</b> and then <b>rotateX(PI/2)</b> is the same
    * as <b>rotateX(PI)</b>. If <b>rotateX()</b> is called within the
-   * <b>draw()</b>, the transformation is reset when the loop begins again.
+   * <b>roboLoop()</b>, the transformation is reset when the loop begins again.
    * This function requires using P3D as a third parameter to <b>size()</b>
    * as shown in the example above.
    *
@@ -5315,7 +5315,7 @@ public class PGraphics extends PImage implements PConstants {
    * subsequent calls to the function accumulates the effect. For example,
    * calling <b>rotateY(PI/2)</b> and then <b>rotateY(PI/2)</b> is the same
    * as <b>rotateY(PI)</b>. If <b>rotateY()</b> is called within the
-   * <b>draw()</b>, the transformation is reset when the loop begins again.
+   * <b>roboLoop()</b>, the transformation is reset when the loop begins again.
    * This function requires using P3D as a third parameter to <b>size()</b>
    * as shown in the examples above.
    *
@@ -5348,7 +5348,7 @@ public class PGraphics extends PImage implements PConstants {
    * subsequent calls to the function accumulates the effect. For example,
    * calling <b>rotateZ(PI/2)</b> and then <b>rotateZ(PI/2)</b> is the same
    * as <b>rotateZ(PI)</b>. If <b>rotateZ()</b> is called within the
-   * <b>draw()</b>, the transformation is reset when the loop begins again.
+   * <b>roboLoop()</b>, the transformation is reset when the loop begins again.
    * This function requires using P3D as a third parameter to <b>size()</b>
    * as shown in the examples above.
    *
@@ -5393,7 +5393,7 @@ public class PGraphics extends PImage implements PConstants {
    * after and subsequent calls to the function multiply the effect. For
    * example, calling <b>scale(2.0)</b> and then <b>scale(1.5)</b> is the
    * same as <b>scale(3.0)</b>. If <b>scale()</b> is called within
-   * <b>draw()</b>, the transformation is reset when the loop begins again.
+   * <b>roboLoop()</b>, the transformation is reset when the loop begins again.
    * Using this fuction with the <b>z</b> parameter requires using P3D as a
    * parameter for <b>size()</b> as shown in the example above. This function
    * can be further controlled by <b>pushMatrix()</b> and <b>popMatrix()</b>.
@@ -5450,7 +5450,7 @@ public class PGraphics extends PImage implements PConstants {
    * calls to the function accumulates the effect. For example, calling
    * <b>shearX(PI/2)</b> and then <b>shearX(PI/2)</b> is the same as
    * <b>shearX(PI)</b>. If <b>shearX()</b> is called within the
-   * <b>draw()</b>, the transformation is reset when the loop begins again.
+   * <b>roboLoop()</b>, the transformation is reset when the loop begins again.
    * <br/> <br/>
    * Technically, <b>shearX()</b> multiplies the current transformation
    * matrix by a rotation matrix. This function can be further controlled by
@@ -5484,7 +5484,7 @@ public class PGraphics extends PImage implements PConstants {
    * calls to the function accumulates the effect. For example, calling
    * <b>shearY(PI/2)</b> and then <b>shearY(PI/2)</b> is the same as
    * <b>shearY(PI)</b>. If <b>shearY()</b> is called within the
-   * <b>draw()</b>, the transformation is reset when the loop begins again.
+   * <b>roboLoop()</b>, the transformation is reset when the loop begins again.
    * <br/> <br/>
    * Technically, <b>shearY()</b> multiplies the current transformation
    * matrix by a rotation matrix. This function can be further controlled by
@@ -5693,10 +5693,10 @@ public class PGraphics extends PImage implements PConstants {
    * you want to more control over camera movement, however for most users,
    * the <b>camera()</b> function will be sufficient.<br /><br />The camera
    * functions will replace any transformations (such as <b>rotate()</b> or
-   * <b>translate()</b>) that occur before them in <b>draw()</b>, but they
+   * <b>translate()</b>) that occur before them in <b>roboLoop()</b>, but they
    * will not automatically replace the camera transform itself. For this
    * reason, camera functions should be placed at the beginning of
-   * <b>draw()</b> (so that transformations happen afterwards), and the
+   * <b>roboLoop()</b> (so that transformations happen afterwards), and the
    * <b>camera()</b> function can be used after <b>beginCamera()</b> if you
    * want to reset the camera before applying transformations.<br /><br
    * />This function sets the matrix mode to the camera matrix so calls such
@@ -6947,7 +6947,7 @@ public class PGraphics extends PImage implements PConstants {
    * Sets the default ambient light, directional light, falloff, and specular
    * values. The defaults are ambientLight(128, 128, 128) and
    * directionalLight(128, 128, 128, 0, 0, -1), lightFalloff(1, 0, 0), and
-   * lightSpecular(0, 0, 0). Lights need to be included in the draw() to
+   * lightSpecular(0, 0, 0). Lights need to be included in the roboLoop() to
    * remain persistent in a looping program. Placing them in the setup() of a
    * looping program will cause them to only have an effect the first time
    * through the loop.
@@ -6991,7 +6991,7 @@ public class PGraphics extends PImage implements PConstants {
    * direction, the rays have light have bounced around so much that objects
    * are evenly lit from all sides. Ambient lights are almost always used in
    * combination with other types of lights. Lights need to be included in
-   * the <b>draw()</b> to remain persistent in a looping program. Placing
+   * the <b>roboLoop()</b> to remain persistent in a looping program. Placing
    * them in the <b>setup()</b> of a looping program will cause them to only
    * have an effect the first time through the loop. The effect of the
    * parameters is determined by the current color mode.
@@ -7028,7 +7028,7 @@ public class PGraphics extends PImage implements PConstants {
    * Adds a directional light. Directional light comes from one direction and
    * is stronger when hitting a surface squarely and weaker if it hits at a a
    * gentle angle. After hitting a surface, a directional lights scatters in
-   * all directions. Lights need to be included in the <b>draw()</b> to
+   * all directions. Lights need to be included in the <b>roboLoop()</b> to
    * remain persistent in a looping program. Placing them in the
    * <b>setup()</b> of a looping program will cause them to only have an
    * effect the first time through the loop. The affect of the <b>v1</b>,
@@ -7060,7 +7060,7 @@ public class PGraphics extends PImage implements PConstants {
   /**
    * ( begin auto-generated from pointLight.xml )
    *
-   * Adds a point light. Lights need to be included in the <b>draw()</b> to
+   * Adds a point light. Lights need to be included in the <b>roboLoop()</b> to
    * remain persistent in a looping program. Placing them in the
    * <b>setup()</b> of a looping program will cause them to only have an
    * effect the first time through the loop. The affect of the <b>v1</b>,
@@ -7091,7 +7091,7 @@ public class PGraphics extends PImage implements PConstants {
   /**
    * ( begin auto-generated from spotLight.xml )
    *
-   * Adds a spot light. Lights need to be included in the <b>draw()</b> to
+   * Adds a spot light. Lights need to be included in the <b>roboLoop()</b> to
    * remain persistent in a looping program. Placing them in the
    * <b>setup()</b> of a looping program will cause them to only have an
    * effect the first time through the loop. The affect of the <b>v1</b>,
@@ -7201,7 +7201,7 @@ public class PGraphics extends PImage implements PConstants {
    *
    * The <b>background()</b> function sets the color used for the background
    * of the Processing window. The default background is light gray. In the
-   * <b>draw()</b> function, the background color is used to clear the
+   * <b>roboLoop()</b> function, the background color is used to clear the
    * display window at the beginning of each frame.
    * <br/> <br/>
    * An image can also be used as the background for a sketch, however its
@@ -8095,7 +8095,7 @@ public class PGraphics extends PImage implements PConstants {
       flush();
 
       // just like beginDraw, this will have to be called because
-      // endDraw() will be happening outside of draw()
+      // endDraw() will be happening outside of roboLoop()
       raw.endDraw();
       raw.dispose();
       raw = null;

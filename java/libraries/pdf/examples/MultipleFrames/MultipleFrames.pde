@@ -15,7 +15,7 @@ void setup() {
   background(255);
 }
 
-void draw() {
+void roboLoop() {
   stroke(0, 20);
   strokeWeight(20.0);
   line(mouseX, 0, width-mouseY, height);

@@ -82,10 +82,10 @@ import processing.opengl.*;
  * sizing, multiple displays, full screen, etc.
  * <p/>
  * Processing uses active mode rendering. All animation tasks happen on the
- * "Processing Animation Thread". The setup() and draw() methods are handled by
+ * "Processing Animation Thread". The setup() and roboLoop() methods are handled by
  * that thread, and events (like mouse movement and key presses, which are fired
  * by the event dispatch thread or EDT) are queued to be safely handled at the
- * end of draw().
+ * end of roboLoop().
  * <p/>
  * Starting with 3.0a6, blit operations are on the EDT, so as not to cause GUI
  * problems with Swing and AWT. In the case of the default renderer, the sketch
@@ -438,17 +438,17 @@ IRobotAdapter delegate;
    * of the mouse in the frame previous to the current frame.<br />
    * <br />
    * You may find that <b>pmouseX</b> and <b>pmouseY</b> have different values
-   * inside <b>draw()</b> and inside events like <b>mousePressed()</b> and
+   * inside <b>roboLoop()</b> and inside events like <b>mousePressed()</b> and
    * <b>mouseMoved()</b>. This is because they're used for different roles, so
-   * don't mix them. Inside <b>draw()</b>, <b>pmouseX</b> and <b>pmouseY</b>
-   * update only once per frame (once per trip through your <b>draw()</b>). But,
+   * don't mix them. Inside <b>roboLoop()</b>, <b>pmouseX</b> and <b>pmouseY</b>
+   * update only once per frame (once per trip through your <b>roboLoop()</b>). But,
    * inside mouse events, they update each time the event is called. If they
    * weren't separated, then the mouse would be read only once per frame, making
    * response choppy. If the mouse variables were always updated multiple times
    * per frame, using <NOBR><b>line(pmouseX, pmouseY, mouseX, mouseY)</b></NOBR>
-   * inside <b>draw()</b> would have lots of gaps, because <b>pmouseX</b> may
+   * inside <b>roboLoop()</b> would have lots of gaps, because <b>pmouseX</b> may
    * have changed several times in between the calls to <b>line()</b>. Use
-   * <b>pmouseX</b> and <b>pmouseY</b> inside <b>draw()</b> if you want values
+   * <b>pmouseX</b> and <b>pmouseY</b> inside <b>roboLoop()</b> if you want values
    * relative to the previous frame. Use <b>pmouseX</b> and <b>pmouseY</b>
    * inside the mouse functions if you want continuous response.
    *
@@ -474,7 +474,7 @@ IRobotAdapter delegate;
    *
    * The system variable <b>pmouseY</b> always contains the vertical position of
    * the mouse in the frame previous to the current frame. More detailed
-   * information about how <b>pmouseY</b> is updated inside of <b>draw()</b> and
+   * information about how <b>pmouseY</b> is updated inside of <b>roboLoop()</b> and
    * mouse events is explained in the reference for <b>pmouseX</b>.
    *
    * ( end auto-generated )
@@ -506,7 +506,7 @@ IRobotAdapter delegate;
    * these are different because mouse events are queued to the end of draw, so
    * the previous position has to be updated on each event, as opposed to the
    * pmouseX/Y that's used inside draw, which is expected to be updated once per
-   * trip through draw().
+   * trip through roboLoop().
    */
   protected int emouseX, emouseY;
 
@@ -867,7 +867,7 @@ IRobotAdapter delegate;
 //    defaultSize = true;
 //    finished = false; // just for clarity
 //
-//    // this will be cleared by draw() if it is not overridden
+//    // this will be cleared by roboLoop() if it is not overridden
 //    looping = true;
 //    redraw = true;  // draw this guy at least once
 //    firstMouse = true;
@@ -1512,9 +1512,9 @@ IRobotAdapter delegate;
    * Register a built-in event so that it can be fired for libraries, etc.
    * Supported events include:
    * <ul>
-   * <li>pre – at the very top of the draw() method (safe to draw)
-   * <li>draw – at the end of the draw() method (safe to draw)
-   * <li>post – after draw() has exited (not safe to draw)
+   * <li>pre – at the very top of the roboLoop() method (safe to draw)
+   * <li>draw – at the end of the roboLoop() method (safe to draw)
+   * <li>post – after roboLoop() has exited (not safe to draw)
    * <li>pause – called when the sketch is paused
    * <li>resume – called when the sketch is resumed
    * <li>dispose – when the sketch is shutting down (definitely not safe to
@@ -1732,7 +1732,7 @@ IRobotAdapter delegate;
    * starts. There can only be one <b>setup()</b> function for each program and
    * it shouldn't be called again after its initial execution. Note: Variables
    * declared within <b>setup()</b> are not accessible within other functions,
-   * including <b>draw()</b>.
+   * including <b>roboLoop()</b>.
    *
    * ( end auto-generated )
    *
@@ -1741,7 +1741,7 @@ IRobotAdapter delegate;
    * @see PApplet#size(int, int)
    * @see PApplet#loop()
    * @see PApplet#noLoop()
-   * @see PApplet#draw()
+   * @see PApplet#roboLoop()
    */
   public void setup() {
   }
@@ -1751,18 +1751,18 @@ IRobotAdapter delegate;
    *
    * Called directly after <b>setup()</b> and continuously executes the lines of
    * code contained inside its block until the program is stopped or
-   * <b>noLoop()</b> is called. The <b>draw()</b> function is called
+   * <b>noLoop()</b> is called. The <b>roboLoop()</b> function is called
    * automatically and should never be called explicitly. It should always be
-   * controlled with <b>noLoop()</b>, <b>redraw()</b> and <b>loop()</b>. After
-   * <b>noLoop()</b> stops the code in <b>draw()</b> from executing,
-   * <b>redraw()</b> causes the code inside <b>draw()</b> to execute once and
-   * <b>loop()</b> will causes the code inside <b>draw()</b> to execute
-   * continuously again. The number of times <b>draw()</b> executes in each
+   * controlled with <b>noLoop()</b>, <b>reroboLoop()</b> and <b>loop()</b>. After
+   * <b>noLoop()</b> stops the code in <b>roboLoop()</b> from executing,
+   * <b>reroboLoop()</b> causes the code inside <b>roboLoop()</b> to execute once and
+   * <b>loop()</b> will causes the code inside <b>roboLoop()</b> to execute
+   * continuously again. The number of times <b>roboLoop()</b> executes in each
    * second may be controlled with <b>frameRate()</b> function. There can only
-   * be one <b>draw()</b> function for each sketch and <b>draw()</b> must exist
+   * be one <b>roboLoop()</b> function for each sketch and <b>roboLoop()</b> must exist
    * if you want the code to run continuously or to process events such as
    * <b>mousePressed()</b>. Sometimes, you might have an empty call to
-   * <b>draw()</b> in your program as shown in the above example.
+   * <b>roboLoop()</b> in your program as shown in the above example.
    *
    * ( end auto-generated )
    *
@@ -1771,11 +1771,11 @@ IRobotAdapter delegate;
    * @see PApplet#setup()
    * @see PApplet#loop()
    * @see PApplet#noLoop()
-   * @see PApplet#redraw()
+   * @see PApplet#reroboLoop()
    * @see PApplet#frameRate(float)
    * @see PGraphics#background(float, float, float, float)
    */
-  public void draw() {
+  public void roboLoop() {
     // if no draw method, then shut things down
     //System.out.println("no draw method, goodbye");
     finished = true;
@@ -2344,7 +2344,7 @@ IRobotAdapter delegate;
 //        }
 //      defaultSize = false;
 
-    } else { // frameCount > 0, meaning an actual draw()
+    } else { // frameCount > 0, meaning an actual roboLoop()
       // update the current frameRate
       double rate = 1000000.0 / ((now - frameRateLastNanos) / 1000000.0);
       float instantaneousRate = (float) (rate / 1000.0);
@@ -2359,9 +2359,9 @@ IRobotAdapter delegate;
       pmouseX = dmouseX;
       pmouseY = dmouseY;
 
-      //println("Calling draw()");
-      draw();
-      //println("Done calling draw()");
+      //println("Calling roboLoop()");
+      roboLoop();
+      //println("Done calling roboLoop()");
 
       // dmouseX/Y is updated only once per frame (unlike emouseX/Y)
       dmouseX = mouseX;
@@ -2376,7 +2376,7 @@ IRobotAdapter delegate;
       handleMethods("draw");
 
       redraw = false; // unset 'redraw' flag in case it was set
-      // (only do this once draw() has run, not just setup())
+      // (only do this once roboLoop() has run, not just setup())
     }
     g.endDraw();
 
@@ -2407,29 +2407,29 @@ IRobotAdapter delegate;
   /**
    * ( begin auto-generated from redraw.xml )
    *
-   * Executes the code within <b>draw()</b> one time. This functions allows the
+   * Executes the code within <b>roboLoop()</b> one time. This functions allows the
    * program to update the display window only when necessary, for example when
    * an event registered by <b>mousePressed()</b> or <b>keyPressed()</b> occurs.
    * <br/>
    * <br/>
-   * structuring a program, it only makes sense to call redraw() within events
-   * such as <b>mousePressed()</b>. This is because <b>redraw()</b> does not run
-   * <b>draw()</b> immediately (it only sets a flag that indicates an update is
+   * structuring a program, it only makes sense to call reroboLoop() within events
+   * such as <b>mousePressed()</b>. This is because <b>reroboLoop()</b> does not run
+   * <b>roboLoop()</b> immediately (it only sets a flag that indicates an update is
    * needed). <br/>
    * <br/>
-   * <b>redraw()</b> within <b>draw()</b> has no effect because <b>draw()</b> is
+   * <b>reroboLoop()</b> within <b>roboLoop()</b> has no effect because <b>roboLoop()</b> is
    * continuously called anyway.
    *
    * ( end auto-generated )
    *
    * @webref structure
    * @usage web_application
-   * @see PApplet#draw()
+   * @see PApplet#roboLoop()
    * @see PApplet#loop()
    * @see PApplet#noLoop()
    * @see PApplet#frameRate(float)
    */
-  synchronized public void redraw() {
+  synchronized public void reroboLoop() {
     if (!looping) {
       redraw = true;
 //      if (thread != null) {
@@ -2449,16 +2449,16 @@ IRobotAdapter delegate;
   /**
    * ( begin auto-generated from loop.xml )
    *
-   * Causes Processing to continuously execute the code within <b>draw()</b>. If
-   * <b>noLoop()</b> is called, the code in <b>draw()</b> stops executing.
+   * Causes Processing to continuously execute the code within <b>roboLoop()</b>. If
+   * <b>noLoop()</b> is called, the code in <b>roboLoop()</b> stops executing.
    *
    * ( end auto-generated )
    *
    * @webref structure
    * @usage web_application
    * @see PApplet#noLoop()
-   * @see PApplet#redraw()
-   * @see PApplet#draw()
+   * @see PApplet#reroboLoop()
+   * @see PApplet#roboLoop()
    */
   synchronized public void loop() {
     if (!looping) {
@@ -2469,20 +2469,20 @@ IRobotAdapter delegate;
   /**
    * ( begin auto-generated from noLoop.xml )
    *
-   * Stops Processing from continuously executing the code within <b>draw()</b>.
-   * If <b>loop()</b> is called, the code in <b>draw()</b> begin to run
+   * Stops Processing from continuously executing the code within <b>roboLoop()</b>.
+   * If <b>loop()</b> is called, the code in <b>roboLoop()</b> begin to run
    * continuously again. If using <b>noLoop()</b> in <b>setup()</b>, it should
    * be the last line inside the block. <br/>
    * <br/>
    * When <b>noLoop()</b> is used, it's not possible to manipulate or access the
    * screen inside event handling functions such as <b>mousePressed()</b> or
-   * <b>keyPressed()</b>. Instead, use those functions to call <b>redraw()</b>
-   * or <b>loop()</b>, which will run <b>draw()</b>, which can update the screen
+   * <b>keyPressed()</b>. Instead, use those functions to call <b>reroboLoop()</b>
+   * or <b>loop()</b>, which will run <b>roboLoop()</b>, which can update the screen
    * properly. This means that when noLoop() has been called, no drawing can
    * happen, and functions like saveFrame() or loadPixels() may not be used.
    * <br/>
    * <br/>
-   * Note that if the sketch is resized, <b>redraw()</b> will be called to
+   * Note that if the sketch is resized, <b>reroboLoop()</b> will be called to
    * update the sketch, even after <b>noLoop()</b> has been specified.
    * Otherwise, the sketch would enter an odd state until <b>loop()</b> was
    * called.
@@ -2492,8 +2492,8 @@ IRobotAdapter delegate;
    * @webref structure
    * @usage web_application
    * @see PApplet#loop()
-   * @see PApplet#redraw()
-   * @see PApplet#draw()
+   * @see PApplet#reroboLoop()
+   * @see PApplet#roboLoop()
    */
   synchronized public void noLoop() {
     if (looping) {
@@ -3206,7 +3206,7 @@ IRobotAdapter delegate;
    * delay(3000) will stop the program for three seconds and delay(500) will
    * stop the program for a half-second.
    *
-   * The screen only updates when the end of draw() is reached, so delay()
+   * The screen only updates when the end of roboLoop() is reached, so delay()
    * cannot be used to slow down drawing. For instance, you cannot use delay()
    * to control the timing of an animation.
    *
@@ -3218,9 +3218,9 @@ IRobotAdapter delegate;
    *
    * @webref environment
    * @param napTime
-   *          milliseconds to pause before running draw() again
+   *          milliseconds to pause before running roboLoop() again
    * @see PApplet#frameRate
-   * @see PApplet#draw()
+   * @see PApplet#roboLoop()
    */
   public void delay(int napTime) {
     //if (frameCount != 0) {
@@ -3250,10 +3250,10 @@ IRobotAdapter delegate;
    * @see PApplet#frameRate
    * @see PApplet#frameCount
    * @see PApplet#setup()
-   * @see PApplet#draw()
+   * @see PApplet#roboLoop()
    * @see PApplet#loop()
    * @see PApplet#noLoop()
-   * @see PApplet#redraw()
+   * @see PApplet#reroboLoop()
    */
   public void frameRate(float fps) {
     surface.setFrameRate(fps);
@@ -3531,18 +3531,18 @@ IRobotAdapter delegate;
   /**
    * ( begin auto-generated from exit.xml )
    *
-   * Quits/stops/exits the program. Programs without a <b>draw()</b> function
+   * Quits/stops/exits the program. Programs without a <b>roboLoop()</b> function
    * exit automatically after the last line has run, but programs with
-   * <b>draw()</b> run continuously until the program is manually stopped or
+   * <b>roboLoop()</b> run continuously until the program is manually stopped or
    * <b>exit()</b> is run.<br />
    * <br />
    * Rather than terminating immediately, <b>exit()</b> will cause the sketch to
-   * exit after <b>draw()</b> has completed (or after <b>setup()</b> completes
+   * exit after <b>roboLoop()</b> has completed (or after <b>setup()</b> completes
    * if called during the <b>setup()</b> function).<br />
    * <br />
    * For Java programmers, this is <em>not</em> the same as System.exit().
    * Further, System.exit() should not be used because closing out an
-   * application while <b>draw()</b> is running may cause a crash (particularly
+   * application while <b>roboLoop()</b> is running may cause a crash (particularly
    * with P3D).
    *
    * ( end auto-generated )
@@ -3559,7 +3559,7 @@ IRobotAdapter delegate;
       // dispose() will be called as the thread exits
       finished = true;
       // tell the code to call exitActual() to do a System.exit()
-      // once the next draw() has completed
+      // once the next roboLoop() has completed
       exitCalled = true;
 
     } else if (!looping) {
@@ -3666,7 +3666,7 @@ IRobotAdapter delegate;
    * @param name
    *          name of the function to be executed in a separate thread
    * @see PApplet#setup()
-   * @see PApplet#draw()
+   * @see PApplet#roboLoop()
    * @see PApplet#loop()
    * @see PApplet#noLoop()
    */
@@ -3726,7 +3726,7 @@ IRobotAdapter delegate;
    *
    * Saves a numbered sequence of images, one image each time the function is
    * run. To save an image that is identical to the display window, run the
-   * function at the end of <b>draw()</b> or within mouse and key events such as
+   * function at the end of <b>roboLoop()</b> or within mouse and key events such as
    * <b>mousePressed()</b> and <b>keyPressed()</b>. If <b>saveFrame()</b> is
    * called without parameters, it will save the files as screen-0000.tif,
    * screen-0001.tif, etc. It is possible to specify the name of the sequence
@@ -5615,7 +5615,7 @@ IRobotAdapter delegate;
    * ( <b>.gif</b>, <b>.jpg</b>, <b>.tga</b>, <b>.png</b>) images may be loaded.
    * To load correctly, images must be located in the data directory of the
    * current sketch. In most cases, load all images in <b>setup()</b> to preload
-   * them at the start of the program. Loading images inside <b>draw()</b> will
+   * them at the start of the program. Loading images inside <b>roboLoop()</b> will
    * reduce the speed of a program.<br/>
    * <br/>
    * <b>filename</b> parameter can also be a URL to a file found online. For
@@ -6501,7 +6501,7 @@ IRobotAdapter delegate;
    * to the current sketch's data directory.<br />
    * <br />
    * Like <b>loadImage()</b> and other functions that load data, the
-   * <b>loadFont()</b> function should not be used inside <b>draw()</b>, because
+   * <b>loadFont()</b> function should not be used inside <b>roboLoop()</b>, because
    * it will slow down the sketch considerably, as the font will be re-loaded
    * from the disk (or network) on each frame.<br />
    * <br />
@@ -11059,7 +11059,7 @@ IRobotAdapter delegate;
     /*
      * // Wait until the applet has figured out its width. In a static mode app,
      * // everything happens inside setup(), so this will be after setup() has
-     * // completed, and the empty draw() has set "finished" to true. while
+     * // completed, and the empty roboLoop() has set "finished" to true. while
      * (sketch.defaultSize && !sketch.finished) {
      * //System.out.println("default size"); try { Thread.sleep(5);
      *
@@ -13452,7 +13452,7 @@ IRobotAdapter delegate;
    * apply to everything that happens after and subsequent calls to the
    * function accumulates the effect. For example, calling <b>translate(50,
    * 0)</b> and then <b>translate(20, 0)</b> is the same as <b>translate(70,
-   * 0)</b>. If <b>translate()</b> is called within <b>draw()</b>, the
+   * 0)</b>. If <b>translate()</b> is called within <b>roboLoop()</b>, the
    * transformation is reset when the loop begins again. This function can be
    * further controlled by the <b>pushMatrix()</b> and <b>popMatrix()</b>.
    *
@@ -13496,7 +13496,7 @@ IRobotAdapter delegate;
    * Transformations apply to everything that happens after and subsequent
    * calls to the function accumulates the effect. For example, calling
    * <b>rotate(HALF_PI)</b> and then <b>rotate(HALF_PI)</b> is the same as
-   * <b>rotate(PI)</b>. All tranformations are reset when <b>draw()</b>
+   * <b>rotate(PI)</b>. All tranformations are reset when <b>roboLoop()</b>
    * begins again.
    * <br/> <br/>
    * Technically, <b>rotate()</b> multiplies the current transformation
@@ -13533,7 +13533,7 @@ IRobotAdapter delegate;
    * subsequent calls to the function accumulates the effect. For example,
    * calling <b>rotateX(PI/2)</b> and then <b>rotateX(PI/2)</b> is the same
    * as <b>rotateX(PI)</b>. If <b>rotateX()</b> is called within the
-   * <b>draw()</b>, the transformation is reset when the loop begins again.
+   * <b>roboLoop()</b>, the transformation is reset when the loop begins again.
    * This function requires using P3D as a third parameter to <b>size()</b>
    * as shown in the example above.
    *
@@ -13567,7 +13567,7 @@ IRobotAdapter delegate;
    * subsequent calls to the function accumulates the effect. For example,
    * calling <b>rotateY(PI/2)</b> and then <b>rotateY(PI/2)</b> is the same
    * as <b>rotateY(PI)</b>. If <b>rotateY()</b> is called within the
-   * <b>draw()</b>, the transformation is reset when the loop begins again.
+   * <b>roboLoop()</b>, the transformation is reset when the loop begins again.
    * This function requires using P3D as a third parameter to <b>size()</b>
    * as shown in the examples above.
    *
@@ -13601,7 +13601,7 @@ IRobotAdapter delegate;
    * subsequent calls to the function accumulates the effect. For example,
    * calling <b>rotateZ(PI/2)</b> and then <b>rotateZ(PI/2)</b> is the same
    * as <b>rotateZ(PI)</b>. If <b>rotateZ()</b> is called within the
-   * <b>draw()</b>, the transformation is reset when the loop begins again.
+   * <b>roboLoop()</b>, the transformation is reset when the loop begins again.
    * This function requires using P3D as a third parameter to <b>size()</b>
    * as shown in the examples above.
    *
@@ -13648,7 +13648,7 @@ IRobotAdapter delegate;
    * after and subsequent calls to the function multiply the effect. For
    * example, calling <b>scale(2.0)</b> and then <b>scale(1.5)</b> is the
    * same as <b>scale(3.0)</b>. If <b>scale()</b> is called within
-   * <b>draw()</b>, the transformation is reset when the loop begins again.
+   * <b>roboLoop()</b>, the transformation is reset when the loop begins again.
    * Using this fuction with the <b>z</b> parameter requires using P3D as a
    * parameter for <b>size()</b> as shown in the example above. This function
    * can be further controlled by <b>pushMatrix()</b> and <b>popMatrix()</b>.
@@ -13708,7 +13708,7 @@ IRobotAdapter delegate;
    * calls to the function accumulates the effect. For example, calling
    * <b>shearX(PI/2)</b> and then <b>shearX(PI/2)</b> is the same as
    * <b>shearX(PI)</b>. If <b>shearX()</b> is called within the
-   * <b>draw()</b>, the transformation is reset when the loop begins again.
+   * <b>roboLoop()</b>, the transformation is reset when the loop begins again.
    * <br/> <br/>
    * Technically, <b>shearX()</b> multiplies the current transformation
    * matrix by a rotation matrix. This function can be further controlled by
@@ -13743,7 +13743,7 @@ IRobotAdapter delegate;
    * calls to the function accumulates the effect. For example, calling
    * <b>shearY(PI/2)</b> and then <b>shearY(PI/2)</b> is the same as
    * <b>shearY(PI)</b>. If <b>shearY()</b> is called within the
-   * <b>draw()</b>, the transformation is reset when the loop begins again.
+   * <b>roboLoop()</b>, the transformation is reset when the loop begins again.
    * <br/> <br/>
    * Technically, <b>shearY()</b> multiplies the current transformation
    * matrix by a rotation matrix. This function can be further controlled by
@@ -13935,10 +13935,10 @@ IRobotAdapter delegate;
    * you want to more control over camera movement, however for most users,
    * the <b>camera()</b> function will be sufficient.<br /><br />The camera
    * functions will replace any transformations (such as <b>rotate()</b> or
-   * <b>translate()</b>) that occur before them in <b>draw()</b>, but they
+   * <b>translate()</b>) that occur before them in <b>roboLoop()</b>, but they
    * will not automatically replace the camera transform itself. For this
    * reason, camera functions should be placed at the beginning of
-   * <b>draw()</b> (so that transformations happen afterwards), and the
+   * <b>roboLoop()</b> (so that transformations happen afterwards), and the
    * <b>camera()</b> function can be used after <b>beginCamera()</b> if you
    * want to reset the camera before applying transformations.<br /><br
    * />This function sets the matrix mode to the camera matrix so calls such
@@ -14941,7 +14941,7 @@ IRobotAdapter delegate;
    * Sets the default ambient light, directional light, falloff, and specular
    * values. The defaults are ambientLight(128, 128, 128) and
    * directionalLight(128, 128, 128, 0, 0, -1), lightFalloff(1, 0, 0), and
-   * lightSpecular(0, 0, 0). Lights need to be included in the draw() to
+   * lightSpecular(0, 0, 0). Lights need to be included in the roboLoop() to
    * remain persistent in a looping program. Placing them in the setup() of a
    * looping program will cause them to only have an effect the first time
    * through the loop.
@@ -14989,7 +14989,7 @@ IRobotAdapter delegate;
    * direction, the rays have light have bounced around so much that objects
    * are evenly lit from all sides. Ambient lights are almost always used in
    * combination with other types of lights. Lights need to be included in
-   * the <b>draw()</b> to remain persistent in a looping program. Placing
+   * the <b>roboLoop()</b> to remain persistent in a looping program. Placing
    * them in the <b>setup()</b> of a looping program will cause them to only
    * have an effect the first time through the loop. The effect of the
    * parameters is determined by the current color mode.
@@ -15030,7 +15030,7 @@ IRobotAdapter delegate;
    * Adds a directional light. Directional light comes from one direction and
    * is stronger when hitting a surface squarely and weaker if it hits at a a
    * gentle angle. After hitting a surface, a directional lights scatters in
-   * all directions. Lights need to be included in the <b>draw()</b> to
+   * all directions. Lights need to be included in the <b>roboLoop()</b> to
    * remain persistent in a looping program. Placing them in the
    * <b>setup()</b> of a looping program will cause them to only have an
    * effect the first time through the loop. The affect of the <b>v1</b>,
@@ -15064,7 +15064,7 @@ IRobotAdapter delegate;
   /**
    * ( begin auto-generated from pointLight.xml )
    *
-   * Adds a point light. Lights need to be included in the <b>draw()</b> to
+   * Adds a point light. Lights need to be included in the <b>roboLoop()</b> to
    * remain persistent in a looping program. Placing them in the
    * <b>setup()</b> of a looping program will cause them to only have an
    * effect the first time through the loop. The affect of the <b>v1</b>,
@@ -15097,7 +15097,7 @@ IRobotAdapter delegate;
   /**
    * ( begin auto-generated from spotLight.xml )
    *
-   * Adds a spot light. Lights need to be included in the <b>draw()</b> to
+   * Adds a spot light. Lights need to be included in the <b>roboLoop()</b> to
    * remain persistent in a looping program. Placing them in the
    * <b>setup()</b> of a looping program will cause them to only have an
    * effect the first time through the loop. The affect of the <b>v1</b>,
@@ -15206,7 +15206,7 @@ IRobotAdapter delegate;
    *
    * The <b>background()</b> function sets the color used for the background
    * of the Processing window. The default background is light gray. In the
-   * <b>draw()</b> function, the background color is used to clear the
+   * <b>roboLoop()</b> function, the background color is used to clear the
    * display window at the beginning of each frame.
    * <br/> <br/>
    * An image can also be used as the background for a sketch, however its

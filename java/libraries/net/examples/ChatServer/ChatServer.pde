@@ -31,7 +31,7 @@ void mousePressed()
   myServerRunning = false;
 }
 
-void draw()
+void roboLoop()
 {
   if (myServerRunning == true)
   {

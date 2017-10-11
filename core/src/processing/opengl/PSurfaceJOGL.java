@@ -849,7 +849,7 @@ public class PSurfaceJOGL implements PSurface {
         sketch.handleDraw();
         if (pframeCount == sketch.frameCount || sketch.finished) {
           // This hack allows the FBO layer to be swapped normally even if
-          // the sketch is no looping or finished because it does not call draw(),
+          // the sketch is no looping or finished because it does not call roboLoop(),
           // otherwise background artifacts may occur (depending on the hardware/drivers).
           pgl.beginRender();
           pgl.endRender(sketch.sketchWindowColor());
