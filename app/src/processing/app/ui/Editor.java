@@ -158,7 +158,7 @@ public abstract class Editor extends JFrame implements RunnerListener {
 
   protected Editor(final Base base, String path, final EditorState state,
                    final Mode mode) throws EditorException {
-    super("Processing", state.checkConfig());
+    super("Roombaide", state.checkConfig());
     this.base = base;
     this.state = state;
     this.mode = mode;

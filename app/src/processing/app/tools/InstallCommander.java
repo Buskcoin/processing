@@ -82,7 +82,7 @@ public class InstallCommander implements Tool {
         return;
       }
 
-      File file = File.createTempFile("processing", "commander");
+      File file = File.createTempFile("Roombaide", "commander");
       PrintWriter writer = PApplet.createWriter(file);
       writer.print("#!/bin/sh\n\n");
 

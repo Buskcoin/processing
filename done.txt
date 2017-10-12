@@ -3062,7 +3062,7 @@ X   http://code.google.com/p/processing/issues/detail?id=1473
 X   marked cantfix back in December
 X change error message for libraries (especially serial) for 32- vs 64-bit
 X   "To use this library, switch to 32-bit mode in Preferences." (OS X)
-X   "To use this library, you must use the 32-bit version of Processing."
+X   "To use this library, you must use the 32-bit version of Roombaide."
 X rebuild Runner to use SocketAttach
 X   deals with spaces in path problem, but also opens a port
 X remove "Listening for transport dt_socket at address: 8727" message
@@ -10645,7 +10645,7 @@ X option to set full screen background color
 X   uses fullscreen.bgcolor in lib/pde.properties
 X remove 'colorScale' from the default program in pde
 X fix color cube applet 
-X   make it run in current version of processing
+X   make it run in current version of Roombaide
 X   fix background from showing up black
 X screenGrab() code (single frame to tif)
 X externally loaded files are off by 1 line for errors

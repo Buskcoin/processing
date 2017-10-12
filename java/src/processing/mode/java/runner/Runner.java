@@ -117,7 +117,7 @@ public class Runner implements MessageConsumer {
                                     "with the  " + opposite + "-bit download of Processing.");
           //throw new SketchException(library.getName() + " does not run in " + bits + "-bit mode.");
           // "To use this library, switch to 32-bit mode in Preferences." (OS X)
-          //  "To use this library, you must use the 32-bit version of Processing."
+          //  "To use this library, you must use the 32-bit version of Roombaide."
         }
       }
     }
@@ -766,7 +766,7 @@ public class Runner implements MessageConsumer {
 
     } else if (exceptionClass.equals("java.lang.UnsupportedClassVersionError")) {
       listener.statusError("UnsupportedClassVersionError: A library is using code compiled with an unsupported version of Java.");
-      err.println("This version of Processing only supports libraries and JAR files compiled for Java 1.6 or earlier.");
+      err.println("This version of Roombaide only supports libraries and JAR files compiled for Java 1.6 or earlier.");
       err.println("A library used by this sketch was compiled for Java 1.7 or later, ");
       err.println("and needs to be recompiled to be compatible with Java 1.6.");
 
@@ -774,7 +774,7 @@ public class Runner implements MessageConsumer {
                exceptionClass.equals("java.lang.NoSuchFieldError")) {
       listener.statusError(exceptionClass.substring(10) + ": " +
                            "You may be using a library that's incompatible " +
-                           "with this version of Processing.");
+                           "with this version of Roombaide.");
     } else {
       return false;
     }

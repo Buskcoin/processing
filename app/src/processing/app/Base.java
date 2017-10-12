@@ -459,13 +459,13 @@ public class Base {
           try {
             contribModes.add(new ModeContribution(this, folder, null));
           } catch (NoSuchMethodError nsme) {
-            System.err.println(folder.getName() + " is not compatible with this version of Processing");
+            System.err.println(folder.getName() + " is not compatible with this version of Roombaide");
             if (DEBUG) nsme.printStackTrace();
           } catch (NoClassDefFoundError ncdfe) {
-            System.err.println(folder.getName() + " is not compatible with this version of Processing");
+            System.err.println(folder.getName() + " is not compatible with this version of Roombaide");
             if (DEBUG) ncdfe.printStackTrace();
           } catch (InvocationTargetException ite) {
-            System.err.println(folder.getName() + " could not be loaded and may not compatible with this version of Processing");
+            System.err.println(folder.getName() + " could not be loaded and may not compatible with this version of Roombaide");
             if (DEBUG) ite.printStackTrace();
           } catch (IgnorableException ig) {
             Messages.log(ig.getMessage());
@@ -678,23 +678,23 @@ public class Base {
 
       } catch (VerifyError ve) {
         System.err.println("\"" + tool.getMenuTitle() + "\" is not " +
-                           "compatible with this version of Processing");
+                           "compatible with this version of Roombaide");
 
       } catch (NoSuchMethodError nsme) {
         System.err.println("\"" + tool.getMenuTitle() + "\" is not " +
-                           "compatible with this version of Processing");
+                           "compatible with this version of Roombaide");
         System.err.println("The " + nsme.getMessage() + " method no longer exists.");
         Messages.loge("Incompatible Tool found during tool.init()", nsme);
 
       } catch (NoClassDefFoundError ncdfe) {
         System.err.println("\"" + tool.getMenuTitle() + "\" is not " +
-                           "compatible with this version of Processing");
+                           "compatible with this version of Roombaide");
         System.err.println("The " + ncdfe.getMessage() + " class is no longer available.");
         Messages.loge("Incompatible Tool found during tool.init()", ncdfe);
 
       } catch (AbstractMethodError ame) {
         System.err.println("\"" + tool.getMenuTitle() + "\" is not " +
-                           "compatible with this version of Processing");
+                           "compatible with this version of Roombaide");
 //        ame.printStackTrace();
 
       } catch (Error err) {
@@ -829,7 +829,7 @@ public class Base {
 
         } catch (NoSuchMethodError nsme) {
           activeEditor.statusError("\"" + tool.getMenuTitle() + "\" is not" +
-                                   "compatible with this version of Processing");
+                                   "compatible with this version of Roombaide");
           //nsme.printStackTrace();
           Messages.loge("Incompatible tool found during tool.run()", nsme);
           item.setEnabled(false);
@@ -1354,7 +1354,7 @@ public class Base {
         }
       } catch (NoSuchMethodError nsme) {
         Messages.showWarning("Mode out of date",
-                             nextMode.getTitle() + " is not compatible with this version of Processing.\n" +
+                             nextMode.getTitle() + " is not compatible with this version of Roombaide.\n" +
                              "Try updating the Mode or contact its author for a new version.", nsme);
       } catch (Throwable t) {
         if (nextMode.equals(getDefaultMode())) {
@@ -1364,7 +1364,7 @@ public class Base {
         } else {
           Messages.showTrace("Mode Problems",
                              "A nasty error occurred while trying to use " + nextMode.getTitle() + ".\n" +
-                             "It may not be compatible with this version of Processing.\n" +
+                             "It may not be compatible with this version of Roombaide.\n" +
                              "Try updating the Mode or contact its author for a new version.", t, false);
         }
       }

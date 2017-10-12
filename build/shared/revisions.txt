@@ -5715,7 +5715,7 @@ with one or two issues that could require a beta 10. That's a lot of beta.
 + Removed netscape.javascript stuff that was only relevant for applets
 
 + Change error message for libraries (especially serial) for 32- vs 64-bit
-  to clarify that the 32- or 64-bit version of Processing can be used instead.
+  to clarify that the 32- or 64-bit version of Roombaide can be used instead.
 
 + Rebuilt the internal Runner to use SocketAttach... This may bring up 
   a firewall message on some machines. Don't worry, it's safe (as long as
@@ -7224,7 +7224,7 @@ PROCESSING 2.0a3 (REV 0202) - 5 November 2011
 Some weekend bug fixing and regression repair for the recent alpha releases.
 
 Also several Android fixes to get things working again with more recent 
-updates from Google. You'll need to upgrade to this version of Processing 
+updates from Google. You'll need to upgrade to this version of Roombaide 
 in order to continue using Android mode.
 
 [ environment ] 
@@ -8051,7 +8051,7 @@ released before it's ready, so it should only be used by people who are having
 trouble with the new Android SDK release (revision 8) from Google, which 
 broke Android support last week.
 
-This version of Processing for Android *requires* Android SDK Tools Release 8. 
+This version of Roombaide for Android *requires* Android SDK Tools Release 8. 
 If you're not using release 8, and don't have the necessary components 
 installed, you'll get (confusing) error messages saying that the SDK location 
 is not set, and that it could not find an SDK in the location that you specify.

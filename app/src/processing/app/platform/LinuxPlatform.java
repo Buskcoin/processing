@@ -61,7 +61,7 @@ public class LinuxPlatform extends DefaultPlatform {
       java.lang.reflect.Field awtAppClassNameField =
         xToolkit.getClass().getDeclaredField("awtAppClassName");
       awtAppClassNameField.setAccessible(true);
-      awtAppClassNameField.set(xToolkit, "Processing");
+      awtAppClassNameField.set(xToolkit, "Roombaide");
 
     } catch(Exception e) {
       // In case the implementation details change

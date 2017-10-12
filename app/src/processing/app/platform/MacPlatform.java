@@ -100,19 +100,19 @@ public class MacPlatform extends DefaultPlatform {
 
 
   public File getSettingsFolder() throws Exception {
-    return new File(getLibraryFolder(), "Processing");
+    return new File(getLibraryFolder(), "Roombaide");
   }
 
 
   public File getDefaultSketchbookFolder() throws Exception {
-    return new File(getDocumentsFolder(), "Processing");
+    return new File(getDocumentsFolder(), "Roombaide");
     /*
     // looking for /Users/blah/Documents/Processing
     try {
       Class clazz = Class.forName("processing.app.BaseMacOS");
       Method m = clazz.getMethod("getDocumentsFolder", new Class[] { });
       String documentsPath = (String) m.invoke(null, new Object[] { });
-      sketchbookFolder = new File(documentsPath, "Processing");
+      sketchbookFolder = new File(documentsPath, "Roombaide);
 
     } catch (Exception e) {
       sketchbookFolder = promptSketchbookLocation();

@@ -217,7 +217,7 @@ public abstract class Mode {
 
     } catch (IOException e) {
       Messages.showError("Problem loading theme.txt",
-                         "Could not load theme.txt, please re-install Processing", e);
+                         "Could not load theme.txt, please re-install Roombaide", e);
     }
   }
 
@@ -406,7 +406,7 @@ public abstract class Mode {
       for (Library library : libraries) {
         String location = library.getPath();
         if (location.startsWith(getLibrariesFolder().getAbsolutePath())) {
-          location = "part of Processing";
+          location = "part of Roombaide";
         }
         secondary += "<b>" + library.getName() + "</b> (" + location + ")<br>";
       }

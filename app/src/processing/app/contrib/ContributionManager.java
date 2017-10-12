@@ -211,7 +211,7 @@ public class ContributionManager {
               Throwable cause = ((RuntimeException) e).getCause();
               if (cause instanceof NoClassDefFoundError ||
                   cause instanceof NoSuchMethodError) {
-                msg = "This item is not compatible with this version of Processing";
+                msg = "This item is not compatible with this version of Roombaide";
               } else if (cause instanceof UnsupportedClassVersionError) {
                 msg = "This item needs to be recompiled for Java " +
                   PApplet.javaPlatform;

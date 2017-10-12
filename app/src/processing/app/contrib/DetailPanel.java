@@ -146,7 +146,7 @@ class DetailPanel extends JPanel {
           listPanel.setSelectedPanel(DetailPanel.this);
         } else {
           setErrorMessage(contrib.getName() +
-                          " cannot be used with this version of Processing");
+                          " cannot be used with this version of Roombaide");
         }
       }
     });

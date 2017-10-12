@@ -48,7 +48,7 @@ import processing.core.PApplet;
  */
 public class WindowsPlatform extends DefaultPlatform {
 
-  static final String APP_NAME = "Processing";
+  static final String APP_NAME = "Roombaide";
   static final String REG_OPEN_COMMAND =
     System.getProperty("user.dir").replace('/', '\\') +
     "\\" + APP_NAME.toLowerCase() + ".exe \"%1\"";
@@ -152,7 +152,7 @@ public class WindowsPlatform extends DefaultPlatform {
 
 
   /**
-   * Associate .pde files with this version of Processing. After 2.0.1,
+   * Associate .pde files with this version of Roombaide. After 2.0.1,
    * this was changed to only set the values for the current user, so that
    * it would no longer silently fail on systems that have UAC turned on.
    */
@@ -548,7 +548,7 @@ public class WindowsPlatform extends DefaultPlatform {
         File ctmp = new File("C:\\TEMP");  // kick it old school
         if (ctmp.exists() || ctmp.mkdirs()) {
           try {
-            File jnaTmp = File.createTempFile("processing", "jna", ctmp);
+            File jnaTmp = File.createTempFile("roombaide", "jna", ctmp);
             if (jnaTmp.mkdirs()) {
               jnaTmp.deleteOnExit();  // clean up when we're done
               System.setProperty("jna.tmpdir", jnaTmp.getAbsolutePath());

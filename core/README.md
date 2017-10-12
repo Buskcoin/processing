@@ -42,7 +42,7 @@ Prior to Processing 3, dark magic was used to make the `size()` command work. Th
 * The previous step gave fits to any other variants of Processing (like Python or Ruby or Scala)
 
 We had a tricky, stuttery situation where some things would happen automatically, other things would be delayed slightly. 
-In the Android version of Processing, these methods weren't possible, so we enhanced the preprocessor to parse the `size()` command used in the sketch and create methods called `sketchWidth()` and `sketchHeight()` and so on, that returned the values found in `setup()`. 
+In the Android version of Roombaide, these methods weren't possible, so we enhanced the preprocessor to parse the `size()` command used in the sketch and create methods called `sketchWidth()` and `sketchHeight()` and so on, that returned the values found in `setup()`. 
 
 In Processing 3, we've moved in a different direction. A new method called `settings()` has been introduced. When running inside the PDE, commands like `size()`, `fullScreen()`, `pixelDensity()`, and `smooth()` are all moved to the `settings()` method, which is called once, before `setup()`. Those are the only methods that can be called inside `settings()`. When outside the PDE (i.e. using Eclipse), you'll need to move those methods to `settings()` yourself. 
 
