@@ -3944,12 +3944,11 @@ IRobotAdapter delegate;
     System.out.print(what);
     System.out.flush();
   }
-  public void driveDirect(int l, int r) {
-    System.out.print("test");
+  public void driveDirect(int leftVelocity, int rightVelocity) throws IOException {
+    delegate.driveDirect(leftVelocity, rightVelocity);
   }
   public void drive(int velocity, int radius) throws IOException {
-   System.out.println("drive");
-
+   drive(velocity, radius);
   }
   public void connect(){
     /**
@@ -3966,306 +3965,246 @@ IRobotAdapter delegate;
 
   }
   public void full() throws IOException {
-    // TODO Auto-generated method stub
-
+    delegate.full();
   }
 
   public int getAngle() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getAngle();
   }
 
   public int getBatteryCapacity() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getBatteryCapacity();
   }
 
   public int getBatteryCharge() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getBatteryCharge();
   }
 
   public int getBatteryTemperature() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getBatteryTemperature();
   }
 
   public int getChargingState() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getChargingState();
   }
 
   public int getCliffSignalLeftFront() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getCliffSignalLeftFront();
   }
 
   public int getCliffSignalRightFront() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getCliffSignalRightFront();
   }
 
   public int getCliffSignalLeft() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getCliffSignalLeft();
   }
 
   public int getCliffSignalRight() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getCliffSignalRight();
   }
 
   public int getCurrent() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getCurrent();
   }
 
   public int getDistance() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getCurrent();
   }
 
   public int getEncoderCountLeft() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getEncoderCountLeft();
   }
 
   public int getEncoderCountRight() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getEncoderCountRight();
   }
 
   public int getInfraredByte() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getInfraredByte();
   }
 
   public int getInfraredByteLeft() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getInfraredByteLeft();
   }
 
   public int getInfraredByteRight() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getInfraredByteRight();
   }
 
   public int getMotorCurrentLeft() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getMotorCurrentLeft();
   }
 
   public int[] getLightBumps() {
-    // TODO Auto-generated method stub
-    return null;
+    return delegate.getLightBumps();
   }
 
   public int getMotorCurrentRight() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getMotorCurrentRight();
   }
 
   public int getOiMode() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getOiMode();
   }
 
   public int getRequestedRadius() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getRequestedRadius();
   }
 
   public int getRequestedVelocity() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getRequestedVelocity();
   }
 
   public int getRequestedVelocityLeft() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getRequestedVelocityLeft();
   }
 
   public int getRequestedVelocityRight() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getRequestedVelocityRight();
   }
 
   public int getSongNumber() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getSongNumber();
   }
 
   public int getVoltage() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getVoltage();
   }
 
   public boolean isStasis() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isStasis();
   }
 
   public int getWallSignal() {
-    // TODO Auto-generated method stub
-    return 0;
+    return delegate.getWallSignal();
   }
 
   public boolean isBumpLeft() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isBumpLeft();
   }
 
   public boolean isBumpRight() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isBumpRight();
   }
 
   public boolean isCleanButtonDown() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isCleanButtonDown();
   }
 
   public boolean isCliffFrontLeft() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isCliffFrontLeft();
   }
 
   public boolean isCliffFrontRight() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isCliffFrontRight();
   }
 
   public boolean isCliffLeft() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isCliffLeft();
   }
 
   public boolean isCliffRight() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isCliffRight();
   }
 
   public boolean isHomeBaseChargerAvailable() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isHomeBaseChargerAvailable();
   }
 
   public boolean isInternalChargerAvailable() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isInternalChargerAvailable();
   }
 
   public boolean isLeftWheelOvercurrent() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isLeftWheelOvercurrent();
   }
 
   public boolean isLightBump() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isLightBump();
   }
 
   public boolean isWheelOvercurrentMainBrush() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isWheelOvercurrentMainBrush();
   }
 
   public boolean isSpotButtonDown() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isSpotButtonDown();
   }
 
   public boolean isRightWheelOvercurrent() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isRightWheelOvercurrent();
   }
 
   public boolean isSongPlaying() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isSongPlaying();
   }
 
   public boolean isVirtualWall() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isVirtualWall();
   }
 
   public boolean isWall() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isWall();
   }
 
   public boolean isWheelDropLeft() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isWheelDropLeft();
   }
 
   public boolean isWheelDropRight() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isWheelDropRight();
   }
 
   public boolean isWheelOvercurrentSideBrush() {
-    // TODO Auto-generated method stub
-    return false;
+    return delegate.isWheelOvercurrentSideBrush();
   }
 
   public void leds(int powerColor, int powerIntensity, boolean spotLedOn)
     throws IOException {
-    // TODO Auto-generated method stub
-
+    delegate.leds(powerColor, powerIntensity, spotLedOn);
   }
 
   public void ledsToggle(boolean togglePower) throws IOException {
-    // TODO Auto-generated method stub
-
+    delegate.ledsToggle(togglePower);
   }
 
   public void playSong(int songNumber) throws IOException {
-    // TODO Auto-generated method stub
-
+    delegate.playSong(songNumber);
   }
 
   public void readSensors(int sensorId) throws IOException {
-    // TODO Auto-generated method stub
-
+    delegate.readSensors(sensorId);
   }
 
   public void reset() throws IOException {
-    // TODO Auto-generated method stub
-
+    delegate.reset();
   }
 
   public void safe() throws IOException {
-    // TODO Auto-generated method stub
-
+    delegate.safe();
   }
 
   public void song(int songNumber, int[] notesAndDurations) throws IOException {
-    // TODO Auto-generated method stub
-
+    delegate.song(songNumber, notesAndDurations);
   }
 
   public void song(int songNumber, int[] notesAndDurations, int startIndex,
                    int length)
     throws IOException {
-    // TODO Auto-generated method stub
-
+    delegate.song(songNumber, notesAndDurations, startIndex, length);
   }
 
   public void setTailLight(boolean on) throws IOException {
-    // TODO Auto-generated method stub
-
+    delegate.setTailLight(on);
   }
 
   public void waitButtonPressed(boolean beep) throws IOException {
-    // TODO Auto-generated method stub
-
+    delegate.waitButtonPressed(beep);
   }
 
   public void closeConnection() {
-    // TODO Auto-generated method stub
-
+    delegate.closeConnection();
   }
   /**
    * @param variables
