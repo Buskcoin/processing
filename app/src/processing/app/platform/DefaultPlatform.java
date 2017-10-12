@@ -97,7 +97,7 @@ public class DefaultPlatform {
   public File getSettingsFolder() throws Exception {
     // otherwise make a .processing directory int the user's home dir
     File home = new File(System.getProperty("user.home"));
-    return new File(home, ".processing");
+    return new File(home, ".roombaide");
   }
 
 

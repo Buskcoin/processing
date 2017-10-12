@@ -3,10 +3,10 @@
 
 name = OpenGL
 
-application.macosx=core.jar,RPiGreenbot.jar,jogl-all.jar,gluegen-rt.jar,jogl-all-natives-macosx-universal.jar,gluegen-rt-natives-macosx-universal.jar
-application.windows32=core.jar,RPiGreenbot.jar,jogl-all.jar,gluegen-rt.jar,jogl-all-natives-windows-i586.jar,gluegen-rt-natives-windows-i586.jar
-application.windows64=core.jar,RPiGreenbot.jar,jogl-all.jar,gluegen-rt.jar,jogl-all-natives-windows-amd64.jar,gluegen-rt-natives-windows-amd64.jar
-application.linux32=core.jar,RPiGreenbot.jar,jogl-all.jar,gluegen-rt.jar,jogl-all-natives-linux-i586.jar,gluegen-rt-natives-linux-i586.jar
-application.linux64=core.jar,RPiGreenbot.jar,jogl-all.jar,gluegen-rt.jar,jogl-all-natives-linux-amd64.jar,gluegen-rt-natives-linux-amd64.jar
-application.linux-armv6hf=core.jar,RPiGreenbot.jar,jogl-all.jar,gluegen-rt.jar,jogl-all-natives-linux-armv6hf.jar,gluegen-rt-natives-linux-armv6hf.jar
-application.linux-arm64=core.jar,RPiGreenbot.jar,jogl-all.jar,gluegen-rt.jar,jogl-all-natives-linux-aarch64.jar,gluegen-rt-natives-linux-aarch64.jar
+application.macosx=core.jar,pi4j-core.jar,pi4j-device.jar,pi4j-gpio-extension.jar,pi4j-service.jar,jogl-all.jar,gluegen-rt.jar,jogl-all-natives-macosx-universal.jar,gluegen-rt-natives-macosx-universal.jar
+application.windows32=core.jar,pi4j-core.jar,pi4j-device.jar,pi4j-gpio-extension.jar,pi4j-service.jar,jogl-all.jar,gluegen-rt.jar,jogl-all-natives-windows-i586.jar,gluegen-rt-natives-windows-i586.jar
+application.windows64=core.jar,pi4j-core.jar,pi4j-device.jar,pi4j-gpio-extension.jar,pi4j-service.jar,jogl-all.jar,gluegen-rt.jar,jogl-all-natives-windows-amd64.jar,gluegen-rt-natives-windows-amd64.jar
+application.linux32=core.jar,pi4j-core.jar,pi4j-device.jar,pi4j-gpio-extension.jar,pi4j-service.jar,jogl-all.jar,gluegen-rt.jar,jogl-all-natives-linux-i586.jar,gluegen-rt-natives-linux-i586.jar
+application.linux64=core.jar,pi4j-core.jar,pi4j-device.jar,pi4j-gpio-extension.jar,pi4j-service.jar,jogl-all.jar,gluegen-rt.jar,jogl-all-natives-linux-amd64.jar,gluegen-rt-natives-linux-amd64.jar
+application.linux-armv6hf=core.jar,pi4j-core.jar,pi4j-device.jar,pi4j-gpio-extension.jar,pi4j-service.jar,jogl-all.jar,gluegen-rt.jar,jogl-all-natives-linux-armv6hf.jar,gluegen-rt-natives-linux-armv6hf.jar
+application.linux-arm64=core.jar,pi4j-core.jar,pi4j-device.jar,pi4j-gpio-extension.jar,pi4j-service.jar,jogl-all.jar,gluegen-rt.jar,jogl-all-natives-linux-aarch64.jar,gluegen-rt-natives-linux-aarch64.jar
