@@ -5,6 +5,9 @@
 	<classpathentry kind="lib" path="library/jogl-all.jar"/>
 	<classpathentry kind="lib" path="library/gluegen-rt.jar"/>
 	<classpathentry kind="lib" path="apple.jar"/>
-	<classpathentry kind="lib" path="library/RPiGreenbot.jar"/>
+	<classpathentry kind="lib" path="library/pi4j-core.jar"/>
+	<classpathentry kind="lib" path="library/pi4j-device.jar"/>
+	<classpathentry kind="lib" path="library/pi4j-gpio-extension.jar"/>
+	<classpathentry kind="lib" path="library/pi4j-service.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

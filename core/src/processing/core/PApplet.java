@@ -53,9 +53,7 @@ import javax.swing.filechooser.FileSystemView;
 // loadXML() error handling
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.jointheleague.ecolban.rpirobot.IRobotAdapter;
-import org.jointheleague.ecolban.rpirobot.IRobotInterface;
-import org.jointheleague.ecolban.rpirobot.SimpleIRobot;
+
 import org.xml.sax.SAXException;
 
 import java.io.*;
@@ -72,6 +70,9 @@ import java.util.zip.*;
 import processing.data.*;
 import processing.event.*;
 import processing.opengl.*;
+import processing.robot.IRobotAdapter;
+import processing.robot.IRobotInterface;
+import processing.robot.SimpleIRobot;
 
 /**
  * Base class for all sketches that use processing.core.

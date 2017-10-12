@@ -36,7 +36,10 @@
 	   includeAntRuntime="false"
 	   classpath="../core/library/core.jar;
                       ../core/apple.jar;
-                      ../core/RPiGreenbot.jar;
+                      ../core/pi4j-gpio-extension.jar;
+                      ../core/pi4j-service.jar;
+                      ../core/pi4j-device.jar;
+                      ../core/pi4j-core.jar;
                       lib/ant.jar;
                       lib/ant-launcher.jar;
                       lib/jna.jar;
