@@ -2,7 +2,7 @@ Roombaide
 ==========
 
 This is the official source code for the [Roombaide](http://iaroc.org) Development Environment (RDE).
-This is a fork of Roombaide intended to be used to control create 2 robots and is very much a work in progress.
+This is a fork of Processing intended to be used to control create 2 robots and is very much a work in progress.
 
 __Please help.__
 The instructions for building the source [are here](https://github.com/roombaide/roombaide/wiki/Build-Instructions).
