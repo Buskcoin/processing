@@ -15,6 +15,4 @@ So in the meantime, I ask for your patience,
 [participation](https://github.com/roombaide/roombaide/wiki/Project-List),
 and [patches](https://github.com/roombaide/roombaide/pulls).
 
-Ben Fry, 6 August 2015
-
 Using DarkProcessingTheme_3.0 by jeffThompson https://github.com/jeffThompson/DarkProcessingTheme_3.0
