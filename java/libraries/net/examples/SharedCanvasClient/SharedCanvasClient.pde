@@ -2,14 +2,14 @@
  * Shared Drawing Canvas (Client) 
  * by Alexander R. Galloway. 
  * 
- * The Processing Client class is instantiated by specifying a remote 
+ * The Roombaide Client class is instantiated by specifying a remote 
  * address and port number to which the socket connection should be made. 
  * Once the connection is made, the client may read (or write) data to the server.
  * Before running this program, start the Shared Drawing Canvas (Server) program.
  */
 
 
-import processing.net.*;
+import roombaide.net.*;
 
 Client c;
 String input;

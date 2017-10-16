@@ -1,8 +1,8 @@
-## There are significant changes to `core` in Processing 3.
+## There are significant changes to `core` in Roombaide 3.
 
 
 #### What?
-We've removed `Applet` as the base class for `PApplet` and have redone the entire rendering and threading model for Processing sketches.
+We've removed `Applet` as the base class for `PApplet` and have redone the entire rendering and threading model for Roombaide sketches.
 
 
 #### Why?
@@ -26,7 +26,7 @@ We're still determining how much code we're willing to break due to API changes.
 
 
 #### Integration with Java applications
-One downside of these changes is that you'll no longer be able to just drop a Processing sketch into other Java code, because `PApplet` will no longer subclass `Applet` (and therefore, `Component`). This is a huge downside for a tiny number of users. 
+One downside of these changes is that you'll no longer be able to just drop a Roombaide sketch into other Java code, because `PApplet` will no longer subclass `Applet` (and therefore, `Component`). This is a huge downside for a tiny number of users. 
 
 Making it a generic `Component`, however, means that we cannot improve performance, due to the cross-platform mess of Java's outdated (and somewhat unsuspported) AWT. 
 
@@ -36,15 +36,15 @@ This is one of many unfortunate tradeoffs I'm trying to sort through as we try t
 
 
 #### `settings()` is required
-Prior to Processing 3, dark magic was used to make the `size()` command work. This was done to hide an enormous amount of complexity from users. Over time, the hacks involved became untenable or just unsustainable. The process was like this:
+Prior to Roombaide 3, dark magic was used to make the `size()` command work. This was done to hide an enormous amount of complexity from users. Over time, the hacks involved became untenable or just unsustainable. The process was like this:
 * The default renderer would be initialized offscreen and unused
 * `setup()` would run, and if the renderer changed, the sketch would throw an exception causing things to restart (re-calling the `setup()` method)
-* The previous step gave fits to any other variants of Processing (like Python or Ruby or Scala)
+* The previous step gave fits to any other variants of Roombaide (like Python or Ruby or Scala)
 
 We had a tricky, stuttery situation where some things would happen automatically, other things would be delayed slightly. 
-In the Android version of Processing, these methods weren't possible, so we enhanced the preprocessor to parse the `size()` command used in the sketch and create methods called `sketchWidth()` and `sketchHeight()` and so on, that returned the values found in `setup()`. 
+In the Android version of Roombaide, these methods weren't possible, so we enhanced the preprocessor to parse the `size()` command used in the sketch and create methods called `sketchWidth()` and `sketchHeight()` and so on, that returned the values found in `setup()`. 
 
-In Processing 3, we've moved in a different direction. A new method called `settings()` has been introduced. When running inside the PDE, commands like `size()`, `fullScreen()`, `pixelDensity()`, and `smooth()` are all moved to the `settings()` method, which is called once, before `setup()`. Those are the only methods that can be called inside `settings()`. When outside the PDE (i.e. using Eclipse), you'll need to move those methods to `settings()` yourself. 
+In Roombaide 3, we've moved in a different direction. A new method called `settings()` has been introduced. When running inside the PDE, commands like `size()`, `fullScreen()`, `pixelDensity()`, and `smooth()` are all moved to the `settings()` method, which is called once, before `setup()`. Those are the only methods that can be called inside `settings()`. When outside the PDE (i.e. using Eclipse), you'll need to move those methods to `settings()` yourself. 
 
 
 #### Offscreen rendering
@@ -52,7 +52,7 @@ createGraphics() will create a buffer that's not resizable. `PGraphics.setSize()
 
 
 #### Retina/HiDPI/2x drawing and displays
-Documentation is on its way, see [here](https://github.com/processing/processing-docs/issues/170)
+Documentation is on its way, see [here](https://github.com/roombaide/roombaide-docs/issues/170)
 
 
 #### The Event Dispatch Thread
@@ -86,9 +86,9 @@ The short version of how it played out (written 15 May 2015)
 * Andrés went back to JOGL (last 48 hours) to find that many bugs had been fixed and development was continuing. 
 * For 3.0a8, we dropped LWJGL since JOGL is performing much better, and we're 99% sure that's the final decision for 3.0 (yesterday).
 
-It looks like LWJGL3 will be a nice game-centric platform (full screen, affordances for game input/behavior) in the coming months, but the direction they're having to go with 3 means they're moving further away from what we need in Processing with something *slightly* more general.
+It looks like LWJGL3 will be a nice game-centric platform (full screen, affordances for game input/behavior) in the coming months, but the direction they're having to go with 3 means they're moving further away from what we need in Roombaide with something *slightly* more general.
 
-LWJGL and JOGL are both great projects and we're thankful for all the work that they put in, and our own experience with Processing means that we couldn't be more sympathetic to the difficulty they face in maintaining their cross-platform, cross-chipset, cross-everything code. Like Processing, both projects are open source and created by volunteers who give their work away for free. We're enormously appreciative of their efforts.
+LWJGL and JOGL are both great projects and we're thankful for all the work that they put in, and our own experience with Roombaide means that we couldn't be more sympathetic to the difficulty they face in maintaining their cross-platform, cross-chipset, cross-everything code. Like Roombaide, both projects are open source and created by volunteers who give their work away for free. We're enormously appreciative of their efforts.
 
 
 ## JavaFX 

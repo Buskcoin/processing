@@ -1,5 +1,5 @@
 /*
-  Part of the Processing project - http://processing.org
+  Part of the Roombaide project - http://processing.org
 
   Copyright (c) 2011-12 hansi raber, released under LGPL under agreement
 
@@ -21,7 +21,7 @@ package japplemenubar;
 
 import java.io.*;
 
-import processing.core.PApplet;
+import roombaide.core.PApplet;
 
 
 /**
@@ -38,7 +38,7 @@ public class JAppleMenuBar {
   
 	static {
 	  try {
-	    File temp = File.createTempFile("processing", "menubar");
+	    File temp = File.createTempFile("roombaide", "menubar");
 	    temp.delete();  // remove the file itself
 	    temp.mkdirs();  // create a directory out of it
 	    temp.deleteOnExit();

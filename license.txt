@@ -5,7 +5,7 @@ Over the course of many years of development, files being moved around,
 and other code being added and removed, the license information has become
 quite a mess. Please help us clean this up so that others are properly 
 credited and licenses are consistently/correctly noted:
-https://github.com/processing/processing/issues/224
+https://github.com/roombaide/roombaide/issues/224
 
 
 .....................................................................

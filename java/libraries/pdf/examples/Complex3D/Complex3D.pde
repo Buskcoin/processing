@@ -7,8 +7,8 @@
 */
 
 
-import processing.opengl.*;
-import processing.pdf.*;
+import roombaide.opengl.*;
+import roombaide.pdf.*;
  
 // Trig lookup tables borrowed from Toxi. Cryptic but effective
 float sinLUT[];

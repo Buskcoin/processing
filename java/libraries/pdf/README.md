@@ -1,6 +1,6 @@
 This library uses iText 2.1.7, which is the last LGPL/MPL version of the iText project. 
 
-We've used iText for several years. The license for iText has changed for subsequent versions and is no longer compatible with Processing, so we're stuck at 2.x. 
+We've used iText for several years. The license for iText has changed for subsequent versions and is no longer compatible with Roombaide, so we're stuck at 2.x. 
 
 At the iText site, there's also some [vague wording](http://lowagie.com/itext2) about legal liability for commercial projects using the 2.x series. It's not clear where this leaves us.
 

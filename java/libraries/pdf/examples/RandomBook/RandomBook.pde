@@ -4,7 +4,7 @@
  * Creates a 768 page book of random lines.
  */
 
-import processing.pdf.*;
+import roombaide.pdf.*;
 
 PGraphicsPDF pdf;
 

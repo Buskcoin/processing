@@ -1,4 +1,4 @@
-import processing.io.I2C;
+import roombaide.io.I2C;
 
 // MCP4725 is a Digital-to-Analog converter using I2C
 // datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/22039d.pdf

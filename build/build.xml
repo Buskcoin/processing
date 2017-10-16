@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="Processing" default="build">
+<project name="Roombaide" default="build">
 
   <!-- Sets properties for macosx/windows/linux depending on current system -->
   <condition property="platform" value="macosx">
@@ -21,7 +21,7 @@
 
   <target name="ignore-tools">
     <echo message="Ignore the 'Unable to locate tools.jar' message." />
-    <echo message="The tools.jar file is not required to build Processing." />
+    <echo message="The tools.jar file is not required to build Roombaide." />
   </target>
 
   <!-- detetect Raspberry Pi and friends -->
@@ -44,12 +44,12 @@
   <target name="check-linux-arm32" if="linux-arm32">
     <property name="jre.download.jdk" value="true" />
     <property name="jre.downloader" value="linux-arm32-vfp-hflt.tar.gz" />
-    <property name="linux.dist" value="linux/processing-${version}-linux-armv6hf.tgz" />
+    <property name="linux.dist" value="linux/roombaide-${version}-linux-armv6hf.tgz" />
   </target>
   <target name="check-linux-arm64" if="linux-arm64">
     <property name="jre.download.jdk" value="true" />
     <property name="jre.downloader" value="linux-arm64-vfp-hflt.tar.gz" />
-    <property name="linux.dist" value="linux/processing-${version}-linux-arm64.tgz" />
+    <property name="linux.dist" value="linux/roombaide-${version}-linux-arm64.tgz" />
   </target>
 
   <!-- Require Java 8 everywhere. -->
@@ -67,7 +67,7 @@
        (Windows/Linux) or JDK (on Mac OS X) -->
 
   <property name="examples.dir"
-            value="../../processing-docs/content/examples" />
+            value="../../roombaide-docs/content/examples" />
 
   <property name="jdk.version" value="8" />
   <property name="jdk.update" value="144" />
@@ -100,7 +100,7 @@
 
   <!-- These lists haven't been updated since Java 6. The new list:
        http://www.oracle.com/technetwork/java/javase/jre-8-readme-2095710.html
-       Please help: https://github.com/processing/processing/issues/3288 -->
+       Please help: https://github.com/roombaide/roombaide/issues/3288 -->
 
   <fileset dir="windows/work/java" id="jre-optional-windows">
     <include name="lib/ext/dnsns.jar" />
@@ -276,7 +276,7 @@
 
   <!-- Figure out the platform-specific output directory for all this work. -->
   <condition property="target.path"
-             value="macosx/work/Processing.app/Contents/Java">
+             value="macosx/work/Roombaide.app/Contents/Java">
     <os family="mac" />
   </condition>
 
@@ -288,7 +288,7 @@
     <os family="windows" />
   </condition>
 
-  <!-- Libraries required for running processing -->
+  <!-- Libraries required for running roombaide -->
   <!-- also need to copy these to the bundleapp task for macosx -->
   <fileset dir=".." id="runtime.jars">
     <include name="app/pde.jar" />
@@ -299,29 +299,29 @@
     <include name="app/lib/ant-launcher.jar" />
   </fileset>
 
-  <target name="build" description="Build Processing.">
+  <target name="build" description="Build Roombaide.">
     <antcall target="${platform}-build" />
   </target>
 
-  <target name="run" description="Run Processing.">
+  <target name="run" description="Run Roombaide.">
     <antcall target="${platform}-run" />
   </target>
 
   <!-- Run the app in a more "native" manner, i.e. no additional
        console for debugging. Ensures that double-clicking shortcuts
        and other desktop integration features work properly. -->
-  <target name="app" description="Run Processing w/o console.">
+  <target name="app" description="Run Roombaide w/o console.">
     <antcall target="${platform}-run-app" />
   </target>
 
   <target name="dist" depends="revision-check"
-          description="Build Processing for distribution.">
+          description="Build Roombaide for distribution.">
     <input message="Enter version number:"
            addproperty="version"
            defaultvalue="${revision}" />
 
     <available file="${examples.dir}" property="examples.exist" />
-    <fail unless="examples.exist" message="To do a distribution, the processing-docs repo must be checked out at the same level as the processing repo." />
+    <fail unless="examples.exist" message="To do a distribution, the roombaide-docs repo must be checked out at the same level as the roombaide repo." />
 
     <!-- do a git pull in the docs repo so that it is up to date -->
     <exec executable="git" dir="${examples.dir}">
@@ -462,7 +462,7 @@
     <!-- <echo message="revision is ${revision}." /> -->
 
     <!-- figure out the revision number in base.java -->
-    <loadfile srcfile="../app/src/processing/app/Base.java"
+    <loadfile srcfile="../app/src/roombaide/app/Base.java"
               property="revision.base">
       <filterchain>
         <tokenfilter>
@@ -494,14 +494,14 @@
   <target name="macosx-clean" depends="subprojects-clean" description="Clean Mac OS X build">
     <delete dir="macosx/work" />
     <delete>
-      <fileset dir="macosx" includes="processing-*zip" />
+      <fileset dir="macosx" includes="roombaide-*zip" />
     </delete>
   </target>
 
   <target name="macosx-check-os" unless="macosx">
     <echo>
       =======================================================
-      Processing for Mac OS X can only be built on Mac OS X.
+      Roombaide for Mac OS X can only be built on Mac OS X.
 
       Bye.
       =======================================================
@@ -524,19 +524,19 @@
              classpath="macosx/appbundler.jar" />
 
     <bundleapp outputDirectory="macosx/work"
-               name="Processing"
-               displayName="Processing"
-               executableName="Processing"
-               identifier="org.processing.app"
+               name="Roombaide"
+               displayName="Roombaide"
+               executableName="Roombaide"
+               identifier="org.roombaide.app"
                signature="Pde3"
-               icon="macosx/processing.icns"
-               copyright="© The Processing Foundation"
-               getInfo="${version}, Copyright © The Processing Foundation"
+               icon="macosx/roombaide.icns"
+               copyright="© The Roombaide Foundation"
+               getInfo="${version}, Copyright © The Roombaide Foundation"
                shortVersion="${version}"
                version="${revision}"
                javafx="true"
                minimumSystem="10.8.5"
-               mainClassName="processing.app.BaseSplash">
+               mainClassName="roombaide.app.BaseSplash">
 
       <!-- The appbundler task needs a couple files (the Info.plist and
            anything else outside /jre) from the full JDK, even though
@@ -563,7 +563,7 @@
 
       <bundledocument extensions="pde"
                       icon="macosx/document.icns"
-                      name="Processing Source Code"
+                      name="Roombaide Source Code"
                       role="Editor">
       </bundledocument>
 
@@ -572,11 +572,11 @@
       <!--<option value="-splash:$APP_ROOT/Contents/Java/lib/about.png" />-->
 
       <!-- Sets dock icon when debugging (not launched via launch svcs) -->
-      <option value="-Xdock:icon=$APP_ROOT/Contents/Resources/processing.icns" />
+      <option value="-Xdock:icon=$APP_ROOT/Contents/Resources/roombaide.icns" />
       <!-- Don't think these actually make any difference.
            (The apple.awt.application.name property is used.)-->
       <!--
-      <option value="-Xdock:name=Processing" />
+      <option value="-Xdock:name=Roombaide" />
       -->
 
       <!-- Probably no longer needed? [fry 130917]
@@ -585,7 +585,7 @@
       <!-- returning 140606 per PDE X request -->
       <option value="-Xmx256M" />
 
-      <option value="-Dapple.awt.application.name=Processing" />
+      <option value="-Dapple.awt.application.name=Roombaide" />
 
       <!-- avoid conflicts with JNA DLLs already in the path -->
       <option value="-Djna.nosys=true" />
@@ -620,19 +620,19 @@
     </bundleapp>
 
     <!-- Temporary fix until new appbundler is included again after solving
-         https://github.com/processing/processing/issues/3359
-         https://github.com/processing/processing/issues/3360
+         https://github.com/roombaide/roombaide/issues/3359
+         https://github.com/roombaide/roombaide/issues/3360
          The 'keytool' file is deleted by our appbundler. Add it back so that
          Android signing works properly. (Not modifying our appbundler since
          most of the time that appbundler is used, keytool isn't needed).
          Also, because Ant's copy task does not retain file permissions on
          Unix systems, we need to use <exec executable="cp" ... > instead -->
     <exec executable="cp">
-      <arg line="${jdk.path.macosx}/Contents/Home/bin/keytool macosx/work/Processing.app/Contents/PlugIns/jdk${jdk.esoteric}.jdk/Contents/Home/jre/bin"/>
+      <arg line="${jdk.path.macosx}/Contents/Home/bin/keytool macosx/work/Roombaide.app/Contents/PlugIns/jdk${jdk.esoteric}.jdk/Contents/Home/jre/bin"/>
     </exec>
 
     <property name="contents.dir"
-              location="macosx/work/Processing.app/Contents" />
+              location="macosx/work/Roombaide.app/Contents" />
 
     <!-- Replace libjli.dylib symlink with actual file.
          Deals with code signing issues on OS X 10.9.5+ -->
@@ -649,13 +649,13 @@
       <fileset file="shared/revisions.txt" />
     </copy>
 
-    <!-- Use the Processing executable as the stub for exported apps.
+    <!-- Use the Roombaide executable as the stub for exported apps.
          This works b/c everything app-specific is in Info.plist. -->
     <property name="app.stub" value="${contents.dir}/Java/modes/java/application/mac-app-stub" />
     <!-- Grab a copy of the stub binary before it is signed.
-         (See processing.mode.java.JavaBuild for usage.)
+         (See roombaide.mode.java.JavaBuild for usage.)
          Prevents signing errors with exported apps. -->
-    <copy file="${contents.dir}/MacOS/Processing" tofile="${app.stub}" />
+    <copy file="${contents.dir}/MacOS/Roombaide" tofile="${app.stub}" />
     <!-- The ant copy command does not preserve permissions. -->
     <chmod file="${app.stub}" perm="ugo+x" />
 
@@ -689,14 +689,14 @@
     <exec executable="open" dir="macosx/work" spawn="true">
       <arg value="-a" />
       <arg value="/Applications/Utilities/Terminal.app" />
-      <arg value="Processing.app/Contents/MacOS/Processing" />
+      <arg value="Roombaide.app/Contents/MacOS/Roombaide" />
     </exec>
   </target>
 
   <target name="macosx-run-app" depends="macosx-build"
           description="Run Mac OS X version without console">
     <exec executable="open" dir="macosx/work" spawn="true">
-      <arg value="Processing.app" />
+      <arg value="Roombaide.app" />
     </exec>
   </target>
 
@@ -715,14 +715,14 @@
       <arg value="--force" />
       <arg value="--sign" />
       <arg value="Developer ID Application" />
-      <arg value="Processing.app/Contents/PlugIns/jdk${jdk.esoteric}.jdk" />
+      <arg value="Roombaide.app/Contents/PlugIns/jdk${jdk.esoteric}.jdk" />
     </exec>
 
     <exec executable="/usr/bin/codesign" dir="macosx/work">
       <arg value="--force" />
       <arg value="--sign" />
       <arg value="Developer ID Application" />
-      <arg value="Processing.app" />
+      <arg value="Roombaide.app" />
     </exec>
 
     <!-- Verify that the signature will pass Gatekeeper checks
@@ -732,7 +732,7 @@
       <arg value="- -verify" />
       <arg value="- -deep" />
       <arg value="- -verbose=2" />
-      <arg value="Processing.app" />
+      <arg value="Roombaide.app" />
     </exec>
     -->
     <!-- Disabling since it's a lot of gunk but not that useful. -->
@@ -745,14 +745,14 @@
     <antcall target="macosx-dist-sign" />
 
     <exec executable="ditto" dir="macosx/work">
-      <arg line="-c -k -rsrc . ../processing-${version}-macosx.zip" />
+      <arg line="-c -k -rsrc . ../roombaide-${version}-macosx.zip" />
     </exec>
 
     <echo>
       =======================================================
-      Processing for Mac OS X was built. Grab it from
+      Roombaide for Mac OS X was built. Grab it from
 
-      macosx/processing-${version}-macosx.zip
+      macosx/roombaide-${version}-macosx.zip
       =======================================================
     </echo>
   </target>
@@ -765,14 +765,14 @@
   <target name="linux-clean" depends="subprojects-clean" description="Clean linux version">
     <delete dir="linux/work" />
     <delete>
-      <fileset dir="linux" includes="processing-*tgz" />
+      <fileset dir="linux" includes="roombaide-*tgz" />
     </delete>
   </target>
 
   <target name="linux-check-os" unless="linux">
     <echo>
       =======================================================
-      Processing for Linux can only be built on *nix systems.
+      Roombaide for Linux can only be built on *nix systems.
 
       Bye.
       =======================================================
@@ -819,15 +819,15 @@
       <fileset refid="runtime.jars" />
     </copy>
 
-    <copy file="linux/processing" todir="linux/work" />
-    <chmod perm="ugo+x" file="linux/work/processing" />
+    <copy file="linux/roombaide" todir="linux/work" />
+    <chmod perm="ugo+x" file="linux/work/roombaide" />
 
     <!-- copy command line tool -->
-    <copy file="linux/processing" tofile="linux/work/processing-java" />
-    <chmod perm="ugo+x" file="linux/work/processing-java" />
+    <copy file="linux/roombaide" tofile="linux/work/roombaide-java" />
+    <chmod perm="ugo+x" file="linux/work/roombaide-java" />
 
     <!-- This allows Linux users to add mime types to the PDE by simply
-         running the install script added to the Processing folder.
+         running the install script added to the Roombaide folder.
          This adds the following features:
          - the icons for the PDE in different resolutions
          - icons for the files
@@ -842,7 +842,7 @@
     <copy file="linux/uninstall.sh" todir="linux/work" />
     <chmod perm="ugo+x" file="linux/work/uninstall.sh" />
 
-    <copy file="linux/processing-pde.xml" todir="linux/work/lib" />
+    <copy file="linux/roombaide-pde.xml" todir="linux/work/lib" />
     <copy file="linux/appdata.xml" todir="linux/work/lib" />
     <copy file="linux/desktop.template" todir="linux/work/lib" />
 
@@ -901,37 +901,37 @@
 
   <target name="linux-run" depends="linux-build"
           description="Run Linux version">
-    <exec executable="./processing" dir="linux/work" spawn="true"/>
+    <exec executable="./roombaide" dir="linux/work" spawn="true"/>
   </target>
 
   <target name="linux-dist" depends="linux-build"
           description="Build .tar.gz of linux version">
 
 <!--
-    <tar compression="gzip" destfile="linux/processing-${version}.tgz">
-      <tarfileset dir="linux/work" prefix="processing-${version}" />
+    <tar compression="gzip" destfile="linux/roombaide-${version}.tgz">
+      <tarfileset dir="linux/work" prefix="roombaide-${version}" />
     </tar>
 -->
 
    <!-- rename the work folder temporarily -->
-   <move file="linux/work" tofile="linux/processing-${version}" />
+   <move file="linux/work" tofile="linux/roombaide-${version}" />
 
-   <property name="linux.dist" value="linux/processing-${version}-linux${sun.arch.data.model}.tgz" />
+   <property name="linux.dist" value="linux/roombaide-${version}-linux${sun.arch.data.model}.tgz" />
 
    <exec executable="tar">
      <arg value="--directory=linux" />
      <arg value="--file=${linux.dist}" />
      <arg value="-cpz" />
-     <arg value="processing-${version}" />
+     <arg value="roombaide-${version}" />
    </exec>
 
    <!-- put... the candle... back -->
-   <!-- (rename the work processing-NNNN version to work) -->
-   <move file="linux/processing-${version}" tofile="linux/work" />
+   <!-- (rename the work roombaide-NNNN version to work) -->
+   <move file="linux/roombaide-${version}" tofile="linux/work" />
 
     <echo>
       =======================================================
-      Processing for Linux was built. Grab the archive from
+      Roombaide for Linux was built. Grab the archive from
 
       ${linux.dist}
       =======================================================
@@ -950,32 +950,32 @@
    <mkdir dir="linux/debian/usr/share/applications/" />
    <mkdir dir="linux/debian/usr/share/mime/packages/" />
    <!-- rename the work folder temporarily -->
-   <move file="linux/work" tofile="linux/debian/opt/processing" />
-   <symlink link="linux/debian/usr/bin/processing"
-            resource="../../opt/processing/processing" />
-   <symlink link="linux/debian/usr/bin/processing-java"
-            resource="../../opt/processing/processing-java" />
+   <move file="linux/work" tofile="linux/debian/opt/roombaide" />
+   <symlink link="linux/debian/usr/bin/roombaide"
+            resource="../../opt/roombaide/roombaide" />
+   <symlink link="linux/debian/usr/bin/roombaide-java"
+            resource="../../opt/roombaide/roombaide-java" />
 
    <!-- place .desktop and .sharedmimeinfo file -->
-   <copy file="linux/processing.desktop"
-         tofile="linux/debian/usr/share/applications/processing.desktop">
+   <copy file="linux/roombaide.desktop"
+         tofile="linux/debian/usr/share/applications/roombaide.desktop">
        <filterchain>
            <replacetokens>
                <token key="version" value="${version}" />
            </replacetokens>
        </filterchain>
    </copy>
-   <copy file="linux/processing.sharedmimeinfo"
-         tofile="linux/debian/usr/share/mime/packages/processing.xml" />
+   <copy file="linux/roombaide.sharedmimeinfo"
+         tofile="linux/debian/usr/share/mime/packages/roombaide.xml" />
 
    <!-- Set properties for DEBIAN/control file -->
-   <condition property="linux.deb" value="linux/processing-${version}-linux-armv6hf.deb">
+   <condition property="linux.deb" value="linux/roombaide-${version}-linux-armv6hf.deb">
      <equals arg1="${linux-arm32}" arg2="linux-arm32" />
    </condition>
-   <condition property="linux.deb" value="linux/processing-${version}-linux-arm64.deb">
+   <condition property="linux.deb" value="linux/roombaide-${version}-linux-arm64.deb">
      <equals arg1="${linux-arm64}" arg2="linux-arm64" />
    </condition>
-   <property name="linux.deb" value="linux/processing-${version}-linux${sun.arch.data.model}.deb" />
+   <property name="linux.deb" value="linux/roombaide-${version}-linux${sun.arch.data.model}.deb" />
 
    <!-- Raspbian seems to borrow armhf for armv6hf, so this works -->
    <condition property="deb.arch" value="armhf">
@@ -1025,15 +1025,15 @@
    </exec>
 
    <!-- put... the candle... back -->
-   <!-- (rename the debian processing version to work) -->
-   <move file="linux/debian/opt/processing" tofile="linux/work" />
+   <!-- (rename the debian roombaide version to work) -->
+   <move file="linux/debian/opt/roombaide" tofile="linux/work" />
 
    <!-- cleanup -->
    <delete dir="linux/debian" />
 
     <echo>
       ========================================================
-      Processing for Debian Linux was built. Grab the deb from
+      Roombaide for Debian Linux was built. Grab the deb from
 
       ${linux.deb}
       ========================================================
@@ -1049,14 +1049,14 @@
           description="Clean windows version">
     <delete dir="windows/work" />
     <delete>
-      <fileset dir="windows" includes="processing-*zip" />
+      <fileset dir="windows" includes="roombaide-*zip" />
     </delete>
   </target>
 
   <target name="windows-check-os" unless="windows">
     <echo>
       =======================================================
-      Processing for Windows can only be built on windows.
+      Roombaide for Windows can only be built on windows.
 
       Bye.
       =======================================================
@@ -1075,7 +1075,7 @@
     </copy>
 
     <!-- unpack the JNA DLLs for Windows to work around
-         https://github.com/processing/processing/issues/3624 -->
+         https://github.com/roombaide/roombaide/issues/3624 -->
 
     <condition property="jna.subfolder" value="win32-x86">
       <equals arg1="${sun.arch.data.model}" arg2="32" />
@@ -1164,7 +1164,7 @@
 
   <target name="windows-run" depends="windows-build"
           description="Run windows version">
-    <exec executable="windows/work/processing.exe"
+    <exec executable="windows/work/roombaide.exe"
           dir="windows/work" spawn="true"/>
   </target>
 
@@ -1172,33 +1172,33 @@
           description="Create .zip files of windows version">
     <!--
     <zip basedir="windows/work"
-         prefix="processing-${version}"
-         destfile="windows/processing-${version}.zip" />
+         prefix="roombaide-${version}"
+         destfile="windows/roombaide-${version}.zip" />
     <zip basedir="windows/work"
-         prefix="processing-${version}"
-         destfile="windows/processing-${version}-expert.zip"
+         prefix="roombaide-${version}"
+         destfile="windows/roombaide-${version}-expert.zip"
          excludes="java/**" />
     -->
 
-    <property name="windows.dist" value="windows/processing-${version}-windows${sun.arch.data.model}.zip" />
+    <property name="windows.dist" value="windows/roombaide-${version}-windows${sun.arch.data.model}.zip" />
 
     <zip destfile="${windows.dist}">
       <zipfileset dir="windows/work"
-                  prefix="processing-${version}" />
+                  prefix="roombaide-${version}" />
     </zip>
 
 <!-- Expert is too much of a headache. Just nix it for 2.0. -->
 <!--
-    <zip destfile="windows/processing-${version}-windows-expert.zip">
+    <zip destfile="windows/roombaide-${version}-windows-expert.zip">
       <zipfileset dir="windows/work"
-                  prefix="processing-${version}"
+                  prefix="roombaide-${version}"
                   excludes="java/**" />
     </zip>
 -->
 
     <echo>
       =======================================================
-      Processing for Windows was built. Grab the archive from
+      Roombaide for Windows was built. Grab the archive from
 
       ${windows.dist}
       =======================================================
@@ -1254,7 +1254,7 @@
     <!-- create iconset for the PDE application for Mac OS X -->
     <antcall target="iconset">
       <param name="icon.root" value="shared/lib/icons/pde" />
-      <param name="icon.icns" value="macosx/processing.icns" />
+      <param name="icon.icns" value="macosx/roombaide.icns" />
     </antcall>
 
     <!-- create iconset for exported sketch on Mac OS X -->
@@ -1290,7 +1290,7 @@ not ready to automate this yet, since we often have to reset the tag
   <target name="dist-src" depends="dist">
     <exec executable="git">
 remove the spaces for depth since it should be double dash, but screws up comments
-      <arg line="clone - -depth 1 git@github.com:processing/processing.git /tmp/processing-${version}-src" />
+      <arg line="clone - -depth 1 git@github.com:roombaide/roombaide.git /tmp/roombaide-${version}-src" />
     </exec>
   </target>
 -->
@@ -1334,7 +1334,7 @@ remove the spaces for depth since it should be double dash, but screws up commen
       <arg value="-Xdoclint:reference,accessibility" />
 
       <packageset dir="../core/src">
-        <include name="processing/**" />
+        <include name="roombaide/**" />
       </packageset>
 
     </javadoc>
@@ -1361,7 +1361,7 @@ remove the spaces for depth since it should be double dash, but screws up commen
 
       <packageset dir="../app/src">
         <include name="antlr/**" />
-        <include name="processing/**" />
+        <include name="roombaide/**" />
       </packageset>
 
 
@@ -1375,11 +1375,11 @@ remove the spaces for depth since it should be double dash, but screws up commen
       <arg value="-Xdoclint:reference,accessibility" />
 
       <!--<packageset dir="../app/generated">
-        <include name="processing/**" />
+        <include name="roombaide/**" />
       </packageset>-->
 
       <packageset dir="../core/src">
-        <include name="processing/**" />
+        <include name="roombaide/**" />
         <!--
         <include name="japplemenubar/**" />
         -->
@@ -1413,27 +1413,27 @@ remove the spaces for depth since it should be double dash, but screws up commen
 
       <packageset dir="../java/libraries/dxf/src">
         <include name="antlr/**" />
-        <include name="processing/**" />
+        <include name="roombaide/**" />
       </packageset>
       <packageset dir="../java/libraries/io/src">
         <include name="antlr/**" />
-        <include name="processing/**" />
+        <include name="roombaide/**" />
       </packageset>
       <packageset dir="../java/libraries/net/src">
         <include name="antlr/**" />
-        <include name="processing/**" />
+        <include name="roombaide/**" />
       </packageset>
       <packageset dir="../java/libraries/pdf/src">
         <include name="antlr/**" />
-        <include name="processing/**" />
+        <include name="roombaide/**" />
       </packageset>
       <packageset dir="../java/libraries/serial/src">
         <include name="antlr/**" />
-        <include name="processing/**" />
+        <include name="roombaide/**" />
       </packageset>
       <packageset dir="../java/libraries/svg/src">
         <include name="antlr/**" />
-        <include name="processing/**" />
+        <include name="roombaide/**" />
       </packageset>
     </javadoc>
 

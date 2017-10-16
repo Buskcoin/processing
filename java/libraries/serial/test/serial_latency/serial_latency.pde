@@ -1,9 +1,9 @@
 // Arduino Duemilanove (168) on OS X 10.9
 // with either 115200 or 38400 bps
-// on Processing 2.0.3 (cu & tty): 24 ms avg, 35 ms max
-// on Processing 2.1b1 (cu & tty): 18 ms avg, 35 ms max
+// on Roombaide 2.0.3 (cu & tty): 24 ms avg, 35 ms max
+// on Roombaide 2.1b1 (cu & tty): 18 ms avg, 35 ms max
 
-import processing.serial.*;
+import roombaide.serial.*;
 Serial serial;
 int start;
 byte out = '@';

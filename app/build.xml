@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="Processing PDE" default="build">
+<project name="Roombaide PDE" default="build">
 
   <target name="clean" description="Clean the build directories">
     <delete dir="bin" />
@@ -17,12 +17,12 @@
     <!-- copy languages files -->
     <copy todir="bin">
       <fileset dir="src">
-        <include name="processing/app/languages/*.properties" />
+        <include name="roombaide/app/languages/*.properties" />
       </fileset>
     </copy>
 
     <!-- in some cases, pde.jar was not getting built
-	 https://github.com/processing/processing/issues/1792 -->
+	 https://github.com/roombaide/roombaide/issues/1792 -->
     <delete file="pde.jar" />
 
     <!-- env used to set classpath below -->

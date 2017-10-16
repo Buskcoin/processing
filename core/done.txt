@@ -3,61 +3,61 @@ X default to using native select on all platforms
 
 contrib
 X Add defaultFontOrDeath to OpenGL textWidth
-X   https://github.com/processing/processing/issues/5137
-X   https://github.com/processing/processing/pull/5138
+X   https://github.com/roombaide/roombaide/issues/5137
+X   https://github.com/roombaide/roombaide/pull/5138
 
 
 0261 (3.3.4)
 X add exec() with StringList options
 X start to add stub for shell() function
 X handle edge case for set() being called with a 2D vector, on a 3D vector
-X   https://github.com/processing/processing/issues/5092
+X   https://github.com/roombaide/roombaide/issues/5092
 o keyPressed() problems with special press-and-hold behavior macOS Sierra
-X   https://github.com/processing/processing/issues/4952
+X   https://github.com/roombaide/roombaide/issues/4952
 X   added documentation in 3 places about it
 
 jakub
 X Fix keyPressed for multiple keys
-X   https://github.com/processing/processing/pull/5050
-X   https://github.com/processing/processing/issues/5049
+X   https://github.com/roombaide/roombaide/pull/5050
+X   https://github.com/roombaide/roombaide/issues/5049
 
 
 0260 (3.3.3)
 X keyPressed not returning false once a key is released
-X   https://github.com/processing/processing/issues/5033
+X   https://github.com/roombaide/roombaide/issues/5033
 X deal with loadBytes() regressions introduced by their rewrite
 X   (was breaking p5jsMode because of its use of loadBytes(File)
 
 jakub
 X image tint() broken in 3.3.x
-X   https://github.com/processing/processing/issues/5040
-X   https://github.com/processing/processing/pull/5042
+X   https://github.com/roombaide/roombaide/issues/5040
+X   https://github.com/roombaide/roombaide/pull/5042
 
 
 0259 (3.3.2)
 X add (far) more efficient file loading for loadBytes(File)
 X add loadBytes(URL) variant that uses content length header for array size
 X keyPressed is false if one key is released while multiple keys are pressed
-X   https://github.com/processing/processing/issues/4993
+X   https://github.com/roombaide/roombaide/issues/4993
 X createInput() wasn't returning null for files that were not found
-X   https://github.com/processing/processing/issues/5026
+X   https://github.com/roombaide/roombaide/issues/5026
 
 andres
 X Assigning Pixels Vertically Flipped in P2D
-X   https://github.com/processing/processing/issues/5013
+X   https://github.com/roombaide/roombaide/issues/5013
 
 gohai
 X improve loadBytes() performance 
-X   https://github.com/processing/processing/pull/5027
+X   https://github.com/roombaide/roombaide/pull/5027
 
 jakub
 X ArrayIndexOutOfBoundsException when using tint() or loadFont()
-X   https://github.com/processing/processing/issues/5028
-X   https://github.com/processing/processing/pull/5029
+X   https://github.com/roombaide/roombaide/issues/5028
+X   https://github.com/roombaide/roombaide/pull/5029
 
 
 0258 (3.3.1)
-X improve sum() functions in processing.data
+X improve sum() functions in roombaide.data
 X   add sum() to IntDict and FloatDict
 X   add sumLong() to IntList, IntDict (to handle cases outside integer range)
 X   add sumDouble() to FloatList, FloatDict (to handle outside float range)
@@ -65,32 +65,32 @@ X   throw exception when using sum() with numbers that are too large or small
 X createInput() and createOutput() now both use buffered streams by default
 X   createInputRaw() does not, however
 X don't derive the font again if the size is unchanged
-X   part of https://github.com/processing/processing/issues/4956
+X   part of https://github.com/roombaide/roombaide/issues/4956
 X fix temporary file handling for saveBytes(), saveStream(), etc
 X   wasn't handling gzip output properly
 X   also could have problems w/ names under length 3
 
 jakub
 X major work on window placement and pixel density
-X   https://github.com/processing/processing/pull/5011
+X   https://github.com/roombaide/roombaide/pull/5011
 
 gohai
 X Fix MeshTweening vertex shader
-X   https://github.com/processing/processing-docs/issues/523
-X   https://github.com/processing/processing-docs/pull/524
+X   https://github.com/roombaide/roombaide-docs/issues/523
+X   https://github.com/roombaide/roombaide-docs/pull/524
 X ARM: Allow Raspberry Pi's Mesa GL driver to use up to 8 lights
-X   https://github.com/processing/processing/pull/4915
+X   https://github.com/roombaide/roombaide/pull/4915
 X   ...and revert it back again
-X   https://github.com/processing/processing/pull/4922
+X   https://github.com/roombaide/roombaide/pull/4922
 X Retry with multisampling disabled if creating a framebuffer fails
 X   because of INCOMPLETE_MULTISAMPLE
-X   https://github.com/processing/processing/pull/4921
+X   https://github.com/roombaide/roombaide/pull/4921
 X Report more error conditions in validateFramebuffer
-X   https://github.com/processing/processing/pull/4920
+X   https://github.com/roombaide/roombaide/pull/4920
 X Add more Raspberry Pi related fixes to JOGL
-X   https://github.com/processing/processing/pull/4911
+X   https://github.com/roombaide/roombaide/pull/4911
 X Unblock hardware-accelerated P3D on ARM Mali devices
-X   https://github.com/processing/processing/pull/5014
+X   https://github.com/roombaide/roombaide/pull/5014
 
 
 0257 (3.3)
@@ -105,27 +105,27 @@ X also remove rows/columns from beginning
 X   since that's what trim() on strings does
 X consume Unicode BOM (0xFEFF) in createReader() and Table parser
 o no prompt shows with selectInput() on 10.11 and 10.12
-X   https://github.com/processing/processing/issues/4758
+X   https://github.com/roombaide/roombaide/issues/4758
 X   can't fix, seems embedded in the Java implementation
 X return null for getString(), getJSONObject(), and getJSONArray()
 X   when key is not present, more in line w/ other p5 api
 
 contrib
 X Fix a number of memory leaks (jdf)
-X   https://github.com/processing/processing/pull/4862
-X   https://github.com/jdf/processing.py/issues/233
-X   https://github.com/processing/processing/pull/4873
+X   https://github.com/roombaide/roombaide/pull/4862
+X   https://github.com/jdf/roombaide.py/issues/233
+X   https://github.com/roombaide/roombaide/pull/4873
 
 
 0256 (3.2.4)
 X write exec() documentation
-X   https://github.com/processing/processing/issues/4740
+X   https://github.com/roombaide/roombaide/issues/4740
 X add xmlns to elements procured from getChild()
 X make sure newline is added after XML header when formatting
 
 api additions
 X add listPaths(), listFiles()
-X   https://github.com/processing/processing/issues/4622
+X   https://github.com/roombaide/roombaide/issues/4622
 X add increment() method that takes IntDict to merge another dictionary
 X   Calling this increment() since it doesn't make sense in practice for
 X   the other dictionary types, even though it's technically an add()
@@ -134,10 +134,10 @@ X add XML.print() method (prints with indent of 2)
 
 contribs
 X Adding missing docs and keywords for TableRow
-X   https://github.com/processing/processing/pull/4333
+X   https://github.com/roombaide/roombaide/pull/4333
 X PShape in Java2D wasn't respecting 'kind'
-X   https://github.com/processing/processing/issues/4826
-X   https://github.com/processing/processing/pull/4834
+X   https://github.com/roombaide/roombaide/issues/4826
+X   https://github.com/roombaide/roombaide/pull/4834
 
 cleaning
 o probably should also check to make sure PApplet running JVM 8
@@ -145,66 +145,66 @@ X   or compile against 1.8 and force it?
 
 andres
 X PShape array index out of bounds when using P3D 
-X   https://github.com/processing/processing/issues/4773
+X   https://github.com/roombaide/roombaide/issues/4773
 X modelX/Y/Z() should be disabled in P2D
-X   https://github.com/processing/processing/issues/4813
+X   https://github.com/roombaide/roombaide/issues/4813
 
 jakub
 X FX: Prevent matrix stack overflow
-X   https://github.com/processing/processing/pull/4799
-X   https://github.com/processing/processing/issues/4206
+X   https://github.com/roombaide/roombaide/pull/4799
+X   https://github.com/roombaide/roombaide/issues/4206
 X FX: Reset transform to identity before drawing background
-X   https://github.com/processing/processing/pull/4795
+X   https://github.com/roombaide/roombaide/pull/4795
 X FX: Implement mouse wheel event
-X   https://github.com/processing/processing/issues/4169
-X   https://github.com/processing/processing/pull/4796
+X   https://github.com/roombaide/roombaide/issues/4169
+X   https://github.com/roombaide/roombaide/pull/4796
 X FX: Fix curveVertex drawing all curves together as one long curve
-X   https://github.com/processing/processing/pull/4800
-X   https://github.com/processing/processing/issues/4382
+X   https://github.com/roombaide/roombaide/pull/4800
+X   https://github.com/roombaide/roombaide/issues/4382
 X FX: Add exception handler which reports exceptions from user code
-X   https://github.com/processing/processing/pull/4798
-X   https://github.com/processing/processing/issues/4339
+X   https://github.com/roombaide/roombaide/pull/4798
+X   https://github.com/roombaide/roombaide/issues/4339
 X Unify mouse pressed/released events across renderers
-X   https://github.com/processing/processing/issues/4361
-X   https://github.com/processing/processing/pull/4797
+X   https://github.com/roombaide/roombaide/issues/4361
+X   https://github.com/roombaide/roombaide/pull/4797
 X Fix typo in GLSL preprocessor
-X   https://github.com/processing/processing/issues/4810
-X   https://github.com/processing/processing/pull/4816
+X   https://github.com/roombaide/roombaide/issues/4810
+X   https://github.com/roombaide/roombaide/pull/4816
 X Keep Windows timer resolution high for OpenGL sketches
 X   prevents frame rate in OpenGL hovering around 30 instead of 60
-X   https://github.com/processing/processing/pull/4847
-X   https://github.com/processing/processing/issues/4846
+X   https://github.com/roombaide/roombaide/pull/4847
+X   https://github.com/roombaide/roombaide/issues/4846
 X Sketches still running in the background after closing
-X   https://github.com/processing/processing/issues/4831
+X   https://github.com/roombaide/roombaide/issues/4831
 X   (needed to allow JAVA2D to terminate when animation thread dies)
-X   https://github.com/processing/processing/pull/4839
+X   https://github.com/roombaide/roombaide/pull/4839
 
 
 0255 (3.2.3)
 
 andres
 X automatic detection of POINT and LINE shaders fails
-X   https://github.com/processing/processing/issues/4725
+X   https://github.com/roombaide/roombaide/issues/4725
 X show warning when frameRate() less than 1 is called with P2D and P3D
-X   https://github.com/processing/processing/issues/4716
+X   https://github.com/roombaide/roombaide/issues/4716
 
 
 0254 (3.2.2)
 X fix quoting problem in IntDict.toJSON()
 X add getRenderer() to SurfaceInfo
-X   https://github.com/processing/processing/issues/4441
+X   https://github.com/roombaide/roombaide/issues/4441
 X Exceptions thrown in OpenGL apps when hitting window close box
-X   https://github.com/processing/processing/issues/4690
+X   https://github.com/roombaide/roombaide/issues/4690
 X add getRowMap() function
 o   do we want rows() to not be transient?
 X   write docs for getRowMap()
 o Add options to saveJSONArray documentation (enhancement)
-o   https://github.com/processing/processing/issues/4683
+o   https://github.com/roombaide/roombaide/issues/4683
 X   made note in the docs repo
 X go back to textMode(MODEL) is native font not available for textMode(SHAPE)
-X   https://github.com/processing/processing/issues/4680
+X   https://github.com/roombaide/roombaide/issues/4680
 X NPE thrown when using textMode(SHAPE) with a .vlw font
-X   https://github.com/processing/processing/issues/4680
+X   https://github.com/roombaide/roombaide/issues/4680
 X add toJSON() method to IntDict
 X   had to use JSONObject.quote() to wrap the text
 X   do the same for the other data classes
@@ -215,29 +215,29 @@ X     keep toJSONObject() for turning XxxxList into a numbered lookup
 
 contrib
 X Call glGetProgramiv to retrieve program log length
-X   https://github.com/processing/processing/issues/4659
-X   https://github.com/processing/processing/pull/4660
+X   https://github.com/roombaide/roombaide/issues/4659
+X   https://github.com/roombaide/roombaide/pull/4660
 X JSONObject get() method is private
-X   https://github.com/processing/processing/issues/4334
-X   https://github.com/processing/processing/pull/4336
+X   https://github.com/roombaide/roombaide/issues/4334
+X   https://github.com/roombaide/roombaide/pull/4336
 
 andres
 X Automatic handling of screen FBOs breaks readPixels() for user-provided FBO
-X   https://github.com/processing/processing/issues/4643
+X   https://github.com/roombaide/roombaide/issues/4643
 X PGraphicsOpenGL: camera info not updated
-X   https://github.com/processing/processing/issues/4609
+X   https://github.com/roombaide/roombaide/issues/4609
 X Fix PShape, updateTessellation, matrix transformations
-X   https://github.com/processing/processing/issues/4662
+X   https://github.com/roombaide/roombaide/issues/4662
 X QUAD_STRIP as child shape draws extra lines
-X   https://github.com/processing/processing/issues/4656
+X   https://github.com/roombaide/roombaide/issues/4656
 X remove extra glClear() calls
-X   https://github.com/processing/processing/issues/4694
+X   https://github.com/roombaide/roombaide/issues/4694
 X PShapes do not show up in PDF with P2D renderer
-X   https://github.com/processing/processing/issues/4647
+X   https://github.com/roombaide/roombaide/issues/4647
 X Some semi-transparent edges of sphere() meshes rendered in higher density
-X   https://github.com/processing/processing/issues/4720
+X   https://github.com/roombaide/roombaide/issues/4720
 X P2D and P3D not stopping with empty roboLoop() blocks
-X   https://github.com/processing/processing/issues/4722
+X   https://github.com/roombaide/roombaide/issues/4722
 
 
 0253 (3.2.1)
@@ -251,44 +251,44 @@ X use StandardCharsets.UTF_8 instead of getting encoding by name
 X PApplet.main(Blah.class) now works
 o add push() and pop() methods to mirror js?
 X Can't render PGraphics object using image() within a PDF
-X   https://github.com/processing/processing/issues/4473
+X   https://github.com/roombaide/roombaide/issues/4473
 
 jakub
 X Fix resizing targets for async save
-X   https://github.com/processing/processing/pull/4607
-X   https://github.com/processing/processing/issues/4578
+X   https://github.com/roombaide/roombaide/pull/4607
+X   https://github.com/roombaide/roombaide/issues/4578
 
 contrib
 X Make loadStrings() and loadJSONObject/loadJSONArray() error msgs consistent
-X   https://github.com/processing/processing/issues/4265
-X   https://github.com/processing/processing/pull/4268
+X   https://github.com/roombaide/roombaide/issues/4265
+X   https://github.com/roombaide/roombaide/pull/4268
 
 
 0251 (3.1.2)
 X rewrite csv handling
 X   fix parsing bugs, remove newlines option, improve performance
 X prevent random(low, high) from returning 'high'
-X   https://github.com/processing/processing/issues/4551
+X   https://github.com/roombaide/roombaide/issues/4551
 X disable async saveFrame() by default
-X   https://github.com/processing/processing/issues/4578
+X   https://github.com/roombaide/roombaide/issues/4578
 
 gohai
 X Fix GLExceptions on Raspberry Pi when using offscreen PGraphics 
-X   https://github.com/processing/processing/pull/4524
+X   https://github.com/roombaide/roombaide/pull/4524
 
 leslie
 X fixed iterator remove() methods so they dont skip container elements
-X   https://github.com/processing/processing/pull/4519
+X   https://github.com/roombaide/roombaide/pull/4519
 X added a check for length 0 arrays in expand()
-X   https://github.com/processing/processing/pull/4520
+X   https://github.com/roombaide/roombaide/pull/4520
 
 jakub
 X Prevent NPE in loadImage() when called before setup()
-X   https://github.com/processing/processing/pull/4505
+X   https://github.com/roombaide/roombaide/pull/4505
 
 andres
 X fix crash when calling getUniformLoc() called in PShader.set()
-X   https://github.com/processing/processing/issues/4542
+X   https://github.com/roombaide/roombaide/issues/4542
 
 earlier
 X see if 8u65 or 8u66 fix the JavaFX problem
@@ -300,16 +300,16 @@ X implement support for encoding= option in loadTable()
 
 jakub
 X Block loadImage and requestImage while images still being saved
-X   https://github.com/processing/processing/issues/4218
-X   https://github.com/processing/processing/pull/4465
+X   https://github.com/roombaide/roombaide/issues/4218
+X   https://github.com/roombaide/roombaide/pull/4465
 
 andres
 X PShapeOBJ error String for missing MTL texture file
-X   https://github.com/processing/processing/issues/3990
-X   https://github.com/processing/processing/commit/49a4c815557214fc1bf92e381ffaa398f262361a
+X   https://github.com/roombaide/roombaide/issues/3990
+X   https://github.com/roombaide/roombaide/commit/49a4c815557214fc1bf92e381ffaa398f262361a
 X Shape (OBJ) import texture data is 0.0
-X   https://github.com/processing/processing/issues/3156
-X   https://github.com/processing/processing/commit/9f1d2988dc80ca7d5ee861b944cb59020ff771c5
+X   https://github.com/roombaide/roombaide/issues/3156
+X   https://github.com/roombaide/roombaide/commit/9f1d2988dc80ca7d5ee861b944cb59020ff771c5
 
 
 0249 (3.1)
@@ -323,158 +323,158 @@ X   call crop() in keyArray() and valueArray() functions
 X     they're duplicates, their length is an implementation detail
 X   normalize features and error handling between all of them
 X add print() and write(PrintWriter) methods to Table/TableRow
-X   https://github.com/processing/processing/issues/4396
+X   https://github.com/roombaide/roombaide/issues/4396
 
 jakub
 X several JavaFX fixes
-X   https://github.com/processing/processing/pull/4411
+X   https://github.com/roombaide/roombaide/pull/4411
 X cursor() and noCursor() not working on FX2D
-X   https://github.com/processing/processing/issues/4405
+X   https://github.com/roombaide/roombaide/issues/4405
 X Make sure PImage.parent is set in loadImage()
-X   https://github.com/processing/processing/pull/4412
+X   https://github.com/roombaide/roombaide/pull/4412
 
 andres
 X Change convention for directional lights in OpenGL-Binding for GLSL
-X   https://github.com/processing/processing/issues/4275
+X   https://github.com/roombaide/roombaide/issues/4275
 X internal texture copy does not update immediately
-X   https://github.com/processing/processing/issues/4404
+X   https://github.com/roombaide/roombaide/issues/4404
 X Font corruption issue in OpenGL
-X   https://github.com/processing/processing/issues/4392
+X   https://github.com/roombaide/roombaide/issues/4392
 X setStroke() does not work with imported OBJ Pshapes
-X   https://github.com/processing/processing/issues/4377
+X   https://github.com/roombaide/roombaide/issues/4377
 
 contribs
 X blendMode() resetting with getGraphics()
-X   https://github.com/processing/processing/issues/4019
-X   https://github.com/processing/processing/pull/4341
-X   https://github.com/processing/processing/issues/4376
+X   https://github.com/roombaide/roombaide/issues/4019
+X   https://github.com/roombaide/roombaide/pull/4341
+X   https://github.com/roombaide/roombaide/issues/4376
 
 
 0248 (3.0.2)
 X Fix another "Zero length string passed to TextLayout constructor" error
 X Ambiguity on where to call smooth()
-X   https://github.com/processing/processing/issues/4211
+X   https://github.com/roombaide/roombaide/issues/4211
 X   add additional clarification for Eclipse users
 X Flipped Y-axis in JavaFX is now done (JDK bug)
-X   https://github.com/processing/processing/issues/3795
+X   https://github.com/roombaide/roombaide/issues/3795
 
 jakub
 X Initialize sketch args before calling settings() 
-X   https://github.com/processing/processing/issues/4219
-X   https://github.com/processing/processing/pull/4220
+X   https://github.com/roombaide/roombaide/issues/4219
+X   https://github.com/roombaide/roombaide/pull/4220
 
 andres
 X Stop button in OpenGL exported applications does not use preference settings
-X   https://github.com/processing/processing/issues/4064
+X   https://github.com/roombaide/roombaide/issues/4064
 X Export without a stop button using P3D or P2D
-X   https://github.com/processing/processing/issues/4056
+X   https://github.com/roombaide/roombaide/issues/4056
 X glClearDepthf() not available on older hardware
-X   https://github.com/processing/processing/issues/4106
+X   https://github.com/roombaide/roombaide/issues/4106
 X Drawing a sphere with shape() first changes sphereDetail from default
-X   https://github.com/processing/processing/issues/4192
+X   https://github.com/roombaide/roombaide/issues/4192
 X PShape.scale() affects strokeWeight differently in P2D and P3D
-X   https://github.com/processing/processing/issues/4231
+X   https://github.com/roombaide/roombaide/issues/4231
 X createShape(GROUP) + textured child + non-textured child = P3D render problems
-X   https://github.com/processing/processing/issues/4176
+X   https://github.com/roombaide/roombaide/issues/4176
 X pixelDensity() and createGraphics() with P3D
-X   https://github.com/processing/processing/issues/4039
+X   https://github.com/roombaide/roombaide/issues/4039
 X Friendlier message when running drawing commands outside animation thread
-X   https://github.com/processing/processing/issues/4196
+X   https://github.com/roombaide/roombaide/issues/4196
 X strokeWeight() not working properly with point() in P2D and P3D
-X   https://github.com/processing/processing/issues/4188
+X   https://github.com/roombaide/roombaide/issues/4188
 X exit() is not called in P2D/P3D
-X   https://github.com/processing/processing/issues/4156
+X   https://github.com/roombaide/roombaide/issues/4156
 X attrib*() function does not work well with PShape 
-X   https://github.com/processing/processing/issues/4048
+X   https://github.com/roombaide/roombaide/issues/4048
 
 contribs
 X Fill out the Javadoc for PMatrix
-X   https://github.com/processing/processing/pull/4155
+X   https://github.com/roombaide/roombaide/pull/4155
 X Have PSurfaceFX pay attention to the setVisible argument
-X   https://github.com/processing/processing/pull/4210
+X   https://github.com/roombaide/roombaide/pull/4210
 X Use xdg-open in PApplet#launch(String)
-X   https://github.com/processing/processing/pull/4171
+X   https://github.com/roombaide/roombaide/pull/4171
 
 
 0247 (3.0.1)
 X curveVertex() does not work with FX2D renderer
-X   https://github.com/processing/processing/issues/3960
+X   https://github.com/roombaide/roombaide/issues/3960
 X hide menu bar on OS X when FX2D is running full screen
 X add quotes to the necessary parameters in the size() error messages
 X Editor menu is outside the visible screen with 800x480 display
-X   https://github.com/processing/processing/issues/3913
-X   https://github.com/processing/processing/pull/3999
-X   https://github.com/processing/processing/pull/3992
+X   https://github.com/roombaide/roombaide/issues/3913
+X   https://github.com/roombaide/roombaide/pull/3999
+X   https://github.com/roombaide/roombaide/pull/3992
 X add a patch for FX2D menubar not hiding, root cause not sorted out
 
 jakub
 X Fix depth sorter ordering when two triangles in a plane share vertices
-X   https://github.com/processing/processing/pull/4010
+X   https://github.com/roombaide/roombaide/pull/4010
 X Turn off fixed rate scheduling in OpenGL
-X   https://github.com/processing/processing/pull/4004
-X Fix GLSL preprocessing issues with variable name mangling
-X   https://github.com/processing/processing/pull/4052
-X   https://github.com/processing/processing/issues/3961
-X   https://github.com/processing/processing/issues/3968
+X   https://github.com/roombaide/roombaide/pull/4004
+X Fix GLSL preroombaide issues with variable name mangling
+X   https://github.com/roombaide/roombaide/pull/4052
+X   https://github.com/roombaide/roombaide/issues/3961
+X   https://github.com/roombaide/roombaide/issues/3968
 
 andres
 X cursor() fails to work as expected with P2D/P3D 
-X   https://github.com/processing/processing/issues/3955
+X   https://github.com/roombaide/roombaide/issues/3955
 X Topics/Shader/Convay broken
-X   https://github.com/processing/processing/issues/3947
-X   https://github.com/processing/processing/issues/3973
+X   https://github.com/roombaide/roombaide/issues/3947
+X   https://github.com/roombaide/roombaide/issues/3973
 X Regressions wrt GLES2 support between b4 and b7
-X   https://github.com/processing/processing/issues/3976
+X   https://github.com/roombaide/roombaide/issues/3976
 X stroke glitches in P3D
-X   https://github.com/processing/processing/issues/4007
-X   https://github.com/processing/processing/issues/4027
-X   https://github.com/processing/processing/issues/4012
+X   https://github.com/roombaide/roombaide/issues/4007
+X   https://github.com/roombaide/roombaide/issues/4027
+X   https://github.com/roombaide/roombaide/issues/4012
 X line loops incorrectly closed in P3D
-X   https://github.com/processing/processing/issues/4031
+X   https://github.com/roombaide/roombaide/issues/4031
 X pixelDensity() and createGraphics()
-X   https://github.com/processing/processing/issues/4039
-X   https://github.com/processing/processing/commit/1d163197c970947bf5be17049bddbe8e444f759d
+X   https://github.com/roombaide/roombaide/issues/4039
+X   https://github.com/roombaide/roombaide/commit/1d163197c970947bf5be17049bddbe8e444f759d
 X GL related crashes when closing the display window on Ubuntu (Intel)
-X   https://github.com/processing/processing/issues/4041
+X   https://github.com/roombaide/roombaide/issues/4041
 X GL related crashes when closing window on MacBook Air (Intel) running 10.9.5
-X   https://github.com/processing/processing/issues/3977
+X   https://github.com/roombaide/roombaide/issues/3977
 
 jogl
 X Update to JogAmp JOGL 2.3.2
-X   https://github.com/processing/processing/issues/3979
+X   https://github.com/roombaide/roombaide/issues/3979
 X Output window cannot be set as non-resizable with the P2D or P3D renderers
 X   https://jogamp.org/bugzilla/show_bug.cgi?id=1188
-X   https://github.com/processing/processing/issues/3952
+X   https://github.com/roombaide/roombaide/issues/3952
 X setAlwaysOnTop does not work in P2D and P3D on Mac
-X   https://github.com/processing/processing/issues/3793
+X   https://github.com/roombaide/roombaide/issues/3793
 X P2D and P3D windows behave strangely when larger than the screen size
-X   https://github.com/processing/processing/issues/3401
+X   https://github.com/roombaide/roombaide/issues/3401
 X Remove Gluegen & JOGL sources
-X   https://github.com/processing/processing/pull/3982
+X   https://github.com/roombaide/roombaide/pull/3982
 
 
 0246 the papal visit (3.0)
 X implement high-performance/async image saving
 X   Use PBOs for async texture copy
-X   https://github.com/processing/processing/issues/3569
-X   https://github.com/processing/processing/pull/3863
-X   https://github.com/processing/processing/pull/3869
+X   https://github.com/roombaide/roombaide/issues/3569
+X   https://github.com/roombaide/roombaide/pull/3863
+X   https://github.com/roombaide/roombaide/pull/3869
 X Textures disappearing in beta 7 (might be WeakReference regression)
-X   https://github.com/processing/processing/issues/3858
-X   https://github.com/processing/processing/pull/3874
-X   https://github.com/processing/processing/pull/3875
+X   https://github.com/roombaide/roombaide/issues/3858
+X   https://github.com/roombaide/roombaide/pull/3874
+X   https://github.com/roombaide/roombaide/pull/3875
 X Convert all documented hacky keys in OpenGL
-X   https://github.com/processing/processing/pull/3888
+X   https://github.com/roombaide/roombaide/pull/3888
 X Frame size displays incorrectly if surface.setResizable(true)
-X   https://github.com/processing/processing/issues/3868
-X   https://github.com/processing/processing/pull/3880
+X   https://github.com/roombaide/roombaide/issues/3868
+X   https://github.com/roombaide/roombaide/pull/3880
 X displayWidth, displayHeight, full screen, display number
-X   https://github.com/processing/processing/pull/3893
-X   https://github.com/processing/processing/issues/3865
+X   https://github.com/roombaide/roombaide/pull/3893
+X   https://github.com/roombaide/roombaide/issues/3865
 X OpenGL with fullScreen() always opens on default display
-X   https://github.com/processing/processing/issues/3889
-X   https://github.com/processing/processing/issues/3797
-X   https://github.com/processing/processing/pull/3892
+X   https://github.com/roombaide/roombaide/issues/3889
+X   https://github.com/roombaide/roombaide/issues/3797
+X   https://github.com/roombaide/roombaide/pull/3892
 
 cleaning
 o move AWT image loading into PImageAWT
@@ -484,396 +484,396 @@ o   in part because FX doesn't even use the EDT
 o   re-check the Linux frame visibility stuff
 X   cleaned most of this as far as we can go
 o Ubuntu Unity prevents full screen from working properly
-X   https://github.com/processing/processing/issues/3158
+X   https://github.com/roombaide/roombaide/issues/3158
 X   can't fix; upstream problem, added to the wiki
 
 
 0245 core (3.0b7)
 X surface.setLocation(x,y) not working with the default renderer
-X   https://github.com/processing/processing/issues/3821
+X   https://github.com/roombaide/roombaide/issues/3821
 X FX2D display is inverted in 3.0b6
-X   https://github.com/processing/processing/issues/3795
+X   https://github.com/roombaide/roombaide/issues/3795
 
 jakub
 X Make the PApplet regex cache LRU
-X   https://github.com/processing/processing/pull/3815
+X   https://github.com/roombaide/roombaide/pull/3815
 X Minor OpenGL improvements
-X   https://github.com/processing/processing/pull/3849
+X   https://github.com/roombaide/roombaide/pull/3849
 
 andres
 X Cannot re-enable stroke or fill of a PShape with P2D
-X   https://github.com/processing/processing/issues/3808
+X   https://github.com/roombaide/roombaide/issues/3808
 X setResizable broke with oscilating behavior in 3.0b6
-X   https://github.com/processing/processing/issues/3825
-X   https://github.com/processing/processing/commit/42c0150da0f400637de916db1f94a687a7bc4288
+X   https://github.com/roombaide/roombaide/issues/3825
+X   https://github.com/roombaide/roombaide/commit/42c0150da0f400637de916db1f94a687a7bc4288
 X surface.setLocation() causing a freeze on Windows
-X   https://github.com/processing/processing/commit/4c0f9234c0a48f62363233cafc9c9951ee351d3e
+X   https://github.com/roombaide/roombaide/commit/4c0f9234c0a48f62363233cafc9c9951ee351d3e
 X selectInput/Output() is behind the drawing window (Windows)
-X   https://github.com/processing/processing/issues/3775
+X   https://github.com/roombaide/roombaide/issues/3775
 X MouseWheel count wrong (backwards?) in P2D and P3D
-X   https://github.com/processing/processing/issues/3840
+X   https://github.com/roombaide/roombaide/issues/3840
 
 
 0244 core (3.0b6)
 X Incomplete text rendering of strings with consecutive line breaks
-X   https://github.com/processing/processing/issues/3736
-X   https://github.com/processing/processing/pull/3737
-X   https://github.com/processing/processing/issues/3761
+X   https://github.com/roombaide/roombaide/issues/3736
+X   https://github.com/roombaide/roombaide/pull/3737
+X   https://github.com/roombaide/roombaide/issues/3761
 X add the Contents/Java folder to java.library.path on OS X
 X   allows exported applications to use the Sound library
 o don't grab pixels of java2d images unless asked
 o   this is the difference between a lot of loadPixels() and not
 o   so important to have it in before beta if that's the change
-o   https://github.com/processing/processing/issues/99
+o   https://github.com/roombaide/roombaide/issues/99
 X   won't fix for now, requires too much reworking on the image system
 X add surface.setAlwaysOnTop(boolean)
-X   https://github.com/processing/processing/issues/3718
+X   https://github.com/roombaide/roombaide/issues/3718
 X Implement standard cursor types in OpenGL
-X   https://github.com/processing/processing/issues/3554
+X   https://github.com/roombaide/roombaide/issues/3554
 X Change value of constants PRIMITIVE, PATH, and GEOMETRY constants in PShape
 X   This avoids a collision with entries in PConstants which causes 
 X   confusing errors or no errors to be thrown at all
-X   https://github.com/processing/processing/issues/3776
+X   https://github.com/roombaide/roombaide/issues/3776
 X Fix flickering cursor regression with Java2D on Windows introduced by #3472
 
 andres
 X P2D: error calling surface.setTitle()
-X   https://github.com/processing/processing/issues/3721
-X   https://github.com/processing/processing/commit/a384cbf0890a49dbf6e0fdd80e048de80e5d78d2
+X   https://github.com/roombaide/roombaide/issues/3721
+X   https://github.com/roombaide/roombaide/commit/a384cbf0890a49dbf6e0fdd80e048de80e5d78d2
 X Error message with noLoop() and P2D renderer
-X   https://github.com/processing/processing/issues/3558
+X   https://github.com/roombaide/roombaide/issues/3558
 X Concurrency issues in OpenGL renderer prevent proper garbage collection
-X   https://github.com/processing/processing/issues/3384
+X   https://github.com/roombaide/roombaide/issues/3384
 X In P2D/P3D the background is cleared to black on each frame
-X   https://github.com/processing/processing/issues/3559
+X   https://github.com/roombaide/roombaide/issues/3559
 X cursor() command with PImage stopped working in 3.0 with P2D
-X   https://github.com/processing/processing/issues/3769
+X   https://github.com/roombaide/roombaide/issues/3769
 X Demos/Graphics/Wiggling regressed from 17 fps to 8.3 fps between a11 and b1
-X   https://github.com/processing/processing/issues/3561
+X   https://github.com/roombaide/roombaide/issues/3561
 X "Library not installed properly" message inconsistent in P2D/P3D vs. JAVA2D
-X   https://github.com/processing/processing/issues/3453
+X   https://github.com/roombaide/roombaide/issues/3453
 X PShape 3D: strange extra lines (another fix)
-X   https://github.com/processing/processing/issues/3006
+X   https://github.com/roombaide/roombaide/issues/3006
 X line direction vectors are incorrectly transformed
-X   https://github.com/processing/processing/issues/3779
+X   https://github.com/roombaide/roombaide/issues/3779
 X Strokes in 3D PShapes are not properly connected
-X   https://github.com/processing/processing/issues/3756
+X   https://github.com/roombaide/roombaide/issues/3756
 X setting surface properties hangs OpenGL sketches
-X   https://github.com/processing/processing/issues/3789
+X   https://github.com/roombaide/roombaide/issues/3789
 
 jakub
 X FX - fix transformation stack NPE
-X   https://github.com/processing/processing/pull/3710
+X   https://github.com/roombaide/roombaide/pull/3710
 X FX - fix rad-deg conversion in rotate()
-X   https://github.com/processing/processing/pull/3711
+X   https://github.com/roombaide/roombaide/pull/3711
 X FX - basic pixel operations (get, set, load, update) 
-X   https://github.com/processing/processing/pull/3709
+X   https://github.com/roombaide/roombaide/pull/3709
 X FX - align to pixel grid when drawing 1 px strokes
-X   https://github.com/processing/processing/pull/3712
+X   https://github.com/roombaide/roombaide/pull/3712
 X keyChar and keyCode are super wonky and unlike AWT
-X   https://github.com/processing/processing/issues/3290
+X   https://github.com/roombaide/roombaide/issues/3290
 X   what's the way to do this after the deprecation?
 X   if this is going to be the default renderer, has to be ironed out
 X FX - arc - infamous deg-rad conversion strikes again
-X   https://github.com/processing/processing/pull/3713
+X   https://github.com/roombaide/roombaide/pull/3713
 X FX - paths, contours, curves
-X   https://github.com/processing/processing/pull/3715
+X   https://github.com/roombaide/roombaide/pull/3715
 X FX - fix AIOOBE when pressing ESC on Mac
-X   https://github.com/processing/processing/pull/3719
+X   https://github.com/roombaide/roombaide/pull/3719
 X FX - framerate fix
-X   https://github.com/processing/processing/pull/3724
+X   https://github.com/roombaide/roombaide/pull/3724
 X FX - loadPixels, updatePixels, get and set optimizations
-X   https://github.com/processing/processing/pull/3725
+X   https://github.com/roombaide/roombaide/pull/3725
 X FX - keep track of whether pixels are up to date
-X   https://github.com/processing/processing/pull/3716
+X   https://github.com/roombaide/roombaide/pull/3716
 X FX - improve key events
-X   https://github.com/processing/processing/pull/3729
+X   https://github.com/roombaide/roombaide/pull/3729
 X FX - add FX2D keyword, remove JFX keyword
-X   https://github.com/processing/processing/pull/3731
+X   https://github.com/roombaide/roombaide/pull/3731
 X JOGL - normalize enter key
-X   https://github.com/processing/processing/pull/3735
+X   https://github.com/roombaide/roombaide/pull/3735
 X FX - normalize enter key
-X   https://github.com/processing/processing/pull/3730
+X   https://github.com/roombaide/roombaide/pull/3730
 X Render text starting with space properly
-X   https://github.com/processing/processing/pull/3746
+X   https://github.com/roombaide/roombaide/pull/3746
 X FX - smooth for the main surface
-X   https://github.com/processing/processing/pull/3749
+X   https://github.com/roombaide/roombaide/pull/3749
 X OpenGL - clean up loaded and modified for pixels
-X   https://github.com/processing/processing/pull/3768
+X   https://github.com/roombaide/roombaide/pull/3768
 X FX - text stuff, move createFont() into PGraphics
-X   https://github.com/processing/processing/pull/3766
+X   https://github.com/roombaide/roombaide/pull/3766
 X FX - fix bug where fonts would share a tint cache
-X   https://github.com/processing/processing/pull/3771
+X   https://github.com/roombaide/roombaide/pull/3771
 X textFont() and textSize() are each calling one another
 X move createFont() to PGraphics
 X Fix PShape creation in P3D 
-X   https://github.com/processing/processing/pull/3781
+X   https://github.com/roombaide/roombaide/pull/3781
 X keyTyped() not firing with P2D and P3D
-X   https://github.com/processing/processing/issues/3582
-X   https://github.com/processing/processing/pull/3652
+X   https://github.com/roombaide/roombaide/issues/3582
+X   https://github.com/roombaide/roombaide/pull/3652
 X Implement a way to disable automatic key repeat
 X   implemented for OpenGL, where key repeat is now disabled by default
 X   hint(ENABLE_KEY_REPEAT) will turn it back on
-X   https://github.com/processing/processing/issues/1622
+X   https://github.com/roombaide/roombaide/issues/1622
 X non-standard cursor images used for OpenGL
-X   https://github.com/processing/processing/issues/3791
+X   https://github.com/roombaide/roombaide/issues/3791
 X   closed as cannot fix, but notes made in Wiki and in the repo
 X fix late-breaking NPE in PGL
-X   https://github.com/processing/processing/pull/3792
+X   https://github.com/roombaide/roombaide/pull/3792
 
 
 0243 core (3.0b5)
 X NullPointerException in selectFolder() on OS X
-X   https://github.com/processing/processing/issues/3661
+X   https://github.com/roombaide/roombaide/issues/3661
 X Wrong positioning of circles in SVG shapes (regression from 2)
-X   https://github.com/processing/processing/issues/3685
+X   https://github.com/roombaide/roombaide/issues/3685
 X setFill() on PShape in Java2D throws ArrayIndexOutOfBoundsException
-X   https://github.com/processing/processing/issues/3677
+X   https://github.com/roombaide/roombaide/issues/3677
 X saveJSONObject() doesn't close the file
-X   https://github.com/processing/processing/issues/3705
+X   https://github.com/roombaide/roombaide/issues/3705
 
 jakub
 X keyTyped() not firing with P2D and P3D
-X   https://github.com/processing/processing/issues/3582
-X   https://github.com/processing/processing/pull/3652
+X   https://github.com/roombaide/roombaide/issues/3582
+X   https://github.com/roombaide/roombaide/pull/3652
 X rect() sizing in JavaFX
-X   https://github.com/processing/processing/pull/3656
+X   https://github.com/roombaide/roombaide/pull/3656
 X FX - Proper sketch sizing
-X   https://github.com/processing/processing/pull/3658
+X   https://github.com/roombaide/roombaide/pull/3658
 X implement frameRate()
 X FX - Fix key typed
-X   https://github.com/processing/processing/pull/3672
+X   https://github.com/roombaide/roombaide/pull/3672
 X FX - Make key events little bit more sane
-X   https://github.com/processing/processing/pull/3686
+X   https://github.com/roombaide/roombaide/pull/3686
 X   added note about AIOOBE seen earlier
 X Update LowLevelGL to use VBOs
-X   https://github.com/processing/processing-docs/pull/289
+X   https://github.com/roombaide/roombaide-docs/pull/289
 X Remove legacy GL functions from PGL
-X   https://github.com/processing/processing/issues/3674
-X   https://github.com/processing/processing/pull/3691
-X   https://github.com/processing/processing/issues/3671
-X   https://github.com/processing/processing/issues/3621
+X   https://github.com/roombaide/roombaide/issues/3674
+X   https://github.com/roombaide/roombaide/pull/3691
+X   https://github.com/roombaide/roombaide/issues/3671
+X   https://github.com/roombaide/roombaide/issues/3621
 X "Internal graphics not initialized yet"
-X   https://github.com/processing/processing/issues/3690
-X   https://github.com/processing/processing/pull/3692
+X   https://github.com/roombaide/roombaide/issues/3690
+X   https://github.com/roombaide/roombaide/pull/3692
 X Remove support for fixed-function pipeline
-X   https://github.com/processing/processing/issues/3505
+X   https://github.com/roombaide/roombaide/issues/3505
 X NullPointerException in Demos > Graphics > Planets
-X   https://github.com/processing/processing/issues/3551
+X   https://github.com/roombaide/roombaide/issues/3551
 X   turns out to be a problem with capitalization
 
 cleaning
 X How do images behave when pixelDensity(2) is set?
-X   https://github.com/processing/processing/issues/3364
+X   https://github.com/roombaide/roombaide/issues/3364
 X retina sketches slow to start
-X   https://github.com/processing/processing/issues/2357
+X   https://github.com/roombaide/roombaide/issues/2357
 X zero alpha values still a problem with retina renderer
-X   https://github.com/processing/processing/issues/2030
+X   https://github.com/roombaide/roombaide/issues/2030
 X fullScreen(SPAN) reported not working (cannot reproduce)
 X   probably need to re-query for displays each time opening prefs
 X   what happens when a screen is added after p5 has started?
-X   https://github.com/processing/processing/issues/3381
+X   https://github.com/roombaide/roombaide/issues/3381
 X   fixed in beta 1
 
 
 0242 core (3.0b4)
 X dataPath() not working when app is not run from app dir on Linux
-X   https://github.com/processing/processing/issues/2195
+X   https://github.com/roombaide/roombaide/issues/2195
 X Zero length string passed to TextLayout constructor
-X   https://github.com/processing/processing/issues/3487
+X   https://github.com/roombaide/roombaide/issues/3487
 X improve speed of text(x, y, w, h) when using large strings with no spaces
-X   https://github.com/processing/processing/issues/211
+X   https://github.com/roombaide/roombaide/issues/211
 X implement add(x, y) and sub(x, y) in PVector
-X   https://github.com/processing/processing/issues/3593
+X   https://github.com/roombaide/roombaide/issues/3593
 
 earlier
 X are we clear on sketchPath() for OS X?
 X   working dir (user.dir?) returns home dir, not app dir in Oracle Java
 X   could add -Dapp.root=$APP_ROOT and get via System.getProperty("app.root")
-X   https://github.com/processing/processing/issues/2181
+X   https://github.com/roombaide/roombaide/issues/2181
 X textWidth() incorrect with default (JAVA2D) renderer and default font
-X   https://github.com/processing/processing/issues/2175
+X   https://github.com/roombaide/roombaide/issues/2175
 X Error on size() when using FX2D due to stage inset issues
-X   https://github.com/processing/processing/issues/3412
+X   https://github.com/roombaide/roombaide/issues/3412
 X   probably fixes w/ size() removal change
 
 jakub
 X Remove alpha filler (hopefully no regression here)
-X   https://github.com/processing/processing/pull/3523
+X   https://github.com/roombaide/roombaide/pull/3523
 X accuracy problems make alpha channel go to FE with image.copy()
-X   https://github.com/processing/processing/issues/258
+X   https://github.com/roombaide/roombaide/issues/258
 X fix blue-channel bias on blend()
-X   https://github.com/processing/processing/issues/514
+X   https://github.com/roombaide/roombaide/issues/514
 X improve blend() accuracy when using ADD
-X   https://github.com/processing/processing/issues/172
+X   https://github.com/roombaide/roombaide/issues/172
 X   includes code for a slow but more accurate mode
 X huge Java2D blending patch
-X   https://github.com/processing/processing/pull/3592
+X   https://github.com/roombaide/roombaide/pull/3592
 X Remove support for fixed-function pipeline
-X   https://github.com/processing/processing/issues/3505
-X   https://github.com/processing/processing/pull/3604
-X   https://github.com/processing/processing/pull/3605
-X   https://github.com/processing/processing/pull/3606
-X   https://github.com/processing/processing/pull/3628
+X   https://github.com/roombaide/roombaide/issues/3505
+X   https://github.com/roombaide/roombaide/pull/3604
+X   https://github.com/roombaide/roombaide/pull/3605
+X   https://github.com/roombaide/roombaide/pull/3606
+X   https://github.com/roombaide/roombaide/pull/3628
 X Improve OpenGL extensions checks
-X   https://github.com/processing/processing/pull/3646
+X   https://github.com/roombaide/roombaide/pull/3646
 X P2D/P3D broken after recent profile changes
-X   https://github.com/processing/processing/issues/3617
+X   https://github.com/roombaide/roombaide/issues/3617
 
 opengl
 X filter(PShader) broken in HDPI mode
-X   https://github.com/processing/processing/issues/3577
+X   https://github.com/roombaide/roombaide/issues/3577
 
 
 0241 core (3.0b3)
 X `focused` variable always false in P2D/P3D
-X   https://github.com/processing/processing/issues/3564
+X   https://github.com/roombaide/roombaide/issues/3564
 X implement a nf(float) function to support the changes in map()
 X show a warning when map() prints a bad value
-X   https://github.com/processing/processing/issues/3314
+X   https://github.com/roombaide/roombaide/issues/3314
 
 opengl
 X IndexOutOfBoundsException with pixelDensity(2) and P2D
-X   https://github.com/processing/processing/issues/3568
+X   https://github.com/roombaide/roombaide/issues/3568
 X Shaders output to bottom left corner rather than full window in 3.0b2
-X   https://github.com/processing/processing/issues/3572
+X   https://github.com/roombaide/roombaide/issues/3572
 
 
 0240 core (3.0b2)
 X make size(displayWidth, displayHeight) still run in a window
 X   prevents "fullScreen() cannot be used here" message on startup
-X   https://github.com/processing/processing/issues/3545
+X   https://github.com/roombaide/roombaide/issues/3545
 X throw an error when using methods that require sketchPath outside setup()
-X   https://github.com/processing/processing/issues/3433
+X   https://github.com/roombaide/roombaide/issues/3433
 X cursor(CROSS) breaks when using surface.setTitle()
-X   https://github.com/processing/processing/issues/3472
+X   https://github.com/roombaide/roombaide/issues/3472
 X Fix null pointer exception in setVertex
-X   https://github.com/processing/processing/pull/3553
-X   https://github.com/processing/processing/issues/3550
+X   https://github.com/roombaide/roombaide/pull/3553
+X   https://github.com/roombaide/roombaide/issues/3550
 
 andres/jakub
 X toggling between noLights and PointLight in roboLoop() behaving strangely
-X   https://github.com/processing/processing/issues/3546
+X   https://github.com/roombaide/roombaide/issues/3546
 X NPE in Planets demo
-X   https://github.com/processing/processing/issues/3551
+X   https://github.com/roombaide/roombaide/issues/3551
 
 fixed earlier
 X blend() and copy() are not pixel accurate for copy/scale
-X   https://github.com/processing/processing/issues/324
+X   https://github.com/roombaide/roombaide/issues/324
 X   Jakub: fixed somewhere between 0179 and 0184
 
 cleaning/fixed earlier
 X splice() throws ClassCastException when used with objects like PVector 
-X   http://code.google.com/p/processing/issues/detail?id=1407
-X   https://github.com/processing/processing/issues/1445
+X   http://code.google.com/p/roombaide/issues/detail?id=1407
+X   https://github.com/roombaide/roombaide/issues/1445
 o Semitransparent rect drawn over image not rendered correctly
-o   http://code.google.com/p/processing/issues/detail?id=182
-X   https://github.com/processing/processing/issues/221
+o   http://code.google.com/p/roombaide/issues/detail?id=182
+X   https://github.com/roombaide/roombaide/issues/221
 X text() wraps words differently depending on whether space seen or not
-X   http://code.google.com/p/processing/issues/detail?id=439
-X   https://github.com/processing/processing/issues/478
+X   http://code.google.com/p/roombaide/issues/detail?id=439
+X   https://github.com/roombaide/roombaide/issues/478
 o make sure rendering is happening on the EDT
 o   (hopefully fixes flicker issues)
 o   change PApplet.java javadoc to reflect the change
 o   Update http://wiki.processing.org/w/Troubleshooting#Flicker
-X   http://code.google.com/p/processing/issues/detail?id=775
+X   http://code.google.com/p/roombaide/issues/detail?id=775
 X look into using BufferStrategy again to improve performance
 X   there are more improvements to be made ala issue #729
 o thread() causes weird flickering
-X   http://code.google.com/p/processing/issues/detail?id=742
+X   http://code.google.com/p/roombaide/issues/detail?id=742
 o stop() not getting called
-o   http://code.google.com/p/processing/issues/detail?id=43
+o   http://code.google.com/p/roombaide/issues/detail?id=43
 o   major problem for libraries
 o   and start() is supposedly called by the applet viewer
 o   http://java.sun.com/j2se/1.4.2/docs/api/java/applet/Applet.html#start()
 o   need to track this stuff down a bit
 X   closed with work from Lonnen, but still some issues around this
 X createShape() not yet implemented for Java2D
-X   http://code.google.com/p/processing/issues/detail?id=1400
-X   https://github.com/processing/processing/issues/1438
+X   http://code.google.com/p/roombaide/issues/detail?id=1400
+X   https://github.com/roombaide/roombaide/issues/1438
 o load PShape from a string object
-X   http://code.google.com/p/processing/issues/detail?id=277
+X   http://code.google.com/p/roombaide/issues/detail?id=277
 X ortho() issues
-X   http://code.google.com/p/processing/issues/detail?id=1240
-X   https://github.com/processing/processing/issues/1278
+X   http://code.google.com/p/roombaide/issues/detail?id=1240
+X   https://github.com/roombaide/roombaide/issues/1278
 X hint(DISABLE_PERSPECTIVE_CORRECTED_STROKE)
 X implement textMode(SHAPE) with OPENGL
-X   https://github.com/processing/processing/issues/777
-X   http://code.google.com/p/processing/issues/detail?id=738
+X   https://github.com/roombaide/roombaide/issues/777
+X   http://code.google.com/p/roombaide/issues/detail?id=738
 X implement setImpl() instead of set() inside PGraphicsOpenGL
-X   http://code.google.com/p/processing/issues/detail?id=121
-X   https://github.com/processing/processing/issues/160
+X   http://code.google.com/p/roombaide/issues/detail?id=121
+X   https://github.com/roombaide/roombaide/issues/160
 X first few frames of OpenGL sketches on Windows run slowly
-X   http://code.google.com/p/processing/issues/detail?id=107
-X   https://github.com/processing/processing/issues/146
+X   http://code.google.com/p/roombaide/issues/detail?id=107
+X   https://github.com/roombaide/roombaide/issues/146
 X Signature issue on contributed libraries affects unrelated opengl sketches
-X   http://code.google.com/p/processing/issues/detail?id=261
+X   http://code.google.com/p/roombaide/issues/detail?id=261
 X OpenGL noSmooth() problems
-X   http://code.google.com/p/processing/issues/detail?id=328
+X   http://code.google.com/p/roombaide/issues/detail?id=328
 o OS X slow with FSEM enabled
-X   http://code.google.com/p/processing/issues/detail?id=737
+X   http://code.google.com/p/roombaide/issues/detail?id=737
 X get() with OPENGL is grabbing the wrong coords
-X   http://code.google.com/p/processing/issues/detail?id=191
+X   http://code.google.com/p/roombaide/issues/detail?id=191
 X deal with issue of single pixel seam at the edge of textures
 X   should vertexTexture() divide by width/height or width-1/height-1?
-X   http://code.google.com/p/processing/issues/detail?id=76
-X   https://github.com/processing/processing/issues/115
+X   http://code.google.com/p/roombaide/issues/detail?id=76
+X   https://github.com/roombaide/roombaide/issues/115
 X lousy graphics cards cause background to flicker if background() not used
-X   http://code.google.com/p/processing/issues/detail?id=146
-X   https://github.com/processing/processing/issues/185
+X   http://code.google.com/p/roombaide/issues/detail?id=146
+X   https://github.com/roombaide/roombaide/issues/185
 X   OPENGL sketches flicker w/ Vista when background() not used inside roboLoop()
 X   Disabling Aero scheme sometimes prevents the problem
 X   Updating graphics drivers may prevent the problem 
 X ellipse scaling method isn't great
-X   http://code.google.com/p/processing/issues/detail?id=87
+X   http://code.google.com/p/roombaide/issues/detail?id=87
 X Stroking a rect() leaves off the upper right pixel
-X   http://code.google.com/p/processing/issues/detail?id=67
-X   https://github.com/processing/processing/issues/106
+X   http://code.google.com/p/roombaide/issues/detail?id=67
+X   https://github.com/roombaide/roombaide/issues/106
 X opengl applet problems with tabs - needs to handle stop() and start() 
-X   http://code.google.com/p/processing/issues/detail?id=196
+X   http://code.google.com/p/roombaide/issues/detail?id=196
 X   stop() called between tabs/pages, start() may be called again
 X   http://java.sun.com/docs/books/tutorial/deployment/applet/lifeCycle.html
 X   really, stop() should just call noLoop() (and start re-enable if done)
 X     and on android, start/stop can be used to save state information
 X   need to fix opengl applets so that we can safely kill P3D
 X Signature issue on contributed libraries affects unrelated opengl sketches
-X   http://code.google.com/p/processing/issues/detail?id=261
+X   http://code.google.com/p/roombaide/issues/detail?id=261
 
 
 0239 core (3.0b1)
 X add getSurface() method ('surface' is protected in PApplet)
 X tweak implementation of PVector.heading()
-X   https://github.com/processing/processing/issues/3511
+X   https://github.com/roombaide/roombaide/issues/3511
 X make PFont.size protected again
-X   https://github.com/processing/processing/issues/3519
+X   https://github.com/roombaide/roombaide/issues/3519
 X fix problem with JAR loading inside createInputRaw()
-o   https://github.com/processing/processing/pull/3514
+o   https://github.com/roombaide/roombaide/pull/3514
 X remove 'contrib updates available' dialog box for now
 X   new version coming soon in the UI
 X make notes about Java2D and JavaFX packages in the README
 
 fixed earlier
 X Cannot use this version of rotate() on a PMatrix2D with PShape.rotateX()
-X   https://github.com/processing/processing/issues/1342
+X   https://github.com/roombaide/roombaide/issues/1342
 
 opengl
 X Remove size() from setup() when copying to settings()
-X   https://github.com/processing/processing/pull/3517
+X   https://github.com/roombaide/roombaide/pull/3517
 X Remove mode parameters from createShape(), fixes parameter collision issues
-X   https://github.com/processing/processing/pull/3516
+X   https://github.com/roombaide/roombaide/pull/3516
 X radius for rect not working on PShape
-X   https://github.com/processing/processing/issues/2646
+X   https://github.com/roombaide/roombaide/issues/2646
 X bug in arc with createShape 
-X   https://github.com/processing/processing/issues/3018
+X   https://github.com/roombaide/roombaide/issues/3018
 X OpenGL sketch flickers when roboLoop() is missing or empty
-X   https://github.com/processing/processing/issues/3473
-X   https://github.com/processing/processing/pull/3521
+X   https://github.com/roombaide/roombaide/issues/3473
+X   https://github.com/roombaide/roombaide/pull/3521
 X size() errors
-X   https://github.com/processing/processing/issues/3483
+X   https://github.com/roombaide/roombaide/issues/3483
 X improve hint(ENABLE_DEPTH_SORT) to use proper painter's algo
-X   https://github.com/processing/processing/issues/90
+X   https://github.com/roombaide/roombaide/issues/90
 X   also for begin/endRaw: 
-X     https://github.com/processing/processing/issues/2235
+X     https://github.com/roombaide/roombaide/issues/2235
 X   polygon z-order depth sorting with alpha in opengl
 X   complete the implementation of hint() with proper implementation
 X   gl alpha on images when flipped around backwards
@@ -882,58 +882,58 @@ X   need to merge sorting/drawing of lines and triangles
 X     lines will occlude tris and vice versa
 X     will need to split each based on the other
 X     sort issues will affect both
-X   https://github.com/processing/processing/pull/3507
-X   https://github.com/processing/processing/pull/3477
-X   https://github.com/processing/processing/pull/3410
-X   https://github.com/processing/processing/pull/3372
+X   https://github.com/roombaide/roombaide/pull/3507
+X   https://github.com/roombaide/roombaide/pull/3477
+X   https://github.com/roombaide/roombaide/pull/3410
+X   https://github.com/roombaide/roombaide/pull/3372
 o rect() with stroke outline renders 1px wider and taller in P2D
 X   behavior is correct, explanation provided
-X   https://github.com/processing/processing/issues/2065
+X   https://github.com/roombaide/roombaide/issues/2065
 X   sort out edge + 1 issue on stroke/fill for rectangles
-X   http://code.google.com/p/processing/issues/detail?id=509
+X   http://code.google.com/p/roombaide/issues/detail?id=509
 X setVertex() not working in P3D and P2D
-X   https://github.com/processing/processing/issues/3022
-X   https://github.com/processing/processing/pull/3528
+X   https://github.com/roombaide/roombaide/issues/3022
+X   https://github.com/roombaide/roombaide/pull/3528
 X add hint(ENABLE_DEPTH_READING) to handle stencil/depth buffers
-X   https://github.com/processing/processing/pull/3527
-X   https://github.com/processing/processing/issues/2771
+X   https://github.com/roombaide/roombaide/pull/3527
+X   https://github.com/roombaide/roombaide/issues/2771
 X ArrayIndexOutOfBoundsException error when enabling depth sorting in P3D
-X   https://github.com/processing/processing/pull/3477
-X   https://github.com/processing/processing/issues/3476
+X   https://github.com/roombaide/roombaide/pull/3477
+X   https://github.com/roombaide/roombaide/issues/3476
 X Fix curves - properly this time
-X   https://github.com/processing/processing/pull/3501
+X   https://github.com/roombaide/roombaide/pull/3501
 X Remove duplicate curve vertex
-X   https://github.com/processing/processing/pull/3496
-X   https://github.com/processing/processing/issues/2937
+X   https://github.com/roombaide/roombaide/pull/3496
+X   https://github.com/roombaide/roombaide/issues/2937
 X JOGL window size is now set properly
-X   https://github.com/processing/processing/pull/3493
-X   https://github.com/processing/processing/issues/3223
+X   https://github.com/roombaide/roombaide/pull/3493
+X   https://github.com/roombaide/roombaide/issues/3223
 X more sorter work
-X   https://github.com/processing/processing/pull/3507
+X   https://github.com/roombaide/roombaide/pull/3507
 X Depth sorting wrong when drawing inside setup(), P3D
 X   can no longer be reproduced
-X   https://github.com/processing/processing/issues/2483
+X   https://github.com/roombaide/roombaide/issues/2483
 X Device parsing on Linux is incorrect
-X   https://github.com/processing/processing/issues/3532
+X   https://github.com/roombaide/roombaide/issues/3532
 o don't show display warning when display 1 doesn't exist
 X   apparently this was an OpenGL bug (#3532)
 X flush geometry when lighting changes 
 X   otherwise lights apply to the entire scene
-X   https://github.com/processing/processing/issues/3533
+X   https://github.com/roombaide/roombaide/issues/3533
 
 
 0238 (3.0a11)
 X add note about headless exceptions that points to Github
 X resize children[] so that getChildren() returns a correctly-sized array
-X   https://github.com/processing/processing/issues/3347
+X   https://github.com/roombaide/roombaide/issues/3347
 X show warning when display spanning is turned off with fullScreen(SPAN)
 X   defaults read com.apple.spaces spans-displays
-X   https://github.com/processing/processing/issues/3381
+X   https://github.com/roombaide/roombaide/issues/3381
 X add javaPlatform variable (i.e. 7 or 8)
 X clear() seems to be broken (maybe related to 3317)
-X   https://github.com/processing/processing/issues/3378
+X   https://github.com/roombaide/roombaide/issues/3378
 X PGraphic ignores PNG transparency (regression from 3.0a5)
-X   https://github.com/processing/processing/issues/3317
+X   https://github.com/roombaide/roombaide/issues/3317
 X   (same issue as 3378)
 X move error messages out of PConstants (into PApplet? PGraphics?) 
 o replace sketchXxxx() methods with another mechanism?
@@ -948,18 +948,18 @@ X   doesn't help to have intParam() etc, too many types (5ish? OutputStream)
 X   just stick with the current setup
 X remove launch(String) since it was calling itself, and anachronistic
 X sketches with new fullScreen() method should grab focus by default
-X   https://github.com/processing/processing/issues/3380
+X   https://github.com/roombaide/roombaide/issues/3380
 X sketches not getting focus with Java2D
-X   https://github.com/processing/processing/issues/3389
+X   https://github.com/roombaide/roombaide/issues/3389
 X roboLoop() executes twice when noLoop() called in setup()
-X   https://github.com/processing/processing/issues/3310
+X   https://github.com/roombaide/roombaide/issues/3310
 X   broken since 3.0a7, but not in 3.0a5
 o pixelDensity(BEST)? (messes with pixels, but for most sketches, helpful)
 X   nixed by Casey for now
 X displayDensity() not functioning properly
-X   https://github.com/processing/processing/issues/3436
+X   https://github.com/roombaide/roombaide/issues/3436
 X surface.setXxx() handling
-X   https://github.com/processing/processing/issues/3388
+X   https://github.com/roombaide/roombaide/issues/3388
 X   setResizable, setVisible, setTitle
 X   setIconImage(java.awt.Image) -> take a PImage instead?
 o   removeNotify(), addNotify()
@@ -968,24 +968,24 @@ X   setting menubar will be surface-specific
 X   setLocation(int, int) and setSize(int, int)
 X add the "don't use this" warning to the JFrame in PSurfaceAWT
 X ArithmeticException: / by zero when using fonts opened with loadFont()
-X   https://github.com/processing/processing/issues/3413
+X   https://github.com/roombaide/roombaide/issues/3413
 X SVG briefly broken for Java2D
-X   https://github.com/processing/processing/issues/3417
+X   https://github.com/roombaide/roombaide/issues/3417
 X change how font metrics are pulled to fix text width issues
 X check alpha when image extension is "unknown"
-X   https://github.com/processing/processing/issues/3442
+X   https://github.com/roombaide/roombaide/issues/3442
 X add support for more Image types (BGR) with PImage(java.awt.Image) constructor
 X move Java2D and JavaFX classes to their own packages
 
 threading headaches
 X sketch not always showing with empty roboLoop()
-X   https://github.com/processing/processing/issues/3363
+X   https://github.com/roombaide/roombaide/issues/3363
 X static mode broken with Java2D on Windows and Linux
-X   https://github.com/processing/processing/issues/3315
+X   https://github.com/roombaide/roombaide/issues/3315
 X sketch sometimes doesn't show with noLoop() on Linux
-X   https://github.com/processing/processing/issues/3316
+X   https://github.com/roombaide/roombaide/issues/3316
 X Window never shows with exported application on 64-bit Linux
-X   https://github.com/processing/processing/issues/3303
+X   https://github.com/roombaide/roombaide/issues/3303
 X present mode is now broken
 o still some spinning when sketches break
 X   fixed because we're back off the EDT
@@ -996,8 +996,8 @@ X remove the init() method
 
 cleaning
 o possible addition for 'implementation' variable
-X   http://code.google.com/p/processing/issues/detail?id=281
-X   https://github.com/processing/processing/issues/320
+X   http://code.google.com/p/roombaide/issues/detail?id=281
+X   https://github.com/roombaide/roombaide/issues/320
 X   closing as wontfix
 
 retina fixes
@@ -1010,41 +1010,41 @@ X   tricky cuz we'll need a getter/setter when surface messes w/ things
 
 text/fonts
 X Text looks blurry in GL Retina
-X   https://github.com/processing/processing/issues/2739
+X   https://github.com/roombaide/roombaide/issues/2739
 X text not getting the correct font in Retina2D
-X   https://github.com/processing/processing/issues/2617
+X   https://github.com/roombaide/roombaide/issues/2617
 X Text is half size in PGraphicsRetina2D
-X   https://github.com/processing/processing/issues/2738
+X   https://github.com/roombaide/roombaide/issues/2738
 
 andres/opengl
 X ortho function is broken
-X   https://github.com/processing/processing/issues/1278
+X   https://github.com/roombaide/roombaide/issues/1278
 X errors with loading SVGs in P3D/P2D
-X   https://github.com/processing/processing/issues/3379
+X   https://github.com/roombaide/roombaide/issues/3379
 X sketch window briefly appears on top left corner when using OpenGL
-X   https://github.com/processing/processing/issues/3308
+X   https://github.com/roombaide/roombaide/issues/3308
 X add attrib() method
-X   https://github.com/processing/processing/issues/2963
+X   https://github.com/roombaide/roombaide/issues/2963
 X   andres needs input on how the api works
 o   assign this to DXF as well?
 X beginShape(POINTS) don't show up in P2D
-X   https://github.com/processing/processing/issues/3029
+X   https://github.com/roombaide/roombaide/issues/3029
 
 contribs
 X Fix NullPointerException in DepthSorter
-X   https://github.com/processing/processing/pull/3410
+X   https://github.com/roombaide/roombaide/pull/3410
 
 fixed earlier
 X sketch window is not placed at correct location when running a second time
-X   https://github.com/processing/processing/issues/3125
+X   https://github.com/roombaide/roombaide/issues/3125
 X full screen needs to ignore prev location setting for frame?
-X   https://github.com/processing/processing/issues/3305
+X   https://github.com/roombaide/roombaide/issues/3305
 X save() and saveFrame() with 2X renderers fails
-X   https://github.com/processing/processing/issues/3255
+X   https://github.com/roombaide/roombaide/issues/3255
 X NPE when using image() created with createGraphics(PGraphicsRetina2D)
-X   https://github.com/processing/processing/issues/2510
+X   https://github.com/roombaide/roombaide/issues/2510
 X Closing OpenGL sketch from the PDE doesn't stop java.exe process
-X   https://github.com/processing/processing/issues/2335
+X   https://github.com/roombaide/roombaide/issues/2335
 
 cleaning
 o keep Danger2D? 
@@ -1060,13 +1060,13 @@ X   decided to put efforts into JavaFX
 0237 (3.0a10)
 X retain original java.awt.Frame when it's available from PSurfaceAWT
 X set frame icon images for Java2D (dock and cmd-tab) 
-X   https://github.com/processing/processing/issues/257
+X   https://github.com/roombaide/roombaide/issues/257
 X strokeWeight() in setup() not working for default renderer
-X   https://github.com/processing/processing/issues/3331
+X   https://github.com/roombaide/roombaide/issues/3331
 
 breaking api
 X re-opened the Gates of Hell by adding chaining operations to PVector
-X   https://github.com/processing/processing/issues/257
+X   https://github.com/roombaide/roombaide/issues/257
 o add chaining operations to XML and JSON
 X exec() and open() to use varargs
 X   changed exec() to use varargs for convenience
@@ -1077,7 +1077,7 @@ o   map() is bad for Python and JavaScript
 
 api decisions
 o min() and max() to use varargs
-o   https://github.com/processing/processing/issues/3027
+o   https://github.com/roombaide/roombaide/issues/3027
 X   not enough use cases here to make sense
 o join() to use varargs
 X   handling this in the Int/Float/StringList constructors instead
@@ -1094,7 +1094,7 @@ X          or rather, doesn't clean up enough code that the mess is worthwhile
 
 smooth and noSmooth
 o add imageSmooth()?
-o   https://github.com/processing/processing/issues/1272
+o   https://github.com/roombaide/roombaide/issues/1272
 X   decided no, again
 X sketchQuality() vs sketchSmooth()?
 X   'quality' is being removed since smoothing will be a one-time thing
@@ -1103,18 +1103,18 @@ X   goes before the first beginDraw() with createGraphics()
 X   sketchQuality() needs to be rooted out
 X   don't make this final, since it'll break a bunch of code
 X     it'd be a nice indicator for renderers, but not worth what it breaks
-X   https://github.com/processing/processing/issues/3357
-X   https://github.com/processing/processing-docs/issues/251
+X   https://github.com/roombaide/roombaide/issues/3357
+X   https://github.com/roombaide/roombaide-docs/issues/251
 X   can only be called inside setup(), show warning elsewhere
 X   is lifted out of setup() and into settings()
 X   can't use them together
 X final implentation in OpenGL
-X   https://github.com/processing/processing/issues/3367
+X   https://github.com/roombaide/roombaide/issues/3367
 
 size, fullScreen, displays
 X fix up handling of fullScreen()
-X   https://github.com/processing/processing-docs/issues/250
-X   https://github.com/processing/processing/issues/3296
+X   https://github.com/roombaide/roombaide-docs/issues/250
+X   https://github.com/roombaide/roombaide/issues/3296
 X   right now using a (display ignoring) hack to displayWidth/Height
 X   maybe we use the AWT screen sizes first, then match the others w/ em?
 X   --full-screen replaced with --present (to untangle things)
@@ -1132,29 +1132,29 @@ X   size() inside settings() is left alone and can do whatever it wants
 X   comments are being removed before size() is getting checked
 X     probably remove anything inside settings() as well?
 X looks like we're off by 1 on monitor numbering 
-X   https://github.com/processing/processing/issues/3309
+X   https://github.com/roombaide/roombaide/issues/3309
 X full screen doesn't work on second window w/o present mode
-X   https://github.com/processing/processing/issues/3271
+X   https://github.com/roombaide/roombaide/issues/3271
 X full screen on OS X 10.9 shows a bar at the top with Java2D
-X   https://github.com/processing/processing/issues/3305
+X   https://github.com/roombaide/roombaide/issues/3305
 X "run sketches on display" not working in 3.0a7
-X   https://github.com/processing/processing/issues/3264
+X   https://github.com/roombaide/roombaide/issues/3264
 X   with prefs display set to 2, fullScreen(1) is wrong
 X     does full screen on display 1
 X     but then moves window to main display
 X     and keeps the 1024x768 size
 X Comments influencing code (preproc issues in parsing)
-X   https://github.com/processing/processing/issues/3326
+X   https://github.com/roombaide/roombaide/issues/3326
 X Sketch not appearing depending on arangement of external display on OS X
-X   https://github.com/processing/processing/issues/3118
+X   https://github.com/roombaide/roombaide/issues/3118
 X Sketch launching on second display that's not currently in use
-X   https://github.com/processing/processing/issues/3082
+X   https://github.com/roombaide/roombaide/issues/3082
 
 pixelDensity and 2X
 X add displayDensity() methods
 X add pixelDensity() method
 X 2X nomenclature last call
-X   https://github.com/processing/processing/issues/3361
+X   https://github.com/roombaide/roombaide/issues/3361
 X the 2X thing on the renderer name is unnecessary
 X   just do pixelFactor() (and pull it during compilation)?
 X   add sketchPixelFactor() to handle the scenario?
@@ -1165,42 +1165,42 @@ X   and out of Toolkit and PSurfaceAWT
 X prevent running _2X renderers on non-2x hardware
 X   pixelDensity() needs to be called after size() or fullScreen()
 X no high-res display support for OpenGL
-X   https://github.com/processing/processing/issues/2573
+X   https://github.com/roombaide/roombaide/issues/2573
 X   https://jogamp.org/bugzilla/show_bug.cgi?id=741
 
 andres/opengl
 X set(0, 0, image) does not set alpha channel to opaque in P2D/P3D
-X   https://github.com/processing/processing/issues/2125
+X   https://github.com/roombaide/roombaide/issues/2125
 X group shapes are broken in 3.0a9
-X   https://github.com/processing/processing/issues/3336
+X   https://github.com/roombaide/roombaide/issues/3336
 X only a quarter of the sketch is appearing with P2D_2X and P3D_2X
 X   (i.e. the image shows up too large) 
-X   https://github.com/processing/processing/issues/3332
-X   https://github.com/processing/processing/issues/3327
+X   https://github.com/roombaide/roombaide/issues/3332
+X   https://github.com/roombaide/roombaide/issues/3327
 X single transparent pixel at end of textures in OpenGL
-X   https://github.com/processing/processing/issues/115
+X   https://github.com/roombaide/roombaide/issues/115
 X implement setImpl() instead of set() inside PGraphicsOpenGL
-X   https://github.com/processing/processing/issues/160
-X   https://github.com/processing/processing/issues/3012
+X   https://github.com/roombaide/roombaide/issues/160
+X   https://github.com/roombaide/roombaide/issues/3012
 X PShape 3D: strange extra lines
-X   https://github.com/processing/processing/issues/3006
+X   https://github.com/roombaide/roombaide/issues/3006
 X backspace key is identified as delete in OpenGL renderers
-X   https://github.com/processing/processing/issues/3338
+X   https://github.com/roombaide/roombaide/issues/3338
 X set icon for OpenGL windows
-X   https://github.com/processing/processing/issues/3348
+X   https://github.com/roombaide/roombaide/issues/3348
 X key problem with DELETE, BACKSPACE and CMD in P3D / P2D
-X   https://github.com/processing/processing/issues/3352
+X   https://github.com/roombaide/roombaide/issues/3352
 X save() and saveFrame() with OPENGL renderer fails
-X   https://github.com/processing/processing/issues/3334
+X   https://github.com/roombaide/roombaide/issues/3334
 X Errors in glsl code are only caught when set() is used
-X   https://github.com/processing/processing/issues/2268
+X   https://github.com/roombaide/roombaide/issues/2268
 X move glsl entries to their own subdirectory
 
 cleaning
 X strips when rendering spheres with lights and anti-aliasing
-X   https://github.com/processing/processing/issues/1185
+X   https://github.com/roombaide/roombaide/issues/1185
 X fix regex documentation (assigned to Shiffman)
-X   http://code.google.com/p/processing/issues/detail?id=169
+X   http://code.google.com/p/roombaide/issues/detail?id=169
 X OpenGL offscreen requires primary surface to be OpenGL
 X can't really change the smoothing/options on offscreen
 X   is this still true?
@@ -1212,27 +1212,27 @@ X   remove 'online' from the docs
 
 0236 (3.0a9)
 X Implement Cmd-Q handler on Mac OS X
-X   https://github.com/processing/processing/issues/3301
+X   https://github.com/roombaide/roombaide/issues/3301
 X Changing "background color when Presenting" causes Exception
-X   https://github.com/processing/processing/issues/3299
+X   https://github.com/roombaide/roombaide/issues/3299
 X remove "null in initImage()" message
 X displayWidth and displayHeight are zero
-X   https://github.com/processing/processing/issues/3295
+X   https://github.com/roombaide/roombaide/issues/3295
 
 fixed in 3.0a8
 X Full screen window on second monitor without using present mode
-X   https://github.com/processing/processing/issues/3271
+X   https://github.com/roombaide/roombaide/issues/3271
 
 andres
 X Offscreen rendering broken in OpenGL renderers
-X   https://github.com/processing/processing/issues/3292
-X   https://github.com/processing/processing/issues/3259
+X   https://github.com/roombaide/roombaide/issues/3292
+X   https://github.com/roombaide/roombaide/issues/3259
 X Initial location of OpenGL window hides the title bar
-X   https://github.com/processing/processing/issues/2981
+X   https://github.com/roombaide/roombaide/issues/2981
 X OpenGL sketches do not terminate, have to be killed
-X   https://github.com/processing/processing/issues/2982
+X   https://github.com/roombaide/roombaide/issues/2982
 X Quitting P3D sketch throws an error
-X   https://github.com/processing/processing/issues/3293
+X   https://github.com/roombaide/roombaide/issues/3293
 
 
 0235 (3.0a8)
@@ -1240,11 +1240,11 @@ X fairly major rewrite of createShape()
 X   prevents same code from appearing 5x (!) in the source
 X   improves bad api design with the static createShapeImpl() methods
 X errors in case changes not correctly reported
-X   https://github.com/processing/processing/issues/3235
+X   https://github.com/roombaide/roombaide/issues/3235
 X move svgz handling to PApplet
 X   remove objz handling
 X Single Frame (No Screen Display) PDF broken
-X   https://github.com/processing/processing/issues/3280
+X   https://github.com/roombaide/roombaide/issues/3280
 o remove setTitle() etc methods from PSurface, just use the ones from Frame?
 o   and with that, encourage the use of the dummy frame object in renderers
 X   dummy moved into PApplet itself
@@ -1256,12 +1256,12 @@ X   this shouldn't be a huge thing, we're not going to set the window visible
 X   until after setup() completes anyway (otherwise a delay w/ blank window)
 X Sketch runs with default size if size() is followed by large memory allocation
 X   some sort of threading issue happening here
-X   https://github.com/processing/processing/issues/1672
-X   https://github.com/processing/processing/issues/2039 (dupe)
-X   https://github.com/processing/processing/issues/2294 (dupe)
+X   https://github.com/roombaide/roombaide/issues/1672
+X   https://github.com/roombaide/roombaide/issues/2039 (dupe)
+X   https://github.com/roombaide/roombaide/issues/2294 (dupe)
 o   also check this out with the new full screen code on OS X
 o use enums for constants
-X   https://github.com/processing/processing/issues/2778
+X   https://github.com/roombaide/roombaide/issues/2778
 X   nope, requires having ALIGN_LEFT instead of just LEFT
 X clean up requestFocus() stuff
 X   make sure it works with retina/canvas/strategy as well
@@ -1288,24 +1288,24 @@ X     in the end, not worth adding fromXxxx() syntax for single use
 
 opengl
 X OpenGL sketches work only after running a sketch with default renderer
-X   https://github.com/processing/processing/issues/3218
+X   https://github.com/roombaide/roombaide/issues/3218
 X static mode - no setup() / roboLoop() - broken in OpenGL
-X   https://github.com/processing/processing/issues/3163
+X   https://github.com/roombaide/roombaide/issues/3163
 X deal with some performance issues
-X   https://github.com/processing/processing/issues/3210
+X   https://github.com/roombaide/roombaide/issues/3210
 X Can't run sketches with offscreen PGraphics
-X   https://github.com/processing/processing/issues/3259
+X   https://github.com/roombaide/roombaide/issues/3259
 o Merge glw code into the OpenGL library
-o   https://github.com/processing/processing/issues/3284
+o   https://github.com/roombaide/roombaide/issues/3284
 X "Buffers have not been created" error for sketches w/o roboLoop()
-X   https://github.com/processing/processing/issues/2469
+X   https://github.com/roombaide/roombaide/issues/2469
 o get code into makeGraphics() to handle bad path settings for LWJGL
 o   right now it has a bunch of JOGL-specific code
 X   switched back to JOGL
 
 javafx
 X implement blendMode
-X   https://github.com/processing/processing/issues/3275
+X   https://github.com/roombaide/roombaide/issues/3275
 X hide the smooth() warnings
 X don't remove JavaFX stuff from Windows and Linux builds
 X sizing works
@@ -1329,12 +1329,12 @@ X   hint(ENABLE_2X_PIXELS)?
 X   hidpi is Apple's name as well
 X   mostly getting away from this
 X bezierSegment() function to do equal-length segments
-X   https://github.com/processing/processing/issues/2919
+X   https://github.com/roombaide/roombaide/issues/2919
 X   handled instead as an example
 X add warning message when a negative textSize() is used
-X   https://github.com/processing/processing/issues/3110
+X   https://github.com/roombaide/roombaide/issues/3110
 X loadXxxx() methods will truly follow redirects (including http -> https)
-X   https://github.com/processing/processing-docs/issues/218
+X   https://github.com/roombaide/roombaide-docs/issues/218
 o move to enums instead of PConstants?
 o   helps textMode() only accept valid entries
 o   really nice for auto-complete
@@ -1342,54 +1342,54 @@ o   prevents hundreds of entries from coming up w/ auto-complete
 o   downside: breaks compatibility big time
 X   would have to use ALIGN_CENTER eta al, so no
 X noSmooth() not sticking, has to be called again inside roboLoop()
-X   https://github.com/processing/processing/issues/3113
+X   https://github.com/roombaide/roombaide/issues/3113
 X performance issues on OS X (might be threading due to Applet)
-X   https://github.com/processing/processing/issues/2423
+X   https://github.com/roombaide/roombaide/issues/2423
 X   can't fix, it's all Oracle stuff
 X remove sketch path hack from PApplet
 X   this may cause Linux issues, but we need to solve that properly
 
 head
 X Sketch window dimensions off in Java2D
-X   https://github.com/processing/processing/issues/3129
-X   https://github.com/processing/processing/pull/3162
+X   https://github.com/roombaide/roombaide/issues/3129
+X   https://github.com/roombaide/roombaide/pull/3162
 X dragging sketch window hides it
-X   https://github.com/processing/processing/issues/3092
+X   https://github.com/roombaide/roombaide/issues/3092
 X Video library is incompatible with 0233
-X   https://github.com/processing/processing/issues/3114
+X   https://github.com/roombaide/roombaide/issues/3114
 
 earlier
 X size(640,360 , P3D) doesn't work properly
-X   https://github.com/processing/processing/issues/2924
-X   https://github.com/processing/processing/issues/2925
+X   https://github.com/roombaide/roombaide/issues/2924
+X   https://github.com/roombaide/roombaide/issues/2925
 
 contribs
 X saveFrame() doesn't save opaque PNG files
-X   https://github.com/processing/processing/issues/3031
-X   https://github.com/processing/processing/pull/3067
+X   https://github.com/roombaide/roombaide/issues/3031
+X   https://github.com/roombaide/roombaide/pull/3067
 X fixes to SVG, implement percentages and some named colors
-X   https://github.com/processing/processing/pull/3205
-X   https://github.com/processing/processing/issues/2992
+X   https://github.com/roombaide/roombaide/pull/3205
+X   https://github.com/roombaide/roombaide/issues/2992
 X add option to save JSON in compact form
-X   https://github.com/processing/processing/pull/3202
+X   https://github.com/roombaide/roombaide/pull/3202
 X Remove extra edges in sphere tessellation
-X   https://github.com/processing/processing/issues/3193
-X   https://github.com/processing/processing/pull/3211
+X   https://github.com/roombaide/roombaide/issues/3193
+X   https://github.com/roombaide/roombaide/pull/3211
 X Add exceptions for FloatList and IntList when using add() w/o enough elements
-X   https://github.com/processing/processing/pull/3053
-X   https://github.com/processing/processing/issues/3052
+X   https://github.com/roombaide/roombaide/pull/3053
+X   https://github.com/roombaide/roombaide/issues/3052
 
 akarshit
 X lerpColor() outside of setup()/roboLoop() kills sketch
-X   https://github.com/processing/processing/issues/3145
+X   https://github.com/roombaide/roombaide/issues/3145
 X use default colorMode() with lerpColor() outside setup()
-X   https://github.com/processing/processing/pull/3146
+X   https://github.com/roombaide/roombaide/pull/3146
 X textAlign(RIGHT) adds extra space to the right
-X   https://github.com/processing/processing/pull/3078
-X   https://github.com/processing/processing/issues/3028
+X   https://github.com/roombaide/roombaide/pull/3078
+X   https://github.com/roombaide/roombaide/issues/3028
 X rectMode() broken for createShape with JAVA2D
-X   https://github.com/processing/processing/issues/3024
-X   https://github.com/processing/processing/pull/3102
+X   https://github.com/roombaide/roombaide/issues/3024
+X   https://github.com/roombaide/roombaide/pull/3102
 
 data
 X fixes for table
@@ -1410,23 +1410,23 @@ X added copy() to PImage (to work like get(), ala PVector)
 X added getFontRenderContext() to PGraphics
 X why doesn't p5 punt when loadFont() is used on an otf?
 X   is this a GL problem? (example in bug report wasn't GL)
-X   https://github.com/processing/processing/issues/2876
+X   https://github.com/roombaide/roombaide/issues/2876
 X   since we don't have any magic number in there, just randomly breaks
 X   add check to require .vlw extension with loadFont()
 X Memory usage insane increasing in 3.0a5
-X   https://github.com/processing/processing/issues/3007
+X   https://github.com/roombaide/roombaide/issues/3007
 X   seems fixed due to the rewrite
 X remove set/get/removeCache() methods from PApplet (add //ignore line)
 X flicker on startup
-X   https://github.com/processing/processing/issues/3134
+X   https://github.com/roombaide/roombaide/issues/3134
 X static mode - no setup() / roboLoop() - broken in Java2D
-X   https://github.com/processing/processing/issues/3130
+X   https://github.com/roombaide/roombaide/issues/3130
 X are we running on the EDT or not?
 X   switched to using the EDT, but no EDT for blit() b/c it flickers
 
 full screen
 X roll back full screen changes
-X   https://github.com/processing/processing/issues/2641
+X   https://github.com/roombaide/roombaide/issues/2641
 o new full screen sometimes causes sketch to temporarily be in the wrong spot
 X   removed the new stuff since it stank, rolled back to menu bar hiding
 X add option to have full screen span across screens
@@ -1436,9 +1436,9 @@ X   added --span option
 X play with improvements to full screen here
 X Ubuntu Unity prevents full screen from working properly
 X   http://stackoverflow.com/questions/8837719/java-in-full-screen-on-linux-how-to-cover-task-bar
-X   https://github.com/processing/processing/issues/3158
+X   https://github.com/roombaide/roombaide/issues/3158
 o   add notes to the Wiki about this (already added)
-X     https://github.com/processing/processing/wiki/Window-Size-and-Full-Screen
+X     https://github.com/roombaide/roombaide/wiki/Window-Size-and-Full-Screen
 X Linux throwing IllegalStateException: Buffers have not been created
 X   in render() (called from blit) PSurfaceAWT:301
 
@@ -1447,8 +1447,8 @@ X   in render() (called from blit) PSurfaceAWT:301
 X detect CMYK JPEG images and return null
 X   https://community.oracle.com/thread/1272045?start=0&tstart=0
 X show a warning when calling getVertexCount() on GROUP or PRIMITIVE shapes
-X   https://github.com/processing/processing/issues/2873
-X   https://github.com/processing/processing-docs/issues/167
+X   https://github.com/roombaide/roombaide/issues/2873
+X   https://github.com/roombaide/roombaide-docs/issues/167
 X replace is3D(boolean) with set3D() 
 
 data
@@ -1469,47 +1469,47 @@ X support "header" option with ODS files
 
 pulls
 X Fix check in loadShader()
-X   https://github.com/processing/processing/pull/2867
+X   https://github.com/roombaide/roombaide/pull/2867
 X Refined PShader uniform missing message fixes
-X   https://github.com/processing/processing/pull/2869
+X   https://github.com/roombaide/roombaide/pull/2869
 X Use correct parameter types in FloatList methods
-X   https://github.com/processing/processing/pull/2902
+X   https://github.com/roombaide/roombaide/pull/2902
 X Pass correct offset to glCopyTexSubImage2D
-X   https://github.com/processing/processing/pull/2898
+X   https://github.com/roombaide/roombaide/pull/2898
 X beginShape(POINTS) not working for PShape
-X   https://github.com/processing/processing/issues/2912
-X   https://github.com/processing/processing/pull/2915
+X   https://github.com/roombaide/roombaide/issues/2912
+X   https://github.com/roombaide/roombaide/pull/2915
 X Multiple blending fixes & improvements
-X   https://github.com/processing/processing/pull/2921
-X   https://github.com/processing/processing/issues/2807
-X   https://github.com/processing/processing/issues/1224
-o   https://github.com/processing/processing/pull/2601
+X   https://github.com/roombaide/roombaide/pull/2921
+X   https://github.com/roombaide/roombaide/issues/2807
+X   https://github.com/roombaide/roombaide/issues/1224
+o   https://github.com/roombaide/roombaide/pull/2601
 o Sort out blending differences with P2D/P3D
 o   might be that compatible images not setting alpha mode correctly
 o   image = gc.createCompatibleVolatileImage(source.width, source.height, Transparency.TRANSLUCENT);
-o   https://github.com/processing/processing/issues/1844
+o   https://github.com/roombaide/roombaide/issues/1844
 X Prevent lerpColor from always rounding down
-X   https://github.com/processing/processing/issues/2812
-X   https://github.com/processing/processing/pull/2813
+X   https://github.com/roombaide/roombaide/issues/2812
+X   https://github.com/roombaide/roombaide/pull/2813
 X Allow mask() with PGraphicsJava2D
-X   https://github.com/processing/processing/pull/2910
+X   https://github.com/roombaide/roombaide/pull/2910
 X OpenGL renderers ignore vertex winding in contours
-X   https://github.com/processing/processing/issues/2665
-X   https://github.com/processing/processing/pull/2927
+X   https://github.com/roombaide/roombaide/issues/2665
+X   https://github.com/roombaide/roombaide/pull/2927
 X NPE when calling Client.ip() after the connection has been closed
-X   https://github.com/processing/processing/issues/2576
-X   https://github.com/processing/processing/pull/2922
+X   https://github.com/roombaide/roombaide/issues/2576
+X   https://github.com/roombaide/roombaide/pull/2922
 
 andres
 A Confusing message: The shader doesn't have a uniform called "foo"
-A   https://github.com/processing/processing/issues/2593
+A   https://github.com/roombaide/roombaide/issues/2593
 A Exceptions in P3D / P2D not showing up properly
-A   https://github.com/processing/processing/issues/2930
+A   https://github.com/roombaide/roombaide/issues/2930
 
 
 0231 core (3.0a4)
 X RuntimeException thrown for open arcs under specific parameters in P2D
-X   https://github.com/processing/processing/issues/2854
+X   https://github.com/roombaide/roombaide/issues/2854
 X update to new version of JOGL (Andres)
 
 
@@ -1517,48 +1517,48 @@ X update to new version of JOGL (Andres)
 X add another NaN check when sorting FloatList/Dict classes
 X   if all values were NaN, an ArrayIndexOutOfBoundsException was thrown
 X PShape for JAVA2D 
-X   https://github.com/processing/processing/pull/2756
+X   https://github.com/roombaide/roombaide/pull/2756
 X add trim() method to the XML library
 
 andres
 X maximizing window leads to erroneous mouse coordinates
-X   https://github.com/processing/processing/issues/2562
+X   https://github.com/roombaide/roombaide/issues/2562
 
 earlier
 X PShape disableStyle() does not work with createShape()
-X   https://github.com/processing/processing/issues/1523
+X   https://github.com/roombaide/roombaide/issues/1523
 X multisampled offscreen PGraphics don't clear the screen properly
-X   https://github.com/processing/processing/issues/2679
+X   https://github.com/roombaide/roombaide/issues/2679
 X   this was done midway through the 3.0a2 release process
 
 pull requests
 X call applet.exit() instead of System.exit() from Present Mode's 'stop'
-X   https://github.com/processing/processing/pull/2680
+X   https://github.com/roombaide/roombaide/pull/2680
 X Drawing RECT PShape with rounded corners crashes the sketch
-X   https://github.com/processing/processing/issues/2648
+X   https://github.com/roombaide/roombaide/issues/2648
 X Corrected a typo in Tessellator#addQuadraticVertex()
-X   https://github.com/processing/processing/pull/2649
+X   https://github.com/roombaide/roombaide/pull/2649
 X fix tiny typo in Table writeHTML()
-X   https://github.com/processing/processing/pull/2773
+X   https://github.com/roombaide/roombaide/pull/2773
 
 
 0229 core (3.0a2)
 X PImage resize() causes images to not draw
-X   https://github.com/processing/processing/issues/2228
-X   https://github.com/processing/processing/pull/2324
+X   https://github.com/roombaide/roombaide/issues/2228
+X   https://github.com/roombaide/roombaide/pull/2324
 X move to native OS X full screen (gets rid of native code)
-X   https://github.com/processing/processing/issues/2641
+X   https://github.com/roombaide/roombaide/issues/2641
 X do bounds check on setVertex(PVector)
-X   https://github.com/processing/processing/issues/2556
+X   https://github.com/roombaide/roombaide/issues/2556
 X using createGraphics() w/o begin/endDraw(), don't attempt drawing w/ image()
-X   https://github.com/processing/processing/issues/2208
+X   https://github.com/roombaide/roombaide/issues/2208
 
 data
 X add copy() method to Table
 X return null from getString() on NaN float and double values
 X   affects how saveTable() works (writes blank entries instead of NaN)
 X get(5) with an empty Int/Float/StringList was returning 0
-X   https://github.com/processing/processing/pull/2343
+X   https://github.com/roombaide/roombaide/pull/2343
 o fix for maxValue() and minValue() when all entries are bad
 o   on FloatDict it was NaN, check across the lists and other dict types
 X   nothing else to do here
@@ -1572,47 +1572,47 @@ X add print() method to other data types (not just IntList)
 
 pulls
 X implement A and a (elliptical arcs)
-X   https://github.com/processing/processing/issues/169
-X   http://code.google.com/p/processing/issues/detail?id=130
-X   https://github.com/processing/processing/pull/2659
+X   https://github.com/roombaide/roombaide/issues/169
+X   http://code.google.com/p/roombaide/issues/detail?id=130
+X   https://github.com/roombaide/roombaide/pull/2659
 X   done with an approximation, if re-saving this will destroy data (docs)
 X fix typo in StringList.insert()
-X   https://github.com/processing/processing/pull/2672
+X   https://github.com/roombaide/roombaide/pull/2672
 X StingList.insert() error (should be an easy fix)
-X   https://github.com/processing/processing/issues/2548
+X   https://github.com/roombaide/roombaide/issues/2548
 
 earlier
 X default font fixes (merged for 2.2.1 or earlier)
-X   https://github.com/processing/processing/issues/2331
-X   https://github.com/processing/processing/pull/2338
+X   https://github.com/roombaide/roombaide/issues/2331
+X   https://github.com/roombaide/roombaide/pull/2338
 X image resize() takes oddly long time
-X   https://github.com/processing/processing/issues/5
+X   https://github.com/roombaide/roombaide/issues/5
 X   the problem was confirmed to have fixed itself
 
 
 0228 core (3.0a1)
 X add copy() method to PVector
 X modify PVector to include better methods for chaining operations
-X   http://code.google.com/p/processing/issues/detail?id=218
-X   https://github.com/processing/processing/issues/257
+X   http://code.google.com/p/roombaide/issues/detail?id=218
+X   https://github.com/roombaide/roombaide/issues/257
 X   PVector discussion with Dan
 o   Jer and Dan will look at their code, plus toxiclibs
 X blendMode() broken with default renderer
 X   fix from Jakub Valtar
-X   https://github.com/processing/processing/issues/2012
+X   https://github.com/roombaide/roombaide/issues/2012
 X   may have been introduced between 2.0b7 and 2.0b8
-X   https://github.com/processing/processing/issues/2275
-X   https://github.com/processing/processing/issues/2276
-X   https://github.com/processing/processing/issues/2483
+X   https://github.com/roombaide/roombaide/issues/2275
+X   https://github.com/roombaide/roombaide/issues/2276
+X   https://github.com/roombaide/roombaide/issues/2483
 X if all data is NaN in a FloatDict, return NaN for maxValue() and minValue()
 X   formerly as AIOOBE -1 because -1 means "not found"
 X   but that was indexing directly into the data array
 
 pulls
 X filter() not applying to images produced by saveframe() consistently
-X   https://github.com/processing/processing/issues/2619
+X   https://github.com/roombaide/roombaide/issues/2619
 X drawLatch in PJOGL can be null after requesting frame rendering
-X   https://github.com/processing/processing/issues/2630
+X   https://github.com/roombaide/roombaide/issues/2630
 
 table
 X major performance improvements to 'newlines' parsing
@@ -1630,34 +1630,34 @@ X   formerly, was throwing a NullPointerException
 
 0227 core (2.2.1)
 X Permit mouse PRESS to set mouseX/mouseY
-X   https://github.com/processing/processing/pull/2509
+X   https://github.com/roombaide/roombaide/pull/2509
 A Fix for video, loop() broken in 2.2
-A   https://github.com/processing/processing/issues/2524
+A   https://github.com/roombaide/roombaide/issues/2524
 
 
 0226 core (2.2)
 X fix parsing with missing categorical values
 X fix for splice() throwing a ClassCastException with other object types
-X   https://github.com/processing/processing/issues/1445
-X   https://github.com/processing/processing/pull/2461
+X   https://github.com/roombaide/roombaide/issues/1445
+X   https://github.com/roombaide/roombaide/pull/2461
 X add candDraw() method to the retina renderer
 X fix sketchPath() issue when used in another environment
 X XML.getChildren() throwing NPE when getInt() called on non-existent var
-X   https://github.com/processing/processing/issues/2367
+X   https://github.com/roombaide/roombaide/issues/2367
 X   need to sort out with docs what's happening here
 X   just a reference issue
 X substitute MOVE cursor with HAND on OS X
-X   https://github.com/processing/processing/issues/2358
+X   https://github.com/roombaide/roombaide/issues/2358
 X Allow textWidth() with the default font
-X   https://github.com/processing/processing/issues/2331
-X   https://github.com/processing/processing/pull/2338
+X   https://github.com/roombaide/roombaide/issues/2331
+X   https://github.com/roombaide/roombaide/pull/2338
 X bug in relative moveto commands for SVG
-X   https://github.com/processing/processing/issues/2377
+X   https://github.com/roombaide/roombaide/issues/2377
 X Add a constructor to bind Server to a specific address 
-X   https://github.com/processing/processing/issues/2356
+X   https://github.com/roombaide/roombaide/issues/2356
 X add disconnectEvent() to Server
-X   https://github.com/processing/processing/pull/2466
-X   https://github.com/processing/processing/issues/2133
+X   https://github.com/roombaide/roombaide/pull/2466
+X   https://github.com/roombaide/roombaide/issues/2133
 X   don't document for now
 
 cleaning
@@ -1685,9 +1685,9 @@ X   should probably be setQuality(parent.sketchQuality())
 
 andres
 X Fonts from loadFont() show up as blocks in P3D (regression)
-X   https://github.com/processing/processing/issues/2465
+X   https://github.com/roombaide/roombaide/issues/2465
 X loadPixels problem in OpenGL
-X   https://github.com/processing/processing/issues/2493
+X   https://github.com/roombaide/roombaide/issues/2493
 
 
 0225 core (2.1.2)
@@ -1698,214 +1698,214 @@ X text looks lousy compared to the Apple JVM
 X   mess with rendering hints? (notes in PGraphicsJava2D)
 X   improvements made, but still not amazing.. just at level of Windows/Linux
 X PGraphics.colorCalcARGB(int, float) doesn't cap alpha
-X   https://github.com/processing/processing/issues/2439
+X   https://github.com/roombaide/roombaide/issues/2439
 X run window border color changed in 2.1
-X   https://github.com/processing/processing/issues/2297
+X   https://github.com/roombaide/roombaide/issues/2297
 X simple NPE issue that needs workaround
-X   https://github.com/processing/processing/issues/2354
+X   https://github.com/roombaide/roombaide/issues/2354
 
 fixed in 2.1
 X roboLoop() called again before finishing on OS X (retina issue)
-X   https://github.com/processing/processing/issues/1709
+X   https://github.com/roombaide/roombaide/issues/1709
 X get() not always setting alpha channel when used with point()
-X   https://github.com/processing/processing/issues/1756
+X   https://github.com/roombaide/roombaide/issues/1756
 A support for geometry and tessellation shaders (on desktop)
-A   https://github.com/processing/processing/issues/2252
+A   https://github.com/roombaide/roombaide/issues/2252
 
 andres
 X copy() under OPENGL uses upside-down coordinates for cropping
-X   https://github.com/processing/processing/issues/2345
+X   https://github.com/roombaide/roombaide/issues/2345
 X video on windows causes exception
-X   https://github.com/processing/processing/issues/2327
+X   https://github.com/roombaide/roombaide/issues/2327
 X Shape Font Rendering was broken with the OpenGL Renderer
-X   https://github.com/processing/processing/issues/2375
+X   https://github.com/roombaide/roombaide/issues/2375
 A depth buffer shouldn't be cleared when depth mask is disabled
-A   https://github.com/processing/processing/issues/2296
+A   https://github.com/roombaide/roombaide/issues/2296
 A set pixels transparent by default in P2D/P3D
-A   https://github.com/processing/processing/issues/2207
+A   https://github.com/roombaide/roombaide/issues/2207
 A unwind depth sorting because it was breaking DXF export
-A   https://github.com/processing/processing/issues/2404
+A   https://github.com/roombaide/roombaide/issues/2404
 A Sketch hangs if sketchRenderer() returns an OpenGL renderer
-A   https://github.com/processing/processing/issues/2363
+A   https://github.com/roombaide/roombaide/issues/2363
 A "buffer" uniform triggers shader compilation error
-A   https://github.com/processing/processing/issues/2325
+A   https://github.com/roombaide/roombaide/issues/2325
 A   buffer has been renamed to ppixels for shaders
 A noLoop clears screen on Windows 8
-A   https://github.com/processing/processing/issues/2416
+A   https://github.com/roombaide/roombaide/issues/2416
 A fix pixels[] array for video capture
-A   https://github.com/processing/processing/issues/2424
+A   https://github.com/roombaide/roombaide/issues/2424
 
 
 0224 core (2.1.1)
 X PImage resize() causes PImage not to be rendered in JAVA2D
-X   https://github.com/processing/processing/issues/2179
+X   https://github.com/roombaide/roombaide/issues/2179
 X remove make.sh from core.. ancient
 X remove println() from dataPath()
 X add special case for 'null' to println()
 X added print() method to IntList
 X fix esoteric typo with alpha and color
-X   https://github.com/processing/processing/issues/2230
+X   https://github.com/roombaide/roombaide/issues/2230
 A pushStyle/popStyle should save/restore blendMode
-A   https://github.com/processing/processing/issues/2232
+A   https://github.com/roombaide/roombaide/issues/2232
 A get() + video requires loadPixels in P2D/P3D
-A   https://github.com/processing/processing/issues/2202
+A   https://github.com/roombaide/roombaide/issues/2202
 
 opengl
 A PImage copy() function used with P2D flips the image
-A   https://github.com/processing/processing/issues/2171
+A   https://github.com/roombaide/roombaide/issues/2171
 A filter shaders don't need to use the texture uniform
-A   https://github.com/processing/processing/issues/2204
+A   https://github.com/roombaide/roombaide/issues/2204
 A texture() bug with stroke() in P2D
-A   https://github.com/processing/processing/issues/2205
+A   https://github.com/roombaide/roombaide/issues/2205
 A allow sharing of GL context amongst multiple windows
-A   https://github.com/processing/processing/issues/1698
+A   https://github.com/roombaide/roombaide/issues/1698
 A texture sampling setting is ignored when creating an offscreen PGraphics
-A   https://github.com/processing/processing/issues/1900
-A rounded rect broken with Processing 2.1 P3D renderer
-A   https://github.com/processing/processing/issues/2193
+A   https://github.com/roombaide/roombaide/issues/1900
+A rounded rect broken with Roombaide 2.1 P3D renderer
+A   https://github.com/roombaide/roombaide/issues/2193
 X Clear the global PGL on dispose() (from JDF)
-X   https://github.com/processing/processing/pull/2279
+X   https://github.com/roombaide/roombaide/pull/2279
 A pie arcs have stroke between endpoints in P2D/P3D
-A   https://github.com/processing/processing/issues/2233
+A   https://github.com/roombaide/roombaide/issues/2233
 
 
 0223 core (2.1)
 X fix dataPath() problem with OS X (was breaking Movie)
 X alpha values from the pixels array coming back as 0
 X   only tested on background(), not image()
-X   https://github.com/processing/processing/issues/2030
+X   https://github.com/roombaide/roombaide/issues/2030
 
 opengl 
 X Using sketchQuality() does not work properly with P3D, OPENGL, P2D
-X   https://github.com/processing/processing/pull/2157
+X   https://github.com/roombaide/roombaide/pull/2157
 X Fix crashes when the sketch window is resized
-X   https://github.com/processing/processing/issues/1880
-X   https://github.com/processing/processing/pull/2156
+X   https://github.com/roombaide/roombaide/issues/1880
+X   https://github.com/roombaide/roombaide/pull/2156
 X scale() wasn't affecting stroke weight in P3D
-X   https://github.com/processing/processing/issues/2162
+X   https://github.com/roombaide/roombaide/issues/2162
 X add set(boolean) to PShader
-X   https://github.com/processing/processing/issues/1991
-X   https://github.com/processing/processing/pull/1993
+X   https://github.com/roombaide/roombaide/issues/1991
+X   https://github.com/roombaide/roombaide/pull/1993
 X add PMatrix.preApply(PMatrix)
-X   https://github.com/processing/processing/pull/2146
-X   https://github.com/processing/processing/issues/2145
+X   https://github.com/roombaide/roombaide/pull/2146
+X   https://github.com/roombaide/roombaide/issues/2145
 X updated to another version of JOGL
 X   updated to jogl-2.1-b1115, gluegen-2.1-b735 for OSX 10.9 support
 X Add warning when no uv texture coordinates are supplied
-X   https://github.com/processing/processing/issues/2034
+X   https://github.com/roombaide/roombaide/issues/2034
 X threading/flicker issues when resizing P2D/P3D/OPENGL
-X   https://github.com/processing/processing/issues/15
+X   https://github.com/roombaide/roombaide/issues/15
 X additional flicker avoidance
-X   https://github.com/processing/processing/commit/cca2f08a24ef892c494f5a75aa0e4b01de7e5d8a
+X   https://github.com/roombaide/roombaide/commit/cca2f08a24ef892c494f5a75aa0e4b01de7e5d8a
 
 
 0222 core (2.1b1)
 X background color for present mode has no effect
-X   https://github.com/processing/processing/issues/2071
-X   https://github.com/processing/processing/pull/2072
+X   https://github.com/roombaide/roombaide/issues/2071
+X   https://github.com/roombaide/roombaide/pull/2072
 X add desktopPath() and desktopFile() methods for testing
 X screen stops updating sometimes with retina
-X   https://github.com/processing/processing/issues/1699
+X   https://github.com/roombaide/roombaide/issues/1699
 X Unicode NLF causing problems in XML files
-X   https://github.com/processing/processing/issues/2100
+X   https://github.com/roombaide/roombaide/issues/2100
 X   not handled by BufferedReader (or XML parser)
 X   http://stackoverflow.com/questions/10556875/list-of-unicode-characters-that-should-be-filtered-in-output
 X   http://stackoverflow.com/questions/3072152/what-is-unicode-character-2028-ls-line-separator-used-for
 X fix image transparency in PDF output
-X   https://github.com/processing/processing/pull/2070
+X   https://github.com/roombaide/roombaide/pull/2070
 X Java2D images crash after being resized
-X   https://github.com/processing/processing/issues/2113
+X   https://github.com/roombaide/roombaide/issues/2113
 X constrain lerpColor() between 0 and 1
 X JSONObject/Array.format(-1) not working on embedded JSONObjects
-X   https://github.com/processing/processing/issues/2119
+X   https://github.com/roombaide/roombaide/issues/2119
 X allow println() and print() to take varargs 
-o   https://github.com/processing/processing/issues/2056
+o   https://github.com/roombaide/roombaide/issues/2056
 X   causes conflict with printing arrays
 X   added printArray() function instead
 o custom DPI settings with PDF
-X   https://github.com/processing/processing/pull/2069
+X   https://github.com/roombaide/roombaide/pull/2069
 X pdf not rendering unicode with beginRecord()
 X   seems to have fixed itself / can't reproduce
-X   http://code.google.com/p/processing/issues/detail?id=90
-X   https://github.com/processing/processing/issues/129
+X   http://code.google.com/p/roombaide/issues/detail?id=90
+X   https://github.com/roombaide/roombaide/issues/129
 X insertRow() bug
-X   https://github.com/processing/processing/issues/2137
+X   https://github.com/roombaide/roombaide/issues/2137
 
 opengl
 X fix inconsistency with P2D and resetMatrix()
-X   https://github.com/processing/processing/issues/2087
+X   https://github.com/roombaide/roombaide/issues/2087
 X text rendering problems
-X   https://github.com/processing/processing/issues/2109
+X   https://github.com/roombaide/roombaide/issues/2109
 X textSize() not working properly in P2D
-X   https://github.com/processing/processing/issues/2073
+X   https://github.com/roombaide/roombaide/issues/2073
 X incorrectly applied transformations in retained mode
-X   https://github.com/processing/processing/issues/2097
+X   https://github.com/roombaide/roombaide/issues/2097
 X push/popStyle() causes color problems with P2D/P3D
-X   https://github.com/processing/processing/issues/2102
+X   https://github.com/roombaide/roombaide/issues/2102
 X child SVG elements misplaced when rendering with P2D/P3D
-X   https://github.com/processing/processing/issues/2086
+X   https://github.com/roombaide/roombaide/issues/2086
 X SUBTRACT and DIFFERENCE blend modes are swapped
-X   https://github.com/processing/processing/issues/2075
+X   https://github.com/roombaide/roombaide/issues/2075
 X throw an error for textureMode(REPEAT) [fry]
-X   https://github.com/processing/processing/issues/2052
+X   https://github.com/roombaide/roombaide/issues/2052
 X Updated to JOGL 2.1.0
-X   https://github.com/processing/processing/issues/2136
+X   https://github.com/roombaide/roombaide/issues/2136
 X vertex codes not being properly set in P2D/P3D
-X   https://github.com/processing/processing/issues/2131
+X   https://github.com/roombaide/roombaide/issues/2131
 X some box normals are inverted
-X   https://github.com/processing/processing/issues/2151
+X   https://github.com/roombaide/roombaide/issues/2151
 
 
 0221 core (2.0.3)
 X fix options parsing on loadTable() to handle spaces
 X add static versions of loadJSONObject and loadJSONArray that take File inputs
 X PVector.angleBetween() returns 0 for 3D vectors whenever x and y are both 0
-X   https://github.com/processing/processing/issues/2045
-X   https://github.com/processing/processing/pull/2046
+X   https://github.com/roombaide/roombaide/issues/2045
+X   https://github.com/roombaide/roombaide/pull/2046
 
 andres
 X blendMode() change causes OpenGL renderer to be very slow
-X   https://github.com/processing/processing/issues/2021
+X   https://github.com/roombaide/roombaide/issues/2021
 X serious OpenGL performance issues on OS X (fixed earlier?)
-X   https://github.com/processing/processing/issues/1714
+X   https://github.com/roombaide/roombaide/issues/1714
 X   fixed with a recent JOGL update
 X P2D low quality text rendering
-X   https://github.com/processing/processing/issues/1972
+X   https://github.com/roombaide/roombaide/issues/1972
 X Rendering artifacts on the diagonal line (topleft to bottomright) in P2D
-X   https://github.com/processing/processing/issues/1964
+X   https://github.com/roombaide/roombaide/issues/1964
 X Fix issues with slow text rendering and OpenGL
-X   https://github.com/processing/processing/issues/2025
+X   https://github.com/roombaide/roombaide/issues/2025
 X loadShape doesn't load OBJ files in subdirectories properly
-X   https://github.com/processing/processing/issues/2003
+X   https://github.com/roombaide/roombaide/issues/2003
 X more OpenGL issues fixed by JOGL or newer drivers
-X   https://github.com/processing/processing/issues/1986
+X   https://github.com/roombaide/roombaide/issues/1986
 X Vertical offset when sketch height is indivisible by 2
-X   https://github.com/processing/processing/issues/1985
+X   https://github.com/roombaide/roombaide/issues/1985
 X ellipse() causes RuntimeException: java.lang.OutOfMemoryError
-X   https://github.com/processing/processing/issues/1941
+X   https://github.com/roombaide/roombaide/issues/1941
 X beginShape()..endShape() lines look wrong at joins/caps with P2D
-X   https://github.com/processing/processing/issues/1927
+X   https://github.com/roombaide/roombaide/issues/1927
 X Corrupted text with large font and OpenGL
-X   https://github.com/processing/processing/issues/1869
-X loadFont hangs on Processing 2.0 with any OpenGL renderer
-X   https://github.com/processing/processing/issues/1854
+X   https://github.com/roombaide/roombaide/issues/1869
+X loadFont hangs on Roombaide 2.0 with any OpenGL renderer
+X   https://github.com/roombaide/roombaide/issues/1854
 X copy doesn't produce a true copy with P2D and P3D renderers
-X   https://github.com/processing/processing/issues/1924
+X   https://github.com/roombaide/roombaide/issues/1924
 X Additional improvements to memory handling with images
-X   https://github.com/processing/processing/issues/1975
+X   https://github.com/roombaide/roombaide/issues/1975
 X PShape does not draw arc properly
-X   https://github.com/processing/processing/issues/1990
+X   https://github.com/roombaide/roombaide/issues/1990
 
 X Additional memory handling changes for render buffers
-X   https://github.com/processing/processing/issues/1776
+X   https://github.com/roombaide/roombaide/issues/1776
 X PShape style is not restored after calling enableStyle in P2D/P3D
-X   https://github.com/processing/processing/issues/2061
+X   https://github.com/roombaide/roombaide/issues/2061
 
 video
 X problem with bit shifting
-X   https://github.com/processing/processing/pull/2023
-X   https://github.com/processing/processing/pull/2022
-X   https://github.com/processing/processing/issues/2021
+X   https://github.com/roombaide/roombaide/pull/2023
+X   https://github.com/roombaide/roombaide/pull/2022
+X   https://github.com/roombaide/roombaide/issues/2021
 
 
 0220 core (2.0.2)
@@ -1913,25 +1913,25 @@ X basic getShape(ch) implementation for font glyph shapes
 X change QUAD_BEZIER_VERTEX to QUADRATIC_VERTEX to match the API call
 X   because this lives inside PConstants
 X Error in IntList and FloatList insert()
-X   https://github.com/processing/processing/issues/1929
+X   https://github.com/roombaide/roombaide/issues/1929
 X selectInput() in exported OS X sketch treats .app package as a folder
 o   Oracle Java 7 problem, but maybe a workaround?
 o   might be a problem with awt dialogs for directories? 
-X   https://github.com/processing/processing/issues/1959
+X   https://github.com/roombaide/roombaide/issues/1959
 X   turns out this is an apple.awt tweak for the exported Info.plist
 X getSubset() broken in IntList, StringList, and missing from FloatList
-X   https://github.com/processing/processing/issues/1979
+X   https://github.com/roombaide/roombaide/issues/1979
 X Present Mode does not work properly on Windows
-X   https://github.com/processing/processing/issues/1955
+X   https://github.com/roombaide/roombaide/issues/1955
 X add retina switch for PApplet to set useActive with OS X and 7u40
 X   prevents speed/performance issues with old sketches on retina macs
 X add error message for raspberry pi (and others?) about int buffers
-X   https://github.com/processing/processing/issues/2010
+X   https://github.com/roombaide/roombaide/issues/2010
 X   not fixed, but made notes there about how to handle
 X add sum() to IntList and FloatList
-X   https://github.com/processing/processing/issues/1893
+X   https://github.com/roombaide/roombaide/issues/1893
 X retain blendMode() between frames
-X   https://github.com/processing/processing/issues/1962
+X   https://github.com/roombaide/roombaide/issues/1962
 X   this should actually be in the code.. 
 X   maybe not working on OS X/retina?
 X   perhaps it's a getGraphics() issue?
@@ -1941,9 +1941,9 @@ X   (this is more in keeping with increment() in the Dict classes)
 X add join() method to Int/Float/StringList
 X add getContent(defaultValue) to XML
 X add isNull() (returns boolean) to JSONObject/Array
-X   https://github.com/processing/processing/issues/2009
+X   https://github.com/roombaide/roombaide/issues/2009
 X add getXxxx(xxx, defaultValue) methods to JSONObject/Array
-X   https://github.com/processing/processing/issues/2007
+X   https://github.com/roombaide/roombaide/issues/2007
 
 cleaning
 X load/save methods.. is it save("blah.svg") or saveSVG("blah.svg")
@@ -1960,15 +1960,15 @@ X   tsv only, ignores extension
 X   if allowed extension, we couldn't use .dict instead
 X   and that's probably the most useful
 X constructing table from an iterator is missing
-X   https://github.com/processing/processing/issues/1956
+X   https://github.com/roombaide/roombaide/issues/1956
 
 andres
 X pixels[] array not updated with Capture and P2D/P3D
-X   https://github.com/processing/processing/issues/1852
+X   https://github.com/roombaide/roombaide/issues/1852
 X Unable to get TAB key event with P2D/P3D renderer
-X   https://github.com/processing/processing/issues/1967
+X   https://github.com/roombaide/roombaide/issues/1967
 X Setting an INT4 uniform in PShader causes an out of bounds exception
-X   https://github.com/processing/processing/issues/1994
+X   https://github.com/roombaide/roombaide/issues/1994
 X updated JOGL to 2.0.2
 
 
@@ -1977,30 +1977,30 @@ X add error message for what line was bad while parsing a table
 X   otherwise confusing ArrayIndexOutOfBoundsException while parsing bad CSV
 X getVertex() trying to get three values when no Z-coord is available
 X   "PShape getVertex() not implemented properly for SVG files"
-X   https://github.com/processing/processing/issues/1596
+X   https://github.com/roombaide/roombaide/issues/1596
 X typo in printProjection() method
-X   https://github.com/processing/processing/issues/1863
+X   https://github.com/roombaide/roombaide/issues/1863
 
 
 0218 core (2.0)
 X textureWrap(REPEAT) + textureMode(IMAGE) clamps positive coordinates
-X   https://github.com/processing/processing/issues/1809
+X   https://github.com/roombaide/roombaide/issues/1809
 X saveJSONArray() loops forever, triggers error
-X   https://github.com/processing/processing/issues/1827
+X   https://github.com/roombaide/roombaide/issues/1827
 X patch to make font textures smaller in P2D/P3D
-X   https://github.com/processing/processing/pull/1775
+X   https://github.com/roombaide/roombaide/pull/1775
 X .png data written when .jpg file specified with save/saveFrame()
-X   https://github.com/processing/processing/issues/1810
+X   https://github.com/roombaide/roombaide/issues/1810
 X remove() broken in the List classes
-X   https://github.com/processing/processing/issues/1826
+X   https://github.com/roombaide/roombaide/issues/1826
 X Java2D surfaces not updating when used with OpenGL
 X   PGraphics using JAVA2D will not update when used with P2D or P3D
-X   https://github.com/processing/processing/issues/1786
+X   https://github.com/roombaide/roombaide/issues/1786
 X several additional functions for data classes
 X change to the binary table file format
 X   not backwards compatible, b/c this feature is unannounced
 X parse exception thrown when using getChildren() on an XML object
-X   https://github.com/processing/processing/issues/1796
+X   https://github.com/roombaide/roombaide/issues/1796
 X change XML.toString() to just send a single line of text
 X   instead of a full XML-formatted beastie
 o PNode.getChildren() shouldn't make a new array.. toArray() can do that
@@ -2009,53 +2009,53 @@ cleaning
 X move requestFocusInWindow() to safter EDT place
 A remove PImage.delete() and friends from PImage, Movie, etc.
 o add shuffle methods for arrays
-X   http://code.google.com/p/processing/issues/detail?id=229
-X   https://github.com/processing/processing/issues/268
+X   http://code.google.com/p/roombaide/issues/detail?id=229
+X   https://github.com/roombaide/roombaide/issues/268
 X   now implemented in the List classes
 
 andres
 A PImage not drawn after resize()/get() in P2D/P3D
-A   https://github.com/processing/processing/issues/1830
+A   https://github.com/roombaide/roombaide/issues/1830
 A Can't disable textures for loaded OBJ shapes (2b9)
-A   https://github.com/processing/processing/issues/1825
+A   https://github.com/roombaide/roombaide/issues/1825
 A Can't mask PGraphics with another PGraphics
-A   https://github.com/processing/processing/issues/1738
+A   https://github.com/roombaide/roombaide/issues/1738
 A PGL.readPixels() causes "invalid operation" error
-A   https://github.com/processing/processing/issues/1666
+A   https://github.com/roombaide/roombaide/issues/1666
 A Strange behavior of PGraphics pixels[] when using P2D and P3D renderer
-A   https://github.com/processing/processing/issues/1815
+A   https://github.com/roombaide/roombaide/issues/1815
 A PShape setVertex has a memory leak
-A   https://github.com/processing/processing/issues/1670
+A   https://github.com/roombaide/roombaide/issues/1670
 A PGL lacks a wrapper for the alphaFunc() method and the ALPHA_TEST constant
-A   https://github.com/processing/processing/issues/1703
+A   https://github.com/roombaide/roombaide/issues/1703
 A Implement textMode(SHAPE) for 3D
-A   https://github.com/processing/processing/issues/777
+A   https://github.com/roombaide/roombaide/issues/777
 A PImage.loadPixels() shouldn't be calling out to the renderer
 A   setting image.parent = null for it makes it work again for get().save() case
 A Setting smooth(n) affects disables background in setup()
-A   https://github.com/processing/processing/issues/1452
+A   https://github.com/roombaide/roombaide/issues/1452
 A P2D/P3D sketches don't get focus until clicked
 A   also problem for Java2D when canvas is used?
 A   need to standardize canvas handling
-A   https://github.com/processing/processing/issues/1700
+A   https://github.com/roombaide/roombaide/issues/1700
 o warning message present
 o   Deleted 1 texture objects, 0 remaining
 A   fixed in last round
 A P2D, P3D drawing errors in static mode, gray screen
-A   https://github.com/processing/processing/issues/1648
+A   https://github.com/roombaide/roombaide/issues/1648
 A Window shorter than 127 pixels high is not rendered correctly in P2D/P3D
-A   https://github.com/processing/processing/issues/1683
+A   https://github.com/roombaide/roombaide/issues/1683
 A Multiple screen crash with OpenGL
-A   https://github.com/processing/processing/issues/1515
+A   https://github.com/roombaide/roombaide/issues/1515
 
 
 0217 core (2.0b9)
 X add set(x, y) to PVector (shiffman)
 X loadImage() with TGA causing images to be upside-down
-X   https://github.com/processing/processing/issues/1682
+X   https://github.com/roombaide/roombaide/issues/1682
 A image caches not being properly disposed (weak references broken?)
-X   http://code.google.com/p/processing/issues/detail?id=1353
-A   https://github.com/processing/processing/issues/1391
+X   http://code.google.com/p/roombaide/issues/detail?id=1353
+A   https://github.com/roombaide/roombaide/issues/1391
 X implement content specifiers
 X   getIntContent()
 X   getFloatContent()
@@ -2069,20 +2069,20 @@ o   PNGEncodeParam png = PNGEncodeParam.getDefaultEncodeParam(bufImage);
 o   png.setPhysicalDimension(round(dpi*39.370079), round(dpi*39.370079), 1);
 o   JAI.create("filestore", bufImage, filename+".png", "PNG");
 X tint() with JAVA2D does not automatically refresh (with possible fix)
-X   https://github.com/processing/processing/issues/1730
+X   https://github.com/roombaide/roombaide/issues/1730
 X change how updatePixels() is called in PGraphicsJava2D
 X   only call setModified(), not updatePixels() in endDraw()
 
 andres
 A lines not properly renderered in P3D when using ortographic projection
-A   https://github.com/processing/processing/issues/1661
+A   https://github.com/roombaide/roombaide/issues/1661
 A "deleted n framebuffer objects" 
 A last lines of a beginShape(LINES) are invisible in the P2D renderer
-A   https://github.com/processing/processing/issues/1761
+A   https://github.com/roombaide/roombaide/issues/1761
 A Incorrect number of vertices on beginShape(TRIANGLES) affect subsequent Shapes
-A   https://github.com/processing/processing/issues/1760
+A   https://github.com/roombaide/roombaide/issues/1760
 A rendering unlit geometry with TEXLIGHT shader throws misleading error message
-A   https://github.com/processing/processing/issues/1757
+A   https://github.com/roombaide/roombaide/issues/1757
 
 earlier
 X decision on registered methods
@@ -2096,8 +2096,8 @@ X   also need to interleave events properly (as per report)
 
 mouse wheel
 X add mouse wheel support to 2.0 event system
-X   https://github.com/processing/processing/issues/1461
-X   http://code.google.com/p/processing/issues/detail?id=1423
+X   https://github.com/roombaide/roombaide/issues/1461
+X   http://code.google.com/p/roombaide/issues/detail?id=1423
 X   this is fairly messy since desktop and JS behave a little differently
 o   wheel event should subclass mouse (since position still relevant)
 X     just another sub-event as part of mouse
@@ -2192,8 +2192,8 @@ json
 X loadJSONArray, loadJSONObject
 X getIntArray() for JSONArray
 X misc bugs with last release
-X   https://github.com/processing/processing/issues/1660
-X   https://github.com/processing/processing/issues/1680
+X   https://github.com/roombaide/roombaide/issues/1660
+X   https://github.com/roombaide/roombaide/issues/1680
 X Dan having trouble with JSON
 X keys() vs keySet() in JSON.. 
 X   keys() doesn't iterate, keySet() introduces 'Set' type
@@ -2204,7 +2204,7 @@ X do we need getColumnType() inside TableRow?
 X   also inside Table
 X   also do we make the constants public?
 X table writing twice when .csv is added 
-X   https://github.com/processing/processing/issues/1734
+X   https://github.com/roombaide/roombaide/issues/1734
 X checkOptions() is a mess.. need to use different options for load/save
 X   rewrite it as necessary
 X implement binary tables
@@ -2237,11 +2237,11 @@ X   not necessary, getChildren() already exists
 
 0216 core (2.0b8)
 X Add clear() to replace background(0, 0, 0, 0)
-X   http://code.google.com/p/processing/issues/detail?id=1446
+X   http://code.google.com/p/roombaide/issues/detail?id=1446
 o add loadType() and saveType()... get working with shapes, etc
 X heading2D()? weird.. changed to heading()
 X   http://toxiclibs.org/docs/core/toxi/geom/Vec3D.html
-X   http://code.google.com/p/processing/issues/detail?id=987
+X   http://code.google.com/p/roombaide/issues/detail?id=987
 o hint(OPENGL_ERRORS) should be the opposite to enable the reporting, no?
 o   hint(ENABLE_OPENGL_ERRORS) should be the hint.. disabled by default
 X   nah, just leave these turned on since (potentially) important
@@ -2258,7 +2258,7 @@ o   but on createFont(), we're probably OK
 o   might need to make reference notes about the two behaviors
 X   decision: remove hint(ENABLE_NATIVE_FONTS)
 X PImage.resize() greater than image size hangs 
-X   http://code.google.com/p/processing/issues/detail?id=1463
+X   http://code.google.com/p/roombaide/issues/detail?id=1463
 X   turns out to be errata from the book
 X add warning message when registering AWT mouse/key events
 X   don't let OpenGL fire those mouse events at all
@@ -2271,89 +2271,89 @@ X   better to do this instead of bringing back the magic event
 X   or implementing the magic event on Android
 X   also problematic with it not being called now
 X loadBytes does not close input stream
-X   http://code.google.com/p/processing/issues/detail?id=1542
+X   http://code.google.com/p/roombaide/issues/detail?id=1542
 X add randomGaussian()
 X Add TAU as alias for TWO_PI
-X   http://code.google.com/p/processing/issues/detail?id=1488
-X   ref assigned here: https://github.com/processing/processing-web/issues/9
+X   http://code.google.com/p/roombaide/issues/detail?id=1488
+X   ref assigned here: https://github.com/roombaide/roombaide-web/issues/9
 X fixes for removeColumn()
 X remove SVG warning about "#text" ignored
 X fix bug where noDelays wasn't being used in PApplet
 X remove "ignoring #text tag" from SVG loader
 X   can ignore any # items altogether
 o add "CGAffineTransformInvert: singular matrix" problem to the Wiki
-X   http://code.google.com/p/processing/issues/detail?id=1363
+X   http://code.google.com/p/roombaide/issues/detail?id=1363
 X   confirmed fixed with 6u41
 X Default Renderer slow on retina displays
-X   http://code.google.com/p/processing/issues/detail?id=1262
-X   https://github.com/processing/processing/issues/1300
+X   http://code.google.com/p/roombaide/issues/detail?id=1262
+X   https://github.com/roombaide/roombaide/issues/1300
 o don't allocate Java2D buffer inside beginDraw()
 X   otherwise PDF will make an enormous image even if it's not needed
 X   modify PDF to not call super.beginDraw()
 
 andres
 A P3D sketches failing to run
-A   http://code.google.com/p/processing/issues/detail?id=1500
+A   http://code.google.com/p/roombaide/issues/detail?id=1500
 A transparent pixels are not set on multisampled offscreen GL surfaces
-A   http://code.google.com/p/processing/issues/detail?id=1516
+A   http://code.google.com/p/roombaide/issues/detail?id=1516
 A clean-up PShape API
-A   http://code.google.com/p/processing/issues/detail?id=1518
+A   http://code.google.com/p/roombaide/issues/detail?id=1518
 A several key/mouse event issues in the db
-A   http://code.google.com/p/processing/issues/detail?id=1464
+A   http://code.google.com/p/roombaide/issues/detail?id=1464
 A finalize shader API
-A   https://github.com/processing/processing/issues/13
+A   https://github.com/roombaide/roombaide/issues/13
 A "focused" become false when window is clicked in OPENGL and P2D renderer
-A   http://code.google.com/p/processing/issues/detail?id=1483
-A   https://github.com/processing/processing/issues/1521
+A   http://code.google.com/p/roombaide/issues/detail?id=1483
+A   https://github.com/roombaide/roombaide/issues/1521
 A cursor(...) and noCursor() having trouble in P2D or P3D mode
 A   noCursor() seems quite/somewhat broken
 X   started some work, ignores 'invisible' already being set
-X   http://code.google.com/p/processing/issues/detail?id=1574
-X   https://github.com/processing/processing/issues/1612
+X   http://code.google.com/p/roombaide/issues/detail?id=1574
+X   https://github.com/roombaide/roombaide/issues/1612
 A OpenGL/P3D sketches show graphical corruption
 A   needs to be set to other color
-X   http://code.google.com/p/processing/issues/detail?id=1452
-X   https://github.com/processing/processing/issues/1490
+X   http://code.google.com/p/roombaide/issues/detail?id=1452
+X   https://github.com/roombaide/roombaide/issues/1490
 A with DISABLE_STROKE_PERSPECTIVE, use GL lines, not triangles to draw lines
-A   https://github.com/processing/processing/issues/1598
-X   http://code.google.com/p/processing/issues/detail?id=1560
+A   https://github.com/roombaide/roombaide/issues/1598
+X   http://code.google.com/p/roombaide/issues/detail?id=1560
 A   disable stroke perspective by default (but this didn't fix it)
 A   fixed the disappearance, though still imperfect
 A Fix get()/set() problems with images and OpenGL
-A   https://github.com/processing/processing/issues/1613
-X   http://code.google.com/p/processing/issues/detail?id=1575
+A   https://github.com/roombaide/roombaide/issues/1613
+X   http://code.google.com/p/roombaide/issues/detail?id=1575
 o arc with large strokeWeight is very slow in P2D renderer
 A   marked WontFix, workaround is to create a PShape
-A   https://github.com/processing/processing/issues/1583
-A   http://code.google.com/p/processing/issues/detail?id=1545
+A   https://github.com/roombaide/roombaide/issues/1583
+A   http://code.google.com/p/roombaide/issues/detail?id=1545
 A child PShape disappears when geometric transformations are applied
-A   http://code.google.com/p/processing/issues/detail?id=1460
-A   https://github.com/processing/processing/issues/1498
+A   http://code.google.com/p/roombaide/issues/detail?id=1460
+A   https://github.com/roombaide/roombaide/issues/1498
 A repeated fill() in P3D throws ex for groups, weird behavior for single shapes
-A   http://code.google.com/p/processing/issues/detail?id=1524
-A   https://github.com/processing/processing/issues/1562
+A   http://code.google.com/p/roombaide/issues/detail?id=1524
+A   https://github.com/roombaide/roombaide/issues/1562
 A Incorrect sampler2D alpha channel from PGraphics.filter(shader)
-A   https://github.com/processing/processing/issues/1557
-X   http://code.google.com/p/processing/issues/detail?id=1519
+A   https://github.com/roombaide/roombaide/issues/1557
+X   http://code.google.com/p/roombaide/issues/detail?id=1519
 A Mouse data erratic in P2D
-A   https://github.com/processing/processing/issues/1626
+A   https://github.com/roombaide/roombaide/issues/1626
 A Destroying an OpenGL PApplet doesn't terminate SharedResourceRunner thread
-A   https://github.com/processing/processing/issues/1483
-A   http://code.google.com/p/processing/issues/detail?id=1445
+A   https://github.com/roombaide/roombaide/issues/1483
+A   http://code.google.com/p/roombaide/issues/detail?id=1445
 A exit() crashes Java on P2D and 3D when fullscreen only
-A   https://github.com/processing/processing/issues/12
+A   https://github.com/roombaide/roombaide/issues/12
 _ Default filter on PGraphics does nothing (JAVA2D) or causes crash (P2D/P3D)
-_   https://github.com/processing/processing/issues/1534
-X   http://code.google.com/p/processing/issues/detail?id=1496
+_   https://github.com/roombaide/roombaide/issues/1534
+X   http://code.google.com/p/roombaide/issues/detail?id=1496
 A crash when running latest P2D/P3D under VMware
-A   https://github.com/processing/processing/issues/1644
+A   https://github.com/roombaide/roombaide/issues/1644
 A SVG width and height not properly set with P2D, P3D & OPENGL renderers
-A   https://github.com/processing/processing/issues/1641
+A   https://github.com/roombaide/roombaide/issues/1641
 A Re-implement per-vertex coloring in P2D/P3D
-A   https://github.com/processing/processing/issues/1196
-X   http://code.google.com/p/processing/issues/detail?id=1158
+A   https://github.com/roombaide/roombaide/issues/1196
+X   http://code.google.com/p/roombaide/issues/detail?id=1158
 A P2D, P3D drawing errors in static mode, gray screen
-A   https://github.com/processing/processing/issues/1648
+A   https://github.com/roombaide/roombaide/issues/1648
 
 cleaning/earlier
 C textureWrap() CLAMP and REPEAT now added
@@ -2406,7 +2406,7 @@ o      getXxxxAttribute() and getXxxxContent() methods.
 X   not gonna do getFloatContent() since it's not really any shorter
 X beginning slash in getChild() threw an NPE
 X XML.format(0) throws error
-X   http://code.google.com/p/processing/issues/detail?id=1512
+X   http://code.google.com/p/roombaide/issues/detail?id=1512
 X fix XML problems on Android as well
 
 
@@ -2420,84 +2420,84 @@ o   to remove java.library.path problems (!)
 X   no longer necessary, JOGL does this by default
 X implement clip()/noClip()
 X remove blend(), add blendMode()
-X   http://code.google.com/p/processing/issues/detail?id=1385
+X   http://code.google.com/p/roombaide/issues/detail?id=1385
 o implement a more efficient version of blend()
-o   http://code.google.com/p/processing/issues/detail?id=120
+o   http://code.google.com/p/roombaide/issues/detail?id=120
 o Problem with beginShape()/endShape() when using multiple contours
-X   http://code.google.com/p/processing/issues/detail?id=1396
+X   http://code.google.com/p/roombaide/issues/detail?id=1396
 X   just a documentation issue
 A PShape and lights results in more lit vertices
-A   http://code.google.com/p/processing/issues/detail?id=1342
+A   http://code.google.com/p/roombaide/issues/detail?id=1342
 A Implement anisotropic filtering when using OPENGL
-A   http://code.google.com/p/processing/issues/detail?id=502
+A   http://code.google.com/p/roombaide/issues/detail?id=502
 X move _MASK constants out of PConstants and into PImage
 X how should stroke work w/ arcs?
 X   decision: we should do pie, you can make the other kind w/o it
 X   add an additional parameter for the others
-X   http://code.google.com/p/processing/issues/detail?id=711
+X   http://code.google.com/p/roombaide/issues/detail?id=711
 X changed events to PRESS, RELEASE, CLICK, DRAG, MOVE, ENTER, EXIT
 X   instead of past-tense versions of the same
 A Implement arc() with modes on OpenGL
-A   http://code.google.com/p/processing/issues/detail?id=1406
+A   http://code.google.com/p/roombaide/issues/detail?id=1406
 X relative coordinates not updated properly on closepath with SVG files
-X   http://code.google.com/p/processing/issues/detail?id=1058
+X   http://code.google.com/p/roombaide/issues/detail?id=1058
 X add XML.getLong() (also updated Android)
-X   http://code.google.com/p/processing/issues/detail?id=1378
+X   http://code.google.com/p/roombaide/issues/detail?id=1378
 X beginShape(QUAD) not working with Java2D
-X   http://code.google.com/p/processing/issues/detail?id=1365
+X   http://code.google.com/p/roombaide/issues/detail?id=1365
 X fix for PMatrix3D.mult() when vectors are identical
-X   http://code.google.com/p/processing/issues/detail?id=921
+X   http://code.google.com/p/roombaide/issues/detail?id=921
 A back-buffer sampler in OpenGL renderers
-A   http://code.google.com/p/processing/issues/detail?id=1169
+A   http://code.google.com/p/roombaide/issues/detail?id=1169
 X image resizing is ugly (just use java2d?)
 o   also deal with copy()/blend() inaccuracies
-X   http://code.google.com/p/processing/issues/detail?id=332
+X   http://code.google.com/p/roombaide/issues/detail?id=332
 o key/mouse events have concurrency problems with noLoop()
-X   http://code.google.com/p/processing/issues/detail?id=187
+X   http://code.google.com/p/roombaide/issues/detail?id=187
 o   need to say "no drawing inside mouse/key events w/ noLoop"
 X   changed to reference issue
 X reroboLoop() doesn't work from within roboLoop()
-X   http://code.google.com/p/processing/issues/detail?id=195
+X   http://code.google.com/p/roombaide/issues/detail?id=195
 X   make note for Casey to include this in the reference
 X Potential race condition when resizing sketches
-X   http://code.google.com/p/processing/issues/detail?id=697
+X   http://code.google.com/p/roombaide/issues/detail?id=697
 X removed mask(int[]).. check reference to make sure it's not in use
 X how to handle get(x, y, w, h) when off screen? 
-X   http://code.google.com/p/processing/issues/detail?id=925
+X   http://code.google.com/p/roombaide/issues/detail?id=925
 A curves aren't rendered seperately when P3D or P2D is specified
-A   http://code.google.com/p/processing/issues/detail?id=1317
+A   http://code.google.com/p/roombaide/issues/detail?id=1317
 A FBO handling in PGL is not transparent
-A   http://code.google.com/p/processing/issues/detail?id=1282
+A   http://code.google.com/p/roombaide/issues/detail?id=1282
 A Shaders are passed wrong defaults when calling "filter" on a PGraphics object
-A   http://code.google.com/p/processing/issues/detail?id=1301
+A   http://code.google.com/p/roombaide/issues/detail?id=1301
 A P2D/P3D PGraphics buffer fails to draw if larger than main surface
-A   http://code.google.com/p/processing/issues/detail?id=1255
+A   http://code.google.com/p/roombaide/issues/detail?id=1255
 A image(pgraphics, x,y, w, h) only draw once when shrinking
-A   http://code.google.com/p/processing/issues/detail?id=1382
+A   http://code.google.com/p/roombaide/issues/detail?id=1382
 A P2D/P3D crashes when trying to display unicode text
-A   http://code.google.com/p/processing/issues/detail?id=1308
+A   http://code.google.com/p/roombaide/issues/detail?id=1308
 A beginContour() behaves differently in immediate and retained modes
-A   http://code.google.com/p/processing/issues/detail?id=1417
+A   http://code.google.com/p/roombaide/issues/detail?id=1417
 A use to pixels array breaks after resize
-A   http://code.google.com/p/processing/issues/detail?id=1119
+A   http://code.google.com/p/roombaide/issues/detail?id=1119
 A no stroke with OpenGL sketches on a 2007 Mac Mini (GMA 950)
-A   http://code.google.com/p/processing/issues/detail?id=1222
+A   http://code.google.com/p/roombaide/issues/detail?id=1222
 A ortho() displays strange line widths
-A   http://code.google.com/p/processing/issues/detail?id=1285
+A   http://code.google.com/p/roombaide/issues/detail?id=1285
 A resizeable frame crashes sketch with AMD video card
-A   http://code.google.com/p/processing/issues/detail?id=1175
+A   http://code.google.com/p/roombaide/issues/detail?id=1175
 A set(x, y, PImage) doesn't work with P2D/P3D
-A   http://code.google.com/p/processing/issues/detail?id=1185
-A Processing 2.0b6 p2d / p3d arraylist pvector display issues
-A   http://code.google.com/p/processing/issues/detail?id=1421
+A   http://code.google.com/p/roombaide/issues/detail?id=1185
+A Roombaide 2.0b6 p2d / p3d arraylist pvector display issues
+A   http://code.google.com/p/roombaide/issues/detail?id=1421
 A Using a PGraphics as a texture produces visual artifacts in P2D/P3D.
-A   http://code.google.com/p/processing/issues/detail?id=1420
+A   http://code.google.com/p/roombaide/issues/detail?id=1420
 X set quality level higher when exporting JPEG images
 o   add ability to control jpeg compression level with save() and saveFrame()
 o   or just write a better example for this one?
-X   http://code.google.com/p/processing/issues/detail?id=58
+X   http://code.google.com/p/roombaide/issues/detail?id=58
 X using com.sun.image.codec.jpeg.* in PImage causes problems with OpenJDK
-X   http://code.google.com/p/processing/issues/detail?id=1424
+X   http://code.google.com/p/roombaide/issues/detail?id=1424
 X fix problem with background() and the default composite (for Casey)
 X   also store the default composite instance and use that on blendMode(BLEND)
 X disable Quartz renderer to fix line blending problem from Casey
@@ -2505,7 +2505,7 @@ X   might make sketches run more slowly
 X fix double error report about textMode(SCREEN)
 X how to handle stroke/fill separation in OpenGL
 X   hint(DISABLE_OPTIMIZED_STROKE)
-X   http://code.google.com/p/processing/issues/detail?id=1302
+X   http://code.google.com/p/roombaide/issues/detail?id=1302
 X   change name for hint() that controls stroke/fill combo:
 
 andres (cleanup)
@@ -2513,53 +2513,53 @@ A when turning smoothing on, internal lines of shapes are visible
 o   add an edge flag when tesselating 
 o   mind the opengl tesselation flags
 o   need to turn off smoothing for the interior of shapes
-A   http://code.google.com/p/processing/issues/detail?id=53
+A   http://code.google.com/p/roombaide/issues/detail?id=53
 o textAlign(CENTER) with P3D and OPENGL produces messy result
 o   probably rounding error with the images
-X   http://code.google.com/p/processing/issues/detail?id=65
+X   http://code.google.com/p/roombaide/issues/detail?id=65
 X Signature issue on contributed libraries affects unrelated opengl sketches
-X   http://code.google.com/p/processing/issues/detail?id=261
+X   http://code.google.com/p/roombaide/issues/detail?id=261
 A Implement efficient version of copy() in PGraphicsOpenGL
 A   use glCopyPixels() or glReadPixels() instead of copy() method
-A   http://code.google.com/p/processing/issues/detail?id=119
+A   http://code.google.com/p/roombaide/issues/detail?id=119
 A copy() does not update the screen with OpenGL
-A   http://code.google.com/p/processing/issues/detail?id=118
+A   http://code.google.com/p/roombaide/issues/detail?id=118
 A strokeCap() and strokeJoin() for use with OPENGL
-A   http://code.google.com/p/processing/issues/detail?id=123
+A   http://code.google.com/p/roombaide/issues/detail?id=123
 A inconsistent anti-aliasing with OpenGL
-A   http://code.google.com/p/processing/issues/detail?id=217
+A   http://code.google.com/p/roombaide/issues/detail?id=217
 A noCursor() + OPENGL = won't get past setup()
-A   http://code.google.com/p/processing/issues/detail?id=1345
+A   http://code.google.com/p/roombaide/issues/detail?id=1345
 A set() requires updatePixels() with OpenGL
-A   http://code.google.com/p/processing/issues/detail?id=89
+A   http://code.google.com/p/roombaide/issues/detail?id=89
 A chopping out triangles in OpenGL (though it's only 2D drawing)
-A   http://code.google.com/p/processing/issues/detail?id=193
+A   http://code.google.com/p/roombaide/issues/detail?id=193
 A shared interface for 3D view data across desktop/Android
-A   http://code.google.com/p/processing/issues/detail?id=970
+A   http://code.google.com/p/roombaide/issues/detail?id=970
 A Distortion of 2D shapes when sphereDetail() is used
-A   http://code.google.com/p/processing/issues/detail?id=762
+A   http://code.google.com/p/roombaide/issues/detail?id=762
 A OPENGL renderer stops rendering after text is written using textMode(SCREEN)
-A   http://code.google.com/p/processing/issues/detail?id=710
+A   http://code.google.com/p/roombaide/issues/detail?id=710
 A OpenGL renderer cannot draw down-right diagonal lines (OS X)
-A   http://code.google.com/p/processing/issues/detail?id=1290
+A   http://code.google.com/p/roombaide/issues/detail?id=1290
 o   marked invalid, can disable stroke perspective, etc
 
 cleaning
 o remove screenBlend(), textureBlend() from PGraphics et al
 o have andres take over all current GL issues in the tracker
 X Support 'black' as color for SVG files (PhiLho fix)
-X   http://code.google.com/p/processing/issues/detail?id=1010
+X   http://code.google.com/p/roombaide/issues/detail?id=1010
 o catch sun.dc.pr.PRException?
-X   http://code.google.com/p/processing/issues/detail?id=39
+X   http://code.google.com/p/roombaide/issues/detail?id=39
 X   no longer valid
 X work through loadPixels in PImage, how consistent do we need to be?
 X   with get() and set() methods, this gets really tricky (too slow)
 X   could optimize by keeping a java image around, but table for later
 X     it's too significant a change, and not enough time to test
 o image created with img.get() works incorrectly when using filter()
-X   http://code.google.com/p/processing/issues/detail?id=167
+X   http://code.google.com/p/roombaide/issues/detail?id=167
 X copy(image with transparency) doesn't keep the transparency at start up
-X   http://code.google.com/p/processing/issues/detail?id=601
+X   http://code.google.com/p/roombaide/issues/detail?id=601
 X   tested and working
 o for a PGraphics2D, should its image cache object be the memoryimagesource?
 o loading lots of images is a problem, describe how to unload
@@ -2570,16 +2570,16 @@ X make sure alt/ctl/meta/etc all work (for both mouse and key)
 X remove thread blocking when dequeueing events
 X finish postEvent()
 X need to make events interleave
-X   http://code.google.com/p/processing/issues/detail?id=79
+X   http://code.google.com/p/roombaide/issues/detail?id=79
 X mouseButton not being set properly in mouseClicked
-X   http://code.google.com/p/processing/issues/detail?id=1350
+X   http://code.google.com/p/roombaide/issues/detail?id=1350
 X mouseButton is 0 in mouseReleased() on OS X
-X   http://code.google.com/p/processing/issues/detail?id=1373
+X   http://code.google.com/p/roombaide/issues/detail?id=1373
 o unconfirmed: keyEvent works only using JAVA2D
-X   http://code.google.com/p/processing/issues/detail?id=1279
+X   http://code.google.com/p/roombaide/issues/detail?id=1279
 X   can't find anything on this, closed
 X mouseEntered/Exited? (they're caught but not handled)
-X   http://code.google.com/p/processing/issues/detail?id=500
+X   http://code.google.com/p/roombaide/issues/detail?id=500
 X also look into Android issues with this stuff
 X this only works for awt events... switch to using internal event code
 if (external && event.getNative() instanceof java.awt.event.KeyEvent &&
@@ -2591,89 +2591,89 @@ if (external && event.getNative() instanceof java.awt.event.KeyEvent &&
 
 
 0214 core (2.0b6)
-A Patch for /trunk/processing/core/src/processing/opengl/PGraphicsOpenGL.java
-A   http://code.google.com/p/processing/issues/detail?id=1306
+A Patch for /trunk/roombaide/core/src/roombaide/opengl/PGraphicsOpenGL.java
+A   http://code.google.com/p/roombaide/issues/detail?id=1306
 A reverted back to earlier version of JOGL
 A several fixes for GMA 950
 A video was broken due to JOGL issues
-A   http://code.google.com/p/processing/issues/detail?id=1364
+A   http://code.google.com/p/roombaide/issues/detail?id=1364
 X icon loading causes an error if you use a package
-X   http://code.google.com/p/processing/issues/detail?id=1346
+X   http://code.google.com/p/roombaide/issues/detail?id=1346
 
 
 0213 core (2.0b5)
 X mouseButton not being set properly on Windows (and probably Linux) in 2.0b4
-X   http://code.google.com/p/processing/issues/detail?id=1332
+X   http://code.google.com/p/roombaide/issues/detail?id=1332
 
 
 0212 core (2.0b4)
 X mouseButton not getting set on release event
-X   http://code.google.com/p/processing/issues/detail?id=1294
+X   http://code.google.com/p/roombaide/issues/detail?id=1294
 X appears that JOGL has been updated?
 
 
 0211 core (2.0b3)
 X remove bad cast in PGL
 X new keyEvent methods not firing
-X   http://code.google.com/p/processing/issues/detail?id=1225
+X   http://code.google.com/p/roombaide/issues/detail?id=1225
 X double check that new key and mouse events are being addressed correctly
 X restore deprecated versions of getFont() and getImage()
 X   Android getBitmap() and getTypeface() will not be restored
-X   http://code.google.com/p/processing/issues/detail?id=1223
+X   http://code.google.com/p/roombaide/issues/detail?id=1223
 X hide getImage() from PApplet (unintentionally hidden before)
 A beginDraw on an OpenGL PGraphics is throwing an exception
-A   http://code.google.com/p/processing/issues/detail?id=1217
+A   http://code.google.com/p/roombaide/issues/detail?id=1217
 
 
 0210 core (2.0b2)
 X fix problem with key events breaking with libraries
 X added hint(ENABLE_STROKE_PURE) to deal with Java 2D grossness
 X fix stroke on TRIANGLE_FAN
-X   http://code.google.com/p/processing/issues/detail?id=1137
+X   http://code.google.com/p/roombaide/issues/detail?id=1137
 
 docs
 C 2x and 4x smooth hints no longer needed/supported
-C   http://code.google.com/p/processing/issues/detail?id=1144
+C   http://code.google.com/p/roombaide/issues/detail?id=1144
 
 andres
 A POINTS mode vertices are huge
-A   http://code.google.com/p/processing/issues/detail?id=1037
+A   http://code.google.com/p/roombaide/issues/detail?id=1037
 A potentially insufficient ellipse detail with P3D/OPENGL when scale()'d
-A   http://code.google.com/p/processing/issues/detail?id=87
+A   http://code.google.com/p/roombaide/issues/detail?id=87
 A Using ortho() breaks stroke rendering
-A   http://code.google.com/p/processing/issues/detail?id=1207
+A   http://code.google.com/p/roombaide/issues/detail?id=1207
 
 earlier
 A Implement support for complex shapes when using the OpenGL renderer 
 A   in opengl mode, use its tesselator
 A   because the vertex calls can just come right back to regular vertex calls
 A   this way we can also implement breakShape() for opengl
-A   http://code.google.com/p/processing/issues/detail?id=122
+A   http://code.google.com/p/roombaide/issues/detail?id=122
 A modelX/Y/Z broken when aiming a camera
-A   http://code.google.com/p/processing/issues/detail?id=148
+A   http://code.google.com/p/roombaide/issues/detail?id=148
 A OpenGL renderer does not work on Mac OS X + JDK 7
 A   upstream fix in JOGL bindings
-A   http://code.google.com/p/processing/issues/detail?id=1070
+A   http://code.google.com/p/roombaide/issues/detail?id=1070
 A Problems w/ opengl example sketches
-A   http://code.google.com/p/processing/issues/detail?id=902
+A   http://code.google.com/p/roombaide/issues/detail?id=902
 A updatePixels wth OpenGL requires a lot of memory, need better texture update
-A   http://code.google.com/p/processing/issues/detail?id=77
+A   http://code.google.com/p/roombaide/issues/detail?id=77
 A text characters showing up as opaque rectangles in tga files
 o   solution is to implement alpha compositing across all of P3D 
 o   http://en.wikipedia.org/wiki/Alpha_compositing
-A   http://code.google.com/p/processing/issues/detail?id=80
+A   http://code.google.com/p/roombaide/issues/detail?id=80
 A changing framerate causes program to crash with P2D in 2.0a6
-A   http://code.google.com/p/processing/issues/detail?id=1116
+A   http://code.google.com/p/roombaide/issues/detail?id=1116
 
 
 0209 core (2.0b1)
 X loadImage() with spaces in path broken with exported applications on OS X
-X   http://code.google.com/p/processing/issues/detail?id=1073
+X   http://code.google.com/p/roombaide/issues/detail?id=1073
 X   maybe getResource() fails because spaces are not encoded?
 X PVector limit() is inefficient
-X   http://code.google.com/p/processing/issues/detail?id=1122
+X   http://code.google.com/p/roombaide/issues/detail?id=1122
 X memory leak when many createGraphics(..., JAVA2D) calls are used
-X   http://code.google.com/p/processing/issues/detail?id=507
+X   http://code.google.com/p/roombaide/issues/detail?id=507
 X   need to add clear() method so clear out ARGB surfaces
 C clear() ok to add
 X   decided clear(r, g, b, a) problematic since it's an exception to color model
@@ -2691,7 +2691,7 @@ X     PImage (BufferedImage and Bitmap), PFont (Typeface or awt.Font)
 X Jagged / Glitchy JAVA2D shape strokes in Java 1.6
 X   g2.setRenderingHint(RenderingHints.KEY_STROKE_CONTROL, 
 X                       RenderingHints.VALUE_STROKE_PURE); 
-X   http://code.google.com/p/processing/issues/detail?id=1068
+X   http://code.google.com/p/roombaide/issues/detail?id=1068
 X loadShape() cleanup
 A   remove PShape2D/3D
 A   make PShapeOBJ the 3D loader
@@ -2713,28 +2713,28 @@ X API cleanup to PShape and unapproved methods
 
 andres
 A implement repeating textures
-A   http://code.google.com/p/processing/issues/detail?id=94
+A   http://code.google.com/p/roombaide/issues/detail?id=94
 X lights don't work in GL renderers on low-end android devices
-X   http://code.google.com/p/processing/issues/detail?id=1145
+X   http://code.google.com/p/roombaide/issues/detail?id=1145
 X Pixels for createGraphics() should be transparent (P2D, P3D) in P2a7
-X   http://code.google.com/p/processing/issues/detail?id=1156
+X   http://code.google.com/p/roombaide/issues/detail?id=1156
 
 video
 X remove/hide several video functions that weren't approved
 A Some videos give OpenGL error with P2D/P3D
-A   http://code.google.com/p/processing/issues/detail?id=1166
+A   http://code.google.com/p/roombaide/issues/detail?id=1166
 A Jump movie to multiple of the framerate
-A   http://code.google.com/p/processing/issues/detail?id=1182
+A   http://code.google.com/p/roombaide/issues/detail?id=1182
 A Movie functions not working in setup()
-A   http://code.google.com/p/processing/issues/detail?id=1181
+A   http://code.google.com/p/roombaide/issues/detail?id=1181
 A Capture needs better initialization API
-A   http://code.google.com/p/processing/issues/detail?id=1184
+A   http://code.google.com/p/roombaide/issues/detail?id=1184
 A Movie examples not working in P2D, P3D in 2.0a8
-A   http://code.google.com/p/processing/issues/detail?id=1178
+A   http://code.google.com/p/roombaide/issues/detail?id=1178
 A GettingStartedCapture in 2.0a8 launches X11 in Mountain Lion
-A   http://code.google.com/p/processing/issues/detail?id=1191
+A   http://code.google.com/p/roombaide/issues/detail?id=1191
 A Wrong resolutions reported by Capture.list()
-A   http://code.google.com/p/processing/issues/detail?id=1192
+A   http://code.google.com/p/roombaide/issues/detail?id=1192
 
 
 0207 core (2.0a8)
@@ -2743,15 +2743,15 @@ X   also deprecate param, link() with a target, and others
 X added notes about "color(0, 0, 0, 0) produces black" to the Wiki
 X smooth() should be the default in 2.0
 X   broken in the recent releases
-X   http://code.google.com/p/processing/issues/detail?id=1157
+X   http://code.google.com/p/roombaide/issues/detail?id=1157
 
 fixed earlier
 A ArrayIndexOutOfBoundsException inside PFontTexture.updateGlyphsTexCoords() 
-A   http://code.google.com/p/processing/issues/detail?id=1104
+A   http://code.google.com/p/roombaide/issues/detail?id=1104
 A Camera function hot changing the upward axis
-A   http://code.google.com/p/processing/issues/detail?id=534
+A   http://code.google.com/p/roombaide/issues/detail?id=534
 C some docs missing (therefore not syntax highlighting)
-C   http://code.google.com/p/processing/issues/detail?id=84
+C   http://code.google.com/p/roombaide/issues/detail?id=84
 C constants that are not highlighting (WINDOWS the only one?)
 C   http://dev.processing.org/bugs/show_bug.cgi?id=662
 
@@ -2760,13 +2760,13 @@ C   http://dev.processing.org/bugs/show_bug.cgi?id=662
 X change appletViewer back to 'online'
 X begin/endGL added to PGraphics/PApplet
 X add hasChildren() to XML library
-X   http://code.google.com/p/processing/issues/detail?id=1045
+X   http://code.google.com/p/roombaide/issues/detail?id=1045
 X displayWidth/Height not being set properly before setup()
-X   http://code.google.com/p/processing/issues/detail?id=1120
+X   http://code.google.com/p/roombaide/issues/detail?id=1120
 X   can't reproduce.. might be Java update, or multi-display issue?
 X selectInput() and selectOutput() freezes
-X   http://code.google.com/p/processing/issues/detail?id=173
-o   http://code.google.com/p/processing/issues/detail?id=445
+X   http://code.google.com/p/roombaide/issues/detail?id=173
+o   http://code.google.com/p/roombaide/issues/detail?id=445
 X     -> now includes a patch that addresses one specific problem
 X   just nix the function and go with a callback setup
 X   decision: named callback functions
@@ -2776,13 +2776,13 @@ X     remove them from the code, write examples for these
 X     use callbacks instead
 X     need to decide if you specify the function name, or if it's specific
 X Set default path for selectXxxxx() functions
-X   http://code.google.com/p/processing/issues/detail?id=233
+X   http://code.google.com/p/roombaide/issues/detail?id=233
 X XML now throws exceptions in its constructor, use loadXML() instead
-X   http://code.google.com/p/processing/issues/detail?id=1138
+X   http://code.google.com/p/roombaide/issues/detail?id=1138
 X loadXML() should return null, new XML() should throw exceptions
-X   http://code.google.com/p/processing/issues/detail?id=1138
+X   http://code.google.com/p/roombaide/issues/detail?id=1138
 A ortho() causing line and fill to be misaligned
-A  http://code.google.com/p/processing/issues/detail?id=1143
+A  http://code.google.com/p/roombaide/issues/detail?id=1143
 o smooth() not working with applets an createGraphics(JAVA2D)
 o   but works fine with applications
 o   need an example of this
@@ -2830,16 +2830,16 @@ o Update JOGL when RC6 arrive: forum.jogamp.org/Road-to-RC6-td3866404.html
 
 0205 core (2.0a6)
 X add support for println(long) because it was converting the type to float
-X   http://code.google.com/p/processing/issues/detail?id=969
+X   http://code.google.com/p/roombaide/issues/detail?id=969
 X   also add support for printing arrays of longs (doubles were already there)
 X createGraphics for JAVA2D generates the wrong error msg w/ w/h <= 0
-X   http://code.google.com/p/processing/issues/detail?id=983
-X move to processing.data.* package
+X   http://code.google.com/p/roombaide/issues/detail?id=983
+X move to roombaide.data.* package
 X   update the internal code for Android and desktop to add the import
 X   add loadTable().. 
 X   loadXML and loadTable are now in desktop
 o trimming text on URLs?
-o   http://code.google.com/p/processing/issues/detail?id=715
+o   http://code.google.com/p/roombaide/issues/detail?id=715
 X change screenWidth/Height to displayWidth/Height
 X   update wiki.processing.org/w/Window_Size_and_Full_Screen
 X add createGraphics() with no renderer param to point to JAVA2D
@@ -2861,33 +2861,33 @@ X   did not work well
 
 andres
 A polygon shapes without fill slowdown render progressively
-A   http://code.google.com/p/processing/issues/detail?id=1028
+A   http://code.google.com/p/roombaide/issues/detail?id=1028
 o OPENGL broken in 2.0a5 on Linux (upstream issues)
-o   http://code.google.com/p/processing/issues/detail?id=1026
+o   http://code.google.com/p/roombaide/issues/detail?id=1026
 A   these were upstream issues
 A screenY(x,y,z) returns incorrect coordinate
-A   http://code.google.com/p/processing/issues/detail?id=1007
+A   http://code.google.com/p/roombaide/issues/detail?id=1007
 A lights() behaving differently with OPENGL2 than original OPENGL
-A   http://code.google.com/p/processing/issues/detail?id=619
+A   http://code.google.com/p/roombaide/issues/detail?id=619
 A directionalLight() is wrong on box()
-A   http://code.google.com/p/processing/issues/detail?id=966
+A   http://code.google.com/p/roombaide/issues/detail?id=966
 A PShape3D uses a lot of memory
-A   http://code.google.com/p/processing/issues/detail?id=1046
+A   http://code.google.com/p/roombaide/issues/detail?id=1046
 A triangle in first ring of sphere() not being made properly
-A   http://code.google.com/p/processing/issues/detail?id=1005
+A   http://code.google.com/p/roombaide/issues/detail?id=1005
 A beginRaw() not working with 3D
-A   http://code.google.com/p/processing/issues/detail?id=744
+A   http://code.google.com/p/roombaide/issues/detail?id=744
 A set() in 3D does not work on 2.0a5
-A   http://code.google.com/p/processing/issues/detail?id=1069
+A   http://code.google.com/p/roombaide/issues/detail?id=1069
 A frustum() and ortho() broken in P3D
-A   http://code.google.com/p/processing/issues/detail?id=867
+A   http://code.google.com/p/roombaide/issues/detail?id=867
 A get() with OPENGL is grabbing the wrong part of the image
-A   http://code.google.com/p/processing/issues/detail?id=191
+A   http://code.google.com/p/roombaide/issues/detail?id=191
 X why are LINE_SMOOTH et al being enabled if antialias < 2?
 
 fixed in 2.0a5
 A OpenGL noSmooth() does not work
-A   http://code.google.com/p/processing/issues/detail?id=328
+A   http://code.google.com/p/roombaide/issues/detail?id=328
 
 cleaning
 o too much object creation in java2d
@@ -2895,12 +2895,12 @@ o   causes inconsistency/hiccups as the gc runs?
 
 XML
 o questions re: final xml api changes
-o   http://code.google.com/p/processing/issues/detail?id=612
+o   http://code.google.com/p/roombaide/issues/detail?id=612
 X look into replacing nanoxml
 X   http://www.exampledepot.com/egs/javax.xml.parsers/pkg.html
 X add save() method
-X Wishlist for the new XML class in Processing 2.0
-X   http://code.google.com/p/processing/issues/detail?id=904
+X Wishlist for the new XML class in Roombaide 2.0
+X   http://code.google.com/p/roombaide/issues/detail?id=904
 X   void addChild(XML child)
 X   void setContent(String content)
 X   void setName(String name)
@@ -2910,9 +2910,9 @@ o   otherwise document how things are sometimes null in XML
 o   test xml examples to see if they break
 X   changed to make it return #text for the name, which is more correct
 X white space in XML 
-X   http://code.google.com/p/processing/issues/detail?id=975
+X   http://code.google.com/p/roombaide/issues/detail?id=975
 o finish updating XML documentation
-o   http://code.google.com/p/processing/issues/detail?id=382
+o   http://code.google.com/p/roombaide/issues/detail?id=382
 X   headed over to Reas
 o ref: constructor has changed to .parse(...) instead of new XMLElement(str)
 X   this wasn't documented in the first place
@@ -2936,7 +2936,7 @@ X   for more options, just integrate the fs library?
 X   let hansi know when it's integrated so he can update his library
 X   casey: I think we only want to most basic functionality, 
 X     to go full screen across monitors.
-X   http://www.superduper.org/processing/fullscreen_api/
+X   http://www.superduper.org/roombaide/fullscreen_api/
 X   https://github.com/kritzikratzi/jAppleMenuBar/blob/master/src/native/jAppleMenuBar.m
 X detect when using full screen
 X   and if so, remove decoration and don't bother with bg present frame
@@ -2948,7 +2948,7 @@ o   http://dev.processing.org/bugs/show_bug.cgi?id=1043
 o   linux present mode isn't working properly
 X   removing FSEM, too buggy and problematic
 X --display not working on osx
-X   http://code.google.com/p/processing/issues/detail?id=71
+X   http://code.google.com/p/roombaide/issues/detail?id=71
 X implement full screen mode.. this takes over the screen as best it can
 X   size(screen.width, screen.height, OPENGL);
 X   if size is screen.width and screen.height, does its best
@@ -2976,14 +2976,14 @@ X   decide on naming for the next release
 
 0204 core (2.0a5)
 X Abnormal high Java CPU usage at empty sketch with roboLoop() 
-X   http://code.google.com/p/processing/issues/detail?id=729
+X   http://code.google.com/p/roombaide/issues/detail?id=729
 X   https://forum.processing.org/topic/absurd-java-cpu-usage-at-empty-sketch-with-draw
 X "Framingham" example has BufferOverflowException
-X   http://code.google.com/p/processing/issues/detail?id=900
+X   http://code.google.com/p/roombaide/issues/detail?id=900
 X enable smooth() by default
 X   better to learn noSmooth() later
 X repeatedly calling texture() with new image raises memory error
-X   http://code.google.com/p/processing/issues/detail?id=806
+X   http://code.google.com/p/roombaide/issues/detail?id=806
 X adding anti-alias methods so that FSAA can set up properly
 X several bug fixes inside Table as they relate to inserting/adding columns
 X urlEncode() and urlDecode() added
@@ -2995,11 +2995,11 @@ X delay() remove or no? (keep adding it back...)
 X   serial and scripting need it. maybe edit the reference further...
 X   just can't remove it. needed for scripting.
 X Fix OpenGL applets (again)
-X   http://code.google.com/p/processing/issues/detail?id=845
+X   http://code.google.com/p/roombaide/issues/detail?id=845
 
 earlier
-o text using textMode(SCREEN) not displayed in Processing 1.5.1
-o   http://code.google.com/p/processing/issues/detail?id=741
+o text using textMode(SCREEN) not displayed in Roombaide 1.5.1
+o   http://code.google.com/p/roombaide/issues/detail?id=741
 X remove textMode(SCREEN)
 o   is it possible to do decent vlw text with JAVA2D and OPENGL?
 o optimize textMode(MODEL) with textMode(SCREEN)
@@ -3014,18 +3014,18 @@ X   maybe just disable this for JAVA2D cuz it's silly?
 
 
 0203 core (2.0a4)
-X Capture.list() Fails Mac OSX 10.6 Processing 2.0a3
+X Capture.list() Fails Mac OSX 10.6 Roombaide 2.0a3
 X   fix strange build issue with video capture breakage on OS X
-X   http://code.google.com/p/processing/issues/detail?id=892
+X   http://code.google.com/p/roombaide/issues/detail?id=892
 A Multiple calls to curve() connect subsequent curves with lines in P3D/OPENGL
-A   http://code.google.com/p/processing/issues/detail?id=865
+A   http://code.google.com/p/roombaide/issues/detail?id=865
 A Arc not drawn in P3D and OpenGL mode (2.0a2)
-A   http://code.google.com/p/processing/issues/detail?id=890
+A   http://code.google.com/p/roombaide/issues/detail?id=890
 
 
 0202 core (2.0a3)
 X Rounded rect() does not have a maximum length for corner radius
-X   http://code.google.com/p/processing/issues/detail?id=813
+X   http://code.google.com/p/roombaide/issues/detail?id=813
 A video problem with P3D
 
 
@@ -3043,7 +3043,7 @@ X   remove inputPath()
 X remove textMode(SCREEN)
 X added expand(long) and expand(double) because of Table
 X PImage.save() with full path raises exception
-X   http://code.google.com/p/processing/issues/detail?id=808
+X   http://code.google.com/p/roombaide/issues/detail?id=808
 X update wiki re: PNode... also include notes about the changes
 X add note about textMode(SCREEN) to the wiki
 
@@ -3060,26 +3060,26 @@ X add orientation() no-op and the two constants
 
 0198 core
 o arrayobjects (and others) flicker like hell in chrome 10 
-o   http://code.google.com/p/processing/issues/detail?id=646
+o   http://code.google.com/p/roombaide/issues/detail?id=646
 o   http://code.google.com/p/chromium/issues/detail?id=62004
 o   http://code.google.com/p/chromium/issues/detail?id=79939
 A ortho() behaving differently in P3D vs OPENGL
 A   http://dev.processing.org/bugs/show_bug.cgi?id=100
-A   http://code.google.com/p/processing/issues/detail?id=37
+A   http://code.google.com/p/roombaide/issues/detail?id=37
 A   shows a blank canvas
 A   (was only happening once b/c was drawing first in perspective)
 A   seems to be mapping to 0, 0 - width/2, height/2
 A   fix 3D > OrthoVsPerspective example once ortho works properly
 A     there's a depth problem in addition to the ortho weirdness
 A using createGraphics() image repeatedly runs out of memory with OPENGL
-A  http://code.google.com/p/processing/issues/detail?id=483
+A  http://code.google.com/p/roombaide/issues/detail?id=483
 X   works with OPENGL2, so no problem
 A finish OPENGL2 renderer
-A   http://code.google.com/p/processing/issues/detail?id=495
+A   http://code.google.com/p/roombaide/issues/detail?id=495
 o Can resize sketch with P3D, but not OPENGL
-o   http://code.google.com/p/processing/issues/detail?id=383
+o   http://code.google.com/p/roombaide/issues/detail?id=383
 A Resizing window in OPENGL breaks ImageCaches
-A   http://code.google.com/p/processing/issues/detail?id=184
+A   http://code.google.com/p/roombaide/issues/detail?id=184
 X need to make sure the createFont() reference is up to date for charset
 o opengl + resize window => window content garbled
 o   http://dev.processing.org/bugs/show_bug.cgi?id=1360
@@ -3095,29 +3095,29 @@ X   goodbye P3D
 o gl power of 2 with textures
 o   P3D also seems to have trouble w/ textures edges.. bad math?
 o No textures render with hint(ENABLE_ACCURATE_TEXTURES)
-X   http://code.google.com/p/processing/issues/detail?id=129
+X   http://code.google.com/p/roombaide/issues/detail?id=129
 o textAlign(JUSTIFY) (with implementation)
 o   http://dev.processing.org/bugs/show_bug.cgi?id=1309
-X   http://code.google.com/p/processing/issues/detail?id=186
+X   http://code.google.com/p/roombaide/issues/detail?id=186
 X   decided with casey not to include
 o resizing opengl destroys context and textures
 o   http://dev.processing.org/bugs/show_bug.cgi?id=1176
 o in P2D, two vertex() line calls with fill() causes duplicate output
 o   works fine in other renderers, has to do with tesselation
 X   http://dev.processing.org/bugs/show_bug.cgi?id=1191
-X   http://code.google.com/p/processing/issues/detail?id=162
+X   http://code.google.com/p/roombaide/issues/detail?id=162
 o extra triangles being seen in P2D
 X   http://dev.processing.org/bugs/show_bug.cgi?id=1192
-X   http://code.google.com/p/processing/issues/detail?id=163
+X   http://code.google.com/p/roombaide/issues/detail?id=163
 A implement repeating textures
-A   http://code.google.com/p/processing/issues/detail?id=94
+A   http://code.google.com/p/roombaide/issues/detail?id=94
 o add a limit to pushStyle() to catch unmatched sets?
-X   http://code.google.com/p/processing/issues/detail?id=198
+X   http://code.google.com/p/roombaide/issues/detail?id=198
 X how should quadVertex() be named? bezierVertex() quadraticVertex() 
 X   decision: quadraticVertex() to avoid confusion with quads
 X more efficient version of copy() added for 2D
 X rounded rectangle method 
-X   http://code.google.com/p/processing/issues/detail?id=265
+X   http://code.google.com/p/roombaide/issues/detail?id=265
 X   clockwise from upper-left
 X   check with casey about finalizing and adding to the docs
 X nfc() is a problem on intl systems when subsetting fonts
@@ -3126,11 +3126,11 @@ X screen.width/screen.height -> screen.width, screenW/H
 o   needs to be documented, and excise all screen.width/height references
 X   add to the 'changes' document
 X saveBytes() error when writing to existing file
-X   http://code.google.com/p/processing/issues/detail?id=667
+X   http://code.google.com/p/roombaide/issues/detail?id=667
 X problem with destroy() calling System.exit()
-X   http://code.google.com/p/processing/issues/detail?id=698
+X   http://code.google.com/p/roombaide/issues/detail?id=698
 X post() is called after setup() (make decision)
-X   http://code.google.com/p/processing/issues/detail?id=455
+X   http://code.google.com/p/roombaide/issues/detail?id=455
 X   decision: post() only gets called in draw, not setup.. document
 
 opengl applets
@@ -3140,7 +3140,7 @@ o   http://jogamp.org/jogl-demos/www/applettest-jnlp.html
 X   not sure why these do/don't work, but it's mostly working
 X OpenGL Applets won't load with JRE 6 update 21 or higher
 X   need to make the final call on this and implement
-X   http://code.google.com/p/processing/issues/detail?id=429
+X   http://code.google.com/p/roombaide/issues/detail?id=429
 o why we can't do OpenGL applets that are self-signed (wiki?) 
 o   http://www.cert.org/blogs/vuls/2008/06/signed_java_security_worse_tha.html
 
@@ -3183,28 +3183,28 @@ o   how to handle smoothing images in P3D even though it has no smoothing?
 o   noSmooth() in opengl should switch to nearest neighbor on textures/images
 o   same for P3D
 o P3D smooshes the top row of pixels when drawing text (or images)
-X   http://code.google.com/p/processing/issues/detail?id=64
+X   http://code.google.com/p/roombaide/issues/detail?id=64
 X textures truly did get worse in P3D
 o   problem is that bilinear is turned on by default starting in 0124(?)
 X   http://processing.org/discourse/yabb_beta/YaBB.cgi?board=Programs;action=display;num=1205171649
 o Implement support for complex shapes when using P2D and P3D
 X   http://dev.processing.org/bugs/show_bug.cgi?id=1053
-X   http://code.google.com/p/processing/issues/detail?id=145
+X   http://code.google.com/p/roombaide/issues/detail?id=145
 o smooth in P3D has zbuffer glitches
-X   http://code.google.com/p/processing/issues/detail?id=131
+X   http://code.google.com/p/roombaide/issues/detail?id=131
 o smoothing is slow
-X   http://code.google.com/p/processing/issues/detail?id=132
+X   http://code.google.com/p/roombaide/issues/detail?id=132
 o textured sphere example needs to set normals
 o   also needs fix for last edge and the seam
 o text() not setting zbuffer in P3D because not fully opaque
 X   http://dev.processing.org/bugs/show_bug.cgi?id=696
-X   http://code.google.com/p/processing/issues/detail?id=88
+X   http://code.google.com/p/roombaide/issues/detail?id=88
 o osx 10.5 (not 10.4) performing text width calculation differently
 o   http://dev.processing.org/bugs/show_bug.cgi?id=972
-X   http://code.google.com/p/processing/issues/detail?id=128
+X   http://code.google.com/p/roombaide/issues/detail?id=128
 o Automatically use textMode(SCREEN) with text() when possible
 o   http://dev.processing.org/bugs/show_bug.cgi?id=1020
-X   http://code.google.com/p/processing/issues/detail?id=134
+X   http://code.google.com/p/roombaide/issues/detail?id=134
 o writing image file (missing a flush() call?) on exit() fails
 o   lots of zero length files
 o saveFrame() at the end of a draw mode program is problematic
@@ -3245,12 +3245,12 @@ o make thick lines draw perpendicular to the screen with P3D
 o   http://dev.processing.org/bugs/show_bug.cgi?id=956
 o   ewjordan suggests building the quad in screen coords after perspective
 o images are losing pixels at the edges
-X   http://code.google.com/p/processing/issues/detail?id=38
+X   http://code.google.com/p/roombaide/issues/detail?id=38
 o odd error with some pixels from images not drawing properly
 o   http://processing.org/discourse/yabb_beta/YaBB.cgi?board=SoftwareBugs;action=display;num=1115681453
 o clipping not implemented
 o   http://dev.processing.org/bugs/show_bug.cgi?id=1393
-X   http://code.google.com/p/processing/issues/detail?id=210
+X   http://code.google.com/p/roombaide/issues/detail?id=210
 o   http://processing.org/discourse/yabb_beta/YaBB.cgi?board=SoftwareBugs;action=display;num=1114184516
 o   http://processing.org/discourse/yabb/YaBB.cgi?board=Proce55ing_software_bugs;action=display;num=1058491568;start=0
 o   http://processing.org/discourse/yabb/YaBB.cgi?board=Proce55ing_software_bugs;action=display;num=1052313604;start=0
@@ -3316,12 +3316,12 @@ X stroke showing above fill when used with P3D
 X   http://dev.processing.org/bugs/show_bug.cgi?id=1032
 X   fixed in release 0160
 o Stroked polygons losing stroke pixels due to z-buffer issues in P3D
-o   http://code.google.com/p/processing/issues/detail?id=73
+o   http://code.google.com/p/roombaide/issues/detail?id=73
 X refactor PApplet.main() and Runner.startInternal() to remove duplication
 X   http://dev.processing.org/bugs/show_bug.cgi?id=245
 o PFont.size not available.. other font accessors? 
 o   http://dev.processing.org/bugs/show_bug.cgi?id=1510
-o implement method for lightweight components with processing applets
+o implement method for lightweight components with roombaide applets
 o   http://dev.processing.org/bugs/show_bug.cgi?id=686
 X   closed as LATER in the original bugs db
 o add getSketchSize() and getSketchRenderer()
@@ -3331,12 +3331,12 @@ X Use getContextClassLoader() instead of Class.forName()
 X   http://dev.processing.org/bugs/show_bug.cgi?id=514
 X cursor functions don't work in present mode
 X   just add a note to the reference
-X   http://code.google.com/p/processing/issues/detail?id=160
+X   http://code.google.com/p/roombaide/issues/detail?id=160
 o when drawing an image, sense whether drawn rotated
 o   specifically, if drawn rotated 90 in either direction, or 180
 o   if just rotate/translate, then can use SCREEN_SPACE for fonts
 o "Target VM failed to initialize" when using Present mode on Mac OS X
-o   http://code.google.com/p/processing/issues/detail?id=178
+o   http://code.google.com/p/roombaide/issues/detail?id=178
 
 decisions
 o call reapplySettings() when using beginRecord()?
@@ -3416,25 +3416,25 @@ X   html parser? javax.swing.text.html.parser... has binary DTDs
 X   decision: it's someone else's job
 X XMLElemnt.parse() or new XMLElement(xmldata)?
 X   same goes for PShape.. parse from a string?
-X   http://code.google.com/p/processing/issues/detail?id=277
+X   http://code.google.com/p/roombaide/issues/detail?id=277
 o Writing XML files (clean up the API)
 o   http://dev.processing.org/bugs/show_bug.cgi?id=964
 X XMLElement lacks add/set/remove methods
-X   http://code.google.com/p/processing/issues/detail?id=440
+X   http://code.google.com/p/roombaide/issues/detail?id=440
 X PNode is final(?) name, get that implemented
 
 
 0197 core (1.5.1)
 X Seeming problem displaying SVG data when layer data is grouped
-X   http://code.google.com/p/processing/issues/detail?id=388
+X   http://code.google.com/p/roombaide/issues/detail?id=388
 X bug in SVG parser for shorthand curves (T/t and S/s)
-X   http://code.google.com/p/processing/issues/detail?id=350
+X   http://code.google.com/p/roombaide/issues/detail?id=350
 X shape(PshapeSVG) fails if SVG contains <path d=""/>
-X   http://code.google.com/p/processing/issues/detail?id=434
+X   http://code.google.com/p/roombaide/issues/detail?id=434
 X implement quadVertex()
 X fix svg issues when dealing with quadratic bezier curves
 X revert to old createFont() behavior
-X   http://code.google.com/p/processing/issues/detail?id=662
+X   http://code.google.com/p/roombaide/issues/detail?id=662
 
 
 0196 core (1.5)
@@ -3463,42 +3463,42 @@ X   however hopefully not a problem on modern machines
 X   and probably no worse than what MemoryImageSource does
 X   removed large synchronized block
 A OPENGL2 record only saves one line in a LINES shape
-A   http://code.google.com/p/processing/issues/detail?id=579
+A   http://code.google.com/p/roombaide/issues/detail?id=579
 X add isClosed() and getChildren() methods to PShape
 X Frame skipping with processor intensive applets using 1.6
 X   http://dev.processing.org/bugs/show_bug.cgi?id=766
 X   may be fixed, but not verified
 o definite present-mode weirdness with background colors
 X normal() command commented out in sphere() method
-X   http://code.google.com/p/processing/issues/detail?id=602
+X   http://code.google.com/p/roombaide/issues/detail?id=602
 X save() no longer works at bottom of draw with JAVA2D
 X   neither does loadPixels it seems
-X   http://code.google.com/p/processing/issues/detail?id=594
+X   http://code.google.com/p/roombaide/issues/detail?id=594
 X   made an edit so that loadPixels will apply to the offscreen image, but...
 X   ironing out more issues with set() and the latest release
 
 
 0194 core (pre)
 X flicker between background and rest with JAVA2D
-X   http://code.google.com/p/processing/issues/detail?id=558
+X   http://code.google.com/p/roombaide/issues/detail?id=558
 
 
 0193 core (pre)
 X fix problem that made applets suck in Google Chrome and Firefox 4
 X java.lang.OutOfMemoryError using get() and image() inside a tight loop
 X   just need to swap out use of clone() since it's causing trouble
-X   http://code.google.com/p/processing/issues/detail?id=42
+X   http://code.google.com/p/roombaide/issues/detail?id=42
 X textAlign() incorrect with default font on Mac OS X 10.6
-X   http://code.google.com/p/processing/issues/detail?id=362
+X   http://code.google.com/p/roombaide/issues/detail?id=362
 X   changed default font to Lucida Sans, available on all platforms
 X need to finish font changes wrt native fonts before any release
 X   right now not in a good place--default font will be bitmapped and ugly
-X   http://code.google.com/p/processing/issues/detail?id=416
+X   http://code.google.com/p/roombaide/issues/detail?id=416
 o   need to have some kind of subsetting mode, but 'subsetting' a bad name
 X changing PDF to use textMode(SHAPE) by default
 X saving a PGraphics as jpg using save() makes a cmyk file
 X   need to shut off the alpha channel when writing
-X   http://code.google.com/p/processing/issues/detail?id=415
+X   http://code.google.com/p/roombaide/issues/detail?id=415
 X present mode is no longer centering on macosx
 X   problem with setExtendedState(), which doesn't seem to be necessary
 o only top left 100 x 100 pixels are displayed in presentation mode (Linux 1.1+)
@@ -3508,27 +3508,27 @@ o   http://dev.processing.org/bugs/show_bug.cgi?id=1560
 
 0192 core (pre)
 X regression in XMLElement.getBoolean(String, boolean)
-X   http://code.google.com/p/processing/issues/detail?id=399
+X   http://code.google.com/p/roombaide/issues/detail?id=399
 o JNLPAppletlauncher doesn't work anymore with OpenGL jar
-o   http://code.google.com/p/processing/issues/detail?id=352
+o   http://code.google.com/p/roombaide/issues/detail?id=352
 X color() problem with alpha
-X   http://code.google.com/p/processing/issues/detail?id=327
+X   http://code.google.com/p/roombaide/issues/detail?id=327
 X   appears to have been some old code that wasn't removed
 X anglebetween regression
-X   http://code.google.com/p/processing/issues/detail?id=435
+X   http://code.google.com/p/roombaide/issues/detail?id=435
 X more chatter with this
 X   http://dev.processing.org/bugs/show_bug.cgi?id=131
-X   http://code.google.com/p/processing/issues/detail?id=43
+X   http://code.google.com/p/roombaide/issues/detail?id=43
 X shearX and shearY not implemented with P2D and JAVA2D
-X   http://code.google.com/p/processing/issues/detail?id=452
+X   http://code.google.com/p/roombaide/issues/detail?id=452
 L PGraphicsJava2D.resize() not working the same as PGraphics2D.resize()
 L   http://dev.processing.org/bugs/show_bug.cgi?id=1107
-X   http://code.google.com/p/processing/issues/detail?id=150
+X   http://code.google.com/p/roombaide/issues/detail?id=150
 X   resize is not available with renderers, use createGraphics()
 X   added a note to the reference
 X frame.setResizable(true) does not enable maximize button
 X   workaround from Christian Thiemann
-X   http://code.google.com/p/processing/issues/detail?id=467
+X   http://code.google.com/p/roombaide/issues/detail?id=467
 
 stop/destroy/dispose
 L stop() not working very well 
@@ -3538,15 +3538,15 @@ L   http://dev.processing.org/bugs/show_bug.cgi?id=77 (dupe)
 L   http://dev.processing.org/bugs/show_bug.cgi?id=183 (dupe)
 L double stop() called with noLoop()
 L   http://dev.processing.org/bugs/show_bug.cgi?id=1270
-L   http://code.google.com/p/processing/issues/detail?id=180
+L   http://code.google.com/p/roombaide/issues/detail?id=180
 
 
 0191 core (pre)
 X fix background(PImage) for OpenGL
-X   http://code.google.com/p/processing/issues/detail?id=336
+X   http://code.google.com/p/roombaide/issues/detail?id=336
 X skip null entries with trim(String[]) 
 X NaN with PVector.angleBetween
-X   http://code.google.com/p/processing/issues/detail?id=340
+X   http://code.google.com/p/roombaide/issues/detail?id=340
 X fix missing getFloat() method in XML library
 X setAttribute? setString/Int/Float or just set?
 X   get() set() methods are confusing.. too spare
@@ -3565,7 +3565,7 @@ X   add to release notes that it shouldn't be used by the finicky
 
 xml fixes
 X add getBoolean() methods?
-X   http://code.google.com/p/processing/issues/detail?id=304
+X   http://code.google.com/p/roombaide/issues/detail?id=304
 X removing namespace versions of the getXxxx() methods
 X   these were never documented, and cause more trouble than they're worth
 X changing getIntAttribute() et al to getInt()
@@ -3573,17 +3573,17 @@ X   need to make the reference change for the next release
 X add listChildren() method
 X XML attributes named "xmlns" always return NULL
 X   http://dev.processing.org/bugs/show_bug.cgi?id=1196
-X   http://code.google.com/p/processing/issues/detail?id=166
+X   http://code.google.com/p/roombaide/issues/detail?id=166
 X when re-saving and ods file, not including all the name spaces at the top
 X several fixes to how namespaces are handled (or not handled)
 X save xml elements back out again
 X   http://dev.processing.org/bugs/show_bug.cgi?id=963
-X   http://code.google.com/p/processing/issues/detail?id=126
+X   http://code.google.com/p/roombaide/issues/detail?id=126
 X   or make the call that it's read-only, and remove the saving code
 X adding write() method?
 X need to handle how save() works inside xml lib
 X update XMLElement constructor problem
-X   http://code.google.com/p/processing/issues/detail?id=342
+X   http://code.google.com/p/roombaide/issues/detail?id=342
 
 
 0189 core (1.2.1)
@@ -3596,7 +3596,7 @@ X no changes, just the version number
 
 0187 core (pre)
 X add requestFocusInWindow() call to replace requestFocus()
-X   http://code.google.com/p/processing/issues/detail?id=279
+X   http://code.google.com/p/roombaide/issues/detail?id=279
 X add getDocumentBase() version to createInput() for internet explorer
 
 
@@ -3617,11 +3617,11 @@ X   http://dev.processing.org/bugs/show_bug.cgi?id=1572
 X pass actual exceptions from InvocationTargetException in registered methods
 o svg issue with implicit path command
 o   http://dev.processing.org/bugs/show_bug.cgi?id=1561
-o   http://code.google.com/p/processing/issues/detail?id=257
+o   http://code.google.com/p/roombaide/issues/detail?id=257
 X   appears to be faulty code
 X remove call to requestFocus() that broke the ColorSelector (and Editor)
 X   and was also breaking some applets
-X   http://code.google.com/p/processing/issues/detail?id=258
+X   http://code.google.com/p/roombaide/issues/detail?id=258
 
 shape/svg work
 X fix for adobe illustrator-mangled svg id names with hex characters
@@ -3870,7 +3870,7 @@ X blend() y coordinates inverted when using OpenGL
 X   http://dev.processing.org/bugs/show_bug.cgi?id=1137
 
 invalid/wontfix/dupe
-X Processing will not start with non-standard disk partitioning on OS X
+X Roombaide will not start with non-standard disk partitioning on OS X
 X   http://dev.processing.org/bugs/show_bug.cgi?id=1127
 X Got NoClassDefFoundError exception when accessing quicktime API
 X   http://dev.processing.org/bugs/show_bug.cgi?id=1128
@@ -4054,11 +4054,11 @@ o   make a version of PGraphics3 that uses it for more accurate rendering?
 
 
 0150 core
-X no changes to processing.core in 0150
+X no changes to roombaide.core in 0150
 
 
 0149 core
-X remove MACOS9 constant from processing.core.*
+X remove MACOS9 constant from roombaide.core.*
 X   because code no longer runs on os9 since dropping 1.1 support
 X specular() with alpha has been removed
 X GLDrawableFactory.chooseGraphicsConfiguration() error with OpenGL
@@ -4236,7 +4236,7 @@ X tweaks to PGraphicsOpenGL to support GLGraphics
 
 
 0147 core
-X processing sketches not restarting after switching pages in safari
+X roombaide sketches not restarting after switching pages in safari
 X   http://dev.processing.org/bugs/show_bug.cgi?id=581
 
 cleaning
@@ -4572,7 +4572,7 @@ o is quad strip broken or not behaving as expected?
 X   may be correct, it worked for nik
 X inside roboLoop() mode, delay() does nothing
 X   delay might be a good way to signal drawing to the screen/updating
-X set(x, y, image) x, y not setting with processing
+X set(x, y, image) x, y not setting with roombaide
 
 fixed earlier
 X is the texture[] array in PGraphics3D causing the problems with memory?
@@ -5174,7 +5174,7 @@ X   expand, append, contract, subset, splice, concat, reverse
 X typed version of array functions:
 X   append(), shorten(), splice, slice, subset, concat, reverse
 X   http://dev.processing.org/bugs/show_bug.cgi?id=115
-X fix issue where processing applets would run extremely fast 
+X fix issue where roombaide applets would run extremely fast 
 X   after having been starved of resources where there framerate dropped
 X   http://dev.processing.org/bugs/show_bug.cgi?id=336
 X added color/stroke/tint/fill(#FF8800, 30);
@@ -5456,7 +5456,7 @@ X   dangerous tho because mouse fxn called just before endFrame
 
 
 0102 core
-X no changes, windows-only release to deal with processing.exe
+X no changes, windows-only release to deal with roombaide.exe
 
 
 0101 core
@@ -5852,7 +5852,7 @@ X move dot() to the bottom w/ the other math
 
 already done
 X remove PMethods as actual class, use recordFrame(PGraphics)
-X   size(200, 200, "processing.illustrator.PGraphicsAI");
+X   size(200, 200, "roombaide.illustrator.PGraphicsAI");
 
 api questions
 o image(String name) and textFont(String name)
@@ -6039,13 +6039,13 @@ X   make sure the program compiles before starting present mode
 X PApplet.saveFrame() is saving to sketch folder, PApplet.save() is not
 X   PApplet.save() will save to the applet folder, 
 X   but PImage.save() or PGraphics.save() will save only to the current
-X   working directory, usually the Processing folder.
+X   working directory, usually the Roombaide folder.
 X removed static version of mask() from PImage
 X   no more PImage.mask(theImage, maskImage)
 X   just use theImage.mask(maskImage)
 X PImage.filter() 
 X   maybe use quasimondo's gaussian blur code?
-X     http://incubator.quasimondo.com/processing/gaussian_blur_1.php
+X     http://incubator.quasimondo.com/roombaide/gaussian_blur_1.php
 o   filter() on subsections? yes, in keeping with rest of api
 X   no, in keeping with getting shit done
 X   BLUR - write simple blur
@@ -6150,7 +6150,7 @@ X   better, just assume that they need the endian swap
 X fixed draw mode apps for opengl
 X   (gl was missing a beginFrame)
 X pmouseX, pmouseY are not working in OpenGL mode
-X   (as they are working in Processing mode)
+X   (as they are working in Roombaide mode)
 
 o screenX/Y aren't properly working for 2D points against a 3D matrix
 o   (ryan alexander rounding bug)
@@ -6447,7 +6447,7 @@ X #ifdef to remove client and server code as well
 X need to resolve issues between rendering screen/file
 X   illustrator-based rendering needs to work for ars projects
 X   screen may be 400x400 pixels, but file be 36x36"
-X launcher.cpp broke serial.. see versions in processing.notcvs
+X launcher.cpp broke serial.. see versions in roombaide.notcvs
 X rewrite bagel code.. 
 X   for this release, because it will break things along with the lib stuff
 X   switch to PImage, PApplet, etc
@@ -6575,7 +6575,7 @@ X fix mouse/key events, make properly public for the package stuff
 X   The biggest problem was the key and mouse functions not working. 
 X   Input: Mouse_Functions
 X   Input: Keyboard_Functions
-X processing.net -> PClient, PServer
+X roombaide.net -> PClient, PServer
 X   write client/server implementations for new-style api
 X   basic test with old net server has things working fine
 
@@ -6685,7 +6685,7 @@ X   http://processing.org/discourse/yabb/YaBB.cgi?board=Proce55ing_software_bugs
 X seems to be some difficult threading problems still present
 X   fixed many threading issues across macosx and linux
 X side-porting changes
-X   new(er) line code is not in the main 'processing'
+X   new(er) line code is not in the main 'roombaide'
 X   making perlin non-static not in the main bagel
 X   polygon stroking hack code from the end of 68
 X erikb found a bug inside split(), it would die on empty strings

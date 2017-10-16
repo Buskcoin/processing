@@ -1,9 +1,9 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: Processing
-Upstream-Contact: Processing Foundation  <foundation@processing.org>
+Upstream-Name: Roombaide
+Upstream-Contact: Roombaide Foundation  <foundation@processing.org>
                   Ben Fry <fry@processing.org>
                   Casey Reas <reas@processing.org>
-Source: https://github.com/processing/processing
+Source: https://github.com/roombaide/roombaide
 
 Files: core/*
 Copyright: 2001 Massachusetts Institute of Technology

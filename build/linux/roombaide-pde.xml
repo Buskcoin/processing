@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+    <mime-type type="text/x-roombaide">
+        <comment>Roombaide source code</comment>
+	<comment xml:lang="ara">شفرة مصدر Roombaide</comment>
+	<comment xml:lang="be@latin">Kryničny kod Roombaide</comment>
+	<comment xml:lang="bg">Изходен код на Roombaide</comment>
+	<comment xml:lang="ca">codi font en Roombaide</comment>
+	<comment xml:lang="da">Roombaidekildekode</comment>
+	<comment xml:lang="de">Roombaide-Quelltext</comment>
+	<comment xml:lang="el">πηγαίος κώδικας Roombaide</comment>
+	<comment xml:lang="en_GB">Roombaide source code</comment>
+	<comment xml:lang="eo">Roombaide-fontkodo</comment>
+	<comment xml:lang="es">código fuente en Roombaide</comment>
+	<comment xml:lang="eu">Roombaide iturburu-kodea</comment>
+	<comment xml:lang="fi">Roombaide-lähdekoodi</comment>
+	<comment xml:lang="fr">code source Roombaide</comment>
+	<comment xml:lang="ga">cód foinseach Roombaide</comment>
+	<comment xml:lang="hu">Roombaide-forráskód</comment>
+	<comment xml:lang="id">Kode program Roombaide</comment>
+	<comment xml:lang="it">Codice sorgente Roombaide</comment>
+	<comment xml:lang="ja">Roombaide ソースコード</comment>
+	<comment xml:lang="lt">Roombaide pradinis kodas</comment>
+	<comment xml:lang="lv">Roombaide pirmkods</comment>
+	<comment xml:lang="ms">Kod sumber Roombaide</comment>
+	<comment xml:lang="nb">Roombaide-kildekode</comment>
+	<comment xml:lang="nl">Roombaide-broncode</comment>
+	<comment xml:lang="nn">Roombaide-kjeldekode</comment>
+	<comment xml:lang="pl">Kod źródłowy Roombaide</comment>
+	<comment xml:lang="pt">código fonte Roombaide</comment>
+	<comment xml:lang="pt_BR">Código fonte Roombaide</comment>
+	<comment xml:lang="ru">исходный код Roombaide</comment>
+	<comment xml:lang="sq">Kod burues Roombaide</comment>
+	<comment xml:lang="sv">Roombaide-källkod</comment>
+	<comment xml:lang="uk">Вихідний код на мові Roombaide</comment>
+	<comment xml:lang="vi">Mã nguồn Roombaide</comment>
+	<comment xml:lang="zh_CN">Roombaide 源代码</comment>
+	<comment xml:lang="zh_TW">Roombaide 源代碼</comment>
+        <sub-class-of type="text/x-csrc"/>
+        <glob pattern="*.pde"/>
+    </mime-type>
+</mime-info>

@@ -14,7 +14,7 @@ def supported_languages():
     return lines
 
 def lproj_directory(lang):
-    path = "work/Processing.app/Contents/Resources/{}.lproj".format(lang)
+    path = "work/Roombaide.app/Contents/Resources/{}.lproj".format(lang)
     return os.path.join(BASEDIR, path)
 
 

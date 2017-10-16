@@ -79,7 +79,7 @@ public class PAppletMethods extends Task {
         content.append(line);
         content.append('\n');  // for efficiency
 
-        if (line.indexOf("public functions for processing.core") >= 0) {
+        if (line.indexOf("public functions for roombaide.core") >= 0) {
           break;
         }
       }

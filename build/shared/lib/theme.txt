@@ -7,11 +7,11 @@ status.error.bgcolor = #cc3300
 #status.warning.bgcolor = #EF8115
 status.warning.bgcolor = #333333
 status.warning.fgcolor = #FFFFFF
-status.font = processing.sans,plain,13
+status.font = roombaide.sans,plain,13
 
 # HEADER TABS
 # Settings for the tab area at the top.
-header.text.font = processing.sans,bold,14
+header.text.font = roombaide.sans,bold,14
 header.text.selected.color = #000000
 header.text.unselected.color = #ffffff
 
@@ -25,7 +25,7 @@ header.gradient.bottom = #111111
 
 
 # FOOTER TABS
-footer.text.font = processing.sans,bold,12
+footer.text.font = roombaide.sans,bold,12
 footer.text.selected.color = #000000
 footer.text.unselected.color = #ffffff
 footer.tab.arrow.color = #ffffff
@@ -64,13 +64,13 @@ divider.dot.diameter = 3
 divider.dot.color = #505050
 
 # TOOLBAR BUTTON TEXT
-toolbar.rollover.font = processing.sans,bold,14
+toolbar.rollover.font = roombaide.sans,bold,14
 toolbar.rollover.color = #ffffff
 toolbar.gradient.top = #212121
 toolbar.gradient.bottom = #212121
 
 # MODE SELECTOR
-mode.title.font = processing.sans,plain,14
+mode.title.font = roombaide.sans,plain,14
 mode.title.color = #ffffff
 mode.background.color = #222222
 mode.outline.color = #888888
@@ -103,7 +103,7 @@ editor.eolmarkers.color = #999999
 editor.brackethighlight = true
 editor.brackethighlight.color = #006699
 
-editor.gutter.text.font = processing.mono,bold,13
+editor.gutter.text.font = roombaide.mono,bold,13
 editor.gutter.text.color = #888888
 
 # marker for breakpointed lines in left hand gutter (2 ascii characters)
@@ -134,10 +134,10 @@ editor.column.warning.color = #ffc30e
 #breakpoint.bgcolor = #f0f0f0
 #currentline.bgcolor = #ffff96
 
-errors.header.font = processing.sans,plain,12
+errors.header.font = roombaide.sans,plain,12
 errors.header.bgcolor = #EBEBEB
 errors.header.fgcolor = #484848
-errors.row.font = processing.sans,plain,12
+errors.row.font = roombaide.sans,plain,12
 errors.row.fgcolor = #484848
 errors.row.bgcolor = #FFFFFF
 errors.selection.fgcolor = #242424
@@ -150,7 +150,7 @@ errors.indicator.warning.color = #EF8115
 
 manager.tab.selected.color = #666666
 manager.tab.unselected.color = #333333
-manager.tab.text.font = processing.sans,bold,14
+manager.tab.text.font = roombaide.sans,bold,14
 manager.tab.text.selected.color = #000000
 manager.tab.text.unselected.color = #ffffff
 # orange circle for updates
