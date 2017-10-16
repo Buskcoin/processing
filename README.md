@@ -17,4 +17,4 @@ and [patches](https://github.com/roombaide/roombaide/pulls).
 
 Ben Fry, 6 August 2015
 
-Using DarkProcessingTheme_3.0 by jeddThompson https://github.com/jeffThompson/DarkProcessingTheme_3.0
+Using DarkProcessingTheme_3.0 by jeffThompson https://github.com/jeffThompson/DarkProcessingTheme_3.0
