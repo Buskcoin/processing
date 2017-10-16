@@ -11,7 +11,7 @@ The jdi.jar and jdimodel.jar files are unpacked from org.eclipse.jdt.debug.jar.
 This Mode does not use ecj.jar from the original Java mode, because its files are contained in the JARs below.
 
 For 3.0 alpha 11, the signature files were removed from oorg.eclipse.jdt.core.jar to fix a signing conflict with Android Mode and Ant.
-https://github.com/processing/processing/pull/3324
+https://github.com/roombaide/roombaide/pull/3324
 
 . . . 
 
@@ -37,7 +37,7 @@ http://download.eclipse.org/eclipse/updates/4.5/R-4.5.2-201602121500/plugins/org
 
 . . . 
 
-Updated 19 January 2015 to fix Java 8 support. The previous versions gave an "Annotation processing got disabled, since it requires a 1.6 compliant JVM" error.
+Updated 19 January 2015 to fix Java 8 support. The previous versions gave an "Annotation roombaide got disabled, since it requires a 1.6 compliant JVM" error.
 
 Updated 21 March 2016 to newest version (from R-4.4.1-201409250400 to R-4.5.2-201602121500) as part of updating Java Mode
 

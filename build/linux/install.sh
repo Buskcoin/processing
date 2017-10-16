@@ -1,12 +1,12 @@
 #!/bin/sh
 
-# This script adds a menu item, icons and mime type for Processing for 
+# This script adds a menu item, icons and mime type for Roombaide for 
 # the current user. If possible, it will use the xdg-utils - or fall back 
 # to just creating and copying a desktop file to the user's directory.
 # If called with the "-u" option, it will uninstall.
 
 # Resource name to use (including vendor prefix)
-RESOURCE_NAME=processing-pde
+RESOURCE_NAME=roombaide-pde
 
 # Get absolute path from which this script file was executed
 # (Could be changed to "pwd -P" to resolve symlinks to their target)
@@ -29,7 +29,7 @@ xdg_install_f() {
   TMP_DIR=`mktemp --directory`
 
   # Create *.desktop file using the existing template file
-  sed -e "s,<BINARY_LOCATION>,${SCRIPT_PATH}/processing,g" \
+  sed -e "s,<BINARY_LOCATION>,${SCRIPT_PATH}/roombaide,g" \
       -e "s,<ICON_NAME>,${RESOURCE_NAME},g" "${SCRIPT_PATH}/lib/desktop.template" > "${TMP_DIR}/${RESOURCE_NAME}.desktop"
 
   # Install the icon files using name and resolutions
@@ -48,21 +48,21 @@ xdg_install_f() {
   # Create icon on the desktop
   xdg-desktop-icon install "${TMP_DIR}/${RESOURCE_NAME}.desktop"
 
-  # Install Processing mime type
+  # Install Roombaide mime type
   xdg-mime install "${SCRIPT_PATH}/lib/${RESOURCE_NAME}.xml"
 
   # Install icons for mime type
-  xdg-icon-resource install --context mimetypes --size 16 "${SCRIPT_PATH}/lib/icons/pde-16.png" text-x-processing
-  xdg-icon-resource install --context mimetypes --size 32 "${SCRIPT_PATH}/lib/icons/pde-32.png" text-x-processing
-  xdg-icon-resource install --context mimetypes --size 48 "${SCRIPT_PATH}/lib/icons/pde-48.png" text-x-processing
-  xdg-icon-resource install --context mimetypes --size 64 "${SCRIPT_PATH}/lib/icons/pde-64.png" text-x-processing
-  xdg-icon-resource install --context mimetypes --size 128 "${SCRIPT_PATH}/lib/icons/pde-128.png" text-x-processing
-  xdg-icon-resource install --context mimetypes --size 256 "${SCRIPT_PATH}/lib/icons/pde-256.png" text-x-processing
-  xdg-icon-resource install --context mimetypes --size 512 "${SCRIPT_PATH}/lib/icons/pde-512.png" text-x-processing
-  xdg-icon-resource install --context mimetypes --size 1024 "${SCRIPT_PATH}/lib/icons/pde-1024.png" text-x-processing
+  xdg-icon-resource install --context mimetypes --size 16 "${SCRIPT_PATH}/lib/icons/pde-16.png" text-x-roombaide
+  xdg-icon-resource install --context mimetypes --size 32 "${SCRIPT_PATH}/lib/icons/pde-32.png" text-x-roombaide
+  xdg-icon-resource install --context mimetypes --size 48 "${SCRIPT_PATH}/lib/icons/pde-48.png" text-x-roombaide
+  xdg-icon-resource install --context mimetypes --size 64 "${SCRIPT_PATH}/lib/icons/pde-64.png" text-x-roombaide
+  xdg-icon-resource install --context mimetypes --size 128 "${SCRIPT_PATH}/lib/icons/pde-128.png" text-x-roombaide
+  xdg-icon-resource install --context mimetypes --size 256 "${SCRIPT_PATH}/lib/icons/pde-256.png" text-x-roombaide
+  xdg-icon-resource install --context mimetypes --size 512 "${SCRIPT_PATH}/lib/icons/pde-512.png" text-x-roombaide
+  xdg-icon-resource install --context mimetypes --size 1024 "${SCRIPT_PATH}/lib/icons/pde-1024.png" text-x-roombaide
 
-  # Make the Processing Development Environment the default app for *.pde files
-  xdg-mime default ${RESOURCE_NAME}.desktop text/x-processing
+  # Make the Roombaide Development Environment the default app for *.pde files
+  xdg-mime default ${RESOURCE_NAME}.desktop text/x-roombaide
 
   # Clean up
   rm "${TMP_DIR}/${RESOURCE_NAME}.desktop"
@@ -77,7 +77,7 @@ simple_install_f() {
   TMP_DIR=`mktemp --directory`
 
   # Create *.desktop file using the existing template file
-  sed -e "s,<BINARY_LOCATION>,${SCRIPT_PATH}/processing,g" \
+  sed -e "s,<BINARY_LOCATION>,${SCRIPT_PATH}/roombaide,g" \
       -e "s,<ICON_NAME>,${SCRIPT_PATH}/lib/icons/pde-128.png,g" "${SCRIPT_PATH}/lib/desktop.template" > "${TMP_DIR}/${RESOURCE_NAME}.desktop"
 
   mkdir -p "${HOME}/.local/share/applications"
@@ -119,14 +119,14 @@ xdg_uninstall_f() {
   xdg-icon-resource uninstall --size 1024 $RESOURCE_NAME
 
   # Remove MIME type icons
-  xdg-icon-resource uninstall --size 16 text-x-processing
-  xdg-icon-resource uninstall --size 32 text-x-processing
-  xdg-icon-resource uninstall --size 48 text-x-processing
-  xdg-icon-resource uninstall --size 64 text-x-processing
-  xdg-icon-resource uninstall --size 128 text-x-processing
-  xdg-icon-resource uninstall --size 256 text-x-processing
-  xdg-icon-resource uninstall --size 512 text-x-processing
-  xdg-icon-resource uninstall --size 1024 text-x-processing
+  xdg-icon-resource uninstall --size 16 text-x-roombaide
+  xdg-icon-resource uninstall --size 32 text-x-roombaide
+  xdg-icon-resource uninstall --size 48 text-x-roombaide
+  xdg-icon-resource uninstall --size 64 text-x-roombaide
+  xdg-icon-resource uninstall --size 128 text-x-roombaide
+  xdg-icon-resource uninstall --size 256 text-x-roombaide
+  xdg-icon-resource uninstall --size 512 text-x-roombaide
+  xdg-icon-resource uninstall --size 1024 text-x-roombaide
 
   # Remove MIME type
   xdg-mime uninstall "${SCRIPT_PATH}/lib/${RESOURCE_NAME}.xml"
@@ -137,13 +137,13 @@ xdg_uninstall_f() {
 simple_uninstall_f() {
 
   # delete legacy cruft .desktop file
-  if [ -f "${HOME}/.local/share/applications/processing.desktop" ]; then
-    rm "${HOME}/.local/share/applications/processing.desktop"
+  if [ -f "${HOME}/.local/share/applications/roombaide.desktop" ]; then
+    rm "${HOME}/.local/share/applications/roombaide.desktop"
   fi
 
   # delete another legacy .desktop file
-  if [ -f "${HOME}/.local/share/applications/processing-processingide.desktop" ]; then
-    rm "${HOME}/.local/share/applications/processing-processingide.desktop"
+  if [ -f "${HOME}/.local/share/applications/roombaide-roombaideide.desktop" ]; then
+    rm "${HOME}/.local/share/applications/roombaide-roombaideide.desktop"
   fi
 
   if [ -f "${HOME}/.local/share/applications/${RESOURCE_NAME}.desktop" ]; then
@@ -154,8 +154,8 @@ simple_uninstall_f() {
     rm "${HOME}/.local/share/metainfo/${RESOURCE_NAME}.appdata.xml"
   fi
 
-  if [ -f "${XDG_DESKTOP_DIR}/processing.desktop" ]; then
-    rm "${XDG_DESKTOP_DIR}/processing.desktop"
+  if [ -f "${XDG_DESKTOP_DIR}/roombaide.desktop" ]; then
+    rm "${XDG_DESKTOP_DIR}/roombaide.desktop"
   fi
 
   if [ -f "${XDG_DESKTOP_DIR}/${RESOURCE_NAME}.desktop" ]; then
@@ -194,7 +194,7 @@ xdg_exists_f() {
 
 # Shows a description of the available options
 display_help_f() {
-  printf "\nThis script will add a Processing desktop shortcut, menu item,\n"
+  printf "\nThis script will add a Roombaide desktop shortcut, menu item,\n"
   printf "icons and file associations for the current user.\n"
   if ! xdg_exists_f; then
     printf "\nxdg-utils are recommended to be installed, so this script can use them.\n"
@@ -227,21 +227,21 @@ done
 # If possible, use xdg-utils, if not, use a more basic approach
 if xdg_exists_f; then
   if [ ${UNINSTALL} = true ]; then
-    printf "Removing desktop shortcut and menu item for Processing..."
+    printf "Removing desktop shortcut and menu item for Roombaide..."
     xdg_uninstall_f
     simple_uninstall_f
   else
-    printf "Adding desktop shortcut, menu item and file associations for Processing..."
+    printf "Adding desktop shortcut, menu item and file associations for Roombaide..."
     xdg_uninstall_f
     simple_uninstall_f
     xdg_install_f
   fi
 else
   if [ ${UNINSTALL} = true ]; then
-    printf "Removing desktop shortcut and menu item for Processing..."
+    printf "Removing desktop shortcut and menu item for Roombaide..."
     simple_uninstall_f
   else
-    printf "Adding desktop shortcut and menu item for Processing..."
+    printf "Adding desktop shortcut and menu item for Roombaide..."
     simple_uninstall_f
     simple_install_f
   fi

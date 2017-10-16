@@ -1,4 +1,4 @@
-import processing.io.I2C;
+import roombaide.io.I2C;
 
 // SSD1306 is a small, inexpensive 128x64 pixels monochrome OLED display
 // available online as "0.96" 128x64 OLED display", SKU 346540

@@ -1,5 +1,5 @@
 /*
-  Copyright (c) The Processing Foundation 2015
+  Copyright (c) The Roombaide Foundation 2015
   Hardware I/O library developed by Gottfried Haider as part of GSoC 2015
 
   This library is free software; you can redistribute it and/or
@@ -39,7 +39,7 @@
 static const int servo_pulse_oversleep = 35;  // amount of uS to account for when sleeping
 
 
-JNIEXPORT jint JNICALL Java_processing_io_NativeInterface_openDevice
+JNIEXPORT jint JNICALL Java_roombaide_io_NativeInterface_openDevice
   (JNIEnv *env, jclass cls, jstring _fn)
 {
 	const char *fn = (*env)->GetStringUTFChars(env, _fn, JNI_FALSE);
@@ -53,7 +53,7 @@ JNIEXPORT jint JNICALL Java_processing_io_NativeInterface_openDevice
 }
 
 
-JNIEXPORT jstring JNICALL Java_processing_io_NativeInterface_getError
+JNIEXPORT jstring JNICALL Java_roombaide_io_NativeInterface_getError
   (JNIEnv *env, jclass cls, jint _errno)
 {
 	char *msg = strerror(abs(_errno));
@@ -65,7 +65,7 @@ JNIEXPORT jstring JNICALL Java_processing_io_NativeInterface_getError
 }
 
 
-JNIEXPORT jint JNICALL Java_processing_io_NativeInterface_closeDevice
+JNIEXPORT jint JNICALL Java_roombaide_io_NativeInterface_closeDevice
   (JNIEnv *env, jclass cls, jint handle)
 {
 	if (close(handle) < 0) {
@@ -76,7 +76,7 @@ JNIEXPORT jint JNICALL Java_processing_io_NativeInterface_closeDevice
 }
 
 
-JNIEXPORT jint JNICALL Java_processing_io_NativeInterface_readFile
+JNIEXPORT jint JNICALL Java_roombaide_io_NativeInterface_readFile
   (JNIEnv *env, jclass cls, jstring _fn, jbyteArray _in)
 {
 	const char *fn = (*env)->GetStringUTFChars(env, _fn, JNI_FALSE);
@@ -98,7 +98,7 @@ JNIEXPORT jint JNICALL Java_processing_io_NativeInterface_readFile
 }
 
 
-JNIEXPORT jint JNICALL Java_processing_io_NativeInterface_writeFile
+JNIEXPORT jint JNICALL Java_roombaide_io_NativeInterface_writeFile
   (JNIEnv *env, jclass cls, jstring _fn, jbyteArray _out)
 {
 	const char *fn = (*env)->GetStringUTFChars(env, _fn, JNI_FALSE);
@@ -120,7 +120,7 @@ JNIEXPORT jint JNICALL Java_processing_io_NativeInterface_writeFile
 }
 
 
-JNIEXPORT jint JNICALL Java_processing_io_NativeInterface_pollDevice
+JNIEXPORT jint JNICALL Java_roombaide_io_NativeInterface_pollDevice
   (JNIEnv *env, jclass cls, jstring _fn, jint timeout)
 {
 	const char *fn = (*env)->GetStringUTFChars(env, _fn, JNI_FALSE);
@@ -158,7 +158,7 @@ JNIEXPORT jint JNICALL Java_processing_io_NativeInterface_pollDevice
 }
 
 
-JNIEXPORT jint JNICALL Java_processing_io_NativeInterface_transferI2c
+JNIEXPORT jint JNICALL Java_roombaide_io_NativeInterface_transferI2c
   (JNIEnv *env, jclass cls, jint handle, jint slave, jbyteArray _out, jbyteArray _in)
 {
 	struct i2c_rdwr_ioctl_data packets;
@@ -225,7 +225,7 @@ static void* servoThread(void *ptr) {
 }
 
 
-JNIEXPORT jlong JNICALL Java_processing_io_NativeInterface_servoStartThread
+JNIEXPORT jlong JNICALL Java_roombaide_io_NativeInterface_servoStartThread
   (JNIEnv *env, jclass cls, jint gpio, jint pulse, jint period)
 {
 	char path[26 + 19 + 1];
@@ -270,7 +270,7 @@ JNIEXPORT jlong JNICALL Java_processing_io_NativeInterface_servoStartThread
 }
 
 
-JNIEXPORT jint JNICALL Java_processing_io_NativeInterface_servoUpdateThread
+JNIEXPORT jint JNICALL Java_roombaide_io_NativeInterface_servoUpdateThread
   (JNIEnv *env, jclass cls, jlong handle, jint pulse, jint period)
 {
 	SERVO_STATE_T *state = (SERVO_STATE_T*)(intptr_t)handle;
@@ -280,7 +280,7 @@ JNIEXPORT jint JNICALL Java_processing_io_NativeInterface_servoUpdateThread
 }
 
 
-JNIEXPORT jint JNICALL Java_processing_io_NativeInterface_servoStopThread
+JNIEXPORT jint JNICALL Java_roombaide_io_NativeInterface_servoStopThread
   (JNIEnv *env, jclass cls, jlong handle)
 {
 	SERVO_STATE_T *state = (SERVO_STATE_T*)(intptr_t)handle;
@@ -295,7 +295,7 @@ JNIEXPORT jint JNICALL Java_processing_io_NativeInterface_servoStopThread
 }
 
 
-JNIEXPORT jint JNICALL Java_processing_io_NativeInterface_setSpiSettings
+JNIEXPORT jint JNICALL Java_roombaide_io_NativeInterface_setSpiSettings
   (JNIEnv *env, jclass cls, jint handle, jint _maxSpeed, jint dataOrder, jint mode)
 {
 	uint8_t tmp;
@@ -323,7 +323,7 @@ JNIEXPORT jint JNICALL Java_processing_io_NativeInterface_setSpiSettings
 }
 
 
-JNIEXPORT jint JNICALL Java_processing_io_NativeInterface_transferSpi
+JNIEXPORT jint JNICALL Java_roombaide_io_NativeInterface_transferSpi
   (JNIEnv *env, jclass cls, jint handle, jbyteArray _out, jbyteArray _in)
 {
 	jbyte* out = (*env)->GetByteArrayElements(env, _out, NULL);

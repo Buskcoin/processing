@@ -9,7 +9,7 @@
  */
 
 
-import processing.serial.*;
+import roombaide.serial.*;
 
 Serial myPort;      // The serial port
 int whichKey = -1;  // Variable to hold keystoke values

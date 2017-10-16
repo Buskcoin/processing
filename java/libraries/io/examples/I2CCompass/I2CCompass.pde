@@ -1,4 +1,4 @@
-import processing.io.*;
+import roombaide.io.*;
 I2C i2c;
 
 // HMC6352 is a digital compass module using I2C

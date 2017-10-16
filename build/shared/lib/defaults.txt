@@ -8,23 +8,23 @@
 # them directly, use the per-user local version of the file:
 
 # Documents and Settings -> [username] -> Application Data ->
-#    Processing -> preferences.txt (on Windows XP)
+#    Roombaide -> preferences.txt (on Windows XP)
 
 # Users -> [username] -> AppData -> Roaming ->
-#    Processing -> preferences.txt (on Windows Vista and 7)
+#    Roombaide -> preferences.txt (on Windows Vista and 7)
 
-# ~/Library -> Processing -> preferences.txt (on Mac OS X)
+# ~/Library -> Roombaide -> preferences.txt (on Mac OS X)
 
-# ~/.processing -> preferences.txt (on Linux)
+# ~/.roombaide -> preferences.txt (on Linux)
 
 # The exact location of your preferences file can be found at
-# the bottom of the Preferences window inside Processing.
+# the bottom of the Preferences window inside Roombaide.
 
 # Because AppData and Application Data may be considered
 # hidden or system folders on Windows, you'll have to ensure
 # that they're visible in order to get at preferences.txt
 
-# You'll have problems running Processing if you incorrectly
+# You'll have problems running Roombaide if you incorrectly
 # modify lines in this file. It will probably not start at all.
 
 # AGAIN, DO NOT ALTER THIS FILE! I'M ONLY YELLING BECAUSE I LOVE YOU!
@@ -35,14 +35,14 @@
 
 # DEFAULT PATHS FOR SKETCHBOOK AND SETTINGS
 
-# relative paths will be relative to processing.exe or processing.app.
+# relative paths will be relative to roombaide.exe or roombaide.app.
 # absolute paths may also be used.
 
 # note that this path should use forward slashes (like unix)
 # instead of \ on windows or : on macos or whatever else
 
 # If you don't want users to have their sketchbook default to
-# "My Documents/Processing" on Windows and "Documents/Processing" on OS X,
+# "My Documents/Roombaide" on Windows and "Documents/Roombaide" on OS X,
 # set this to another path that will be used by default.
 # Note that this path must exist already otherwise it won't see
 # the sketchbook folder, and will instead assume the sketchbook
@@ -55,7 +55,7 @@ welcome.seen = false
 
 # By default, no sketches currently open
 last.sketch.count = 0
-# true if you want sketches to re-open when you next run processing
+# true if you want sketches to re-open when you next run roombaide
 last.sketch.restore = true
 
 # by default, contributions are moved to backup folders when
@@ -79,12 +79,12 @@ chooser.files.native = true
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
-# by default, check the processing server for any updates
+# by default, check the roombaide server for any updates
 # (please avoid disabling, this also helps us know basic numbers
-# on how many people are using Processing)
+# on how many people are using Roombaide)
 update.check = true
 
-# on windows, automatically associate .pde files with processing.exe
+# on windows, automatically associate .pde files with roombaide.exe
 platform.auto_file_type_associations = true
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -113,7 +113,7 @@ editor.zoom.auto = true
 # Monaco is nicer on Mac OS X, so use that explicitly
 #editor.font.macosx = Monaco,plain,10
 # trying for a built-in, consistent monospace for 2.0
-#editor.font = processing.mono,plain,12
+#editor.font = roombaide.mono,plain,12
 editor.font.family = Source Code Pro
 editor.font.size = 12
 
@@ -170,7 +170,7 @@ editor.watcher.window = 1500
 # font choice and size for the console
 #console.font = Monospaced,plain,11
 #console.font.macosx = Monaco,plain,10
-#console.font = processing.mono,plain,12
+#console.font = roombaide.mono,plain,12
 console.font.size = 12
 
 # number of lines to show by default
@@ -200,7 +200,7 @@ run.options.memory.maximum = 256
 run.options.bits.macosx = 32
 
 # Index of the display to use for running sketches (starts at 1).
-# Kept this 1-indexed because older vesions of Processing were setting
+# Kept this 1-indexed because older vesions of Roombaide were setting
 # the preference even before it was being used.
 # -1 means the default display, 0 means all displays
 run.display = -1
@@ -220,7 +220,7 @@ editor.untitled.prefix=sketch_
 # If you change this, be careful that this will work with your language
 # settings. For instance, MMMdd won't work on Korean-language systems
 # because it'll insert non-ASCII characters and break the environment.
-# http://code.google.com/p/processing/issues/detail?id=283
+# http://code.google.com/p/roombaide/issues/detail?id=283
 editor.untitled.suffix=yyMMdd
 
 # Set the default look & feel on Linux to something other than
@@ -241,7 +241,7 @@ editor.laf.linux = javax.swing.plaf.nimbus.NimbusLookAndFeel
 
 # TEXT - KEYWORDS, LITERALS
 # For an explanation of these tags, see Token.java:
-# processing/app/src/processing/app/syntax/Token.java
+# roombaide/app/src/roombaide/app/syntax/Token.java
 
 editor.token.function1.style = #bbc4ef,plain
 editor.token.function2.style = #bbc4ef,plain

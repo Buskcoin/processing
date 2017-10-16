@@ -3,26 +3,26 @@
 
 gohai
 X shell discussion with gohai
-X   https://github.com/processing/processing/pull/5082
+X   https://github.com/roombaide/roombaide/pull/5082
 X Workaround issues with Raspbian release August 2017
-X   https://github.com/processing/processing/pull/5222
+X   https://github.com/roombaide/roombaide/pull/5222
 
 jakub
 X Fix bugs in line vert shader
-X   https://github.com/processing/processing/pull/5184
-X   https://github.com/processing/processing/issues/5181
-X   https://github.com/processing/processing/issues/5182
-X   https://github.com/processing/processing/issues/5183
-X   https://github.com/processing/processing/issues/5194
+X   https://github.com/roombaide/roombaide/pull/5184
+X   https://github.com/roombaide/roombaide/issues/5181
+X   https://github.com/roombaide/roombaide/issues/5182
+X   https://github.com/roombaide/roombaide/issues/5183
+X   https://github.com/roombaide/roombaide/issues/5194
 
 
 _ when doing createFont, can we add it to the os fonts available?
 
 _ add separator option to loadTable() 
-_   https://github.com/processing/processing/issues/5068
+_   https://github.com/roombaide/roombaide/issues/5068
 
 _ add blendMode() to nope() calls in PGraphicsPDF
-_   https://github.com/processing/processing/issues/5105
+_   https://github.com/roombaide/roombaide/issues/5105
 
 _ WARNING: GL pipe is running in software mode (Renderer ID=0x1020400)
 _   is this coming from us? if so, need to provide actions
@@ -30,23 +30,23 @@ _   is this coming from us? if so, need to provide actions
 
 high
 _ implement sketch scaling into PApplet
-_   https://github.com/processing/processing/issues/4897
+_   https://github.com/roombaide/roombaide/issues/4897
 _ Sketches on Windows don't take UI sizing into account
-_   https://github.com/processing/processing/issues/4894
+_   https://github.com/roombaide/roombaide/issues/4894
 _ Sketches on Linux don't take UI scaling into account
-_   https://github.com/processing/processing/issues/4895
+_   https://github.com/roombaide/roombaide/issues/4895
 
 _ TRIANGLE_STRIP not working correctly with createShape() and default renderer
-_   https://github.com/processing/processing/issues/4678
+_   https://github.com/roombaide/roombaide/issues/4678
 
 _ should we drop the 'default' prefix from the ex handler so it's not static?
 _   http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Thread.html
 
 _ option to disable OpenGL ES on Linux? 
-_   https://github.com/processing/processing/issues/4584
+_   https://github.com/roombaide/roombaide/issues/4584
 
 _ textAlign(CENTER) and pixelDensity(2) aligning incorrectly with Java2D
-_   https://github.com/processing/processing/issues/4020
+_   https://github.com/roombaide/roombaide/issues/4020
 _   calling textSize() fixes it
 
 _ should fullScreen() set width and height to displayWidth/Height
@@ -66,9 +66,9 @@ _ size() function that scales to screen, keeps aspect, re-scales mouse coords
 
 known
 _ window must close when using file dialogs with OpenGL on Windows
-_   https://github.com/processing/processing/issues/3831
+_   https://github.com/roombaide/roombaide/issues/3831
 _ window loses focus after maximizing
-_   https://github.com/processing/processing/issues/3339
+_   https://github.com/roombaide/roombaide/issues/3339
 
 
 misc
@@ -80,20 +80,20 @@ _   default sketch location using insets incorrectly
 _   use the BufferStrategy directly from the Frame object?
 _     might fix performance issues w/ Presentation mode
 _ sketch placement (window insets) not properly set on Linux
-_   https://github.com/processing/processing/issues/2063
+_   https://github.com/roombaide/roombaide/issues/2063
 _ note in docs that full screen and present are now different
 _   on Export to Application, this has an impact
 _ update wiki/docs to say "don't override sketchXxxx() methods"
 _ SVG only exports last frame
 _   possibly because Java2D is disposing the Graphics2D in between?
-_   https://github.com/processing/processing/issues/3753
+_   https://github.com/roombaide/roombaide/issues/3753
 
 
 javafx
 _ wrong window size with fullScreen()
-_   https://github.com/processing/processing/issues/4737
+_   https://github.com/roombaide/roombaide/issues/4737
 _ menu bar not hiding properly in exported applications with FX2D
-_   https://github.com/processing/processing/issues/4527
+_   https://github.com/roombaide/roombaide/issues/4527
 _   hideMenuBar() called from setup() works fine
 _   just call it around setup time? 
 _ the --hide-stop option not working (FX only? traces?)
@@ -118,7 +118,7 @@ _ updatePixels()
 _ save() and saveFrame()
 _ get() and set()
 _ clip/noClip
-_   https://github.com/processing/processing/issues/3274
+_   https://github.com/roombaide/roombaide/issues/3274
 _ getNative() in PImage problematic because it gives back a BufferedImage
 _   move loadImage() into PGraphics, with AWT version the default
 _   or pass createImage() through to renderer?
@@ -145,7 +145,7 @@ _ present window draws in stages (OS X)
 _ crash on startup when "Mirror Displays" selected (cantfix?)
 _   suspect that this is a specific chipset since Oracle didn't reproduce
 _   AMD Radeon HD 6770M was in the Oracle bug report
-_   https://github.com/processing/processing/issues/2186
+_   https://github.com/roombaide/roombaide/issues/2186
 _   https://bugs.openjdk.java.net/browse/JDK-8027391
 _   test with JG's 13" retina laptop
 
@@ -166,7 +166,7 @@ _   need a programmatic way to set size
 _ deal with applySettings() change (maybe not a problem?)
 _ check on performance of the new EDT setup
 _ present mode is 30-40% slower than windowed
-_   w/ this example: https://github.com/processing/processing/issues/2423
+_   w/ this example: https://github.com/roombaide/roombaide/issues/2423
 
 
 data
@@ -191,11 +191,11 @@ _   the table pointer version will be speedy and allow chaining
 
 high
 _ point() rendering differently in 2.0.3 and 2.1
-_   https://github.com/processing/processing/issues/2278
+_   https://github.com/roombaide/roombaide/issues/2278
 _   internally, we probably have to call set() if it's a 1 pixel point
 _     but that's going to be a mess.. need to first check the CTM
 _ tint() not working in PDF (regression between 2.0.3 and 2.1)
-_   https://github.com/processing/processing/issues/2428
+_   https://github.com/roombaide/roombaide/issues/2428
 _ finish PFont.getShape() implementation
 _   needs to have a way to set width/height properly
 _   draw(s) doesn't work on the returned PShape
@@ -218,14 +218,14 @@ _   createShape(RECT) uses x/y/w/h, and optionally adds a mode param
 _     and optionally the corner radii
 _   createShape(ELLIPSE) is x/y/w/h, and optionally adds a mode param
 _ async requests
-_   https://github.com/processing/processing/issues/3165
+_   https://github.com/roombaide/roombaide/issues/3165
 _   Request r = createRequest("http://p5.org/feed/13134.jpg");
 _   Request r = createRequest("http://p5.org/feed/13134.jpg", "callbackName");
 _   Request r = createRequest("http://p5.org/feed/13134, "callbackName", "jpg");
 _   implement callbacks for images and other loadXxxx() functions
 _     remove requestImage() and friends
 _   callback for requestImage()
-_     https://github.com/processing/processing/issues/680
+_     https://github.com/roombaide/roombaide/issues/680
 _   remove/update requestImage example
 _   check into promise api
 _     http://www.html5rocks.com/en/tutorials/es6/promises/
@@ -253,7 +253,7 @@ _ add version of math functions that use doubles?
 _   what other methods should work with doubles? all math functions?
 _   seems like internal (mostly static) things, but not graphics api
 _ new PGraphics(... OutputStream) 
-_   https://github.com/processing/processing/issues/285
+_   https://github.com/roombaide/roombaide/issues/285
 _   already added for PDF, just need to work out the API
 _ if save() returns boolean, does saveFrame()?
 _   also need to copy this over to android
@@ -297,7 +297,7 @@ _ wrap exceptions with die() and warn() methods
 _   this way, people can make use of exceptions if they would rather
 _   or shut them off if they don't want to 
 _   also need to explain exception handling in general
-_   https://github.com/processing/processing/issues/222
+_   https://github.com/roombaide/roombaide/issues/222
 _ bring PConstants back in line w/ previous 1.5 (can't renumber)
 _ finish adding loadStrings(BufferedReader)
 _   decide if we want to keep this (and/or others?)
@@ -346,7 +346,7 @@ _   move that stuff to destroy()
 _ pause()/resume() need to work on the desktop side as well
 _   notify ddf when pause/resume implemented
 _ stop() not called in 1.5
-_   https://github.com/processing/processing/issues/675
+_   https://github.com/roombaide/roombaide/issues/675
 _   noticed that dispose() is getting called. stop() isn't.
 _   http://java.sun.com/docs/books/tutorial/deployment/applet/lifeCycle.html
 _ static mode sketches seem to break ESC... noLoop() problem?
@@ -393,19 +393,19 @@ _   Python Mode has a hook for when it's called
 CORE / PFont and text()
 
 _ font rotation (native font problem?) with natives?
-_   https://github.com/processing/processing/issues/731
+_   https://github.com/roombaide/roombaide/issues/731
 _ Text rotation, placement and font metrics incorrect when scaled
-_   https://github.com/processing/processing/issues/2167
+_   https://github.com/roombaide/roombaide/issues/2167
 
 _ remove subsetting stuff from PFont?
 _   or use hint(ENABLE_FONT_SUBSETTING)? 
 _ what's the difference with ascent on loadFont vs. createFont?
 _ svg fonts
 _   would be nifty if we could convert on the fly to ttf for speed...
-_   https://github.com/processing/processing/issues/787
+_   https://github.com/roombaide/roombaide/issues/787
 _ text position is quantized in JAVA2D
 _   text placement is ugly, seems like fractional metrics problem
-_   https://github.com/processing/processing/issues/138
+_   https://github.com/roombaide/roombaide/issues/138
 _ text(char c) with char 0 and undefined should print nothing
 _   perhaps also DEL or other nonprintables?
 _   book example 25-03
@@ -437,13 +437,13 @@ _   and then does 5 step sizes for each curveto
 _ show an error when using a font character that isn't available
 _   maybe fall back on other characters instead?
 _ some font weights cannot be specified/selected on OS X
-_   https://github.com/processing/processing/issues/1727
+_   https://github.com/roombaide/roombaide/issues/1727
 
 
 CORE / PImage
 
 _ TGA files writing strangely
-_   https://github.com/processing/processing/issues/2096
+_   https://github.com/roombaide/roombaide/issues/2096
 
 _ loadPixels() implementation needs to be in PApplet, not PGraphics
 _ this is a tricky thing to implement because of how OpenGL is handled
@@ -458,13 +458,13 @@ _   is the image actually a BufferedImage so PixelGrabber is a waste?
 _ deprecate the blend() function
 
 _ implement unified means to specify smoothing level for image scaling
-_   https://github.com/processing/processing/issues/204
+_   https://github.com/roombaide/roombaide/issues/204
 
 
 CORE / PShape
 
 _ major refactoring for PShape/PShapeOpenGL
-_   https://github.com/processing/processing/issues/1623
+_   https://github.com/roombaide/roombaide/issues/1623
 _ PShape should be cached as well
 _ major surgery to put loadShape() back into PApplet/PGraphics
 _   then have the OpenGL or Java2D versions as cached objects
@@ -497,7 +497,7 @@ _   better lockout inside beginShape() to keep other things from happening
 _   don't allow you to draw stroked items unless stroke() is called
 _   don't allow beginShape() if shape is already set
 _     (otherwise will cause some very strange errors)
-_   https://github.com/processing/processing/issues/174
+_   https://github.com/roombaide/roombaide/issues/174
 _ make determination on shape(x,y,z,w,h,d) or no
 _ PShape API to handle internal vertex stuff
 _   add deconstruct() method for paths
@@ -514,7 +514,7 @@ _ for PShape, need to be able to set the origin (flash people)
 CORE / PShapeSVG
 
 _ implement support for SVG gradients from Inkscape
-_   https://github.com/processing/processing/issues/1180
+_   https://github.com/roombaide/roombaide/issues/1180
 _ need to handle <!ENTITY tags in XML for SVG documents
 _   get entity tags working in xml library for SVG
 _ cover the svg changes in a future release
@@ -534,7 +534,7 @@ _   also curveto with multiple sets of points is ignored
 _ document somehow.. svg viewer will be discontinued
 _   http://www.adobe.com/svg/eol.html
 _ PShape getVertex() not implemented properly for SVG files
-_   https://github.com/processing/processing/issues/1596
+_   https://github.com/roombaide/roombaide/issues/1596
 
 
 CORE / PVector
@@ -557,7 +557,7 @@ _   libraries have to do a lot of casting
 _ opengl isn't drawing rectangles out to raw properly with fonts
 _   when not in textMode(SHAPE) should have rects
 _ InvScreenX, Y, Z to convert screen (mouse) coordinates to model coordinates
-_   https://github.com/processing/processing/issues/1609
+_   https://github.com/roombaide/roombaide/issues/1609
 
 
 CORE / Events

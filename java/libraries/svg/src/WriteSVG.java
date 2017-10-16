@@ -1,4 +1,4 @@
-import processing.core.PApplet;
+import roombaide.core.PApplet;
 
 
 // TODO This is code for testing; remove before final release
@@ -6,7 +6,7 @@ import processing.core.PApplet;
 public class WriteSVG extends PApplet {
 
 //  public String sketchRenderer() {
-//    return "processing.svg.PGraphicsSVG";
+//    return "roombaide.svg.PGraphicsSVG";
 //  }
 
 

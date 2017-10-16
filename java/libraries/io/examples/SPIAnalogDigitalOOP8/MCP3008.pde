@@ -1,4 +1,4 @@
-import processing.io.SPI;
+import roombaide.io.SPI;
 
 // MCP3008 is a Analog-to-Digital converter using SPI
 // other than the MCP3001, this has 8 input channels

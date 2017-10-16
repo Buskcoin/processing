@@ -14,7 +14,7 @@
  */
  
 
-import processing.serial.*;
+import roombaide.serial.*;
 
 int bgcolor;			     // Background color
 int fgcolor;			     // Fill color
@@ -114,7 +114,7 @@ void setup()
   // start serial port at 9600 bps:
   Serial.begin(9600);
   pinMode(2, INPUT);   // digital sensor is on digital pin 2
-  establishContact();  // send a byte to establish contact until Processing responds 
+  establishContact();  // send a byte to establish contact until Roombaide responds 
 }
 
 void loop()

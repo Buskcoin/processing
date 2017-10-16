@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="Processing Core" default="build">
+<project name="Roombaide Core" default="build">
 
   <target name="clean" description="Clean out the build directories">
     <delete dir="bin" />
@@ -18,7 +18,7 @@
     <taskdef name="methods"
 	     classname="PAppletMethods"
 	     classpath="methods/methods.jar" />
-    <methods dir="${basedir}/src/processing/core" recorder="true" />
+    <methods dir="${basedir}/src/roombaide/core" recorder="true" />
 
     <!-- Where can I expect to find Java Mode JARs? -->
     <property name="java.mode" value="../java/mode/" />
@@ -63,8 +63,8 @@
       <!-- kinda gross, but if not using the JDT, this just ignored anyway -->
       <compilerclasspath path="${jdt.jar}; ${java.mode}/jdtCompilerAdapter.jar" />
       <src path="src" />
-      <include name="processing/**" />
-      <exclude name="processing/javafx/**" if="fx.unavailable" />
+      <include name="roombaide/**" />
+      <exclude name="roombaide/javafx/**" if="fx.unavailable" />
     </javac>
 
     <!-- Copy the jnilib to the bin folder so it's included. -->
@@ -74,8 +74,8 @@
     <!-- Copy shaders to bin. (Eclipse does this automatically.) -->
     <copy todir="bin">
       <fileset dir="src">
-        <include name="processing/opengl/shaders/*.glsl" />
-        <include name="processing/opengl/cursors/*.png" />
+        <include name="roombaide/opengl/shaders/*.glsl" />
+        <include name="roombaide/opengl/cursors/*.png" />
         <include name="icon/*.png" />
       </fileset>
     </copy>

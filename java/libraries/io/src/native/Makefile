@@ -1,4 +1,4 @@
-TARGET := libprocessing-io.so
+TARGET := libroombaide-io.so
 OBJS := impl.o
 CC := gcc
 
@@ -12,7 +12,7 @@ $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@
 
 iface.h:
-	javah -classpath .. -o iface.h processing.io.NativeInterface
+	javah -classpath .. -o iface.h roombaide.io.NativeInterface
 
 clean:
 	rm -f $(TARGET) $(OBJS)

@@ -6,7 +6,7 @@
  */
 
 
-import processing.serial.*;
+import roombaide.serial.*;
 
 Serial myPort;  // Create object from Serial class
 int val;        // Data received from the serial port

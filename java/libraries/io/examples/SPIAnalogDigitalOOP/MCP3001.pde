@@ -1,4 +1,4 @@
-import processing.io.SPI;
+import roombaide.io.SPI;
 
 // MCP3001 is a Analog-to-Digital converter using SPI
 // datasheet: http://ww1.microchip.com/downloads/en/DeviceDoc/21293C.pdf

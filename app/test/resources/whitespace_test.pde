@@ -1,12 +1,12 @@
 // this is a whitespace and other invisible token torture test for the ANTLR-based
 // preprocessor.  edit pde.properties and set "editor.save_build_files" to true.
-// then, build this in processing.  next, use
+// then, build this in roombaide.  next, use
 //
 // diff -u --strip-trailing-cr \ 
 //   work/sketchbook/default/whitespace_test/whitespace_test.pde \ 
 //   work/lib/build/MyDemo.java
 //
-// to compare the files before and after preprocessing.  There should not be 
+// to compare the files before and after preroombaide.  There should not be 
 // any differences.
 
 import // comment test

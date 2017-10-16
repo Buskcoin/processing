@@ -5,7 +5,7 @@
  */
 
 
-import processing.serial.*;
+import roombaide.serial.*;
 
 Serial[] myPorts = new Serial[2];  // Create a list of objects from Serial class
 int[] dataIn = new int[2];         // a list to hold data from the serial ports

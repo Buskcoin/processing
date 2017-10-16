@@ -2,11 +2,11 @@
 <project name="Java Mode" default="build">
 
   <property name="generated" 
-	    value="${basedir}/generated/processing/mode/java/preproc" />
+	    value="${basedir}/generated/roombaide/mode/java/preproc" />
   <mkdir dir="${generated}" />
 
   <property name="grammars" 
-	    value="${basedir}/src/processing/mode/java/preproc" />
+	    value="${basedir}/src/roombaide/mode/java/preproc" />
 
   <property name="antlr_jar" 
 	    value="${basedir}/mode/antlr.jar" />
@@ -50,25 +50,25 @@
 
     <!-- need to match against the previous line so that we don't re-add -->
     <replaceregexp 
-        file="generated/processing/mode/java/preproc/JavaLexer.java"
+        file="generated/roombaide/mode/java/preproc/JavaLexer.java"
         match="(\n\n)(public class JavaLexer .*)" 
         replace="\1${uucr}\2">
     </replaceregexp>
 
     <replaceregexp 
-        file="generated/processing/mode/java/preproc/JavaRecognizer.java"
+        file="generated/roombaide/mode/java/preproc/JavaRecognizer.java"
         match="(\*/\n)(public class JavaRecognizer .*)" 
         replace="\1${uc}\2">
     </replaceregexp>
 
     <replaceregexp 
-        file="generated/processing/mode/java/preproc/PdeLexer.java"
+        file="generated/roombaide/mode/java/preproc/PdeLexer.java"
         match="(\n\n)(public class PdeLexer .*)" 
         replace="\1${uucr}\2">
     </replaceregexp>
 
     <replaceregexp 
-        file="generated/processing/mode/java/preproc/PdeRecognizer.java"
+        file="generated/roombaide/mode/java/preproc/PdeRecognizer.java"
         match="(\n\n)(public class PdeRecognizer .*)" 
         replace="\1${uc}\2">
     </replaceregexp>
@@ -90,7 +90,7 @@
     <mkdir dir="bin" />
        
     <!-- in some cases, pde.jar was not getting built
-	 https://github.com/processing/processing/issues/1792 -->
+	 https://github.com/roombaide/roombaide/issues/1792 -->
     <delete file="${mode_jar}" />
 
     <!-- env used to set classpath below -->

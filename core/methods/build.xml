@@ -36,9 +36,9 @@
     <mkdir dir="demo" />
 
     <copy todir="demo">
-      <fileset file="../src/processing/core/PApplet.java" />
-      <fileset file="../src/processing/core/PGraphics.java" />
-      <fileset file="../src/processing/core/PImage.java" />
+      <fileset file="../src/roombaide/core/PApplet.java" />
+      <fileset file="../src/roombaide/core/PGraphics.java" />
+      <fileset file="../src/roombaide/core/PImage.java" />
     </copy>
 
     <taskdef name="methods" 

@@ -3,42 +3,42 @@ X update to Java 8u144
 X fix issue with call to remove value instead of key in mode contrib hash
 X   this was only in the code used by the command line mode loader
 _ make setting the window icon automatic, based on files in local dirs
-X   https://github.com/processing/processing/issues/5123
-X   https://github.com/processing/processing/pull/5202
+X   https://github.com/roombaide/roombaide/issues/5123
+X   https://github.com/roombaide/roombaide/pull/5202
 _   need to make this work behind the scenes instead
 _   create icon.png or have an 'icons' folder with multiple sizes
 _ movie maker a little broken
-_   https://github.com/processing/processing/issues/5168
+_   https://github.com/roombaide/roombaide/issues/5168
 _ data folder not exporting on macOS?
-_   https://github.com/processing/processing/issues/5207
+_   https://github.com/roombaide/roombaide/issues/5207
 
 contrib
 X add Italian translation
-X   https://github.com/processing/processing/pull/5169
+X   https://github.com/roombaide/roombaide/pull/5169
 X Wrong tab for missing brace
-X   https://github.com/processing/processing/pull/5180
-X   https://github.com/processing/processing/issues/5165
+X   https://github.com/roombaide/roombaide/pull/5180
+X   https://github.com/roombaide/roombaide/issues/5165
 X typo in German translation
-X   https://github.com/processing/processing/pull/5195
-X   https://github.com/processing/processing/issues/5187
+X   https://github.com/roombaide/roombaide/pull/5195
+X   https://github.com/roombaide/roombaide/issues/5187
 
 jakub
 X Fix comment/uncomment adding slashes at wrong indent
-X   https://github.com/processing/processing/issues/5171
-X   https://github.com/processing/processing/pull/5185
+X   https://github.com/roombaide/roombaide/issues/5171
+X   https://github.com/roombaide/roombaide/pull/5185
 X Add JavaFX runtime to error checker class path
-X   https://github.com/processing/processing/pull/5186
+X   https://github.com/roombaide/roombaide/pull/5186
 
 contrib
 _ console hiding button?
-_   https://github.com/processing/processing/pull/5115
+_   https://github.com/roombaide/roombaide/pull/5115
 _ make "loadXML(String)" handle "file not found"
-_   https://github.com/processing/processing/pull/5144
+_   https://github.com/roombaide/roombaide/pull/5144
 _ detect errors from curved quotation marks
-_   https://github.com/processing/processing/issues/5133
-_   https://github.com/processing/processing/pull/5152
+_   https://github.com/roombaide/roombaide/issues/5133
+_   https://github.com/roombaide/roombaide/pull/5152
 _ alternate handling of duplicate library conflicts
-_   https://github.com/processing/processing/pull/5126
+_   https://github.com/roombaide/roombaide/pull/5126
 
 
 _ sketch.properties not being written if initial mode is p5.js?
@@ -52,10 +52,10 @@ _   lack of a project file makes this a pain
 _   dropping a sketch folder onto the PDE should also be implemented
 _ some type of sketch archive format for posting examples (.psk?)
 _   would be nice to open a sketch directly from a zip file
-_   https://github.com/processing/processing/issues/73
+_   https://github.com/roombaide/roombaide/issues/73
 _   maybe just open from a zip file, since psk doesn't help anything
 _   also have a means of importing sketches
-_     https://github.com/processing/processing/issues/3987
+_     https://github.com/roombaide/roombaide/issues/3987
 _   also see several notes below re: examples
 _ how are file associations handled in Linux? (for .pde, .psk)
 
@@ -63,8 +63,8 @@ _ add means to import .zip files from file/url into sketchbook, library, etc.
 _   super easy given current code implementation, might help usability
 
 _ EventQueue problems with "could not find sketch size" message
-_   https://github.com/processing/processing/issues/4893
-_   https://github.com/processing/processing/issues/5030
+_   https://github.com/roombaide/roombaide/issues/4893
+_   https://github.com/roombaide/roombaide/issues/5030
 
 _ put the reference (and examples?) into .zip files
 _   unzipping the app takes forever
@@ -72,7 +72,7 @@ _   see the 'examples' section below
 
 _ untitled folders are stored in temp folder
 _ clean up /tmp folders used during build
-_   https://github.com/processing/processing/issues/1896
+_   https://github.com/roombaide/roombaide/issues/1896
 _ don't let people into the /tmp folder for sketches
 o   don't use tmp folder for sketches? 
 _   restrict more things like "show sketch folder"
@@ -80,13 +80,13 @@ _   don't allow adding files w/o saving
 _   others?
 
 _ Could not initialize class com.sun.jna.Native on startup (Windows)
-_   https://github.com/processing/processing/issues/4929
+_   https://github.com/roombaide/roombaide/issues/4929
 
 _ implement fallback fonts instead of giving up and using Dialog and Mono
-_   https://github.com/processing/processing/issues/5023
+_   https://github.com/roombaide/roombaide/issues/5023
 
 _ "Required files could not be found" when trying to run from the .zip file
-_   https://github.com/processing/processing/issues/5022
+_   https://github.com/roombaide/roombaide/issues/5022
 
 _ mode list does not update after changing sketchbook folder
 _   already reported?
@@ -94,129 +94,129 @@ _ swap font smoothing for tab size?
 _   implement simple table for prefs?
 
 _ Welcome screen doesn't size properly for HiDPI screens
-_   https://github.com/processing/processing/issues/4896
+_   https://github.com/roombaide/roombaide/issues/4896
 
 _ "Sketch disappeared" infinite pop up dialogs
-_   https://github.com/processing/processing/pull/4808
-_   https://github.com/processing/processing/issues/4805
+_   https://github.com/roombaide/roombaide/pull/4808
+_   https://github.com/roombaide/roombaide/issues/4805
 
 _ "error during export" message, but no error message contents come through
-_   e.g. https://github.com/processing/processing/issues/4792
+_   e.g. https://github.com/roombaide/roombaide/issues/4792
 
 _ report of a library or tool (probably includes 2.x? 1.x?) breaking things
 _   NoSuchFieldError: useNativeSelect
-_   https://github.com/processing/processing/issues/4821
+_   https://github.com/roombaide/roombaide/issues/4821
 
 _ allow modes to specify their own base file name
 _   need to move "is this a sketch?" handling into Mode
 _ fix extension check for other modes
-_   https://github.com/processing/processing/issues/3980
+_   https://github.com/roombaide/roombaide/issues/3980
 
 _ did we lose settings.path because it was too buggy?
-_   https://github.com/processing/processing/issues/3948
+_   https://github.com/roombaide/roombaide/issues/3948
 
 _ update list of optional JRE files for Java 8
 _   Andres provided some updates
-_   https://github.com/processing/processing/issues/3288
+_   https://github.com/roombaide/roombaide/issues/3288
 
 _ proxy trouble with p5? since adding the system proxy?
-_   https://github.com/processing/processing/pull/3251/files
-_   larger problem thread https://github.com/processing/processing/issues/3891
+_   https://github.com/roombaide/roombaide/pull/3251/files
+_   larger problem thread https://github.com/roombaide/roombaide/issues/3891
 _   ideen2011.blogspot.de/2011/08/java-proxyselector-usesystemproxies-and.html
 _   malformed proxy issues http://stackoverflow.com/q/376101
 _   docs.oracle.com/javase/7/docs/api/java/net/doc-files/net-properties.html
-_   https://github.com/processing/processing/issues/1476#issuecomment-23229990
+_   https://github.com/roombaide/roombaide/issues/1476#issuecomment-23229990
 
 _ could not write to temporary directory
-_   https://github.com/processing/processing/issues/4757
+_   https://github.com/roombaide/roombaide/issues/4757
 
 _ Export Application fails on machines w/ non-ASCII chars in user name
 _   at least give a warning about this? 
-_   https://github.com/processing/processing/issues/4736
-_   related: https://github.com/processing/processing/issues/3543
+_   https://github.com/roombaide/roombaide/issues/4736
+_   related: https://github.com/roombaide/roombaide/issues/3543
 
 _ fix appbundler problems due to rollback
-_   https://github.com/processing/processing/issues/3790
+_   https://github.com/roombaide/roombaide/issues/3790
 _   the rollback re-introduces two bugs (serial export and scrolling)
 _   and any other changes later than 16 November 2014:
-_   https://github.com/processing/processing/commits/master/build/macosx/appbundler.jar
-_   https://github.com/processing/processing/commits/master/build/macosx/appbundler/native/main.m
-_   https://github.com/processing/processing/commit/fa27b983e76fdbc5c4c1451a1f0d854c652b1639
+_   https://github.com/roombaide/roombaide/commits/master/build/macosx/appbundler.jar
+_   https://github.com/roombaide/roombaide/commits/master/build/macosx/appbundler/native/main.m
+_   https://github.com/roombaide/roombaide/commit/fa27b983e76fdbc5c4c1451a1f0d854c652b1639
 _   https://bitbucket.org/infinitekind/appbundler
 
 _ settings() present and pixelDensity() is in setup(), nothing set/no error
-_   https://github.com/processing/processing/issues/4703
+_   https://github.com/roombaide/roombaide/issues/4703
 
 _ right bracket missing error
-_   https://github.com/processing/processing/issues/4702
+_   https://github.com/roombaide/roombaide/issues/4702
 
 _ sharing usage metrics about libraries
-_   https://github.com/processing/processing/issues/4708
+_   https://github.com/roombaide/roombaide/issues/4708
 
 _ library compilations handled oddly
-_   https://github.com/processing/processing/issues/4630
+_   https://github.com/roombaide/roombaide/issues/4630
 
 _ editor windows always open on display 1
-_   https://github.com/processing/processing/issues/1566
+_   https://github.com/roombaide/roombaide/issues/1566
 
 _ modify line number color when no lines extend that far?
-_   https://github.com/processing/processing/pull/4560
+_   https://github.com/roombaide/roombaide/pull/4560
 _ text gutter doesn't seem to be hidpi 
 X   or is it b/c screen not quite 2x? (nope)
 _ swap out the fonts?
 
 _ Help Menu disabled on OS X
-_   https://github.com/processing/processing/issues/4353#issuecomment-237715947
+_   https://github.com/roombaide/roombaide/issues/4353#issuecomment-237715947
 
 medium
 _ detect changes in case with libraries
-_   https://github.com/processing/processing/issues/4507
+_   https://github.com/roombaide/roombaide/issues/4507
 _ make when opening new editor window, open on the same display as current
-_   https://github.com/processing/processing/issues/4526
-_ Library path mismatch between processing-java and export
-_   https://github.com/processing/processing/issues/4493
+_   https://github.com/roombaide/roombaide/issues/4526
+_ Library path mismatch between roombaide-java and export
+_   https://github.com/roombaide/roombaide/issues/4493
 
 shortcuts
 _ problems with non-US keyboards and some shortcuts
-_   https://github.com/processing/processing/issues/2199
+_   https://github.com/roombaide/roombaide/issues/2199
 _ Determine shortcut for Export vs Use Selection for Find
-_   https://github.com/processing/processing/issues/2985
+_   https://github.com/roombaide/roombaide/issues/2985
 _ Determine new keyboard shortcut for Step Out
-_   https://github.com/processing/processing/issues/3538
+_   https://github.com/roombaide/roombaide/issues/3538
 
 
 needs more review
 _ createPreprocessor() added to JavaEditor, creating a mess
-_   https://github.com/processing/processing/commit/2ecdc36ac7c680eb36e271d17ad80b657b3ae6a0
+_   https://github.com/roombaide/roombaide/commit/2ecdc36ac7c680eb36e271d17ad80b657b3ae6a0
 _ patch to core classpath by Manindra?
 
 _ spacing of the updates number/circle in the lower right is off
-_   https://github.com/processing/processing/issues/4094
-_   https://github.com/processing/processing/pull/4097
+_   https://github.com/roombaide/roombaide/issues/4094
+_   https://github.com/roombaide/roombaide/pull/4097
 _   solution is to create a sprite sheet as a psd that'll have better type
 _     no way we're gonna fix the sizing and spacing for all platforms
 
 _ need docs for translations
-_   https://github.com/processing/processing/issues/4018
+_   https://github.com/roombaide/roombaide/issues/4018
 
 _ setting a bad font/size causes a crash on startup
-_   https://github.com/processing/processing/issues/4085
-o   https://github.com/processing/processing/pull/4087
+_   https://github.com/roombaide/roombaide/issues/4085
+o   https://github.com/roombaide/roombaide/pull/4087
 
 
 more contribs
 _ question about PDE_pt-br instead of PDE_pt
-_   https://github.com/processing/processing/issues/4018
+_   https://github.com/roombaide/roombaide/issues/4018
 _ Saving sketch with the same name as a class
-_   https://github.com/processing/processing/pull/4033
+_   https://github.com/roombaide/roombaide/pull/4033
 _ Pasting text into PDE results in "Clipboard does not contain a string"
-_   https://github.com/processing/processing/pull/4040
+_   https://github.com/roombaide/roombaide/pull/4040
 
 known issues
 _ launch4j doesn't work from folders with non-native charsets
 _   anything in CP1252 on an English Windows system is fine
 _   but anything else reports "font sadness" b/c it's using the system JRE
-_   https://github.com/processing/processing/issues/3543
+_   https://github.com/roombaide/roombaide/issues/3543
 _   move to javapackager or another option?
 _   http://www.excelsiorjet.com/kb/35/howto-create-a-single-exe-from-your-java-application
 _ mouse events (i.e. toggle breakpoint) seem to be firing twice
@@ -224,21 +224,21 @@ _ mouse events (i.e. toggle breakpoint) seem to be firing twice
 
 run/debug
 _ Tweak Mode sometimes freezes while running, require a force quit
-_   https://github.com/processing/processing/issues/3928
+_   https://github.com/roombaide/roombaide/issues/3928
 _ TweakMode listener mess in JavaTextArea
-_   https://github.com/processing/processing/issues/4605
+_   https://github.com/roombaide/roombaide/issues/4605
 
 
 gui
 _ Tooltip over variable decl has wrong style and content
 _   make all tooltips run through our style
-_   https://github.com/processing/processing/issues/3940
+_   https://github.com/roombaide/roombaide/issues/3940
 _ import suggestions box needs design review
-_   https://github.com/processing/processing/issues/3407
+_   https://github.com/roombaide/roombaide/issues/3407
 _ fix background color for selected lines in VariableInspector 
-_   https://github.com/processing/processing/issues/3925
+_   https://github.com/roombaide/roombaide/issues/3925
 _ implement 2x versions of the icons for the debugger window/variable inspector
-_   https://github.com/processing/processing/issues/3921
+_   https://github.com/roombaide/roombaide/issues/3921
 _ different design of squiggly line
 _   easy to do inside JavaTextAreaPainter.paintSquiggle()
 _ build custom scroll bar since the OS versions are so ugly
@@ -255,15 +255,15 @@ _ recent menu gets huge with other p5 versions on osx
 _ show compiling/startup animation after clicking run
 _   or maybe show an animation for starting up
 _   rather than post-compile
-_   https://github.com/processing/processing/issues/136
+_   https://github.com/roombaide/roombaide/issues/136
 
 
 welcome
 _ click "show this welcome" text to check/uncheck the box
-_   https://github.com/processing/processing/issues/3912
+_   https://github.com/roombaide/roombaide/issues/3912
 _ submit the form (as if 'get started' clicked) when closing the window
 _   whether hitting ESC or the close box on the window
-_   https://github.com/processing/processing/issues/3911
+_   https://github.com/roombaide/roombaide/issues/3911
 
 
 fonts
@@ -275,7 +275,7 @@ _   System.setProperty("swing.aatext", "true");
 _ how are we going to handle fonts for other languages? 
 _   two new fonts have been added, other languages will need more
 _   need a decent sans with with Unicode coverage
-_   i.e. https://github.com/processing/processing/pull/3025
+_   i.e. https://github.com/roombaide/roombaide/pull/3025
 
 
 pde/build
@@ -283,7 +283,7 @@ _ unsupported java version when trying ant run with 7u65
 _   no helpful message about how to automatically download 8u51
 _ ignore-tools in build.xml not being called for some reason
 _ when variables used in size(), getting exceptions instead of any warning
-_   https://github.com/processing/processing/issues/3311
+_   https://github.com/roombaide/roombaide/issues/3311
 _ crashed on startup w/ JavaScript mode as default b/c PdeKeyListener not found
 _   because it's in the other ClassLoader, can no longer rely on it
 _ remove JavaMode.errorLogsEnabled and JavaEditor.writeErrorsToFile()
@@ -291,16 +291,16 @@ _ continue clearing out ProgressFrame
 _   also hook up the statusNotice() when done
 _ break out Mode-specific options to their own panels in prefs
 _   Mode should just provide a panel for their prefs
-_ make the build fail if git pull on processing-docs fails
+_ make the build fail if git pull on roombaide-docs fails
 _ remove "save before running" message
 _ pass through the source to update licenses
-_   add Processing Foundation as 2012-15
+_   add Roombaide Foundation as 2012-15
 _   update license info to state gplv2 not v3
 _   run through that online license checker
 _ save() and saveAs() need to be refactored
-_   https://github.com/processing/processing/issues/3843
+_   https://github.com/roombaide/roombaide/issues/3843
 _ clean out the repo
-_   https://github.com/processing/processing/issues/1898
+_   https://github.com/roombaide/roombaide/issues/1898
 _ search the source for 'applet' references (i.e. SVG docs)
 _ PreferencesFrame is a misnomer (not a frame itself)
 _   change to PreferencesDialog, and make it a dialog?
@@ -324,16 +324,16 @@ _   and when sketches saved as well?
 _   makes saving *really* slow with a lot of libraries
 _ New/Rename/Save As is reloading the whole sketchbook, argh
 _ improve start time by populating sketchbook/libraries on threads
-_   https://github.com/processing/processing/issues/2945
+_   https://github.com/roombaide/roombaide/issues/2945
 
 
 help me
 _ Add support for localizing contributions
-_   https://github.com/processing/processing/pull/2833
-_   https://github.com/processing/processing/issues/3154
-_   https://github.com/processing/processing/pull/3337
+_   https://github.com/roombaide/roombaide/pull/2833
+_   https://github.com/roombaide/roombaide/issues/3154
+_   https://github.com/roombaide/roombaide/pull/3337
 _ export application ubuntu -> windows not working (2.2.1)
-_   https://github.com/processing/processing/issues/2698
+_   https://github.com/roombaide/roombaide/issues/2698
 _   might be something with libraries (native or otherwise)
 
 
@@ -345,7 +345,7 @@ _ 'recent' menu needs to recognize the p5 app folder
 _   also should recognize the user's home dir
 _ possibility of libraries folder inside a particular sketch?
 _ add font fixes to the rest of the API
-_   https://github.com/processing/processing/commit/eaff673d173b2d27f276cf5c59e3abf6c0fab86b
+_   https://github.com/roombaide/roombaide/commit/eaff673d173b2d27f276cf5c59e3abf6c0fab86b
 _   g2.setRenderingHint(RenderingHints.KEY_FRACTIONALMETRICS,
 _                       RenderingHints.VALUE_FRACTIONALMETRICS_ON);
 _ should default to the local Java on Windows and Linux
@@ -369,7 +369,7 @@ _   and/or start bundling separate source downloads
 _ look through all isPopupTrigger() code 
 _   make sure both press/release are implemented
 _ emacs style errors in commander aren't quite right
-_   https://github.com/processing/processing/issues/2158
+_   https://github.com/roombaide/roombaide/issues/2158
 _ add documentation for how to run mode development from Eclipse
 _   implementation/changes from JDF
 _ modes are being loaded multiple times, which can cause trouble
@@ -520,7 +520,7 @@ _ explain how to integrate code with swing
 _   use a separate environment, call init(), use noLoop(), reroboLoop()
 _   use JPopupMenu.setDefaultLightWeightPopupEnabled(false); for zorder
 _   http://processing.org/discourse/yabb_beta/YaBB.cgi?board=Integrate;action=display;num=1147670059
-_ write documentation on general use of processing.core
+_ write documentation on general use of roombaide.core
 _   note that applet is itself a Component
 _ eclipse
 _   document how to properly integrate with eclipse
@@ -536,7 +536,7 @@ _     how to do this with subclipse instructions?
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 
-PDE - Processing Development Environment
+PDE - Roombaide Development Environment
 
 
 PDE / Dialogs
@@ -546,7 +546,7 @@ _   http://javagraphics.blogspot.com/2008/06/joptionpane-making-alternative.html
 _ option to suppress warning dialogs
 _   starting with the one about modifying the sketch name for spaces
 _   also the "some features will be disabled" with .java tabs
-_   https://github.com/processing/processing/issues/46
+_   https://github.com/roombaide/roombaide/issues/46
 _ add "don't warn me about this" for sketch renaming
 _   make sure renamed version doesn't exist already
 _ prompt user before nuking applet or application folders
@@ -565,12 +565,12 @@ PDE / Compiler & Preprocessor
 
 medium (bugs/features)
 _ preprocessor throws error when calling color() on a PGraphics
-_   https://github.com/processing/processing/issues/3762
+_   https://github.com/roombaide/roombaide/issues/3762
 _ incorporate new preproc
-_   https://github.com/fjenett/processing-preprocessor-antlr4
-_   https://github.com/processing/processing/issues/3055
+_   https://github.com/fjenett/roombaide-preprocessor-antlr4
+_   https://github.com/roombaide/roombaide/issues/3055
 _ update grammar for ANTLR
-_   https://github.com/processing/processing/issues/3054
+_   https://github.com/roombaide/roombaide/issues/3054
 _ omitting a semicolon shows the error on the line after it
 _ npe if library is removed before compile
 _   always check library folders to make sure they're still valid
@@ -588,17 +588,17 @@ _ link out to further documentation (e.g. AIOOBE, NPE)
 
 low (common errors around reserved names/class naming)
 _ Saving sketch with the same name as a class or primitive breaks sketch
-_   https://github.com/processing/processing/issues/196
+_   https://github.com/roombaide/roombaide/issues/196
 _ don't allow people to override methods like paint() 
 _   make them final? just improve the error messages?
-_   https://github.com/processing/processing/issues/1058
-_ Processing chokes if a sketch defines a class with same name as the sketch
-_   https://github.com/processing/processing/issues/196
+_   https://github.com/roombaide/roombaide/issues/1058
+_ Roombaide chokes if a sketch defines a class with same name as the sketch
+_   https://github.com/roombaide/roombaide/issues/196
 _ don't allow goofy case versions of reserved words
 _   keypressed should maybe throw an error
-_   https://github.com/processing/processing/issues/44
+_   https://github.com/roombaide/roombaide/issues/44
 _ "unexpected token" on anonymous instance of parameterized Comparator
-_   https://github.com/processing/processing/issues/533
+_   https://github.com/roombaide/roombaide/issues/533
 
 
 PDE / Editor
@@ -622,16 +622,16 @@ _   some kind of NPE in handleOpenInternal and friends
 _   appears to be a synchronization problem with the loading
 _ blank sketch opened even if another opened by double-click
 _   add a 150 ms or more lag before opening the untitled window
-_   https://github.com/processing/processing/issues/218
+_   https://github.com/roombaide/roombaide/issues/218
 _ editors opening up at the same time on load?
 _   either synchronize the open (at a minimum)
 _   or wait for mac handlers to register an open event
 _   can also cause problems with opening multiple copies of same sketch
 _ after fixing name of sketch, ensure sketch of that name does not exist
 _ add auto-save to the editor
-_   https://github.com/processing/processing/issues/131
+_   https://github.com/roombaide/roombaide/issues/131
 _ implement better method of showing curly brace closure
-_   https://github.com/processing/processing/issues/94
+_   https://github.com/roombaide/roombaide/issues/94
 _ setModified() getting called on Windows (probably Linux) for key cmds
 
 
@@ -670,7 +670,7 @@ o keep examples.zip in a zip file? (5000 files @ 30 MB instead of 15 MB zip)
 o   mark examples as untitled (rather than read-only)
 o   maybe even pull these directly from the zip file?
 _ load examples from zip files
-_   https://github.com/processing/processing/issues/182
+_   https://github.com/roombaide/roombaide/issues/182
 _ don't make examples read-only
 _   just do them from psk filess
 _ disallow add file to sketch, export, export application
@@ -679,7 +679,7 @@ _   but don't do this with untitled, cuz it kinda stinks
 _   this is too weird--just put examples into individual zip files
 _   mark example files as untitled
 _   though will that require the sketch to be saved before export?
-_   https://github.com/processing/processing/issues/2459
+_   https://github.com/roombaide/roombaide/issues/2459
 _ examples window sketches should load in proper environment
 _ write build.xml file to automatically update the examples
 _ see how library installation goes, then possibly do same w/ examples
@@ -689,7 +689,7 @@ _ see how library installation goes, then possibly do same w/ examples
 PDE / Libraries
 
 _ Add a means to specify packages to import in library.properties
-_   https://github.com/processing/processing/issues/2134
+_   https://github.com/roombaide/roombaide/issues/2134
 _ need to deal with classpath conflicts
 _   avoid garbage that people have installed on their machines
 _   antlr.jar in the classpath will cause trouble.. 
@@ -706,8 +706,8 @@ _   altho prolly only when it's actually different (md5hash it?)
 _   this seems to be causing a lot of trouble with recent releases
 _   (opengl changes and whatnot)
 _ jar files like the bad aiexport plugin will cause serious problems
-_   https://github.com/processing/processing/issues/95
-_   need to ignore processing.core classes showing up in other jar files
+_   https://github.com/roombaide/roombaide/issues/95
+_   need to ignore roombaide.core classes showing up in other jar files
 _   tougher than it looks, because it all depends on what java wants to use
 _     i.e. even if not specified, the stuff will be in the classpath
 _   need to make classpath code be less promiscuous
@@ -733,19 +733,19 @@ PDE / Manager
 _ 'version' should be x.y or x.y.z, not some extra long string
 _   enforce this by disallowing spaces? on the import script?
 _ Progress bar height on macOS is too thin
-_   https://github.com/processing/processing/issues/4734
+_   https://github.com/roombaide/roombaide/issues/4734
 _ proper error handling when downloading contribs listing
-_   https://github.com/processing/processing/issues/4732
+_   https://github.com/roombaide/roombaide/issues/4732
 _ update CM entries when sketchbook location changes
-_   https://github.com/processing/processing/issues/3927
+_   https://github.com/roombaide/roombaide/issues/3927
 _ ugly white gap at the top of scroll bar
 _   the table header doesn't extend far enough
 _ scrolling "past" top/bottom causes the screen to jiggle (OS X and Trackpad)
 _   looks like ContributionListing.getScrollableUnitIncrement() returns early
 _ Examples window closes and re-opens during library install/remove
-_   https://github.com/processing/processing/issues/3304
+_   https://github.com/roombaide/roombaide/issues/3304
 _ CM - Icon instead of an "X" for the "could not connect" message
-_   https://github.com/processing/processing/issues/3706
+_   https://github.com/roombaide/roombaide/issues/3706
 _ several TODO items listed in ContributionPanel
 _ something to set min/max versions that are supported by a library
 _ ability to cancel a download/install
@@ -818,7 +818,7 @@ _ does closing the window call stop()?
 _   need to make sure hitting stop button and closing window explicitly call
 _   set finished to true, then join() the animation thread
 _ dispose handlers not called when stop button pressed
-_   https://github.com/processing/processing/issues/4445
+_   https://github.com/roombaide/roombaide/issues/4445
 _ need to set dock icon title on osx
 
 
@@ -826,7 +826,7 @@ PDE / Sketch & Sketchbook
 
 _ Large number of files in sketchbook folder can cause slow startup 
 _   and/or errors with launch4j
-_   https://github.com/processing/processing/issues/1190
+_   https://github.com/roombaide/roombaide/issues/1190
 _ error that sketch is read-only can't be canceled
 _   hitting cancel (or ESC?) still brings up the save dialog
 _ ArticulatePrint-070103a.pde from ArticulatePrint-070103a loads ok
@@ -871,7 +871,7 @@ _   update will update classes from shared in the current folder
 TOOLS / Auto Format
 
 _ Switch block cases not indented
-_   https://github.com/processing/processing/issues/1042
+_   https://github.com/roombaide/roombaide/issues/1042
 _ do a better job of maintaining cursor 
 _ only auto-format a particular section of code
 _   set the 'tabs' var based on how many spaces on previous line
@@ -910,7 +910,7 @@ How the environment gets packed up, downloaded, and installed.
 
 DIST / General 
 
-_ move processing-java inside the Java Mode? 
+_ move roombaide-java inside the Java Mode? 
 _   make a Tool that installs it for all platforms, not just OS X
 _   not really part of the 'build' anymore
 _ line ending issues
@@ -927,7 +927,7 @@ _ add additional caveats about incompletion to javadoc
 _ drag and drop
 _   including the number of items added to sketch would be especially nice
 _ implement automatic update
-_   https://github.com/processing/processing/issues/100
+_   https://github.com/roombaide/roombaide/issues/100
 _ need .pde document icons
 _ need .psk file icon
 _ need exported application icons
@@ -943,7 +943,7 @@ _   bring up information about gpl, lgpl, and ibmpl
 _   jedit syntax is under mit license
 _     http://www.opensource.org/licenses/mit-license.php
 _ add proper copyright and license information for all included projects
-_   https://github.com/processing/processing/issues/224
+_   https://github.com/roombaide/roombaide/issues/224
 _ write up guidelines for modes
 _   i.e. don't mess with Sketch menu, put it in the mode menu
 _ p5 assets need to be licensed differently from the source
@@ -961,14 +961,14 @@ _   this may already work with SingleInstance stuff
 DIST / Mac OS X
 
 _ Java bug prevents us from setting the dock name of a sketch run from the PDE
-_   https://github.com/processing/processing/issues/5045
+_   https://github.com/roombaide/roombaide/issues/5045
 _ client properties 
 _   https://developer.apple.com/library/mac/technotes/tn2007/tn2196.html
 _ built-in images: http://nadeausoftware.com/articles/2008/12/mac_java_tip_how_access_mac_specific_nsimage_icons
-_ Update QuickLook plugin for Processing 3
-_   https://github.com/processing/processing/issues/3261
+_ Update QuickLook plugin for Roombaide 3
+_   https://github.com/roombaide/roombaide/issues/3261
 _ Find a long-term solution for OS X bundler to address signing/symlink issues
-_   https://github.com/processing/processing/issues/2967
+_   https://github.com/roombaide/roombaide/issues/2967
 _ appbundler improvements
 _   don't re-copy JRE into work folder if already exists
 _   implement a splash screen
@@ -993,7 +993,7 @@ _   and have a .log extension so it can be browsed properly
 _   need to make sure that it's ok to write to logs dir..
 _      probably being removed from future OS X versions
 _ Exiting a sketch with Command-Q or File > Quit doesn't call stop() on OS X
-_   https://github.com/processing/processing/issues/186
+_   https://github.com/roombaide/roombaide/issues/186
 _ investigate the sandboxing situation on OS X
 _   http://developer.apple.com/library/mac/#documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW1
 most sandbox violations are triggered by attempts to read/write to the
@@ -1032,9 +1032,9 @@ find YOUR_APP/Contents/ -type f \
 
 DIST / Linux
 
-_ Processing is named processing-app-Base in Gnome 3
-_   https://github.com/processing/processing/issues/2534
-_ not being able to make a link to the processing app
+_ Roombaide is named roombaide-app-Base in Gnome 3
+_   https://github.com/roombaide/roombaide/issues/2534
+_ not being able to make a link to the roombaide app
 _   argh.. more path and shell issues..
 
 
@@ -1050,10 +1050,10 @@ FUTURE
 Notes for some indefinite later release...
 
 _ make reference build process part of dist
-_   https://github.com/processing/processing-docs/issues/85
+_   https://github.com/roombaide/roombaide-docs/issues/85
 _   separate ant target, but only require them for dist
 _   as separate targets, folks can build explicitly if they'd like
-_   processing-docs/java_generate/ReferenceGenerator/processingrefBuild.sh
+_   roombaide-docs/java_generate/ReferenceGenerator/roombaiderefBuild.sh
 _   remove reference.zip from main repo
 _ using svg images for res-indep icons/gui
 _   http://stackoverflow.com/questions/2495501/swing-batik-create-an-imageicon-from-an-svg-file
@@ -1068,7 +1068,7 @@ _ add === for String.equals()
 _   might be problematic since it might be opposite the javascript meaning
 _   jer: it's a decent time to start talking abt references/vars
 _ Blank sketch opened even if opening an existing sketch by double-clicking
-_   https://github.com/processing/processing/issues/218
+_   https://github.com/roombaide/roombaide/issues/218
 _ changing number of screens between run causes things to show up off-screen
 _   so when running, check to make sure that things are out of the area
 _ improve the speed of file copying

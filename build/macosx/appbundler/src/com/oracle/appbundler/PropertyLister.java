@@ -12,7 +12,7 @@ import java.util.Stack;
  * XML implementation doesn't have simple indentation support, but evolved
  * from there to hide some of the Info.plist innards for cleaner code in the
  * AppBundlerTask object.  
- * @author fry at processing dot org
+ * @author fry at roombaide dot org
  */
 class PropertyLister {
   static private final String XML_HEADER = "<?xml version=\"1.0\" ?>";

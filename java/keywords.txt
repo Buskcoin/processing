@@ -2,7 +2,7 @@
 # IN THE PROCESSING-DOCS REPO. DON'T EDITS THE keywords.txt FILE DIRECTLY.
 
 # For an explanation of these tags, see Token.java
-# trunk/processing/app/src/processing/app/syntax/Token.java
+# trunk/roombaide/app/src/roombaide/app/syntax/Token.java
 
 ADD	LITERAL2	blend_
 ALIGN_CENTER	LITERAL2
@@ -278,7 +278,7 @@ while	FUNCTION3	while
 #try	FUNCTION3	try
 
 
-# These items are a part of Processing but, but pages don't generate
+# These items are a part of Roombaide but, but pages don't generate
 
 boolean	FUNCTION1	booleanconvert_
 byte	FUNCTION1	byteconvert_
@@ -377,12 +377,12 @@ PVector	FUNCTION1	PVector
 ArrayList	FUNCTION1	ArrayList
 HashMap	FUNCTION1	HashMap
 
-# pixelHeight is not generating correctly: https://github.com/processing/processing-docs/issues/260
+# pixelHeight is not generating correctly: https://github.com/roombaide/roombaide-docs/issues/260
 
 pixelHeight	KEYWORD4	pixelHeight
 
 
-# THE TEXT ABOVE IS HAND-WRITTEN AND FOUND IN THE FILE "keywords_base.txt" in processing/processing-docs/generate
+# THE TEXT ABOVE IS HAND-WRITTEN AND FOUND IN THE FILE "keywords_base.txt" in roombaide/roombaide-docs/generate
 #
 # THE TEXT BELOW IS AUTO-GENERATED
 #

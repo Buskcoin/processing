@@ -7,7 +7,7 @@
  */
 
 
-import processing.serial.*;
+import roombaide.serial.*;
 
 Serial myPort;  // Create object from Serial class
 int val;      // Data received from the serial port
@@ -54,9 +54,9 @@ void setup() {
 
 void loop() {
   if (digitalRead(switchPin) == HIGH) {  // If switch is ON,
-    Serial.write(1);               // send 1 to Processing
+    Serial.write(1);               // send 1 to Roombaide
   } else {                               // If the switch is not ON,
-    Serial.write(0);               // send 0 to Processing
+    Serial.write(0);               // send 0 to Roombaide
   }
   delay(100);                            // Wait 100 milliseconds
 }
