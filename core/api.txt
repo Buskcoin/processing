@@ -126,8 +126,8 @@ This document was last updated for Roombaide 1.0.
                     float x3, float y3, float z3,
                     float x4, float y4, float z4)
   protected void splineForward(int segments, PMatrix3D matrix)
-  public void driveDirect(int l,int r)	void drive(int velocity, int radius)
-  void driveDirect(int leftVelocity, int rightVelocity)
+  public void drive(int velocity, int radius)
+  public void driveDirect(int leftVelocity, int rightVelocity)
   void full()
   int getAngle()
   int getBatteryCapacity()

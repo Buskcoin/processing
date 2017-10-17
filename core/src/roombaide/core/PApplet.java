@@ -3944,11 +3944,19 @@ IRobotAdapter delegate;
     System.out.print(what);
     System.out.flush();
   }
-  public void driveDirect(int leftVelocity, int rightVelocity) throws IOException {
-    delegate.driveDirect(leftVelocity, rightVelocity);
+  public void driveDirect(int leftVelocity, int rightVelocity) {
+    try {
+      delegate.driveDirect(leftVelocity, rightVelocity);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
-  public void drive(int velocity, int radius) throws IOException {
-   drive(velocity, radius);
+  public void drive(int velocity, int radius) {
+   try {
+    delegate.drive(velocity, radius);
+  } catch (IOException e) {
+    e.printStackTrace();
+  }
   }
   public void connect(){
     /**
@@ -3957,15 +3965,18 @@ IRobotAdapter delegate;
       try {
         base = new SimpleIRobot();
       } catch (InterruptedException | IOException e) {
-        // TODO Auto-generated catch block
         e.printStackTrace();
       }
       delegate = new IRobotAdapter(base);
 
 
   }
-  public void full() throws IOException {
-    delegate.full();
+  public void full(){
+    try {
+      delegate.full();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
   public int getAngle() {
@@ -4165,42 +4176,87 @@ IRobotAdapter delegate;
     delegate.leds(powerColor, powerIntensity, spotLedOn);
   }
 
-  public void ledsToggle(boolean togglePower) throws IOException {
-    delegate.ledsToggle(togglePower);
+  public void ledsToggle(boolean togglePower) {
+    try {
+      delegate.ledsToggle(togglePower);
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
   }
 
-  public void playSong(int songNumber) throws IOException {
-    delegate.playSong(songNumber);
+  public void playSong(int songNumber){
+    try {
+      delegate.playSong(songNumber);
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
   }
 
-  public void readSensors(int sensorId) throws IOException {
-    delegate.readSensors(sensorId);
+  public void readSensors(int sensorId)  {
+    try {
+      delegate.readSensors(sensorId);
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
   }
 
-  public void reset() throws IOException {
-    delegate.reset();
+  public void reset(){
+    try {
+      delegate.reset();
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
   }
 
-  public void safe() throws IOException {
-    delegate.safe();
+  public void safe()  {
+    try {
+      delegate.safe();
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
   }
 
-  public void song(int songNumber, int[] notesAndDurations) throws IOException {
-    delegate.song(songNumber, notesAndDurations);
+  public void song(int songNumber, int[] notesAndDurations)  {
+    try {
+      delegate.song(songNumber, notesAndDurations);
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
   }
 
   public void song(int songNumber, int[] notesAndDurations, int startIndex,
                    int length)
-    throws IOException {
-    delegate.song(songNumber, notesAndDurations, startIndex, length);
+    {
+    try {
+      delegate.song(songNumber, notesAndDurations, startIndex, length);
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
   }
 
-  public void setTailLight(boolean on) throws IOException {
-    delegate.setTailLight(on);
+  public void setTailLight(boolean on) {
+    try {
+      delegate.setTailLight(on);
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
   }
 
-  public void waitButtonPressed(boolean beep) throws IOException {
-    delegate.waitButtonPressed(beep);
+  public void waitButtonPressed(boolean beep) {
+    try {
+      delegate.waitButtonPressed(beep);
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
   }
 
   public void closeConnection() {
