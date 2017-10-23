@@ -15,4 +15,7 @@ So in the meantime, I ask for your patience,
 [participation](https://github.com/roombaide/roombaide/wiki/Project-List),
 and [patches](https://github.com/roombaide/roombaide/pulls).
 
-Using DarkProcessingTheme_3.0 by jeffThompson https://github.com/jeffThompson/DarkProcessingTheme_3.0
+** Thank You to the following open source projects:
+Processing (obviously)
+DarkProcessingTheme_3.0 by jeffThompson https://github.com/jeffThompson/DarkProcessingTheme_3.0
+RPiGreenbot http://www.iAroc.org https://github.com/jointheleague/RPiGreenbot
