@@ -17,6 +17,8 @@ and [patches](https://github.com/roombaide/roombaide/pulls).
 
 # Thank You
 ...to the following open source projects:
-Processing (obviously)
+
+[Processing](https://github.com/processing/processing) (obviously)
+
 DarkProcessingTheme_3.0 by jeffThompson https://github.com/jeffThompson/DarkProcessingTheme_3.0
 RPiGreenbot http://www.iAroc.org https://github.com/jointheleague/RPiGreenbot
